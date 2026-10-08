@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Plus, Save, Download, FolderOpen, Image, Box, Settings2 } from 'lucide-react';
 import { equipment, getEquipment } from '../data/catalog.js';
-import { saveEquipment, uploadAsset, validateEquipment } from '../lib/library.js';
+import { saveEquipment, uploadAsset, validateEquipment, libraryStatus } from '../lib/library.js';
 import { downloadFile } from '../lib/storage.js';
 import { PageHeading, localPath } from './UI.jsx';
 import '../builder.css';
@@ -9,7 +9,7 @@ const ModelScene=lazy(()=>import('./ModelScene.jsx'));
 const emptyItem=()=>({id:'',name:'',model:'',category:'',location:'',status:'Needs verification',role:'',specs:[],url:'',alternatives:'',note:'',image:'',model3d:'',modelReference:'',dimensions:''});
 export default function Admin({onSaved}) {
   const [item,setItem]=useState(()=>structuredClone(equipment[0])),[isNew,setIsNew]=useState(false),[status,setStatus]=useState(null),[notice,setNotice]=useState(''),[busy,setBusy]=useState(false),[preview,setPreview]=useState('image'),[cadAxis,setCadAxis]=useState('y');
-  useEffect(()=>{fetch('/api/library/status').then(r=>r.ok?r.json():null).then(setStatus).catch(()=>setStatus(null));},[]);
+  useEffect(()=>{libraryStatus().then(setStatus);},[]);
   const writable=!!status?.writable;
   function patch(key,value) {setItem(i=>({...i,[key]:value}));setNotice('');}
   async function save(event) {event.preventDefault();setBusy(true);try{validateEquipment(item);if(isNew&&getEquipment(item.id))throw new Error('That equipment ID already exists. Choose a different ID.');await saveEquipment(item);setIsNew(false);onSaved();setNotice('Saved to public/library/equipment.json. Changes are now available throughout the app.');}catch(error){setNotice(error.message);}finally{setBusy(false);}}

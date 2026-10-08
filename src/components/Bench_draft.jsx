@@ -3,6 +3,7 @@ import { Box, Network, Grid2X2, Maximize2, Minimize2, Search, Plus, Save, Downlo
 import { equipment, getEquipment, setups } from '../data/catalog.js';
 import { workspaceSeed, workspaceChanges, updateBenchNode, validateWorkspace, draftStorageKey, contentSignature, saveDraftFile, traceNetwork, createDraftConnection, connectionChecks, measurementChecks, equipmentReadiness, benchCoordinates } from '../lib/workspace_draft.js';
 import { readLocal, writeLocal, downloadFile } from '../lib/storage.js';
+import { libraryStatus } from '../lib/library.js';
 import { addNode, addSignalNode, connectors, fibres } from '../lib/setupBuilder.js';
 import { assignModule, removeAssemblyNode, housingFor } from '../lib/mainframeAssembly.js';
 import { publishSetup, publicationDefaults } from '../lib/publishedSetups.js';
@@ -29,7 +30,7 @@ export default function Bench_draft({setupId='wst-optical-manual',onSetupChange,
   const publishedChanged=!entry?.published||['name','nodes','connections','measurement','procedure','publication'].some(k=>JSON.stringify(draft[k]??null)!==JSON.stringify(entry.published[k]??null));
   useEffect(()=>{
     let active=true;
-    fetch('/api/library/status').then(r=>r.ok?r.json():null).then(data=>{if(active)setStorage(data);}).catch(()=>{if(active)setStorage(null);});
+    libraryStatus().then(data=>{if(active)setStorage(data);});
     fetch(`${import.meta.env.BASE_URL}library/workspaces_draft/${setupId}_draft.json`,{cache:'no-store'}).then(async r=>{if(!r.ok)return;const saved=validateWorkspace(await r.json());if(active&&saved.id===setupId){setDiskSignature(contentSignature(saved));setDiskTime(saved.savedAtDraft?new Date(saved.savedAtDraft).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}):'');}}).catch(()=>{});
     return()=>{active=false;};
   },[setupId]);

@@ -1,5 +1,11 @@
 import { equipment } from '../data/catalog.js';
 const original = structuredClone(equipment);
+export async function libraryStatus() {
+  // Production hosting is static; its file-writing API exists only in Vite dev.
+  if (!import.meta.env?.DEV) return null;
+  try { const response=await fetch('/api/library/status'); return response.ok?await response.json():null; }
+  catch { return null; }
+}
 export function validateEquipment(item) {
   if (!item || !/^[a-z0-9][a-z0-9-]{0,79}$/.test(item.id)) throw new Error('Use a unique ID with lowercase letters, numbers and hyphens.');
   for (const key of ['name','model','category','location','status','role','alternatives','note']) if (typeof item[key] !== 'string' || (['name','model','category'].includes(key) && !item[key].trim())) throw new Error(`Check the ${key} field.`);

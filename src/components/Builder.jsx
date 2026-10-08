@@ -3,6 +3,7 @@ import { Plus, Download, Upload, Save, Trash2, Cable, Box, GitBranch, Undo2 } fr
 import { equipment, getEquipment, setups } from '../data/catalog.js';
 import { PageHeading, SearchBox, localPath } from './UI.jsx';
 import { readLocal, writeLocal, downloadFile } from '../lib/storage.js';
+import { libraryStatus } from '../lib/library.js';
 import { addNode, addSignalNode, signalPosition, blankSetup, clampPosition, connectors, fibres, connectionRecord, connectionProblem, validateSetup } from '../lib/setupBuilder.js';
 import { arrangeOnBench } from '../lib/benchLayout.js';
 import SetupView from './SetupView.jsx';
@@ -27,7 +28,7 @@ export default function Builder({onInspect}){
   const [notice,setNotice]=useState(''),[seed,setSeed]=useState('wst-optical-manual'),[localStatus,setLocalStatus]=useState(null),[saving,setSaving]=useState(false);
   const publishPanel=useRef(null),input=useRef(null),history=useRef([]),current=useRef(draft);current.current=draft;
   const edge=draft.connections.find(c=>c.id===edgeId),node=draft.nodes.find(n=>n.id===selected);
-  useEffect(()=>{fetch('/api/library/status').then(r=>r.ok?r.json():null).then(setLocalStatus).catch(()=>setLocalStatus(null));},[]);
+  useEffect(()=>{libraryStatus().then(setLocalStatus);},[]);
   useEffect(()=>{const timer=setTimeout(()=>{if(!writeLocal('builder',draft))setNotice('Browser storage is full. Export your setup to keep a copy.');},300);return()=>clearTimeout(timer);},[draft]);
   function remember(value){history.current.push(structuredClone(value));if(history.current.length>40)history.current.shift();}
   function change(fn){remember(current.current);setDraft(fn(current.current));setNotice('');}

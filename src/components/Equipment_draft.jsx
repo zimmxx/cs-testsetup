@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Search, CheckCircle2, AlertCircle, Box, Download, Save, ArrowRight, Pencil } from 'lucide-react';
 import { equipment } from '../data/catalog.js';
 import { equipmentReadiness, workspaceSeed } from '../lib/workspace_draft.js';
-import { validateEquipment } from '../lib/library.js';
+import { validateEquipment, libraryStatus } from '../lib/library.js';
 import { readLocal, writeLocal, downloadFile } from '../lib/storage.js';
 import { EquipmentDetail } from './Equipment.jsx';
 import '../workspaces_draft.css';
@@ -15,7 +15,7 @@ export default function Equipment_draft({onAdmin}){
   const rows=items.map(e=>({item:e,checks:equipmentReadiness(e,setup.nodes.find(n=>n.equipmentId===e.id))}));
   const filtered=rows.filter(({item:e,checks})=>(!category||e.category===category)&&`${e.id} ${e.name} ${e.model}`.toLowerCase().includes(query.toLowerCase())&&(filter==='all'||filter==='model'&&!e.model3d||filter==='picture'&&!e.image||filter==='reference'&&e.cadKind!=='Vendor CAD'||filter==='details'&&checks.some(c=>!c.done)));
   const modelCount=items.filter(e=>e.model3d).length,pictureCount=items.filter(e=>e.image).length,vendorCount=items.filter(e=>e.cadKind==='Vendor CAD').length;
-  useEffect(()=>{fetch('/api/library/status').then(r=>r.ok?r.json():null).then(setStorage).catch(()=>setStorage(null));},[]);
+  useEffect(()=>{libraryStatus().then(setStorage);},[]);
   useEffect(()=>{const t=setTimeout(()=>{if(!writeLocal('equipment_draft',{version:1,workspaceName:'Equipment_draft',equipment:items}))setNotice('Browser storage unavailable. Export your draft catalog.');},350);return()=>{clearTimeout(t);writeLocal('equipment_draft',{version:1,workspaceName:'Equipment_draft',equipment:items});};},[items]);
   function patch(key,value){setItems(es=>es.map(e=>e.id===item.id?{...e,[key]:value}:e));setNotice('Equipment_draft changed · shared library unchanged.');}
   async function save(){setBusy(true);try{items.forEach(validateEquipment);const r=await fetch('/api/library/workspace-draft',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({version:1,workspaceName:'Equipment_draft',equipment:items})});const data=await r.json();if(!r.ok)throw new Error(data.error);setNotice(`Saved separately to public/${data.path}. The shared equipment catalog is unchanged.`);}catch(e){setNotice(e.message);}finally{setBusy(false);}}
