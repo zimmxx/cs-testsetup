@@ -1,0 +1,30 @@
+{
+  "source": "wst-wafer-holder-manual-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 2,
+  "triangles": 504,
+  "boundsMm": {
+    "min": [
+      -90,
+      0,
+      -90
+    ],
+    "max": [
+      90,
+      11,
+      90
+    ]
+  },
+  "extentsMm": [
+    180,
+    11,
+    180
+  ],
+  "glbBytes": 26620,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

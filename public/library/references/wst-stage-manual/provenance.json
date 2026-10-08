@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-stage-manual",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "Local bespoke design · user description; complete CAD pending",
+  "review": "Concept only: separate DUT motion stage remains unidentified. Estimated stacked XYZ geometry; MAX313D is NOT assigned to this record.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

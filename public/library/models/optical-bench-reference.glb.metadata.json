@@ -1,0 +1,30 @@
+{
+  "source": "optical-bench-reference-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 5,
+  "triangles": 316,
+  "boundsMm": {
+    "min": [
+      -900,
+      -700,
+      -450
+    ],
+    "max": [
+      900,
+      0,
+      450
+    ]
+  },
+  "extentsMm": [
+    1800,
+    700,
+    900
+  ],
+  "glbBytes": 20752,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

@@ -1,0 +1,537 @@
+{
+  "retrievedAt": "2026-10-07T22:46:18.195Z",
+  "productUrl": "https://www.thorlabs.com/item/FPC562",
+  "product": {
+    "name": "FPC562",
+    "id": "26055b3f-2867-44b6-b270-f12574353957",
+    "mainProductId": null,
+    "isConfigurable": false,
+    "code": "FPC562",
+    "fallbackName": "Fiber Polarization Controller, 3 Ø56 mm Paddles, SMF-28e+, FC/APC Connectors",
+    "slug": "FPC562",
+    "outline": "26055b3f-2867-44b6-b270-f12574353957",
+    "hasVariations": false,
+    "minQuantity": 1,
+    "maxQuantity": 0,
+    "imgSrc": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012.webp?v=1115071317&v=2025-11-15-19-13-17",
+    "inWishlist": false,
+    "altItemIdTL": null,
+    "releasedDateTL": "2006-01-06T00:00:00Z",
+    "discontinuedDateTL": null,
+    "lastWebPresentationLinkTL": null,
+    "warrantyTextTL": "Two year warranty. Incorporated light sources are warrantied for the lesser of one year or (to the extent applicable) the number of hours stated in the specifications.",
+    "warrantyCodeTL": "Cat. 3",
+    "serialNumberTL": null,
+    "unitDescriptionTL": null,
+    "dataSheetUrlTL": null,
+    "recalibrationProductIdsTL": null,
+    "eccnTL": "EAR99",
+    "itemStatusTL": "Active",
+    "statusDescriptionTL": null,
+    "unspscTL": "43223300",
+    "eclassTL": "32039090",
+    "subGroupIdTL": null,
+    "engineeringIdTL": "14012",
+    "ukHvyTL": false,
+    "threadingTypeTL": "Universal",
+    "isSerializedTL": false,
+    "hasDataSheetsTL": false,
+    "itemModelGroupTL": null,
+    "useLineDiscountTL": false,
+    "isCustomerInspiredTL": false,
+    "originCountryTL": "USA",
+    "onSpecialTL": false,
+    "softwarePageUrlTL": null,
+    "routeSegmentTL": "FPC562",
+    "mfgGroupTL": null,
+    "imperialMetricEquivalentTL": null,
+    "isCalibrationServiceTL": false,
+    "defaultAvailabilityTL": "BRL:2-3 Weeks;JPY:Today;EUR:Today;CNY:Today;SEK:Today;USD:In Stock Overseas;GBP:Today;",
+    "punchoutProhibitedTL": false,
+    "weight": 1.6895,
+    "weightUnit": "pounds",
+    "measureUnit": "Each",
+    "associations": {
+      "totalCount": 0,
+      "__typename": "ProductAssociationConnection"
+    },
+    "productType": null,
+    "images": [
+      {
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012.webp?v=1115071317&v=2025-11-15-19-13-17",
+        "name": "14012.webp",
+        "description": null,
+        "__typename": "ImageType"
+      }
+    ],
+    "assets": [
+      {
+        "id": "584961e7-661b-45c9-986d-39a29dcf93d2",
+        "name": "14012-E0W.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012-e0w.pdf?v=0116113708",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD PDF",
+        "description": "CAD PDF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/f/fp/fpc/fpc562/14012-e0w.pdf?v=0116113708",
+        "__typename": "Asset"
+      },
+      {
+        "id": "f34024ae-87f6-41ad-8b85-9f31b17e01e1",
+        "name": "14012-E0W.dxf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012-e0w.dxf?v=0116113709",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD DXF",
+        "description": "CAD DXF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/f/fp/fpc/fpc562/14012-e0w.dxf?v=0116113709",
+        "__typename": "Asset"
+      },
+      {
+        "id": "ccb2dc27-7cdf-461d-a99e-bc8dafbb8fa8",
+        "name": "14012-E0W.sldprt",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012-e0w.sldprt?v=0116113710",
+        "size": 0,
+        "mimeType": null,
+        "group": "Solidworks",
+        "description": "Solidworks",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/f/fp/fpc/fpc562/14012-e0w.sldprt?v=0116113710",
+        "__typename": "Asset"
+      },
+      {
+        "id": "dd29c655-9709-44d6-8816-660bfd21b61d",
+        "name": "14012-E0W.html",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012-e0w.html?v=0116113711",
+        "size": 0,
+        "mimeType": null,
+        "group": "eDrawing / 3D Model",
+        "description": "eDrawing / 3D Model",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/f/fp/fpc/fpc562/14012-e0w.html?v=0116113711",
+        "__typename": "Asset"
+      },
+      {
+        "id": "b24ddac1-ada4-48b5-9f06-e79f3e76d7b5",
+        "name": "14012-E0W.step",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc562/14012-e0w.step?v=0116113712",
+        "size": 0,
+        "mimeType": null,
+        "group": "Step",
+        "description": "Step",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/f/fp/fpc/fpc562/14012-e0w.step?v=0116113712",
+        "__typename": "Asset"
+      },
+      {
+        "id": "e1a5479e-03b5-4254-856d-668f7f907bbf",
+        "name": "1167-D02.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/f/fp/fpc/fpc031/1167-d02.pdf?v=0116113713",
+        "size": 0,
+        "mimeType": null,
+        "group": "Manual",
+        "description": "Manual",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/f/fp/fpc/fpc031/1167-d02.pdf?v=0116113713",
+        "__typename": "Asset"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "itemId": "e40c12f7-09da-46fb-a7ae-e74518090386",
+        "typeName": "Catalog",
+        "title": "Catalog",
+        "seoPath": "catalog",
+        "__typename": "Breadcrumb"
+      },
+      {
+        "itemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "typeName": "CatalogProduct",
+        "title": "Fiber Polarization Controller, 3 Ø56 mm Paddles, SMF-28e+, FC/APC Connectors",
+        "seoPath": "FPC562",
+        "__typename": "Breadcrumb"
+      }
+    ],
+    "description": {
+      "content": "Fiber Polarization Controller, 3 Ø56 mm Paddles, SMF-28e+, FC/APC Connectors",
+      "__typename": "DescriptionType"
+    },
+    "descriptions": [
+      {
+        "id": "039c6cfa-0c77-48c8-9900-323fb43fa9ba",
+        "reviewType": "Title",
+        "content": "Fiber Polarization Controller, 3 Ø56 mm Paddles, SMF-28e+, FC/APC Connectors",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "0933dbc1-9e53-4601-aff4-e6e227402084",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Manual Fiber Polarization Controllers\",\"/manual-fiber-polarization-controllers\"],[\"Fiber Polarization Management\",\"/fiber-polarization-management\"],[\"Fiber Components\",\"/fiber-components\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"FPC562\",\"/item/fpc562\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "0bb55cc4-6c70-4f0a-aa2e-682aed4c4c4a",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "140d7640-3d97-436f-a9e3-75733c85ecb8",
+        "reviewType": "FamilyPageUrl",
+        "content": "/manual-fiber-polarization-controllers",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1d9fc559-a686-4ea8-94a5-87cde4250e23",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "3ad1513f-f1cf-4554-aad4-2d708ee741a6",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6add595f-7edb-40fb-87c2-f5b0989e601e",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "880e98ca-494d-454e-8aba-f775bb913d32",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "9ce181e8-380f-49d5-8d42-334ef18ee84f",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "bf4769e1-577e-4514-9084-b9c57ec103d4",
+        "reviewType": "FamilyPageName",
+        "content": "Manual Fiber Polarization Controllers",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "bf760e8d-2bbc-4a41-aed5-f90b2ba25526",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e31c5ef5-98c7-44dc-8134-f1d94dfadcc8",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e90b3bdf-e69c-4d4d-8234-249f3b532340",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "f7876abe-f236-4c65-a540-065119adce8a",
+        "reviewType": "ItemUrl",
+        "content": "/item/fpc562",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "descriptionsWithFallbacksTL": [
+      {
+        "id": "039c6cfa-0c77-48c8-9900-323fb43fa9ba",
+        "reviewType": "Title",
+        "content": "Fiber Polarization Controller, 3 Ø56 mm Paddles, SMF-28e+, FC/APC Connectors",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "880e98ca-494d-454e-8aba-f775bb913d32",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "0933dbc1-9e53-4601-aff4-e6e227402084",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Manual Fiber Polarization Controllers\",\"/manual-fiber-polarization-controllers\"],[\"Fiber Polarization Management\",\"/fiber-polarization-management\"],[\"Fiber Components\",\"/fiber-components\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"FPC562\",\"/item/fpc562\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e31c5ef5-98c7-44dc-8134-f1d94dfadcc8",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "0bb55cc4-6c70-4f0a-aa2e-682aed4c4c4a",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "bf4769e1-577e-4514-9084-b9c57ec103d4",
+        "reviewType": "FamilyPageName",
+        "content": "Manual Fiber Polarization Controllers",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "140d7640-3d97-436f-a9e3-75733c85ecb8",
+        "reviewType": "FamilyPageUrl",
+        "content": "/manual-fiber-polarization-controllers",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1d9fc559-a686-4ea8-94a5-87cde4250e23",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "f7876abe-f236-4c65-a540-065119adce8a",
+        "reviewType": "ItemUrl",
+        "content": "/item/fpc562",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6add595f-7edb-40fb-87c2-f5b0989e601e",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e90b3bdf-e69c-4d4d-8234-249f3b532340",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "3ad1513f-f1cf-4554-aad4-2d708ee741a6",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "bf760e8d-2bbc-4a41-aed5-f90b2ba25526",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "9ce181e8-380f-49d5-8d42-334ef18ee84f",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "properties": [],
+    "variations": [],
+    "vendor": null,
+    "availabilityData": {
+      "isActive": true,
+      "isAvailable": true,
+      "isBuyable": true,
+      "isInStock": true,
+      "availableQuantity": 0,
+      "inventories": [
+        {
+          "inStockQuantity": 11,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "5319ca3a-ca09-4096-8065-33e99b91e473",
+          "fulfillmentCenterName": "UK0 - GBP",
+          "backorderQuantity": 11,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 11,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "80c89e5e-038b-4a1f-819d-cb92c34c105b",
+          "fulfillmentCenterName": "SWE - SEK",
+          "backorderQuantity": 11,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 11,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "7f5e6c92-bf3d-460f-b922-b8f5306d3403",
+          "fulfillmentCenterName": "MUC - EUR",
+          "backorderQuantity": 11,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "2aa868d8-d894-4cfe-bdb4-ff3b5521c087",
+          "fulfillmentCenterName": "THO - USD",
+          "backorderQuantity": 11,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "10e1f10c-525b-4887-a097-b60cbe4a2b3b",
+          "fulfillmentCenterName": "BRA - BRL",
+          "backorderQuantity": 16,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 5,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "fc76a83a-8c98-46a4-80d5-adbfabb4dc06",
+          "fulfillmentCenterName": "JPN - JPY",
+          "backorderQuantity": 16,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 10,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "e45c3124-d2c1-47a9-8009-2dd0de53f71e",
+          "fulfillmentCenterName": "PRC - CNY",
+          "backorderQuantity": 26,
+          "__typename": "InventoryInfo"
+        }
+      ],
+      "__typename": "AvailabilityData"
+    },
+    "price": {
+      "actual": {
+        "amount": 297.94,
+        "formattedAmount": "£297.94",
+        "__typename": "MoneyType"
+      },
+      "discountAmount": {
+        "amount": 0,
+        "formattedAmount": "£0.00",
+        "__typename": "MoneyType"
+      },
+      "sale": {
+        "amount": 297.94,
+        "formattedAmount": "£297.94",
+        "__typename": "MoneyType"
+      },
+      "list": {
+        "amount": 297.94,
+        "formattedAmount": "£297.94",
+        "__typename": "MoneyType"
+      },
+      "discountPercent": 0,
+      "discounts": [],
+      "tierPrices": [
+        {
+          "price": {
+            "currency": {
+              "code": "GBP",
+              "symbol": "£",
+              "__typename": "CurrencyType"
+            },
+            "amount": 297.94,
+            "formattedAmount": "£297.94",
+            "__typename": "MoneyType"
+          },
+          "quantity": 1,
+          "__typename": "TierPriceType"
+        }
+      ],
+      "listWithTax": {
+        "amount": 297.94,
+        "formattedAmount": "£297.94",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "actualWithTax": {
+        "amount": 297.94,
+        "formattedAmount": "£297.94",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "__typename": "PriceType"
+    },
+    "seoInfo": {
+      "pageTitle": "Fiber Polarization Controller, 3 Ø56 mm Paddles, SMF-28e+, FC/APC Connectors",
+      "metaKeywords": "poincare sphere,poincare,polarization,polarization state,sop,in-fiber,inline,in-line,mickey ears,birefrengence,fractional wave plate,fractional waveplate,polarization control,stress induced, stress-induced,pdl,pmd,coiled,coil,ClearCurve,clear curve,SMF-28e,SMF-28e+,wire,patch cable,cord,patch,connectorized,connector,fc/apc,fc/pc,apc,pc,fc,wavelength,fibreoptic,fiberoptic,optical,optic,multi,multimode,mode,single,nm,pm,mm,sm,fibre,fiber,3 polarizers,polarizers,three paddle,paddle controller,polarization controller,paddle polarization controller",
+      "metaDescription": null,
+      "__typename": "SeoInfo"
+    },
+    "videos": {
+      "items": [],
+      "__typename": "VideoConnection"
+    },
+    "compliancesTL": [
+      {
+        "id": "4d53ad51-1ae7-4244-b5f0-056f5e051307",
+        "categoryName": "eCl@ss",
+        "displayText": "32039090",
+        "catalogItemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "f5265bc9-d704-48ee-a7e1-8acdbc98ebea",
+        "categoryName": "REACH",
+        "displayText": "SVHC > 0.1% Lead",
+        "catalogItemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "cf7c1732-ef91-4d8f-81b2-34c772347178",
+        "categoryName": "RoHS",
+        "displayText": "Exempt - Annex III - 6(c)",
+        "catalogItemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "dc5370f8-8e69-457f-8dd6-ed7510efff2d",
+        "categoryName": "Show on web?",
+        "displayText": "Show on web?",
+        "catalogItemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "3183f28d-9ff2-424d-bb46-6b12867ca569",
+        "categoryName": "UNSPSC",
+        "displayText": "43223300",
+        "catalogItemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "bcf9f37c-6f7e-4d70-908c-21915ac63112",
+        "categoryName": "Warranty Group",
+        "displayText": "Cat. 3",
+        "catalogItemId": "26055b3f-2867-44b6-b270-f12574353957",
+        "__typename": "Compliance"
+      }
+    ],
+    "infoIconTabsTL": [],
+    "infoIconPriceBoxTL": false,
+    "infoIconDisplayProductImageTL": false,
+    "familyPageUrlTL": "/manual-fiber-polarization-controllers",
+    "__typename": "Product"
+  }
+}

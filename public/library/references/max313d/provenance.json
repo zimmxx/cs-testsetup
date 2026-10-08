@@ -1,0 +1,10 @@
+{
+  "equipmentId": "fibre-arm-stage",
+  "model": "Thorlabs MAX313D",
+  "sourceFile": "MAX313D-Step.step",
+  "vendorUrl": "https://www.thorlabs.com/item/MAX313D",
+  "sha256": "aa0bf30689a032fae13c453ed70b1b81403bd0a02827a9278129ce91d74ee87b",
+  "suppliedBy": "User",
+  "licence": "Vendor redistribution permission not verified",
+  "role": "Two stages for input/output bespoke fibre arms, not the DUT motion stage"
+}

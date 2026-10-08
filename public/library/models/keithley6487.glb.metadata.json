@@ -1,0 +1,30 @@
+{
+  "source": "6487-sales-04-04-2014.stp",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 37,
+  "triangles": 100118,
+  "boundsMm": {
+    "min": [
+      -210.69299999999998,
+      0,
+      -348.69289295107177
+    ],
+    "max": [
+      3.8099999999999996,
+      88.5444,
+      22.86
+    ]
+  },
+  "extentsMm": [
+    214.503,
+    88.5444,
+    371.5528929510718
+  ],
+  "glbBytes": 3701340,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

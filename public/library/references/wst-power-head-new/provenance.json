@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-power-head-new",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.keysight.com/us/en/assets/3121-1226/data-sheets/8162-C-and-N7749C-Optical-Power-Meter-Heads-and-Optical-Head-Interface.pdf",
+  "review": "8162-C is a product family. Head variant remains to select; conceptual head geometry and dimensions are provisional.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

@@ -1,0 +1,12 @@
+{
+  "equipmentId": "oband-laser-81606a",
+  "generatedAt": "2026-10-08",
+  "kind": "Illustrative reference",
+  "review": "Generated horizontal back-loadable 81606A module silhouette. Body dimensions, internal shape, ports and rear extraction handle are estimated; installed range 1240–1380 nm is user-confirmed. Not vendor CAD.",
+  "sources": [
+    "https://www.keysight.com/us/en/product/81606A/81606a-tunable-laser-source-high-power-lowest-sse-top-line.html",
+    "https://www.keysight.com/us/en/assets/7018-01659/data-sheets/5989-7321.pdf"
+  ],
+  "units": "millimetres",
+  "method": "Closed faceted reference solids, not a vendor mechanical assembly"
+}

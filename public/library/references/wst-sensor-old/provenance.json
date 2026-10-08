@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-sensor-old",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.keysight.com/us/en/product/81634B/low-polarization-dependence-optical-power-sensor.html",
+  "review": "Generated optical sensor module silhouette. Body depth, port and latch positions are estimated; actual 81634B CAD not located.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

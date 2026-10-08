@@ -1,0 +1,533 @@
+{
+  "retrievedAt": "2026-10-07T22:46:12.322Z",
+  "productUrl": "https://www.thorlabs.com/item/P3-SMF28Y-FC-5",
+  "product": {
+    "name": "P3-SMF28Y-FC-5",
+    "id": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+    "mainProductId": null,
+    "isConfigurable": false,
+    "code": "P3-SMF28Y-FC-5",
+    "fallbackName": "Single Mode Patch Cable, 1260-1625 nm, FC/APC, Ø900 µm Jacket, 5 m Long",
+    "slug": "P3-SMF28Y-FC-5",
+    "outline": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+    "hasVariations": false,
+    "minQuantity": 1,
+    "maxQuantity": 0,
+    "imgSrc": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575.webp?v=1115070628&v=2025-11-15-19-06-28",
+    "inWishlist": false,
+    "altItemIdTL": null,
+    "releasedDateTL": "2019-05-30T16:40:17.1Z",
+    "discontinuedDateTL": null,
+    "lastWebPresentationLinkTL": null,
+    "warrantyTextTL": "Two year warranty. Incorporated light sources are warrantied for the lesser of one year or (to the extent applicable) the number of hours stated in the specifications.",
+    "warrantyCodeTL": "Cat. 3",
+    "serialNumberTL": null,
+    "unitDescriptionTL": null,
+    "dataSheetUrlTL": null,
+    "recalibrationProductIdsTL": null,
+    "eccnTL": "EAR99",
+    "itemStatusTL": "Active",
+    "statusDescriptionTL": null,
+    "unspscTL": "43223326",
+    "eclassTL": "32020000",
+    "subGroupIdTL": null,
+    "engineeringIdTL": "TTN185575",
+    "ukHvyTL": false,
+    "threadingTypeTL": "Universal",
+    "isSerializedTL": false,
+    "hasDataSheetsTL": false,
+    "itemModelGroupTL": null,
+    "useLineDiscountTL": false,
+    "isCustomerInspiredTL": false,
+    "originCountryTL": "USA",
+    "onSpecialTL": false,
+    "softwarePageUrlTL": null,
+    "routeSegmentTL": "P3-SMF28Y-FC-5",
+    "mfgGroupTL": null,
+    "imperialMetricEquivalentTL": null,
+    "isCalibrationServiceTL": false,
+    "defaultAvailabilityTL": "BRL:2-3 Weeks;JPY:Today;EUR:Today;CNY:Today;SEK:Today;USD:Today;GBP:Today;",
+    "punchoutProhibitedTL": false,
+    "weight": 0.2285,
+    "weightUnit": "pounds",
+    "measureUnit": "Each",
+    "associations": {
+      "totalCount": 0,
+      "__typename": "ProductAssociationConnection"
+    },
+    "productType": null,
+    "images": [
+      {
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575.webp?v=1115070628&v=2025-11-15-19-06-28",
+        "name": "ttn185575.webp",
+        "description": null,
+        "__typename": "ImageType"
+      }
+    ],
+    "assets": [
+      {
+        "id": "55912ad2-8ccc-4f82-a4fe-b8c66f72dd7e",
+        "name": "TTN185575-E0W.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.pdf?v=0116015016",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD PDF",
+        "description": "CAD PDF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.pdf?v=0116015016",
+        "__typename": "Asset"
+      },
+      {
+        "id": "e3f79459-8497-4e77-9969-bd079f0d1311",
+        "name": "TTN185575-E0W.dxf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.dxf?v=0116015016",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD DXF",
+        "description": "CAD DXF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.dxf?v=0116015016",
+        "__typename": "Asset"
+      },
+      {
+        "id": "b1a76c1d-b808-4620-a448-3c8f74e762de",
+        "name": "TTN185575-E0W.sldprt",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.sldprt?v=0116015017",
+        "size": 0,
+        "mimeType": null,
+        "group": "Solidworks",
+        "description": "Solidworks",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.sldprt?v=0116015017",
+        "__typename": "Asset"
+      },
+      {
+        "id": "af62984c-5a75-4c0f-828c-d880ddd7d249",
+        "name": "TTN185575-E0W.html",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.html?v=0116015017",
+        "size": 0,
+        "mimeType": null,
+        "group": "eDrawing / 3D Model",
+        "description": "eDrawing / 3D Model",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.html?v=0116015017",
+        "__typename": "Asset"
+      },
+      {
+        "id": "0aa38104-73a3-4006-aa46-817402e27f7f",
+        "name": "TTN185575-E0W.step",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.step?v=0116015018",
+        "size": 0,
+        "mimeType": null,
+        "group": "Step",
+        "description": "Step",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-smf28y-fc-5/ttn185575-e0w.step?v=0116015018",
+        "__typename": "Asset"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "itemId": "e40c12f7-09da-46fb-a7ae-e74518090386",
+        "typeName": "Catalog",
+        "title": "Catalog",
+        "seoPath": "catalog",
+        "__typename": "Breadcrumb"
+      },
+      {
+        "itemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "typeName": "CatalogProduct",
+        "title": "Single Mode Patch Cable, 1260-1625 nm, FC/APC, Ø900 µm Jacket, 5 m Long",
+        "seoPath": "P3-SMF28Y-FC-5",
+        "__typename": "Breadcrumb"
+      }
+    ],
+    "description": {
+      "content": null,
+      "__typename": "DescriptionType"
+    },
+    "descriptions": [
+      {
+        "id": "12da8191-b7a5-4210-b2f0-2da5411bd655",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1608a83a-4ee9-4243-a830-f993dc68dab3",
+        "reviewType": "FamilyPageName",
+        "content": "Single Mode FC/APC Fiber Optic Patch Cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "260b3d7d-b1d9-44f9-acb3-3da74dc6376b",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Single Mode FC/APC Fiber Optic Patch Cables\",\"/single-mode-fcapc-fiber-optic-patch-cables\"],[\"Single Mode Fiber Optic Patch Cables\",\"/single-mode-fiber-optic-patch-cables\"],[\"Optical Fiber \\u0026 Fiber Patch Cables\",\"/optical-fiber-fiber-patch-cables\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"P3-SMF28Y-FC-5\",\"/item/p3-smf28y-fc-5\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "2f8a72af-0a0e-48bd-848a-787f9f7053c5",
+        "reviewType": "ItemUrl",
+        "content": "/item/p3-smf28y-fc-5",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "3940fafa-9518-4865-a465-00ea710fc0a5",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "49643d6a-85cd-4714-a3df-3c34e327eaed",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "618969dd-ecdc-48a7-8601-8549bf9d86bc",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "68aa33f1-6674-49c8-b19c-ccd874ad9378",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6913c5a4-8897-489f-b30a-b49f9b59103f",
+        "reviewType": "FamilyPageUrl",
+        "content": "/single-mode-fcapc-fiber-optic-patch-cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6e62faf5-b2a1-4022-adb6-498f1a8245f1",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "ac0b6d63-2ee5-4476-952f-818c8f5464fb",
+        "reviewType": "Title",
+        "content": "Single Mode Patch Cable, 1260-1625 nm, FC/APC, Ø900 µm Jacket, 5 m Long",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "d81e2001-e549-466f-a9ac-486664103fd6",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "dc202c22-4653-4a8e-88fe-d4549efee5f7",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "fe7fca63-0298-4b50-a408-9ec8cfe48043",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "descriptionsWithFallbacksTL": [
+      {
+        "id": "fe7fca63-0298-4b50-a408-9ec8cfe48043",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "d81e2001-e549-466f-a9ac-486664103fd6",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "12da8191-b7a5-4210-b2f0-2da5411bd655",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1608a83a-4ee9-4243-a830-f993dc68dab3",
+        "reviewType": "FamilyPageName",
+        "content": "Single Mode FC/APC Fiber Optic Patch Cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "618969dd-ecdc-48a7-8601-8549bf9d86bc",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "260b3d7d-b1d9-44f9-acb3-3da74dc6376b",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Single Mode FC/APC Fiber Optic Patch Cables\",\"/single-mode-fcapc-fiber-optic-patch-cables\"],[\"Single Mode Fiber Optic Patch Cables\",\"/single-mode-fiber-optic-patch-cables\"],[\"Optical Fiber \\u0026 Fiber Patch Cables\",\"/optical-fiber-fiber-patch-cables\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"P3-SMF28Y-FC-5\",\"/item/p3-smf28y-fc-5\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "2f8a72af-0a0e-48bd-848a-787f9f7053c5",
+        "reviewType": "ItemUrl",
+        "content": "/item/p3-smf28y-fc-5",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "3940fafa-9518-4865-a465-00ea710fc0a5",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "dc202c22-4653-4a8e-88fe-d4549efee5f7",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "49643d6a-85cd-4714-a3df-3c34e327eaed",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6e62faf5-b2a1-4022-adb6-498f1a8245f1",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "68aa33f1-6674-49c8-b19c-ccd874ad9378",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6913c5a4-8897-489f-b30a-b49f9b59103f",
+        "reviewType": "FamilyPageUrl",
+        "content": "/single-mode-fcapc-fiber-optic-patch-cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "ac0b6d63-2ee5-4476-952f-818c8f5464fb",
+        "reviewType": "Title",
+        "content": "Single Mode Patch Cable, 1260-1625 nm, FC/APC, Ø900 µm Jacket, 5 m Long",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "properties": [],
+    "variations": [],
+    "vendor": null,
+    "availabilityData": {
+      "isActive": true,
+      "isAvailable": true,
+      "isBuyable": true,
+      "isInStock": true,
+      "availableQuantity": 0,
+      "inventories": [
+        {
+          "inStockQuantity": 17,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "80c89e5e-038b-4a1f-819d-cb92c34c105b",
+          "fulfillmentCenterName": "SWE - SEK",
+          "backorderQuantity": 32,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 17,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "5319ca3a-ca09-4096-8065-33e99b91e473",
+          "fulfillmentCenterName": "UK0 - GBP",
+          "backorderQuantity": 32,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 17,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "7f5e6c92-bf3d-460f-b922-b8f5306d3403",
+          "fulfillmentCenterName": "MUC - EUR",
+          "backorderQuantity": 32,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 15,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "2aa868d8-d894-4cfe-bdb4-ff3b5521c087",
+          "fulfillmentCenterName": "THO - USD",
+          "backorderQuantity": 32,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "10e1f10c-525b-4887-a097-b60cbe4a2b3b",
+          "fulfillmentCenterName": "BRA - BRL",
+          "backorderQuantity": 38,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 6,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "fc76a83a-8c98-46a4-80d5-adbfabb4dc06",
+          "fulfillmentCenterName": "JPN - JPY",
+          "backorderQuantity": 38,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 11,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "e45c3124-d2c1-47a9-8009-2dd0de53f71e",
+          "fulfillmentCenterName": "PRC - CNY",
+          "backorderQuantity": 49,
+          "__typename": "InventoryInfo"
+        }
+      ],
+      "__typename": "AvailabilityData"
+    },
+    "price": {
+      "actual": {
+        "amount": 64.67,
+        "formattedAmount": "£64.67",
+        "__typename": "MoneyType"
+      },
+      "discountAmount": {
+        "amount": 0,
+        "formattedAmount": "£0.00",
+        "__typename": "MoneyType"
+      },
+      "sale": {
+        "amount": 64.67,
+        "formattedAmount": "£64.67",
+        "__typename": "MoneyType"
+      },
+      "list": {
+        "amount": 64.67,
+        "formattedAmount": "£64.67",
+        "__typename": "MoneyType"
+      },
+      "discountPercent": 0,
+      "discounts": [],
+      "tierPrices": [
+        {
+          "price": {
+            "currency": {
+              "code": "GBP",
+              "symbol": "£",
+              "__typename": "CurrencyType"
+            },
+            "amount": 64.67,
+            "formattedAmount": "£64.67",
+            "__typename": "MoneyType"
+          },
+          "quantity": 1,
+          "__typename": "TierPriceType"
+        }
+      ],
+      "listWithTax": {
+        "amount": 64.67,
+        "formattedAmount": "£64.67",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "actualWithTax": {
+        "amount": 64.67,
+        "formattedAmount": "£64.67",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "__typename": "PriceType"
+    },
+    "seoInfo": {
+      "pageTitle": "Single Mode Patch Cable, 1260-1625 nm, FC/APC, Ø900 µm Jacket, 5 m Long",
+      "metaKeywords": "1310,1310 nm,1310nm,1550,1550 nm,1550nm,angle polished,apc,cable,connector,connectorized,cord,fc,fc/apc,fiber,fibercord,fiberoptic,fibre,fibreoptic,jumper,laser,mode,Ø900 µm tubing,Ø900 um tubing,optic,optical,patch,patch cable,pc,pipe,Polarization controller patch cable,simplex,single,single mode patch cable,sm,sm cable,sm patch cable,smf28,smf28 ultra,smf28e,smf28e+,smf28ultra,wavelength,wire,",
+      "metaDescription": null,
+      "__typename": "SeoInfo"
+    },
+    "videos": {
+      "items": [],
+      "__typename": "VideoConnection"
+    },
+    "compliancesTL": [
+      {
+        "id": "965863dd-7d44-4128-8d57-b59ad6afec38",
+        "categoryName": "eCl@ss",
+        "displayText": "32020000",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "0d49589d-d2ad-4c04-bfd8-8e7093567a3b",
+        "categoryName": "REACH",
+        "displayText": "SVHC > 0.1% Lead",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "f99f2617-d16f-4a10-af9d-0bc7c8436a55",
+        "categoryName": "RoHS",
+        "displayText": "Exempt - Annex III - 6(c)",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "573820c4-6db4-493d-b82c-c34f4f505353",
+        "categoryName": "Show on web?",
+        "displayText": "Show on web?",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "c34ff41b-abe8-48dd-a079-32cecccf7c3f",
+        "categoryName": "TSCA",
+        "displayText": "Compliant",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "2281460e-2c3b-4b0c-9d49-cf9d6cf88a85",
+        "categoryName": "UNSPSC",
+        "displayText": "43223326",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "1376d2b1-f176-4dd4-a2ae-e116cb5b6002",
+        "categoryName": "Warranty Group",
+        "displayText": "Cat. 3",
+        "catalogItemId": "8fb1331b-3018-442a-b26b-a0e60e573aec",
+        "__typename": "Compliance"
+      }
+    ],
+    "infoIconTabsTL": [],
+    "infoIconPriceBoxTL": false,
+    "infoIconDisplayProductImageTL": false,
+    "familyPageUrlTL": "/single-mode-fcapc-fiber-optic-patch-cables",
+    "__typename": "Product"
+  }
+}

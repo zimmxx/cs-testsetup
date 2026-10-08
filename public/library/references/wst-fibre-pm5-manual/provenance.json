@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-fibre-pm5-manual",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.thorlabs.com/item/P3-1550PM-FC-5",
+  "review": "Coiled cable presentation reference only. Nominal product length 5 m; routed geometry is shortened for display, not dimensional CAD.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

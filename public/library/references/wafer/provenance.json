@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wafer",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://cornerstone.sotonfab.co.uk/wafer-scale-testing-service-wst/",
+  "review": "Generic wafer-test platform concept. Does not depict or identify the actual ficonTEC system; platform CAD needed.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

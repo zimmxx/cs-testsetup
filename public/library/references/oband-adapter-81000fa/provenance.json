@@ -1,0 +1,11 @@
+{
+  "equipmentId": "oband-adapter-81000fa",
+  "generatedAt": "2026-10-08",
+  "kind": "Illustrative reference",
+  "review": "Illustrative 81000FA FC connector adapter reference. Exact threads, aperture, dimensions and mating geometry are unmeasured. Not vendor CAD.",
+  "sources": [
+    "https://www.keysight.com/us/en/assets/9018-01715/user-manuals/9018-01715.pdf"
+  ],
+  "units": "millimetres",
+  "method": "Closed faceted reference solids, not a vendor mechanical assembly"
+}

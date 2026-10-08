@@ -1,0 +1,30 @@
+{
+  "source": "P3-1550PM-FC-2-Vendor.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 21,
+  "triangles": 100778,
+  "boundsMm": {
+    "min": [
+      -5.8192316214497,
+      -27.720670443374644,
+      -153.852667500888
+    ],
+    "max": [
+      15.841965559222553,
+      29.50052673729762,
+      198.6735910510122
+    ]
+  },
+  "extentsMm": [
+    21.661197180672254,
+    57.22119718067226,
+    352.52625855190024
+  ],
+  "glbBytes": 2845980,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

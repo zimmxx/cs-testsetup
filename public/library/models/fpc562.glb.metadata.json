@@ -1,0 +1,30 @@
+{
+  "source": "FPC562-Step.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 34,
+  "triangles": 182484,
+  "boundsMm": {
+    "min": [
+      -189.81802099097195,
+      -7.048448262681359,
+      -0.7725892421182705
+    ],
+    "max": [
+      127.68197900902803,
+      85.53455173731864,
+      30.64721075788175
+    ]
+  },
+  "extentsMm": [
+    317.5,
+    92.583,
+    31.419800000000023
+  ],
+  "glbBytes": 6304636,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

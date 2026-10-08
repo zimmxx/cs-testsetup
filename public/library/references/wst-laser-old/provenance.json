@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-laser-old",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.keysight.com/us/en/assets/7018-01142/data-sheets/5988-8518.pdf",
+  "review": "Generated 81940A family reference from Keysight datasheet photograph and 81940A body dimensions. Front details, vents, latch and connector offsets are approximate. Not vendor CAD.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

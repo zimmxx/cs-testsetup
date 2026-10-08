@@ -1,0 +1,30 @@
+{
+  "source": "wst-power-head-new-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 2,
+  "triangles": 152,
+  "boundsMm": {
+    "min": [
+      -28,
+      0,
+      -42
+    ],
+    "max": [
+      28,
+      55,
+      28
+    ]
+  },
+  "extentsMm": [
+    56,
+    55,
+    70
+  ],
+  "glbBytes": 9708,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

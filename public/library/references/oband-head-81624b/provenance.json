@@ -1,0 +1,11 @@
+{
+  "equipmentId": "oband-head-81624b",
+  "generatedAt": "2026-10-08",
+  "kind": "Illustrative reference",
+  "review": "Generated external 81624B head with illustrative 81000FA FC adapter. Head dimensions, cable stub and adapter mounting are estimated. User reports FC/PC optical input. Not vendor CAD.",
+  "sources": [
+    "https://www.keysight.com/us/en/product/81624B/general-purpose-optical-power-head.html"
+  ],
+  "units": "millimetres",
+  "method": "Closed faceted reference solids, not a vendor mechanical assembly"
+}

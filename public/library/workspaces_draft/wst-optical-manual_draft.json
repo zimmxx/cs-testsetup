@@ -1,0 +1,498 @@
+{
+  "version": 1,
+  "id": "wst-optical-manual",
+  "name": "Manual Wafer Optical Measurement",
+  "nodes": [
+    {
+      "id": "laser",
+      "equipmentId": "wst-laser-old",
+      "label": "Laser",
+      "x": 20,
+      "y": 20,
+      "configuration": {
+        "exactModel": "Keysight 81940A",
+        "specUrl": "https://www.keysight.com/us/en/product/81940A/compact-tunable-laser-source-continuous-sweep-mode-1520nm-1630nm.html",
+        "specifications": "Usual output setting: 10 mW (user-reported)",
+        "cadReference": "library/references/wst-laser-old/wst-laser-old-Reference.step",
+        "modelReference": "library/models/wst-laser-old.glb",
+        "mainframeId": "mainframe",
+        "mainframeSlot": "1"
+      },
+      "benchXMm": -580,
+      "benchZMm": 160,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "sleeve-in",
+      "equipmentId": "wst-mating-sleeve-manual",
+      "label": "Input laser sleeve",
+      "x": 240,
+      "y": 20,
+      "configuration": {
+        "exactModel": "Thorlabs ADAFCPMB2",
+        "specUrl": "https://www.thorlabs.com/item/ADAFCPMB2",
+        "specifications": "",
+        "cadReference": "library/references/adafcpmb2/ADAFCPMB2-Vendor.step",
+        "modelReference": "library/models/adafcpmb2.glb"
+      },
+      "benchXMm": -500,
+      "benchZMm": 40,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "controller",
+      "equipmentId": "wst-polarisation-manual",
+      "label": "FPC562 controller",
+      "x": 460,
+      "y": 20,
+      "configuration": {
+        "exactModel": "Thorlabs FPC562",
+        "specUrl": "https://www.thorlabs.com/item/FPC562",
+        "specifications": "Paddles: 3\nLoop diameter: 56 mm",
+        "cadReference": "library/references/fpc562/FPC562-Step.step",
+        "modelReference": "library/models/fpc562.glb"
+      },
+      "benchXMm": -250,
+      "benchZMm": -200,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "sleeve-arm",
+      "equipmentId": "wst-mating-sleeve-manual",
+      "label": "Input arm sleeve",
+      "x": 680,
+      "y": 20,
+      "configuration": {
+        "exactModel": "Thorlabs ADAFCPMB2",
+        "specUrl": "https://www.thorlabs.com/item/ADAFCPMB2",
+        "specifications": "",
+        "cadReference": "library/references/adafcpmb2/ADAFCPMB2-Vendor.step",
+        "modelReference": "library/models/adafcpmb2.glb"
+      },
+      "benchXMm": -260,
+      "benchZMm": 40,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "input-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Input arm · cleaved SM",
+      "x": 680,
+      "y": 175,
+      "configuration": {
+        "exactModel": "Bespoke · University of Southampton",
+        "specUrl": "",
+        "specifications": "Coupling: Grating couplers\nUsual angle: 10° from wafer normal",
+        "mountingStage": "input-fibre-stage",
+        "cadReference": "library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step",
+        "modelReference": "library/models/wst-fibre-arms-manual.glb"
+      },
+      "benchXMm": -170,
+      "benchZMm": 120,
+      "elevationMm": 63,
+      "rotationDeg": 0
+    },
+    {
+      "id": "dut",
+      "equipmentId": "wst-wafer-holder-manual",
+      "label": "Wafer / DUT",
+      "x": 460,
+      "y": 175,
+      "configuration": {
+        "exactModel": "Bespoke · 3D printed",
+        "specUrl": "",
+        "specifications": "",
+        "cadReference": "library/references/wst-wafer-holder-manual/wst-wafer-holder-manual-Reference.step",
+        "modelReference": "library/models/wst-wafer-holder-manual.glb"
+      },
+      "benchXMm": 0,
+      "benchZMm": 120,
+      "elevationMm": 65,
+      "rotationDeg": 0
+    },
+    {
+      "id": "output-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Output arm · cleaved SM",
+      "x": 240,
+      "y": 175,
+      "configuration": {
+        "exactModel": "Bespoke · University of Southampton",
+        "specUrl": "",
+        "specifications": "Coupling: Grating couplers\nUsual angle: 10° from wafer normal",
+        "mountingStage": "output-fibre-stage",
+        "cadReference": "library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step",
+        "modelReference": "library/models/wst-fibre-arms-manual.glb"
+      },
+      "benchXMm": 170,
+      "benchZMm": 120,
+      "elevationMm": 63,
+      "rotationDeg": 180
+    },
+    {
+      "id": "sleeve-out",
+      "equipmentId": "wst-mating-sleeve-manual",
+      "label": "Output sleeve",
+      "x": 20,
+      "y": 175,
+      "configuration": {
+        "exactModel": "Thorlabs ADAFCPMB2",
+        "specUrl": "https://www.thorlabs.com/item/ADAFCPMB2",
+        "specifications": "",
+        "cadReference": "library/references/adafcpmb2/ADAFCPMB2-Vendor.step",
+        "modelReference": "library/models/adafcpmb2.glb"
+      },
+      "benchXMm": 450,
+      "benchZMm": 40,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "sensor",
+      "equipmentId": "wst-sensor-old",
+      "label": "Power sensor",
+      "x": 20,
+      "y": 330,
+      "configuration": {
+        "exactModel": "Keysight 81634B",
+        "specUrl": "https://www.keysight.com/us/en/product/81634B/low-polarization-dependence-optical-power-sensor.html",
+        "specifications": "",
+        "cadReference": "library/references/wst-sensor-old/wst-sensor-old-Reference.step",
+        "modelReference": "library/models/wst-sensor-old.glb",
+        "mainframeId": "mainframe",
+        "mainframeSlot": "2"
+      },
+      "benchXMm": 600,
+      "benchZMm": -200,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "mainframe",
+      "equipmentId": "wst-mainframe-manual",
+      "label": "8163B laser & sensor mainframe",
+      "x": 240,
+      "y": 330,
+      "configuration": {
+        "exactModel": "Keysight 8163B",
+        "specUrl": "https://www.keysight.com/us/en/product/8163B/lightwave-multimeter.html",
+        "specifications": "",
+        "cadReference": "library/references/wst-mainframe-manual/wst-mainframe-manual-Reference.step",
+        "modelReference": "library/models/wst-mainframe-manual.glb"
+      },
+      "benchXMm": -600,
+      "benchZMm": -200,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "stage",
+      "equipmentId": "wst-stage-manual",
+      "label": "DUT motion stage",
+      "x": 460,
+      "y": 330,
+      "configuration": {
+        "exactModel": "Model pending",
+        "specUrl": "",
+        "specifications": "",
+        "notes": "DUT motion stage remains to identify; MAX313D is used for the fibre arms.",
+        "cadReference": "library/references/wst-stage-manual/wst-stage-manual-Reference.step",
+        "modelReference": "library/models/wst-stage-manual.glb"
+      },
+      "benchXMm": 0,
+      "benchZMm": 120,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "camera",
+      "equipmentId": "wst-camera-manual",
+      "label": "Alignment camera",
+      "x": 680,
+      "y": 330,
+      "configuration": {
+        "exactModel": "USB / display · exact model pending",
+        "specUrl": "https://gtvision.co.uk/collections/usb-hdmi-cameras",
+        "specifications": "",
+        "cadReference": "library/references/wst-camera-manual/wst-camera-manual-Reference.step",
+        "modelReference": "library/models/wst-camera-manual.glb"
+      },
+      "benchXMm": 0,
+      "benchZMm": -100,
+      "elevationMm": 0,
+      "rotationDeg": 0
+    },
+    {
+      "id": "input-fibre-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Input fibre arm stage",
+      "x": 680,
+      "y": 480,
+      "configuration": {
+        "exactModel": "Thorlabs MAX313D",
+        "specUrl": "https://www.thorlabs.com/item/MAX313D",
+        "specifications": "Axes: X / Y / Z\nDrives: Differential drives\nPiezos: None\nBench quantity: 2: input and output fibre arms",
+        "notes": "Supports the input bespoke fibre arm. Physical mounting dimensions remain to confirm.",
+        "cadReference": "library/references/max313d/MAX313D-Step.step",
+        "modelReference": "library/models/max313d.glb"
+      },
+      "benchXMm": -170,
+      "benchZMm": 120,
+      "elevationMm": 0,
+      "rotationDeg": 90
+    },
+    {
+      "id": "output-fibre-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Output fibre arm stage",
+      "x": 240,
+      "y": 480,
+      "configuration": {
+        "exactModel": "Thorlabs MAX313D",
+        "specUrl": "https://www.thorlabs.com/item/MAX313D",
+        "specifications": "Axes: X / Y / Z\nDrives: Differential drives\nPiezos: None\nBench quantity: 2: input and output fibre arms",
+        "notes": "Supports the output bespoke fibre arm. Physical mounting dimensions remain to confirm.",
+        "cadReference": "library/references/max313d/MAX313D-Step.step",
+        "modelReference": "library/models/max313d.glb"
+      },
+      "benchXMm": 170,
+      "benchZMm": 120,
+      "elevationMm": 0,
+      "rotationDeg": -90
+    }
+  ],
+  "connections": [
+    {
+      "id": "M-O1",
+      "from": "laser",
+      "to": "sleeve-in",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "P3-1550PM-FC-2",
+      "customFibre": "",
+      "fromConnector": "FC/APC",
+      "toConnector": "FC/APC",
+      "length": "2 m nominal",
+      "notes": "User-reported PM patch cable. Verify installed instrument port."
+    },
+    {
+      "id": "M-O5",
+      "from": "sleeve-in",
+      "to": "controller",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "custom",
+      "customFibre": "FPC562 preloaded fibre assembly",
+      "fromConnector": "FC/APC",
+      "toConnector": "FC/APC",
+      "length": "",
+      "notes": "FPC562 input lead; installed connector options to verify."
+    },
+    {
+      "id": "M-O6",
+      "from": "controller",
+      "to": "sleeve-arm",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "custom",
+      "customFibre": "FPC562 preloaded fibre assembly",
+      "fromConnector": "FC/APC",
+      "toConnector": "FC/APC",
+      "length": "",
+      "notes": "FPC562 output lead; same assembly as M-O5, not a separate cable."
+    },
+    {
+      "id": "M-O2",
+      "from": "sleeve-arm",
+      "to": "input-arm",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "P3-SMF28Y-FC-5",
+      "customFibre": "",
+      "fromConnector": "FC/APC",
+      "toConnector": "Bare fibre",
+      "length": "",
+      "notes": "Cleaved SM fibre at input arm; actual cut length to enter."
+    },
+    {
+      "id": "GC-IN",
+      "from": "input-arm",
+      "to": "dut",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "custom",
+      "customFibre": "Free-space grating coupling",
+      "fromConnector": "Bare fibre",
+      "toConnector": "Other",
+      "length": "",
+      "notes": "Free-space coupling to input grating; no cable or mating connector."
+    },
+    {
+      "id": "GC-OUT",
+      "from": "dut",
+      "to": "output-arm",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "custom",
+      "customFibre": "Free-space grating coupling",
+      "fromConnector": "Other",
+      "toConnector": "Bare fibre",
+      "length": "",
+      "notes": "Free-space coupling from output grating; no cable or mating connector."
+    },
+    {
+      "id": "M-O3",
+      "from": "output-arm",
+      "to": "sleeve-out",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "P3-SMF28Y-FC-5",
+      "customFibre": "",
+      "fromConnector": "Bare fibre",
+      "toConnector": "FC/APC",
+      "length": "",
+      "notes": "Cleaved SM fibre at output arm; actual cut length to enter."
+    },
+    {
+      "id": "M-O4",
+      "from": "sleeve-out",
+      "to": "sensor",
+      "type": "optical",
+      "fromPort": "Output",
+      "toPort": "Input",
+      "fibre": "P3-1550PM-FC-2",
+      "customFibre": "",
+      "fromConnector": "FC/APC",
+      "toConnector": "FC/APC",
+      "length": "2 m nominal",
+      "notes": "User-reported PM patch cable. Verify installed sensor port."
+    }
+  ],
+  "measurement": {
+    "lab": "Lab 2077",
+    "operator": "",
+    "date": "",
+    "waferId": "",
+    "chipId": "",
+    "deviceId": "",
+    "deviceMap": "",
+    "objective": "",
+    "siteCount": "",
+    "waveguideCount": "",
+    "laserPowerMw": 10,
+    "startNm": "",
+    "stopNm": "",
+    "stepNm": "",
+    "fixedNm": "",
+    "method": "",
+    "sweepSpeed": "",
+    "dwellMs": "",
+    "settleMs": "",
+    "repeats": "",
+    "laserSlot": "1",
+    "instrumentAddress": "",
+    "software": "",
+    "sensorMainframe": "Keysight 8163B · 8163B laser mainframe",
+    "sensorSlot": "2",
+    "detectorRange": "",
+    "averagingMs": "",
+    "readoutUnit": "",
+    "referenceStructure": "",
+    "referenceFile": "",
+    "normalisation": "",
+    "dutPowerMw": "",
+    "noiseFloor": "",
+    "saturation": "",
+    "coupling": "Grating couplers",
+    "inputAngle": 10,
+    "outputAngle": 10,
+    "polarisation": "",
+    "paddleSettings": "",
+    "inputCoordinates": "",
+    "outputCoordinates": "",
+    "gratingPitch": "",
+    "holder": "",
+    "mounting": "",
+    "stageModel": "",
+    "cameraModel": "",
+    "temperatureC": "",
+    "humidity": "",
+    "maxPowerMw": "",
+    "allowedStartNm": "",
+    "allowedStopNm": "",
+    "calibration": "",
+    "acceptance": "",
+    "realign": "",
+    "rawFolder": "",
+    "naming": "",
+    "analysis": "",
+    "outputFolder": "",
+    "sop": "",
+    "reviewer": "",
+    "reviewDate": "",
+    "notes": "",
+    "preparationMin": "",
+    "alignmentSec": "",
+    "measurementSec": "",
+    "moveSec": "",
+    "processingMin": "",
+    "inputFibreStageModel": "Thorlabs MAX313D",
+    "outputFibreStageModel": "Thorlabs MAX313D"
+  },
+  "procedure": [
+    {
+      "title": "Prepare session",
+      "text": "Record wafer/device IDs, reference structure, objective and approved local procedure. Complete instrument and calibration records."
+    },
+    {
+      "title": "Inspect and connect",
+      "text": "Verify the recorded input/output fibre path, sleeve interfaces and cleaved tips against the bench. Record actual cable lengths and connector ends."
+    },
+    {
+      "title": "Mount and align",
+      "text": "Use the approved local loading procedure. Locate the grating couplers with the camera. Usual input/output fibre angle is 10° from wafer normal; adjust and record the actual setting."
+    },
+    {
+      "title": "Set polarisation and acquire reference",
+      "text": "Configure polarisation and measurement settings. Record the reference path/structure and reference file. Confirm the permitted DUT power and wavelength range."
+    },
+    {
+      "title": "Measure and review",
+      "text": "Acquire the manual measurement, record raw traces and inspect for alignment drift, noise and saturation. Add local acceptance and repeat criteria."
+    },
+    {
+      "title": "Finish and post-process",
+      "text": "Follow the approved shutdown/unloading procedure. Retain raw data, reference data and configuration together; record the chosen post-processing method and output files."
+    }
+  ],
+  "recordStatus": "Draft · local verification pending",
+  "savedAt": "2026-10-07T14:55:17.206Z",
+  "manualAssemblyRevision": 1,
+  "benchRevision": 1,
+  "benchLayout": "suggested-manual-v1",
+  "mainframeRevision": 1,
+  "publication": {
+    "scale": "Wafer",
+    "mode": "Optical",
+    "bands": [
+      "C-band"
+    ],
+    "lab": "Local bench · location to confirm",
+    "description": "Manual wafer optical measurement with the recorded input/output fibre path."
+  },
+  "publishedAt": "2026-10-08T13:51:01.35608+01:00",
+  "workspaceName": "Bench_draft",
+  "workspaceRevision": 1,
+  "savedAtDraft": "2026-10-08T13:56:13.550Z"
+}

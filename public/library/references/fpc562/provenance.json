@@ -1,0 +1,12 @@
+{
+  "equipmentId": "wst-polarisation-manual",
+  "model": "Thorlabs FPC562",
+  "suppliedBy": "User",
+  "receivedDate": "2026-10-07",
+  "vendorUrl": "https://www.thorlabs.com/item/FPC562",
+  "sourceFile": "FPC562-Step.step",
+  "sha256": "f3d2f0acf7429402af20b57df7c5049d7a56e8ce396c89f10cbd0294bb54edcb",
+  "browserModel": "library/models/fpc562.glb",
+  "licence": "Vendor redistribution permission not verified",
+  "notes": "Preserved original SolidWorks 2014 AP203 STEP export. Geometry supplied by user; exact bench unit/variant remains to verify."
+}

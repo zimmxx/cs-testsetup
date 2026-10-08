@@ -1,0 +1,10 @@
+{
+  "equipmentId": "band-source",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.keysight.com/us/en/products/photonic-products/optical-component-test-products/tunable-laser-sources.html",
+  "review": "Generated illustrative geometry. Confirm the installed model, dimensions, ports and mounting before replacing it with vendor or measured CAD.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

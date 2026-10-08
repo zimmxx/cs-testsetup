@@ -1,0 +1,30 @@
+{
+  "source": "wst-stage-manual-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 6,
+  "triangles": 264,
+  "boundsMm": {
+    "min": [
+      -95,
+      0,
+      -100
+    ],
+    "max": [
+      135,
+      56,
+      80
+    ]
+  },
+  "extentsMm": [
+    230,
+    56,
+    180
+  ],
+  "glbBytes": 19208,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

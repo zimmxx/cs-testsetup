@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-laser-new",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.keysight.com/us/en/product/N7776C/tunable-laser-source-high-power-lowest-sse-top-line.html",
+  "review": "Generated N7776C benchtop reference. Enclosure dimensions, front-panel layout and options estimated; vendor STEP not located.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

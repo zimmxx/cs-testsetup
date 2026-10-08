@@ -1,0 +1,30 @@
+{
+  "source": "P3-SMF28Y-FC-5-Vendor.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 7,
+  "triangles": 20170,
+  "boundsMm": {
+    "min": [
+      -59.07413360768688,
+      49.55524134979333,
+      -496.4961344617557
+    ],
+    "max": [
+      -49.08207521565284,
+      59.547299741827366,
+      526.2368655382443
+    ]
+  },
+  "extentsMm": [
+    9.99205839203404,
+    9.99205839203404,
+    1022.733
+  ],
+  "glbBytes": 728464,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

@@ -1,0 +1,10 @@
+{
+  "equipmentId": "fibre",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.thorlabs.com/optical-fiber-fiber-patch-cables",
+  "review": "Provisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

@@ -1,0 +1,30 @@
+{
+  "source": "ADAFCPMB2-Vendor.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 13,
+  "triangles": 28850,
+  "boundsMm": {
+    "min": [
+      -8.636000000000003,
+      -13.970000000000006,
+      -30.64233463324598
+    ],
+    "max": [
+      14.833584598761476,
+      13.97000000000001,
+      12.700000000000005
+    ]
+  },
+  "extentsMm": [
+    23.46958459876148,
+    27.940000000000015,
+    43.34233463324598
+  ],
+  "glbBytes": 1027400,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

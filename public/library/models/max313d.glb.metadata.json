@@ -1,0 +1,30 @@
+{
+  "source": "MAX313D-Step.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 97,
+  "triangles": 175863,
+  "boundsMm": {
+    "min": [
+      -115.98804068953422,
+      -13.97728119180648,
+      -4.611348062403085e-17
+    ],
+    "max": [
+      43.65195530726257,
+      147.17271880819376,
+      63
+    ]
+  },
+  "extentsMm": [
+    159.63999599679678,
+    161.15000000000023,
+    63
+  ],
+  "glbBytes": 6103360,
+  "orientation": "Source Z-up rotated -90 degrees about X for viewer Y-up"
+}

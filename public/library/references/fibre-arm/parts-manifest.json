@@ -1,0 +1,33 @@
+{
+  "equipmentId": "wst-fibre-arms-manual",
+  "sourceArchive": "OneDrive_1_07-10-2026.zip",
+  "archiveSha256": "c968c51008243f6874f6f880418781e3e75f2f59116d813696c67f0709654622",
+  "assemblyStatus": "Unassembled parts supplied by user",
+  "files": [
+    {
+      "file": "Base Bottom.idw",
+      "bytes": 445952,
+      "sha256": "c7a1f66f6c37bdd5f5672c8cd0370583611252395646bec62dc88f0ce644d84a",
+      "type": "IDW drawing"
+    },
+    {
+      "file": "Base Top.idw",
+      "bytes": 385536,
+      "sha256": "fad54a0f2c786200616383bd8271aa9537cbb089df4371cb91291fe9ebb20b20",
+      "type": "IDW drawing"
+    },
+    {
+      "file": "Fibre Arm.stp",
+      "bytes": 71605,
+      "sha256": "59689ffdcf2800a32c96c17859e1a4901e05590dabb4076d57456f91adaae0b7",
+      "type": "STEP geometry"
+    },
+    {
+      "file": "Micrometer Housing.idw",
+      "bytes": 431104,
+      "sha256": "bb4bc7c31d811b2ecc81e68a6addf501d956f55282996556db79c920b65f9622",
+      "type": "IDW drawing"
+    }
+  ],
+  "notes": "Do not infer part positions, mating relations, missing geometry or input/output handedness from these files."
+}

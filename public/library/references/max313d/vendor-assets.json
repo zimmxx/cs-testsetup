@@ -1,0 +1,555 @@
+{
+  "retrievedAt": "2026-10-07T22:46:23.466Z",
+  "productUrl": "https://www.thorlabs.com/item/MAX313D",
+  "product": {
+    "name": "MAX313D",
+    "id": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+    "mainProductId": null,
+    "isConfigurable": false,
+    "code": "MAX313D",
+    "fallbackName": "3-Axis NanoMax Stage, Differential Drives, No Piezos",
+    "slug": "MAX313D",
+    "outline": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+    "hasVariations": false,
+    "minQuantity": 1,
+    "maxQuantity": 0,
+    "imgSrc": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802.webp?v=1115055849&v=2025-11-15-17-58-49",
+    "inWishlist": false,
+    "altItemIdTL": "MAX313D/M",
+    "releasedDateTL": "2011-07-27T09:05:45.97Z",
+    "discontinuedDateTL": null,
+    "lastWebPresentationLinkTL": null,
+    "warrantyTextTL": "Two year warranty. Incorporated light sources are warrantied for the lesser of one year or (to the extent applicable) the number of hours stated in the specifications.",
+    "warrantyCodeTL": "Cat. 3",
+    "serialNumberTL": null,
+    "unitDescriptionTL": null,
+    "dataSheetUrlTL": null,
+    "recalibrationProductIdsTL": null,
+    "eccnTL": "EAR99",
+    "itemStatusTL": "Active",
+    "statusDescriptionTL": null,
+    "unspscTL": "26111506",
+    "eclassTL": "32039090",
+    "subGroupIdTL": null,
+    "engineeringIdTL": "22802",
+    "ukHvyTL": false,
+    "threadingTypeTL": "Imperial",
+    "isSerializedTL": false,
+    "hasDataSheetsTL": false,
+    "itemModelGroupTL": null,
+    "useLineDiscountTL": false,
+    "isCustomerInspiredTL": false,
+    "originCountryTL": "GBR",
+    "onSpecialTL": false,
+    "softwarePageUrlTL": "/en/software-pages/motion_control",
+    "routeSegmentTL": "MAX313D",
+    "mfgGroupTL": "570",
+    "imperialMetricEquivalentTL": null,
+    "isCalibrationServiceTL": false,
+    "defaultAvailabilityTL": "BRL:2-3 Weeks;JPY:7-10 Days;EUR:Today;CNY:2 Weeks;SEK:Today;USD:Today;GBP:Today;",
+    "punchoutProhibitedTL": false,
+    "weight": 5.5786,
+    "weightUnit": "pounds",
+    "measureUnit": "Each",
+    "associations": {
+      "totalCount": 0,
+      "__typename": "ProductAssociationConnection"
+    },
+    "productType": null,
+    "images": [
+      {
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802.webp?v=1115055849&v=2025-11-15-17-58-49",
+        "name": "22802.webp",
+        "description": null,
+        "__typename": "ImageType"
+      }
+    ],
+    "assets": [
+      {
+        "id": "33eabbc6-d20c-4977-957a-df94c94d9514",
+        "name": "22802-E0W.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802-e0w.pdf?v=0204070308",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD PDF",
+        "description": "CAD PDF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/ma/max/max313d/22802-e0w.pdf?v=0204070308",
+        "__typename": "Asset"
+      },
+      {
+        "id": "78e4796d-8d2a-412b-8f90-d4d36b41042b",
+        "name": "22802-E0W.dxf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802-e0w.dxf?v=0204070309",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD DXF",
+        "description": "CAD DXF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/ma/max/max313d/22802-e0w.dxf?v=0204070309",
+        "__typename": "Asset"
+      },
+      {
+        "id": "6c78110c-002b-4541-b571-3b3af6fa0fa6",
+        "name": "22802-E0W.sldprt",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802-e0w.sldprt?v=0204070311",
+        "size": 0,
+        "mimeType": null,
+        "group": "Solidworks",
+        "description": "Solidworks",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/ma/max/max313d/22802-e0w.sldprt?v=0204070311",
+        "__typename": "Asset"
+      },
+      {
+        "id": "1fbd044a-f2b0-416b-80eb-7d8a695ed6f2",
+        "name": "22802-E0W.html",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802-e0w.html?v=0204070314",
+        "size": 0,
+        "mimeType": null,
+        "group": "eDrawing / 3D Model",
+        "description": "eDrawing / 3D Model",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/ma/max/max313d/22802-e0w.html?v=0204070314",
+        "__typename": "Asset"
+      },
+      {
+        "id": "07ee3d62-7c38-42ab-8fbc-7b3d36814c0e",
+        "name": "22802-E0W.step",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/ma/max/max313d/22802-e0w.step?v=0204070319",
+        "size": 0,
+        "mimeType": null,
+        "group": "Step",
+        "description": "Step",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/ma/max/max313d/22802-e0w.step?v=0204070319",
+        "__typename": "Asset"
+      },
+      {
+        "id": "78b496a8-93b4-4ba0-90de-bba5a7969734",
+        "name": "10997-D02.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/md/mdt/mdt630b/10997-d02.pdf?v=0810050604",
+        "size": 0,
+        "mimeType": null,
+        "group": "Manual",
+        "description": "Manual",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/md/mdt/mdt630b/10997-d02.pdf?v=0810050604",
+        "__typename": "Asset"
+      },
+      {
+        "id": "2e20c4e6-cafd-4358-b849-ba42778ed008",
+        "name": "DOC-101911.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/m/m1/m15/m150xy/doc-101911.pdf?v=1006032408",
+        "size": 0,
+        "mimeType": null,
+        "group": "Manual",
+        "description": "XA User Guide",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/m/m1/m15/m150xy/doc-101911.pdf?v=1006032408",
+        "__typename": "Asset"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "itemId": "e40c12f7-09da-46fb-a7ae-e74518090386",
+        "typeName": "Catalog",
+        "title": "Catalog",
+        "seoPath": "catalog",
+        "__typename": "Breadcrumb"
+      },
+      {
+        "itemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "typeName": "CatalogProduct",
+        "title": "3-Axis NanoMax Stage, Differential Drives, No Piezos",
+        "seoPath": "MAX313D",
+        "__typename": "Breadcrumb"
+      }
+    ],
+    "description": {
+      "content": "/item/max313d",
+      "__typename": "DescriptionType"
+    },
+    "descriptions": [
+      {
+        "id": "1cff3ddd-2082-4afb-a84e-727a3cdd33db",
+        "reviewType": "ItemUrl",
+        "content": "/item/max313d",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1f2683f5-f410-4f3c-bdd1-91d96d864b1a",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "464518f9-bd54-4483-b9c2-5ed12f4ffe71",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "5d0ce2e8-d954-4064-a9a8-8a80931d6880",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "75f368bc-83c0-4e70-8654-5098ba6a5e3b",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "780e7844-761f-450a-8503-f726b45bc738",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8a4ddee6-0ccc-4bc3-9a88-187f2f08dc2f",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8be73154-00b6-46c7-9cc0-9ca514e5e61b",
+        "reviewType": "Title",
+        "content": "3-Axis NanoMax Stage, Differential Drives, No Piezos",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "a119e279-75e4-41a1-8c84-489609ce63a4",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "afe884bf-f771-453e-87f5-56602617dc4a",
+        "reviewType": "FamilyPageUrl",
+        "content": "/3-axis-nanomax-tm-flexure-stages",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "bbbf9e7a-93ca-42bb-8502-3b1e9ce74f51",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"3-Axis NanoMax\\u2122 Flexure Stages\",\"/3-axis-nanomax-tm-flexure-stages\"],[\"3-Axis Stages\",\"/3-axis-stages\"],[\"Multi-Axis Stages\",\"/multi-axis-stages\"],[\"Motion Control\",\"/motion-control\"],[\"All Products\",\"/main-visual-navigation\"],[\"MAX313D\",\"/item/max313d\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "d48e903e-1913-4231-8247-1b0d617b9936",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "de09ed01-ea7a-4d3a-b5c3-05f0de0be4da",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "fffff047-a63b-4e91-b8e9-8d34f5a673fe",
+        "reviewType": "FamilyPageName",
+        "content": "3-Axis NanoMax™ Flexure Stages",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "descriptionsWithFallbacksTL": [
+      {
+        "id": "464518f9-bd54-4483-b9c2-5ed12f4ffe71",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8a4ddee6-0ccc-4bc3-9a88-187f2f08dc2f",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1cff3ddd-2082-4afb-a84e-727a3cdd33db",
+        "reviewType": "ItemUrl",
+        "content": "/item/max313d",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1f2683f5-f410-4f3c-bdd1-91d96d864b1a",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8be73154-00b6-46c7-9cc0-9ca514e5e61b",
+        "reviewType": "Title",
+        "content": "3-Axis NanoMax Stage, Differential Drives, No Piezos",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "fffff047-a63b-4e91-b8e9-8d34f5a673fe",
+        "reviewType": "FamilyPageName",
+        "content": "3-Axis NanoMax™ Flexure Stages",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "bbbf9e7a-93ca-42bb-8502-3b1e9ce74f51",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"3-Axis NanoMax\\u2122 Flexure Stages\",\"/3-axis-nanomax-tm-flexure-stages\"],[\"3-Axis Stages\",\"/3-axis-stages\"],[\"Multi-Axis Stages\",\"/multi-axis-stages\"],[\"Motion Control\",\"/motion-control\"],[\"All Products\",\"/main-visual-navigation\"],[\"MAX313D\",\"/item/max313d\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "d48e903e-1913-4231-8247-1b0d617b9936",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "5d0ce2e8-d954-4064-a9a8-8a80931d6880",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "afe884bf-f771-453e-87f5-56602617dc4a",
+        "reviewType": "FamilyPageUrl",
+        "content": "/3-axis-nanomax-tm-flexure-stages",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "75f368bc-83c0-4e70-8654-5098ba6a5e3b",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "780e7844-761f-450a-8503-f726b45bc738",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "de09ed01-ea7a-4d3a-b5c3-05f0de0be4da",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "a119e279-75e4-41a1-8c84-489609ce63a4",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "properties": [],
+    "variations": [],
+    "vendor": null,
+    "availabilityData": {
+      "isActive": true,
+      "isAvailable": true,
+      "isBuyable": true,
+      "isInStock": true,
+      "availableQuantity": 0,
+      "inventories": [
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "e45c3124-d2c1-47a9-8009-2dd0de53f71e",
+          "fulfillmentCenterName": "PRC - CNY",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "10e1f10c-525b-4887-a097-b60cbe4a2b3b",
+          "fulfillmentCenterName": "BRA - BRL",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 8,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "80c89e5e-038b-4a1f-819d-cb92c34c105b",
+          "fulfillmentCenterName": "SWE - SEK",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 8,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "5319ca3a-ca09-4096-8065-33e99b91e473",
+          "fulfillmentCenterName": "UK0 - GBP",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 8,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "7f5e6c92-bf3d-460f-b922-b8f5306d3403",
+          "fulfillmentCenterName": "MUC - EUR",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 5,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "2aa868d8-d894-4cfe-bdb4-ff3b5521c087",
+          "fulfillmentCenterName": "THO - USD",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "fc76a83a-8c98-46a4-80d5-adbfabb4dc06",
+          "fulfillmentCenterName": "JPN - JPY",
+          "backorderQuantity": 13,
+          "__typename": "InventoryInfo"
+        }
+      ],
+      "__typename": "AvailabilityData"
+    },
+    "price": {
+      "actual": {
+        "amount": 1663.58,
+        "formattedAmount": "£1,663.58",
+        "__typename": "MoneyType"
+      },
+      "discountAmount": {
+        "amount": 0,
+        "formattedAmount": "£0.00",
+        "__typename": "MoneyType"
+      },
+      "sale": {
+        "amount": 1663.58,
+        "formattedAmount": "£1,663.58",
+        "__typename": "MoneyType"
+      },
+      "list": {
+        "amount": 1663.58,
+        "formattedAmount": "£1,663.58",
+        "__typename": "MoneyType"
+      },
+      "discountPercent": 0,
+      "discounts": [],
+      "tierPrices": [
+        {
+          "price": {
+            "currency": {
+              "code": "GBP",
+              "symbol": "£",
+              "__typename": "CurrencyType"
+            },
+            "amount": 1663.58,
+            "formattedAmount": "£1,663.58",
+            "__typename": "MoneyType"
+          },
+          "quantity": 1,
+          "__typename": "TierPriceType"
+        }
+      ],
+      "listWithTax": {
+        "amount": 1663.58,
+        "formattedAmount": "£1,663.58",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "actualWithTax": {
+        "amount": 1663.58,
+        "formattedAmount": "£1,663.58",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "__typename": "PriceType"
+    },
+    "seoInfo": {
+      "pageTitle": "3-Axis NanoMax Stage, Differential Drives, No Piezos",
+      "metaKeywords": "NanoMax,3 Axis Positioner,3 axis Flexure Stage,3 Axis Flexure Stage,Three Axis,Flexure Stage,Stage,Positioning,Nanopositioning,XYZ stage,Fibre alignment,Fiber alignment,Multi axis platforms,Multi axis stage,Parallel flexure stage,Manual Stage,Fiber Launch,PM Fiber,Launch System,Single Mode,translation stage,Translational stage,laser fiber coupling,3 axis,positioning platform",
+      "metaDescription": null,
+      "__typename": "SeoInfo"
+    },
+    "videos": {
+      "items": [],
+      "__typename": "VideoConnection"
+    },
+    "compliancesTL": [
+      {
+        "id": "31a4e1ef-a048-484a-b412-002f823ca8f0",
+        "categoryName": "eCl@ss",
+        "displayText": "32039090",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "4987fbf4-6e61-48ed-9125-964a5f79c040",
+        "categoryName": "REACH",
+        "displayText": "SVHC > 0.1% Lead",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "9a57ba17-f8a3-490c-b2e8-e6fa26f3c747",
+        "categoryName": "RoHS",
+        "displayText": "Exempt - Annex III - 6(c)",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "bc981b06-93fb-4a15-a0bc-c9a2983a5e7c",
+        "categoryName": "Show on web?",
+        "displayText": "Show on web?",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "9e6db521-6705-4a93-8945-11019d967207",
+        "categoryName": "TSCA",
+        "displayText": "Compliant",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "8943b970-8e46-47f7-bf6d-2245d00a9c9c",
+        "categoryName": "UNSPSC",
+        "displayText": "26111506",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "b9768712-2a94-406e-ac09-cabe8b16ea42",
+        "categoryName": "Warranty Group",
+        "displayText": "Cat. 3",
+        "catalogItemId": "ff4703ea-cb24-45ad-b8e4-ce22e9d78aa3",
+        "__typename": "Compliance"
+      }
+    ],
+    "infoIconTabsTL": [],
+    "infoIconPriceBoxTL": false,
+    "infoIconDisplayProductImageTL": false,
+    "familyPageUrlTL": "/3-axis-nanomax-tm-flexure-stages",
+    "__typename": "Product"
+  }
+}

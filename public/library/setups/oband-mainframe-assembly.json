@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "id": "oband-mainframe-assembly",
+  "name": "O-band laser and detector mainframe",
+  "mainframeRevision": 1,
+  "nodes": [
+    {
+      "id": "oband-mainframe",
+      "equipmentId": "oband-mainframe-8164b",
+      "label": "O-band laser and detector mainframe",
+      "x": 50,
+      "y": 50,
+      "benchXMm": -200,
+      "benchZMm": 0,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "exactModel": "Keysight 8164B",
+        "specUrl": "https://www.keysight.com/us/en/product/8164B/lightwave-measurement-system.html",
+        "specifications": "Slots: 4 compact vertical bays (1–4) + horizontal extended TLS bay (0)\nDimensions: 426 W × 145 H × 545 D mm; published mainframe envelope",
+        "cadReference": "library/references/oband-mainframe-8164b/oband-mainframe-8164b-Reference.step",
+        "modelReference": "library/models/oband-mainframe-8164b.glb"
+      }
+    },
+    {
+      "id": "oband-laser",
+      "equipmentId": "oband-laser-81606a",
+      "label": "81606A tunable laser",
+      "x": 300,
+      "y": 50,
+      "benchXMm": -200,
+      "benchZMm": -350,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "exactModel": "Keysight 81606A",
+        "specUrl": "https://www.keysight.com/us/en/product/81606A/81606a-tunable-laser-source-high-power-lowest-sse-top-line.html",
+        "specifications": "Assigned slot: 0\nInstalled wavelength range: 1240–1380 nm (user-confirmed)\nOption reference: Range corresponds to vendor option 113; physical option label not yet checked",
+        "mainframeId": "oband-mainframe",
+        "mainframeSlot": "0",
+        "cadReference": "library/references/oband-laser-81606a/oband-laser-81606a-Reference.step",
+        "modelReference": "library/models/oband-laser-81606a.glb"
+      }
+    },
+    {
+      "id": "oband-interface",
+      "equipmentId": "oband-head-interface",
+      "label": "81618A single-head interface",
+      "x": 550,
+      "y": 50,
+      "benchXMm": 100,
+      "benchZMm": -350,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "exactModel": "Keysight 81618A",
+        "specUrl": "https://www.keysight.com/us/en/product/81618A/single-optical-head-interface-module.html",
+        "specifications": "Assigned slot: 3\nChannels: 1; 81618A confirmed by user",
+        "mainframeId": "oband-mainframe",
+        "mainframeSlot": "3",
+        "cadReference": "library/references/oband-head-interface/oband-head-interface-Reference.step",
+        "modelReference": "library/models/oband-head-interface.glb"
+      }
+    },
+    {
+      "id": "oband-head",
+      "equipmentId": "oband-head-81624b",
+      "label": "81624B · 81000FA FC/PC input",
+      "x": 550,
+      "y": 250,
+      "benchXMm": 400,
+      "benchZMm": -100,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "exactModel": "Keysight 81624B",
+        "specUrl": "https://www.keysight.com/us/en/product/81624B/general-purpose-optical-power-head.html",
+        "specifications": "Optical interface: FC/PC via Keysight 81000FA (user-reported)\nConnection to mainframe: External head cable → 81618A/81619A interface\nDetector: 5 mm InGaAs, vendor family specification",
+        "ports": "Optical input: FC/PC via 81000FA; electrical head cable to Slot 3 interface.",
+        "notes": "Connect the measurement fibre output here. Fibre model, source connector, length and detector cable/channel remain to specify.",
+        "cadReference": "library/references/oband-head-81624b/oband-head-81624b-Reference.step",
+        "modelReference": "library/models/oband-head-81624b.glb"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "OB-HEAD-LINK",
+      "from": "oband-head",
+      "to": "oband-interface",
+      "type": "electrical",
+      "fromPort": "Detector head cable",
+      "toPort": "81618A optical head input · channel 1",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "External 81624B head cable to the user-confirmed 81618A single-head interface in Slot 3. Exact cable model and length pending."
+    }
+  ],
+  "measurement": {
+    "notes": "O-band instrument assembly. User confirms laser range 1240–1380 nm; this corresponds to vendor option 113. Add the complete DUT/fibre path before using this as a measurement setup.",
+    "laserSlot": "0",
+    "sensorSlot": "3",
+    "sensorMainframe": "Keysight 8164B · O-band laser and detector mainframe"
+  },
+  "recordStatus": "Draft · complete measurement path pending"
+}

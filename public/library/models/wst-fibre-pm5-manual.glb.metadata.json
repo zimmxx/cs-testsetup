@@ -1,0 +1,30 @@
+{
+  "source": "wst-fibre-pm5-manual-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 34,
+  "triangles": 1048,
+  "boundsMm": {
+    "min": [
+      -75,
+      0,
+      -66.49277709
+    ],
+    "max": [
+      75,
+      10,
+      66.49277709
+    ]
+  },
+  "extentsMm": [
+    150,
+    10,
+    132.98555418
+  ],
+  "glbBytes": 88328,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

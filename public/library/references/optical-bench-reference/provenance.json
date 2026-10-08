@@ -1,0 +1,10 @@
+{
+  "equipmentId": "optical-bench-reference",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.thorlabs.com/optical-tables-and-breadboards",
+  "review": "Suggested bench only; actual table size, hole pitch and working height are unconfirmed.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

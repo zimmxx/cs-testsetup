@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-wafer-holder-manual",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "Local bespoke design · user description; complete CAD pending",
+  "review": "Concept wafer holder and illustrative wafer. Diameter, thickness and printed design estimated; actual holder CAD pending.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

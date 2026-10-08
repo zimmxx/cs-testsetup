@@ -1,0 +1,32 @@
+import { useEffect, useRef, useState } from 'react';
+import { getEquipment } from '../data/catalog.js';
+import { clampPosition, signalPosition } from '../lib/setupBuilder.js';
+import { localPath } from './UI.jsx';
+
+export const nodeName=n=>n?.label||getEquipment(n?.equipmentId)?.name||'Unknown equipment';
+const curve=(a,b)=>`M${a.x+176} ${a.y+44} C${a.x+240} ${a.y+44},${b.x-64} ${b.y+44},${b.x} ${b.y+44}`;
+
+// Shared by the editor and the published viewer. Persistence belongs to the caller.
+export default function SetupGraph({draft,mode,selected,edgeId,onSelect,onSelectEdge,onMove,onMoveStart,onConnect,pathType='optical',onAdd}) {
+  const svg=useRef(null),gesture=useRef(null);
+  const [wire,setWire]=useState(null);
+  useEffect(()=>{const cancel=e=>{if(e.key==='Escape'){gesture.current=null;setWire(null);}};window.addEventListener('keydown',cancel);return()=>window.removeEventListener('keydown',cancel);},[]);
+  useEffect(()=>{gesture.current=null;setWire(null);},[mode,pathType]);
+  const nodes=mode==='signal'?draft.nodes.map((n,i)=>({...n,x:signalPosition(n,i).signalX,y:signalPosition(n,i).signalY})):draft.nodes;
+  const height=mode==='signal'?Math.max(620,...nodes.map(n=>n.y+150)):620;
+  function position(x,y){return mode==='signal'?{signalX:Math.max(0,Math.min(880,x)),signalY:Math.max(0,Math.min(5000,y))}:clampPosition(x,y);}
+  function point(e){const p=svg.current.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(svg.current.getScreenCTM().inverse());}
+  function start(e,n,connecting=false){if(!connecting&&e.target.closest('[data-port]'))return;e.preventDefault();e.stopPropagation();const p=point(e);svg.current.setPointerCapture(e.pointerId);gesture.current=connecting?{from:n.id,start:{x:n.x+176,y:n.y+44},type:pathType}:{id:n.id,dx:p.x-n.x,dy:p.y-n.y,started:false};if(connecting)setWire({...gesture.current,end:p});else onSelect(n.id);}
+  function move(e){const g=gesture.current;if(!g)return;const p=point(e);if(g.from){const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-port="input"]');setWire({...g,end:p,target:target?.dataset.nodeId});return;}if(!g.started){onMoveStart?.();g.started=true;}onMove?.(g.id,position(p.x-g.dx,p.y-g.dy));}
+  function finish(e){const g=gesture.current;gesture.current=null;setWire(null);if(g?.from&&e.type!=='pointercancel'){const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-port="input"]');if(target)onConnect?.(g.from,target.dataset.nodeId,g.type);}}
+  function keyboard(e,n){if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(n.id);}if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();onMoveStart?.();onMove?.(n.id,position(n.x+(e.key==='ArrowRight'?10:e.key==='ArrowLeft'?-10:0),n.y+(e.key==='ArrowDown'?10:e.key==='ArrowUp'?-10:0)));}}
+  return <div className="builder-canvas" onKeyDown={e=>{if(e.key==='Escape'){gesture.current=null;setWire(null);}}} onDragOver={e=>{if(onAdd){e.preventDefault();e.dataTransfer.dropEffect='copy';}}} onDrop={e=>{if(!onAdd)return;e.preventDefault();const id=e.dataTransfer.getData('application/cs-equipment');if(getEquipment(id)){const p=point(e);onAdd(id,...Object.values(position(p.x-90,p.y-45)));}}}>
+    <svg ref={svg} viewBox={`0 0 1060 ${height}`} aria-label={`${mode==='signal'?'Signal path':'Equipment layout'} canvas`} onPointerMove={move} onPointerUp={finish} onPointerCancel={finish} onLostPointerCapture={()=>{gesture.current=null;setWire(null);}}>
+      <defs><pattern id="builder-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#d9deec"/></pattern>{['optical','electrical'].map(t=><marker id={`builder-arrow-${t}`} key={t} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill={t==='optical'?'#cf9b12':'#8060d9'}/></marker>)}</defs><rect width="1060" height={height} fill="url(#builder-grid)"/>
+      {draft.connections.map(c=>{const a=nodes.find(n=>n.id===c.from),b=nodes.find(n=>n.id===c.to);if(!a||!b)return null;return <g key={c.id} className={`builder-edge ${c.type} ${edgeId===c.id?'selected':''}`} role="button" tabIndex={0} aria-label={`Inspect ${c.type} connection from ${nodeName(a)} to ${nodeName(b)}`} onClick={()=>onSelectEdge(c.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelectEdge(c.id);}}}><path className="edge-hit" d={curve(a,b)}/><path className="edge-line" d={curve(a,b)} markerEnd={`url(#builder-arrow-${c.type})`}/></g>;})}
+      {wire&&<path className={`wire-preview ${wire.type}`} d={`M${wire.start.x} ${wire.start.y} C${wire.start.x+75} ${wire.start.y},${wire.end.x-75} ${wire.end.y},${wire.end.x} ${wire.end.y}`}/>}
+      {nodes.map(n=>{const item=getEquipment(n.equipmentId);return <g key={n.id} transform={`translate(${n.x} ${n.y})`} className={`builder-node ${selected===n.id?'selected':''}`} role="button" tabIndex={0} aria-label={`Select ${nodeName(n)}`} onPointerDown={e=>start(e,n)} onClick={e=>{if(!e.target.closest('[data-port]'))onSelect(n.id);}} onKeyDown={e=>keyboard(e,n)}><rect width="176" height="88" rx="12"/>{item.image?<image href={localPath(item.image)} x="12" y="12" width="28" height="28"/>:<g><rect className="node-symbol" x="12" y="12" width="27" height="24" rx="4"/><path d="M18 19h15M18 25h10" stroke="#857cc4"/></g>}<text x="48" y="27">{item.category.slice(0,18)}</text><text className="node-title" x="12" y="53">{nodeName(n).length>24?nodeName(n).slice(0,22)+'…':nodeName(n)}</text><text x="12" y="72">{item.model.slice(0,26)}</text><circle className={`connection-port input ${wire?.target===n.id&&wire.from!==n.id?'ready':''}`} data-node-id={n.id} data-port="input" cx="0" cy="44" r="10"><title>Input: drop a connection here</title></circle><circle className={`connection-port output ${pathType}`} data-node-id={n.id} data-port="output" cx="176" cy="44" r="10" onPointerDown={e=>start(e,n,true)}><title>Output: drag to another equipment input</title></circle></g>;})}
+      {!nodes.length&&<g className="canvas-empty"><text x="530" y="270" textAnchor="middle">Your measurement setup starts here</text><text x="530" y="303" textAnchor="middle">Add equipment from the library, then drag between ports.</text></g>}
+    </svg>
+  </div>;
+}

@@ -1,0 +1,11 @@
+{
+  "equipmentId": "oband-head-interface",
+  "generatedAt": "2026-10-08",
+  "kind": "Illustrative reference",
+  "review": "Generated 81618A compact single-head interface silhouette. Model and Slot 3 are user-confirmed; connector offsets and body depth are estimated. Not vendor CAD.",
+  "sources": [
+    "https://www.keysight.com/us/en/product/81618A/single-optical-head-interface-module.html"
+  ],
+  "units": "millimetres",
+  "method": "Closed faceted reference solids, not a vendor mechanical assembly"
+}

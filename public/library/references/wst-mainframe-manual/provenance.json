@@ -1,0 +1,11 @@
+{
+  "equipmentId": "wst-mainframe-manual",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-08",
+  "source": "https://www.keysight.com/us/en/assets/7018-01037/data-sheets/5988-3924.pdf",
+  "review": "Generated 8163B shell with two open bays for 81940A and 81634B. Published outer dimensions; slot offsets, wall thickness and panel details illustrative. Verify installed order against a bench photo.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing.",
+  "assembly": "Two compact bays; app stores module instance IDs and editable Slot 1/2 assignments separately."
+}

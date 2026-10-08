@@ -1,0 +1,533 @@
+{
+  "retrievedAt": "2026-10-07T22:45:58.828Z",
+  "productUrl": "https://www.thorlabs.com/item/ADAFCPMB2",
+  "product": {
+    "name": "ADAFCPMB2",
+    "id": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+    "mainProductId": null,
+    "isConfigurable": false,
+    "code": "ADAFCPMB2",
+    "fallbackName": "FC/PC to FC/PC or FC/APC to FC/APC Single L-Bracket Mating Sleeve, Narrow Precision Key (2.0 mm)",
+    "slug": "ADAFCPMB2",
+    "outline": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+    "hasVariations": false,
+    "minQuantity": 1,
+    "maxQuantity": 0,
+    "imgSrc": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634.webp?v=1115094130&v=2025-11-15-21-41-30",
+    "inWishlist": false,
+    "altItemIdTL": null,
+    "releasedDateTL": "2012-11-16T15:46:01.193Z",
+    "discontinuedDateTL": null,
+    "lastWebPresentationLinkTL": null,
+    "warrantyTextTL": "Two year warranty. Incorporated light sources are warrantied for the lesser of one year or (to the extent applicable) the number of hours stated in the specifications.",
+    "warrantyCodeTL": "Cat. 3",
+    "serialNumberTL": null,
+    "unitDescriptionTL": null,
+    "dataSheetUrlTL": null,
+    "recalibrationProductIdsTL": null,
+    "eccnTL": "EAR99",
+    "itemStatusTL": "Active",
+    "statusDescriptionTL": null,
+    "unspscTL": "43223323",
+    "eclassTL": "27069290",
+    "subGroupIdTL": null,
+    "engineeringIdTL": "TTN004634",
+    "ukHvyTL": false,
+    "threadingTypeTL": "Universal",
+    "isSerializedTL": false,
+    "hasDataSheetsTL": false,
+    "itemModelGroupTL": null,
+    "useLineDiscountTL": false,
+    "isCustomerInspiredTL": true,
+    "originCountryTL": "USA",
+    "onSpecialTL": false,
+    "softwarePageUrlTL": null,
+    "routeSegmentTL": "ADAFCPMB2",
+    "mfgGroupTL": null,
+    "imperialMetricEquivalentTL": null,
+    "isCalibrationServiceTL": false,
+    "defaultAvailabilityTL": "BRL:2-3 Weeks;JPY:Today;EUR:Today;CNY:Today;SEK:Today;USD:Today;GBP:Today;",
+    "punchoutProhibitedTL": false,
+    "weight": 0.0491,
+    "weightUnit": "pounds",
+    "measureUnit": "Each",
+    "associations": {
+      "totalCount": 0,
+      "__typename": "ProductAssociationConnection"
+    },
+    "productType": null,
+    "images": [
+      {
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634.webp?v=1115094130&v=2025-11-15-21-41-30",
+        "name": "ttn004634.webp",
+        "description": null,
+        "__typename": "ImageType"
+      }
+    ],
+    "assets": [
+      {
+        "id": "afdeebfb-a1d4-4a05-a93a-c3aa57facda8",
+        "name": "TTN004634-E0W.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.pdf?v=0116102500",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD PDF",
+        "description": "CAD PDF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.pdf?v=0116102500",
+        "__typename": "Asset"
+      },
+      {
+        "id": "a15d0df3-72fd-42a2-83d3-19076c7f6d13",
+        "name": "TTN004634-E0W.dxf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.dxf?v=0116102501",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD DXF",
+        "description": "CAD DXF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.dxf?v=0116102501",
+        "__typename": "Asset"
+      },
+      {
+        "id": "acff9d78-2139-4da6-9805-52eda8cf5f7d",
+        "name": "TTN004634-E0W.sldprt",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.sldprt?v=0116102501",
+        "size": 0,
+        "mimeType": null,
+        "group": "Solidworks",
+        "description": "Solidworks",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.sldprt?v=0116102501",
+        "__typename": "Asset"
+      },
+      {
+        "id": "ab890bce-cc56-4510-bf8c-9b7465c65472",
+        "name": "TTN004634-E0W.html",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.html?v=0116102502",
+        "size": 0,
+        "mimeType": null,
+        "group": "eDrawing / 3D Model",
+        "description": "eDrawing / 3D Model",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.html?v=0116102502",
+        "__typename": "Asset"
+      },
+      {
+        "id": "6314b3dd-a3e5-46e0-b73d-85b5d67161ff",
+        "name": "TTN004634-E0W.step",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.step?v=0116102503",
+        "size": 0,
+        "mimeType": null,
+        "group": "Step",
+        "description": "Step",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/a/ad/ada/adafcpmb2/ttn004634-e0w.step?v=0116102503",
+        "__typename": "Asset"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "itemId": "e40c12f7-09da-46fb-a7ae-e74518090386",
+        "typeName": "Catalog",
+        "title": "Catalog",
+        "seoPath": "catalog",
+        "__typename": "Breadcrumb"
+      },
+      {
+        "itemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "typeName": "CatalogProduct",
+        "title": "FC/PC to FC/PC or FC/APC to FC/APC Single L-Bracket Mating Sleeve, Narrow Precision Key (2.0 mm)",
+        "seoPath": "ADAFCPMB2",
+        "__typename": "Breadcrumb"
+      }
+    ],
+    "description": {
+      "content": "[[\"Fiber Optic L-Bracket Mating Sleeves\",\"/fiber-optic-l-bracket-mating-sleeves\"],[\"Mating Sleeves/Connectors\",\"/mating-sleevesconnectors\"],[\"Fiber Components\",\"/fiber-components\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"ADAFCPMB2\",\"/item/adafcpmb2\"]]",
+      "__typename": "DescriptionType"
+    },
+    "descriptions": [
+      {
+        "id": "1c1af828-f608-494a-8452-80fc2b118fcf",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Fiber Optic L-Bracket Mating Sleeves\",\"/fiber-optic-l-bracket-mating-sleeves\"],[\"Mating Sleeves/Connectors\",\"/mating-sleevesconnectors\"],[\"Fiber Components\",\"/fiber-components\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"ADAFCPMB2\",\"/item/adafcpmb2\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "3805fbb8-c1ed-4880-91d8-5698eab12f93",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "4c0e7808-800f-4f2c-ab61-c320eedc12b9",
+        "reviewType": "ItemUrl",
+        "content": "/item/adafcpmb2",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "4e2e8d7a-4e1e-4d68-a669-d8d6d149807d",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6e657ea5-6905-49bb-b887-0d8a29b4fa02",
+        "reviewType": "FamilyPageUrl",
+        "content": "/fiber-optic-l-bracket-mating-sleeves",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "72ef0730-8476-422f-9919-77ca4bc917cf",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8714b2fe-5a38-42a2-b5bb-d295f9bb3e09",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8797d96a-a54c-4505-8992-acd1415e8d9c",
+        "reviewType": "FamilyPageName",
+        "content": "Fiber Optic L-Bracket Mating Sleeves",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8b9936c4-a490-495c-95e4-7581def9a441",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "a3dc09f9-172e-4945-9f95-fb9cfb73fb4b",
+        "reviewType": "Title",
+        "content": "FC/PC to FC/PC or FC/APC to FC/APC Single L-Bracket Mating Sleeve, Narrow Precision Key (2.0 mm)",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "b13e0cd4-efcc-4887-96a2-caf2479f5117",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "dfcd0c5f-5770-4d79-bd30-f5d9cbe85cc3",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e7553508-ab09-4a7a-882d-a065d8896ab2",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "fd6a1102-f3c7-465b-bb83-c39bd5c0efbe",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "descriptionsWithFallbacksTL": [
+      {
+        "id": "b13e0cd4-efcc-4887-96a2-caf2479f5117",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "72ef0730-8476-422f-9919-77ca4bc917cf",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "6e657ea5-6905-49bb-b887-0d8a29b4fa02",
+        "reviewType": "FamilyPageUrl",
+        "content": "/fiber-optic-l-bracket-mating-sleeves",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "1c1af828-f608-494a-8452-80fc2b118fcf",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Fiber Optic L-Bracket Mating Sleeves\",\"/fiber-optic-l-bracket-mating-sleeves\"],[\"Mating Sleeves/Connectors\",\"/mating-sleevesconnectors\"],[\"Fiber Components\",\"/fiber-components\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"ADAFCPMB2\",\"/item/adafcpmb2\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "dfcd0c5f-5770-4d79-bd30-f5d9cbe85cc3",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "4e2e8d7a-4e1e-4d68-a669-d8d6d149807d",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "3805fbb8-c1ed-4880-91d8-5698eab12f93",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "4c0e7808-800f-4f2c-ab61-c320eedc12b9",
+        "reviewType": "ItemUrl",
+        "content": "/item/adafcpmb2",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8714b2fe-5a38-42a2-b5bb-d295f9bb3e09",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8b9936c4-a490-495c-95e4-7581def9a441",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e7553508-ab09-4a7a-882d-a065d8896ab2",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "8797d96a-a54c-4505-8992-acd1415e8d9c",
+        "reviewType": "FamilyPageName",
+        "content": "Fiber Optic L-Bracket Mating Sleeves",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "a3dc09f9-172e-4945-9f95-fb9cfb73fb4b",
+        "reviewType": "Title",
+        "content": "FC/PC to FC/PC or FC/APC to FC/APC Single L-Bracket Mating Sleeve, Narrow Precision Key (2.0 mm)",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "fd6a1102-f3c7-465b-bb83-c39bd5c0efbe",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "properties": [],
+    "variations": [],
+    "vendor": null,
+    "availabilityData": {
+      "isActive": true,
+      "isAvailable": true,
+      "isBuyable": true,
+      "isInStock": true,
+      "availableQuantity": 0,
+      "inventories": [
+        {
+          "inStockQuantity": 35,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "80c89e5e-038b-4a1f-819d-cb92c34c105b",
+          "fulfillmentCenterName": "SWE - SEK",
+          "backorderQuantity": 360,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 35,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "7f5e6c92-bf3d-460f-b922-b8f5306d3403",
+          "fulfillmentCenterName": "MUC - EUR",
+          "backorderQuantity": 360,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 35,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "5319ca3a-ca09-4096-8065-33e99b91e473",
+          "fulfillmentCenterName": "UK0 - GBP",
+          "backorderQuantity": 360,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 325,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "2aa868d8-d894-4cfe-bdb4-ff3b5521c087",
+          "fulfillmentCenterName": "THO - USD",
+          "backorderQuantity": 360,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 2,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "e45c3124-d2c1-47a9-8009-2dd0de53f71e",
+          "fulfillmentCenterName": "PRC - CNY",
+          "backorderQuantity": 382,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "10e1f10c-525b-4887-a097-b60cbe4a2b3b",
+          "fulfillmentCenterName": "BRA - BRL",
+          "backorderQuantity": 380,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 20,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "fc76a83a-8c98-46a4-80d5-adbfabb4dc06",
+          "fulfillmentCenterName": "JPN - JPY",
+          "backorderQuantity": 380,
+          "__typename": "InventoryInfo"
+        }
+      ],
+      "__typename": "AvailabilityData"
+    },
+    "price": {
+      "actual": {
+        "amount": 68.39,
+        "formattedAmount": "£68.39",
+        "__typename": "MoneyType"
+      },
+      "discountAmount": {
+        "amount": 0,
+        "formattedAmount": "£0.00",
+        "__typename": "MoneyType"
+      },
+      "sale": {
+        "amount": 68.39,
+        "formattedAmount": "£68.39",
+        "__typename": "MoneyType"
+      },
+      "list": {
+        "amount": 68.39,
+        "formattedAmount": "£68.39",
+        "__typename": "MoneyType"
+      },
+      "discountPercent": 0,
+      "discounts": [],
+      "tierPrices": [
+        {
+          "price": {
+            "currency": {
+              "code": "GBP",
+              "symbol": "£",
+              "__typename": "CurrencyType"
+            },
+            "amount": 68.39,
+            "formattedAmount": "£68.39",
+            "__typename": "MoneyType"
+          },
+          "quantity": 1,
+          "__typename": "TierPriceType"
+        }
+      ],
+      "listWithTax": {
+        "amount": 68.39,
+        "formattedAmount": "£68.39",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "actualWithTax": {
+        "amount": 68.39,
+        "formattedAmount": "£68.39",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "__typename": "PriceType"
+    },
+    "seoInfo": {
+      "pageTitle": "FC/PC to FC/PC or FC/APC to FC/APC Single L-Bracket Mating Sleeve, Narrow Precision Key (2.0 mm)",
+      "metaKeywords": "apc,back,barrel,bracket,bulkhead,butt,cable,ceramic,connector,connectorized,cord,d-flange,fc,fc/apc,fc/pc,ferrule,fiber,fiberoptic,fibre,fibreoptic,hybrid,inter,interconnection,interconnector,laser,loss,low,mate,mating,mm,multimode,nm,patch,pc,reflection,simplex,sleeve,sleeve-through,tube,wavelength,wire,zirconia,",
+      "metaDescription": null,
+      "__typename": "SeoInfo"
+    },
+    "videos": {
+      "items": [],
+      "__typename": "VideoConnection"
+    },
+    "compliancesTL": [
+      {
+        "id": "fccefaf1-29f9-45ef-be55-d64f283c2655",
+        "categoryName": "eCl@ss",
+        "displayText": "27069290",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "e3886d5f-6e50-408c-9e80-417eeb9eeea1",
+        "categoryName": "REACH",
+        "displayText": "SVHC > 0.1% Lead",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "1d18afea-5c2e-43f7-84b9-65a695e2af5f",
+        "categoryName": "RoHS",
+        "displayText": "Exempt - Annex III - 6(c)",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "449a2311-a241-4027-80e4-0e15546787c8",
+        "categoryName": "Show on web?",
+        "displayText": "Show on web?",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "420b3020-4b33-4026-9c19-b3bebe1d2d67",
+        "categoryName": "TSCA",
+        "displayText": "Compliant",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "ec2d6f1c-236a-485e-a086-41de66efa90e",
+        "categoryName": "UNSPSC",
+        "displayText": "43223323",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "0a1c38fb-c79b-4122-9068-9340339a01d6",
+        "categoryName": "Warranty Group",
+        "displayText": "Cat. 3",
+        "catalogItemId": "1bc4b36e-3021-4092-8cae-9e552f0df309",
+        "__typename": "Compliance"
+      }
+    ],
+    "infoIconTabsTL": [],
+    "infoIconPriceBoxTL": false,
+    "infoIconDisplayProductImageTL": false,
+    "familyPageUrlTL": "/fiber-optic-l-bracket-mating-sleeves",
+    "__typename": "Product"
+  }
+}

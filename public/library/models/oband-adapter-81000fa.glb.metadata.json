@@ -1,0 +1,30 @@
+{
+  "source": "oband-adapter-81000fa-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 3,
+  "triangles": 228,
+  "boundsMm": {
+    "min": [
+      -14,
+      0,
+      -27
+    ],
+    "max": [
+      14,
+      28,
+      0
+    ]
+  },
+  "extentsMm": [
+    28,
+    28,
+    27
+  ],
+  "glbBytes": 14456,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

@@ -1,0 +1,30 @@
+{
+  "source": "wst-chip-holder-manual-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 2,
+  "triangles": 24,
+  "boundsMm": {
+    "min": [
+      -35,
+      0,
+      -30
+    ],
+    "max": [
+      35,
+      26,
+      30
+    ]
+  },
+  "extentsMm": [
+    70,
+    26,
+    60
+  ],
+  "glbBytes": 3388,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

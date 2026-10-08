@@ -1,0 +1,10 @@
+{
+  "equipmentId": "wst-power-supply",
+  "kind": "Illustrative reference",
+  "generatedAt": "2026-10-07",
+  "source": "https://www.keysight.com/us/en/assets/9018-01165/user-manuals/9018-01165.pdf",
+  "review": "Generated E3640A reference with published enclosure dimensions. Controls and ports approximate.",
+  "units": "millimetres",
+  "method": "Closed planar faceted BREP; all feature detail approximate",
+  "license": "Generated project geometry. Supplier-linked documents retain supplier rights; confirm redistribution before publishing."
+}

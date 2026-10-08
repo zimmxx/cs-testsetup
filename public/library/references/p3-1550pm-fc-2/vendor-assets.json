@@ -1,0 +1,533 @@
+{
+  "retrievedAt": "2026-10-07T22:46:04.500Z",
+  "productUrl": "https://www.thorlabs.com/item/P3-1550PM-FC-2",
+  "product": {
+    "name": "P3-1550PM-FC-2",
+    "id": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+    "mainProductId": null,
+    "isConfigurable": false,
+    "code": "P3-1550PM-FC-2",
+    "fallbackName": "PM Patch Cable, PANDA, 1550 nm, Ø3 mm Jacket, FC/APC, 2 m Long",
+    "slug": "P3-1550PM-FC-2",
+    "outline": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+    "hasVariations": false,
+    "minQuantity": 1,
+    "maxQuantity": 0,
+    "imgSrc": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459.webp?v=1115070722&v=2025-11-15-19-07-22",
+    "inWishlist": false,
+    "altItemIdTL": null,
+    "releasedDateTL": "2008-08-21T16:25:42.44Z",
+    "discontinuedDateTL": null,
+    "lastWebPresentationLinkTL": null,
+    "warrantyTextTL": "Two year warranty. Incorporated light sources are warrantied for the lesser of one year or (to the extent applicable) the number of hours stated in the specifications.",
+    "warrantyCodeTL": "Cat. 3",
+    "serialNumberTL": null,
+    "unitDescriptionTL": null,
+    "dataSheetUrlTL": null,
+    "recalibrationProductIdsTL": null,
+    "eccnTL": "EAR99",
+    "itemStatusTL": "Active",
+    "statusDescriptionTL": null,
+    "unspscTL": "43223326",
+    "eclassTL": "27061003",
+    "subGroupIdTL": null,
+    "engineeringIdTL": "18459",
+    "ukHvyTL": false,
+    "threadingTypeTL": "Universal",
+    "isSerializedTL": false,
+    "hasDataSheetsTL": true,
+    "itemModelGroupTL": null,
+    "useLineDiscountTL": false,
+    "isCustomerInspiredTL": false,
+    "originCountryTL": "USA",
+    "onSpecialTL": false,
+    "softwarePageUrlTL": null,
+    "routeSegmentTL": "P3-1550PM-FC-2",
+    "mfgGroupTL": null,
+    "imperialMetricEquivalentTL": null,
+    "isCalibrationServiceTL": false,
+    "defaultAvailabilityTL": "BRL:2-3 Weeks;JPY:Today;EUR:Today;CNY:2 Weeks;SEK:Today;USD:Today;GBP:Today;",
+    "punchoutProhibitedTL": false,
+    "weight": 0.2215,
+    "weightUnit": "pounds",
+    "measureUnit": "Each",
+    "associations": {
+      "totalCount": 0,
+      "__typename": "ProductAssociationConnection"
+    },
+    "productType": null,
+    "images": [
+      {
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459.webp?v=1115070722&v=2025-11-15-19-07-22",
+        "name": "18459.webp",
+        "description": null,
+        "__typename": "ImageType"
+      }
+    ],
+    "assets": [
+      {
+        "id": "d558aa23-242e-4809-a8cd-5f046343e272",
+        "name": "18459-E0W.pdf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.pdf?v=0116014911",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD PDF",
+        "description": "CAD PDF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.pdf?v=0116014911",
+        "__typename": "Asset"
+      },
+      {
+        "id": "75f82f1b-2f48-4a2a-b10b-334ccc3d8cdb",
+        "name": "18459-E0W.dxf",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.dxf?v=0116014912",
+        "size": 0,
+        "mimeType": null,
+        "group": "CAD DXF",
+        "description": "CAD DXF",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.dxf?v=0116014912",
+        "__typename": "Asset"
+      },
+      {
+        "id": "5fdd7586-bead-40f7-994e-6a2e3ea1a503",
+        "name": "18459-E0W.sldprt",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.sldprt?v=0116014913",
+        "size": 0,
+        "mimeType": null,
+        "group": "Solidworks",
+        "description": "Solidworks",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.sldprt?v=0116014913",
+        "__typename": "Asset"
+      },
+      {
+        "id": "3e659de5-4205-4f14-a1b4-aedb141c3755",
+        "name": "18459-E0W.html",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.html?v=0116014914",
+        "size": 0,
+        "mimeType": null,
+        "group": "eDrawing / 3D Model",
+        "description": "eDrawing / 3D Model",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.html?v=0116014914",
+        "__typename": "Asset"
+      },
+      {
+        "id": "8826947c-af89-470e-a366-681761fc5fd6",
+        "name": "18459-E0W.step",
+        "url": "https://thin01mstroc282prod.dxcloud.episerver.net/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.step?v=0116014914",
+        "size": 0,
+        "mimeType": null,
+        "group": "Step",
+        "description": "Step",
+        "optiUrl": "https://media.thorlabs.com/globalassets/items/p/p3/p3-/p3-1550pm-fc-2/18459-e0w.step?v=0116014914",
+        "__typename": "Asset"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "itemId": "e40c12f7-09da-46fb-a7ae-e74518090386",
+        "typeName": "Catalog",
+        "title": "Catalog",
+        "seoPath": "catalog",
+        "__typename": "Breadcrumb"
+      },
+      {
+        "itemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "typeName": "CatalogProduct",
+        "title": "PM Patch Cable, PANDA, 1550 nm, Ø3 mm Jacket, FC/APC, 2 m Long",
+        "seoPath": "P3-1550PM-FC-2",
+        "__typename": "Breadcrumb"
+      }
+    ],
+    "description": {
+      "content": "/item/p3-1550pm-fc-2",
+      "__typename": "DescriptionType"
+    },
+    "descriptions": [
+      {
+        "id": "0370f5be-7dec-4b4c-95c1-a5e7cf7eedc8",
+        "reviewType": "ItemUrl",
+        "content": "/item/p3-1550pm-fc-2",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "12b043cc-2914-4bdf-9713-416eb37e54e0",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Polarization-Maintaining FC/APC Fiber Optic Patch Cables\",\"/polarization-maintaining-fcapc-fiber-optic-patch-cables\"],[\"Polarization-Maintaining Single Mode Patch Cables\",\"/polarization-maintaining-single-mode-patch-cables\"],[\"Optical Fiber \\u0026 Fiber Patch Cables\",\"/optical-fiber-fiber-patch-cables\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"P3-1550PM-FC-2\",\"/item/p3-1550pm-fc-2\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "25122bde-1870-49f0-8fdc-c67ec012dc93",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "48330de8-527e-421e-a14b-f68ea5d2b428",
+        "reviewType": "FamilyPageName",
+        "content": "Polarization-Maintaining FC/APC Fiber Optic Patch Cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "5620afd9-ca33-493d-a43c-8992b2880453",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "5d892c3b-3afe-4833-bf19-2e5a1cf180fe",
+        "reviewType": "Title",
+        "content": "PM Patch Cable, PANDA, 1550 nm, Ø3 mm Jacket, FC/APC, 2 m Long",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "617e03ab-8f6e-4bb1-9d4b-e01d37bc22c1",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "62cf3a4c-4a1e-48f3-8224-b2d4ab249144",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "95b3bbae-324a-4230-aa4b-5adfaa22a1e0",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "a02fdd9e-a176-4a15-b4d6-30475b1dd04e",
+        "reviewType": "FamilyPageUrl",
+        "content": "/polarization-maintaining-fcapc-fiber-optic-patch-cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "b29079e0-5347-43d2-8ab9-955be0f37153",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "c3e497c0-7981-44af-9b67-9f8fe1c31358",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "daebb73d-85fe-4b9e-b2e3-808631081dfd",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e3e5a392-5613-467b-a1d3-31b7fceffd20",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "descriptionsWithFallbacksTL": [
+      {
+        "id": "0370f5be-7dec-4b4c-95c1-a5e7cf7eedc8",
+        "reviewType": "ItemUrl",
+        "content": "/item/p3-1550pm-fc-2",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "62cf3a4c-4a1e-48f3-8224-b2d4ab249144",
+        "reviewType": "PerItemNoteGBP",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "5620afd9-ca33-493d-a43c-8992b2880453",
+        "reviewType": "CalibrationTerms",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "12b043cc-2914-4bdf-9713-416eb37e54e0",
+        "reviewType": "Breadcrumb",
+        "content": "[[\"Polarization-Maintaining FC/APC Fiber Optic Patch Cables\",\"/polarization-maintaining-fcapc-fiber-optic-patch-cables\"],[\"Polarization-Maintaining Single Mode Patch Cables\",\"/polarization-maintaining-single-mode-patch-cables\"],[\"Optical Fiber \\u0026 Fiber Patch Cables\",\"/optical-fiber-fiber-patch-cables\"],[\"Fiber\",\"/fiber\"],[\"All Products\",\"/main-visual-navigation\"],[\"P3-1550PM-FC-2\",\"/item/p3-1550pm-fc-2\"]]",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "25122bde-1870-49f0-8fdc-c67ec012dc93",
+        "reviewType": "CalibrationInstructions",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "48330de8-527e-421e-a14b-f68ea5d2b428",
+        "reviewType": "FamilyPageName",
+        "content": "Polarization-Maintaining FC/APC Fiber Optic Patch Cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "617e03ab-8f6e-4bb1-9d4b-e01d37bc22c1",
+        "reviewType": "PerItemNoteCNY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "c3e497c0-7981-44af-9b67-9f8fe1c31358",
+        "reviewType": "PerItemNoteEUR",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "b29079e0-5347-43d2-8ab9-955be0f37153",
+        "reviewType": "PerItemNote",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "95b3bbae-324a-4230-aa4b-5adfaa22a1e0",
+        "reviewType": "PerItemNoteSEK",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "e3e5a392-5613-467b-a1d3-31b7fceffd20",
+        "reviewType": "PerItemNoteJPY",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "5d892c3b-3afe-4833-bf19-2e5a1cf180fe",
+        "reviewType": "Title",
+        "content": "PM Patch Cable, PANDA, 1550 nm, Ø3 mm Jacket, FC/APC, 2 m Long",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "daebb73d-85fe-4b9e-b2e3-808631081dfd",
+        "reviewType": "PerItemNoteBRL",
+        "content": null,
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      },
+      {
+        "id": "a02fdd9e-a176-4a15-b4d6-30475b1dd04e",
+        "reviewType": "FamilyPageUrl",
+        "content": "/polarization-maintaining-fcapc-fiber-optic-patch-cables",
+        "languageCode": "en-US",
+        "__typename": "DescriptionType"
+      }
+    ],
+    "properties": [],
+    "variations": [],
+    "vendor": null,
+    "availabilityData": {
+      "isActive": true,
+      "isAvailable": true,
+      "isBuyable": true,
+      "isInStock": true,
+      "availableQuantity": 0,
+      "inventories": [
+        {
+          "inStockQuantity": 5,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "fc76a83a-8c98-46a4-80d5-adbfabb4dc06",
+          "fulfillmentCenterName": "JPN - JPY",
+          "backorderQuantity": 91,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "10e1f10c-525b-4887-a097-b60cbe4a2b3b",
+          "fulfillmentCenterName": "BRA - BRL",
+          "backorderQuantity": 91,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 0,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "e45c3124-d2c1-47a9-8009-2dd0de53f71e",
+          "fulfillmentCenterName": "PRC - CNY",
+          "backorderQuantity": 91,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 61,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "2aa868d8-d894-4cfe-bdb4-ff3b5521c087",
+          "fulfillmentCenterName": "THO - USD",
+          "backorderQuantity": 86,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 25,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "7f5e6c92-bf3d-460f-b922-b8f5306d3403",
+          "fulfillmentCenterName": "MUC - EUR",
+          "backorderQuantity": 86,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 25,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "5319ca3a-ca09-4096-8065-33e99b91e473",
+          "fulfillmentCenterName": "UK0 - GBP",
+          "backorderQuantity": 86,
+          "__typename": "InventoryInfo"
+        },
+        {
+          "inStockQuantity": 25,
+          "reservedQuantity": 0,
+          "fulfillmentCenterId": "80c89e5e-038b-4a1f-819d-cb92c34c105b",
+          "fulfillmentCenterName": "SWE - SEK",
+          "backorderQuantity": 86,
+          "__typename": "InventoryInfo"
+        }
+      ],
+      "__typename": "AvailabilityData"
+    },
+    "price": {
+      "actual": {
+        "amount": 200.63,
+        "formattedAmount": "£200.63",
+        "__typename": "MoneyType"
+      },
+      "discountAmount": {
+        "amount": 0,
+        "formattedAmount": "£0.00",
+        "__typename": "MoneyType"
+      },
+      "sale": {
+        "amount": 200.63,
+        "formattedAmount": "£200.63",
+        "__typename": "MoneyType"
+      },
+      "list": {
+        "amount": 200.63,
+        "formattedAmount": "£200.63",
+        "__typename": "MoneyType"
+      },
+      "discountPercent": 0,
+      "discounts": [],
+      "tierPrices": [
+        {
+          "price": {
+            "currency": {
+              "code": "GBP",
+              "symbol": "£",
+              "__typename": "CurrencyType"
+            },
+            "amount": 200.63,
+            "formattedAmount": "£200.63",
+            "__typename": "MoneyType"
+          },
+          "quantity": 1,
+          "__typename": "TierPriceType"
+        }
+      ],
+      "listWithTax": {
+        "amount": 200.63,
+        "formattedAmount": "£200.63",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "actualWithTax": {
+        "amount": 200.63,
+        "formattedAmount": "£200.63",
+        "decimalDigits": 2,
+        "__typename": "MoneyType"
+      },
+      "__typename": "PriceType"
+    },
+    "seoInfo": {
+      "pageTitle": "PM Patch Cable, PANDA, 1550 nm, Ø3 mm Jacket, FC/APC, 2 m Long",
+      "metaKeywords": "1550 nm apc cable,1550 nm apc fiber,1550 nm patch cable,ceramic connectors,fc/apc,high extinction ratio,narrow key,patch cable,pm patch cable,pm1550-xp,polar,polarization,polarization maintaing fiber,polarization maintaining fiber,polarization-maintainin,polarization-maintaining,",
+      "metaDescription": null,
+      "__typename": "SeoInfo"
+    },
+    "videos": {
+      "items": [],
+      "__typename": "VideoConnection"
+    },
+    "compliancesTL": [
+      {
+        "id": "a2f3f0f9-1396-4ee0-a76e-16a1b187867f",
+        "categoryName": "eCl@ss",
+        "displayText": "27061003",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "b9597ed7-efbb-4798-a205-927524495bcd",
+        "categoryName": "REACH",
+        "displayText": "SVHC Free",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "1081e60f-20b7-46aa-bf24-59c93cf31790",
+        "categoryName": "RoHS",
+        "displayText": "Compliant",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "b3e03157-7016-409b-b375-dccf5ce00a37",
+        "categoryName": "Show on web?",
+        "displayText": "Show on web?",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "58fbdbf7-5d3a-452a-8456-2e1c5e5620c1",
+        "categoryName": "TSCA",
+        "displayText": "Compliant",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "b054d860-048a-4075-9d7c-2ee01b368f06",
+        "categoryName": "UNSPSC",
+        "displayText": "43223326",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      },
+      {
+        "id": "d9bd3976-e71e-499f-bff7-533a8c5fdb4c",
+        "categoryName": "Warranty Group",
+        "displayText": "Cat. 3",
+        "catalogItemId": "79d3387d-7e27-4543-8d36-dc4e36fbac8f",
+        "__typename": "Compliance"
+      }
+    ],
+    "infoIconTabsTL": [],
+    "infoIconPriceBoxTL": false,
+    "infoIconDisplayProductImageTL": false,
+    "familyPageUrlTL": "/polarization-maintaining-fcapc-fiber-optic-patch-cables",
+    "__typename": "Product"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "equipmentId": "oband-mainframe-8164b",
+  "generatedAt": "2026-10-08",
+  "kind": "Illustrative reference",
+  "review": "Generated 8164B enclosure with four upper compact bays and one lower horizontal TLS bay. Published 426 W × 145 H × 545 D mm outer envelope and user-supplied photo. Bay positions, wall thickness and panel details are illustrative, not vendor CAD.",
+  "sources": [
+    "https://www.keysight.com/us/en/product/8164B/lightwave-measurement-system.html",
+    "https://images.cdn-krs.com/upload/2025/04/10/20250410195018-d49944c0.jpg",
+    "https://www.keysight.com/us/en/assets/7018-01037/data-sheets/5988-3924.pdf"
+  ],
+  "units": "millimetres",
+  "method": "Closed faceted reference solids, not a vendor mechanical assembly"
+}
