@@ -19,7 +19,7 @@ Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.2**; setup s
 
 Validation: **61 tests passed**, production build passed. Local browser checks exercised rotation/tilt, mounting, undo, Explore/Edit state and a successful full CAD download. Independent OpenCascade re-import confirmed one root assembly, 17 named source equipment instances plus the optional bench, and every exported source translation/quaternion against the placement manifest. Existing Three.js chunk-size warning remains. Actual import/mating in SolidWorks is not tested.
 
-Deployment: **pending user review, merge and successful Pages deployment**.
+Review: [PR #4](https://github.com/zimmxx/cs-testsetup/pull/4). Deployment: **pending user review, merge and successful Pages deployment**.
 
 ## 0.2.1 — Vacuum chip sample stage — deployed 2026-10-09
 
