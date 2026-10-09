@@ -18,8 +18,9 @@ import { assignModule, removeAssemblyNode, housingFor, syncModuleSettings, accep
 import { createManualSetup, upgradeManualSetup, instanceFields } from '../data/manualSetup.js';
 import '../builder.css';
 import { createObandAssembly } from '../data/obandAssembly.js';
+import { upgradePhotoChipSetup } from '../data/photoChipSetup.js';
 const nodeName=n=>n?.label||getEquipment(n?.equipmentId)?.name||'Unknown equipment';
-function prepareSetup(data){const migrated=upgradeManualSetup(data),setup=migrated.mainframeRevision>=1?syncModuleSettings(migrated):migrated;return {...setup,nodes:setup.nodes.map(n=>{const e=getEquipment(n.equipmentId);return {...n,configuration:{...n.configuration,cadReference:n.configuration?.cadReference||e?.stepPath||'',modelReference:n.configuration?.modelReference||e?.model3d||''}};})};}
+function prepareSetup(data){const migrated=upgradeManualSetup(upgradePhotoChipSetup(data)),setup=migrated.mainframeRevision>=1?syncModuleSettings(migrated):migrated;return {...setup,nodes:setup.nodes.map(n=>{const e=getEquipment(n.equipmentId);return {...n,configuration:{...n.configuration,cadReference:n.configuration?.cadReference||e?.stepPath||'',modelReference:n.configuration?.modelReference||e?.model3d||''}};})};}
 
 export default function Builder({onInspect}){
   const [draft,setDraft]=useState(()=>{try{return prepareSetup(validateSetup(readLocal('builder',arrangeOnBench(createManualSetup())),equipment.map(e=>e.id)));}catch{return blankSetup();}});

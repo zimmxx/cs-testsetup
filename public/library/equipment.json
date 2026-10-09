@@ -1549,7 +1549,7 @@
       "specs": [
         [
           "Source",
-          "User-provided SolidWorks SLDPRT"
+          "User-provided SolidWorks SLDPRT and STEP"
         ],
         [
           "Use",
@@ -1557,7 +1557,7 @@
         ],
         [
           "Dimensions",
-          "To confirm from exported CAD"
+          "CAD X/Y/Z: 85.0 / 25.5 / 64.0 mm (not physically measured)"
         ],
         [
           "Vacuum connection",
@@ -1570,19 +1570,24 @@
       ],
       "url": "",
       "alternatives": "Bespoke copper chip holder or other mount: suitability to verify.",
-      "note": "Native SolidWorks part preserved. STEP export is needed before the geometry can appear in the browser.",
+      "note": "User-confirmed holder for optical-chip-testing-v1. STEP and original SolidWorks part retained; vacuum hardware, pressure and approved loading procedure still need recording.",
       "image": "library/images/manual-chip-holder-lab.png",
-      "model3d": "",
-      "cadKind": "User-provided native CAD - preview pending",
-      "cadReview": "A native SLDPRT has been supplied. No browser conversion or dimensional validation has been performed.",
+      "model3d": "library/models/chip-vacuum-stage.glb",
+      "cadKind": "User-provided CAD",
+      "cadReview": "User-supplied vacuum chip sample stage STEP, 9 October 2026. User confirmed this holder for optical-chip-testing-v1, replacing the alternative chip holder. Source Y-up axes retained. Vacuum port, operating pressure, retention and mounting interface are not independently verified; this is separate from the DUT motion stage.",
       "nativeCad": [
         {
-          "label": "SolidWorks vacuum sample stage part",
+          "label": "Latest SolidWorks vacuum chip sample stage part — 9 October 2026",
+          "path": "library/references/chip-vacuum-stage/Vaccum Sample Stage.SLDPRT",
+          "sha256": "01263866978c30abd0d9cec9c322d8dc0dd702991718010a860566097c5687c5"
+        },
+        {
+          "label": "Earlier SolidWorks sample stage part (archived)",
           "path": "library/references/chip-vacuum-stage/Vacuum-Sample-Stage.SLDPRT",
           "sha256": "01263866978c30abd0d9cec9c322d8dc0dd702991718010a860566097c5687c5"
         }
       ],
-      "nativeCadNote": "Separate chip holder/stage, confirmed by the user on 8 October 2026. Awaiting STEP export for browser conversion.",
+      "nativeCadNote": "Latest SLDPRT and self-contained STEP export supplied 9 October 2026; browser preview uses the STEP geometry. Earlier source retained.",
       "imageSource": "",
       "imageAssetSource": "",
       "imageCredit": "Aiman Hazim / CORNERSTONE",
@@ -1595,14 +1600,19 @@
       "imageHeight": 456,
       "imageRights": "User-supplied lab photograph. Original ownership retained.",
       "imageSourcePath": "documents/CORNERSTONE_TESTING.pptx",
-      "imageSourceLabel": "CORNERSTONE_TESTING.pptx, slide 9, image13.png"
+      "imageSourceLabel": "CORNERSTONE_TESTING.pptx, slide 9, image13.png",
+      "stepPath": "library/references/chip-vacuum-stage/Vaccum Sample Stage.STEP",
+      "stepSha256": "063d9acea4283c2d141f6370e678b343026f92ee809dab1fb41529fd1e16abe8",
+      "cadSource": "User-supplied STEP and SolidWorks part, 9 October 2026",
+      "dimensions": "CAD bounding box X/Y/Z: 85.0 / 25.5 / 64.0 mm; mounting and installed envelope to verify",
+      "modelReference": "STEP: library/references/chip-vacuum-stage/Vaccum Sample Stage.STEP\nGLB: library/models/chip-vacuum-stage.glb\nSolidWorks: library/references/chip-vacuum-stage/Vaccum Sample Stage.SLDPRT\nProvenance: library/references/chip-vacuum-stage/vacuum-stage.provenance.json\nUser-supplied vacuum chip sample stage STEP, 9 October 2026. User confirmed this holder for optical-chip-testing-v1, replacing the alternative chip holder. Source Y-up axes retained. Vacuum port, operating pressure, retention and mounting interface are not independently verified; this is separate from the DUT motion stage."
     },
     {
       "id": "chip-dut-translation-stage-v1",
       "name": "Chip DUT translation stage",
       "model": "Manual multi-axis stage · model unconfirmed",
       "category": "Positioning",
-      "role": "Moves the copper chip holder independently of the two fibre-arm stages.",
+      "role": "Moves the chip sample holder independently of the two fibre-arm stages.",
       "location": "Lab 2077 · Setup 3 (photo labels)",
       "status": "Needs verification",
       "specs": [

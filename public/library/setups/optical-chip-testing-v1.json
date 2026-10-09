@@ -21,7 +21,7 @@
       "C-band"
     ],
     "lab": "Lab 2077 · Setup 3 (photo labels)",
-    "description": "Photo-derived optical chip bench draft with two fibre arms, copper chip holder and overhead imaging. Review models, signal routes and dimensions before publication."
+    "description": "Photo-derived optical chip bench draft with two fibre arms, vacuum chip sample stage and overhead imaging. Review models, signal routes and dimensions before publication."
   },
   "nodes": [
     {
@@ -151,8 +151,8 @@
     },
     {
       "id": "photo-holder",
-      "equipmentId": "wst-chip-holder-manual",
-      "label": "Copper chip holder / DUT",
+      "equipmentId": "chip-vacuum-stage",
+      "label": "Vacuum chip sample stage / DUT",
       "x": 460,
       "y": 130,
       "signalX": 460,
@@ -166,7 +166,7 @@
         "calibration": "",
         "dimensions": "Estimated placement only; measure before mechanical use",
         "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
-        "notes": "Copper block is visible at the centre. Chip identity, retention, heating/vacuum and grating/edge coupling are unconfirmed.",
+        "notes": "User confirmed the vacuum chip sample stage for this setup on 9 October 2026. Separate holder mounted on the DUT translation stage; vacuum connection, pressure and chip retention procedure require confirmation.",
         "signalRole": "through",
         "mountingStage": "photo-dut-stage"
       }
@@ -470,7 +470,7 @@
     "stopNm": "",
     "maxPowerMw": "",
     "notes": "Configure the actual optical band, source/sensor models, fibre routing, coupling, power, scan, calibration and approved limits. Do not inherit the manual wafer bench 10 mW / 10° defaults from photographs.",
-    "holder": "Copper chip holder · photo-observed",
+    "holder": "Vacuum chip sample stage · user-confirmed",
     "stageModel": "Manual DUT translation stage · model unknown",
     "inputFibreStageModel": "MAX313D candidate · verify",
     "outputFibreStageModel": "MAX313D candidate · verify",
@@ -497,5 +497,6 @@
       "title": "Retain results and review the setup",
       "text": "Save raw/reference data and configuration; record post-processing and measured timings. Save the editable setup, then explicitly publish a reviewed snapshot if appropriate."
     }
-  ]
+  ],
+  "chipHolderRevision": 1
 }

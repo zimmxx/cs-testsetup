@@ -1,6 +1,7 @@
 import { getEquipment, equipment, setups } from '../data/catalog.js';
 import { createManualSetup, upgradeManualSetup } from '../data/manualSetup.js';
 import { createObandAssembly } from '../data/obandAssembly.js';
+import { upgradePhotoChipSetup } from '../data/photoChipSetup.js';
 import { arrangeOnBench, benchPosition } from './benchLayout.js';
 import { validateSetup, connectionProblem, connectionRecord } from './setupBuilder.js';
 import { housingFor, equipmentPose } from './mainframeAssembly.js';
@@ -16,7 +17,7 @@ export function validateWorkspace(data,ids=equipment.map(e=>e.id)){
   if(!data.id||data.workspaceName!=='Bench_draft'||data.workspaceRevision!==1)throw new Error('Use a Bench_draft workspace export.');
   for(const n of data.nodes)if(n.locked!==undefined&&typeof n.locked!=='boolean')throw new Error('Invalid equipment lock.');
   for(const n of data.nodes)if(n.configuration?.signalRole!==undefined&&!['auto','source','detector','through','electrical','support'].includes(n.configuration.signalRole))throw new Error('Invalid recorded signal role.');
-  return data;
+  return upgradePhotoChipSetup(data);
 }
 export const contentSignature=draft=>JSON.stringify(Object.fromEntries(Object.entries(draft).filter(([key])=>!['savedAt','savedAtDraft','publishedAt'].includes(key))));
 export const draftStorageKey=id=>`bench_draft:${id}`;
@@ -45,7 +46,7 @@ export function workspaceChanges(draft,published){
 export function capabilities(node,draft){
   const item=getEquipment(node.equipmentId),category=item?.category||'';
   const connected=draft.connections.filter(c=>c.from===node.id||c.to===node.id);
-  const through=['wst-fibre-arms-manual','wst-wafer-holder-manual','wst-chip-holder-manual','fibre'].includes(item?.id),role=node.configuration?.signalRole||'auto';
+  const through=['wst-fibre-arms-manual','wst-wafer-holder-manual','wst-chip-holder-manual','chip-vacuum-stage','fibre'].includes(item?.id),role=node.configuration?.signalRole||'auto';
   const opticalIn=role==='auto'?(through||connected.some(c=>c.type==='optical'&&c.to===node.id)||/Detection|Fibre optics/.test(category)):['detector','through'].includes(role);
   const opticalOut=role==='auto'?(through||connected.some(c=>c.type==='optical'&&c.from===node.id)||/Optical source|Fibre optics/.test(category)):['source','through'].includes(role);
   return {opticalIn,opticalOut,electricalIn:true,electricalOut:true,electricalKnown:connected.some(c=>c.type==='electrical')||category==='Electrical'};

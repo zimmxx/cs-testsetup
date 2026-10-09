@@ -6,7 +6,19 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 Future changes belong here.
 
-## 0.2.0 — Photo-derived optical chip setup — deployment pending
+## 0.2.1 — Vacuum chip sample stage — deployment pending
+
+Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.1**; setup/import schema remains version 1.
+
+- Added the supplied vacuum-stage STEP and SolidWorks sources, checksums/provenance and converted GLB preview. All 44 equipment records now have STEP/GLB assignments.
+- Replaced the alternative chip holder in `optical-chip-testing-v1` with `chip-vacuum-stage`, preserving its instance ID, placement, mounting to the separate DUT stage and optical connection endpoints.
+- Added a one-time upgrade for older Builder/Bench drafts that preserves user settings, custom labels and alternate holder choices. Updated the evidence manifest and photo-to-setup guide with the user's confirmation.
+
+Validation: **51 tests passed**, production build passed. Browser inspection confirmed the migrated vacuum holder, loaded 3D scene/inspector, preserved 17 items/six paths and separate DUT-stage mounting, with no captured console errors. The existing Three.js bundle-size warning remains.
+
+Deployment: **pending review, merge and successful Pages deployment**. Vacuum plumbing, operating pressure and physical mounting remain unverified.
+
+## 0.2.0 — Photo-derived optical chip setup — deployed 2026-10-09
 
 Prepared for review: **2026-10-09**. Package and sidebar version: **0.2.0**. Setup/import schema remains version 1 for compatibility.
 
@@ -18,11 +30,11 @@ Prepared for review: **2026-10-09**. Package and sidebar version: **0.2.0**. Set
 
 Validation: **50 tests passed**, production build passed; browser checks covered template loading, local draft saving, editing/undo, 3D and source-photo views. The existing Three.js bundle-size warning remains.
 
-Deployment: **pending user review, merge and successful Pages deployment**.
+Merged commit: [ffe8f8c](https://github.com/zimmxx/cs-testsetup/commit/ffe8f8c36a096c2b0f727bad037a106565723c6b). Deployment verified against the [successful Pages workflow](https://github.com/zimmxx/cs-testsetup/actions/runs/37955228758), completed 2026-10-09 at 15:55:31 UTC.
 
 ### Documentation handover — merged 2026-10-09
 
-[PR #1](https://github.com/zimmxx/cs-testsetup/pull/1) was merged on 2026-10-09. Deployment of that documentation merge has not been reverified here.
+[PR #1](https://github.com/zimmxx/cs-testsetup/pull/1) was merged on 2026-10-09 and deployed by the [successful documentation workflow](https://github.com/zimmxx/cs-testsetup/actions/runs/37925408220).
 
 - Added this version history with verified deployment dates, commits and workflow evidence.
 - Added `CONTEXT.md` to the project source: implementation summary, architecture, confirmed hardware, persistence rules, limitations and continuation checklist.
