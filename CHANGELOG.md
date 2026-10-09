@@ -1,13 +1,27 @@
 # Version history
 
-Deployment dates below are UTC dates verified against successful GitHub Actions runs. A push, PR creation or merge alone does not prove deployment. Release-history labels were assigned retrospectively; the existing package and UI version remain `0.1.0`. No historical Git tags are implied.
+Deployment dates below are UTC dates verified against successful GitHub Actions runs. A push, PR creation or merge alone does not prove deployment. Historical 0.1.x release-history labels were assigned retrospectively while the package/UI remained `0.1.0`; version `0.2.0` updates the package and displayed version together. No historical Git tags are implied.
 
 ## Unreleased
 
+Future changes belong here.
+
+## 0.2.0 — Photo-derived optical chip setup — deployment pending
+
+Prepared for review: **2026-10-09**. Package and sidebar version: **0.2.0**. Setup/import schema remains version 1 for compatibility.
+
 - Added the photo-derived `optical-chip-testing-v1` editable setup, original photos/evidence manifest, eight provisional equipment records with illustrative STEP/GLB previews and a reusable photo-to-setup agent guide. Proposed paths and hardware matches require review; the setup is not automatically published.
 - Added shared photo evidence panels and draft-template loading to Builder, Bench_draft and Explorer while preserving existing published snapshots and the manual wafer setup.
+- Added a wider initial/reset 3D camera view for elevated shelf equipment, validated local photo-evidence imports and preserved all existing `_draft` workspaces.
+- Expanded the local library to 44 equipment records and 43 STEP/GLB assignments. New models are illustrative references with estimated dimensions, not verified vendor CAD.
+
+Validation: **50 tests passed**, production build passed; browser checks covered template loading, local draft saving, editing/undo, 3D and source-photo views. The existing Three.js bundle-size warning remains.
 
 Deployment: **pending user review, merge and successful Pages deployment**.
+
+### Documentation handover — merged 2026-10-09
+
+[PR #1](https://github.com/zimmxx/cs-testsetup/pull/1) was merged on 2026-10-09. Deployment of that documentation merge has not been reverified here.
 
 - Added this version history with verified deployment dates, commits and workflow evidence.
 - Added `CONTEXT.md` to the project source: implementation summary, architecture, confirmed hardware, persistence rules, limitations and continuation checklist.

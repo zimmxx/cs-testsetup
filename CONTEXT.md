@@ -6,7 +6,9 @@ Last updated: **2026-10-09**. This file is part of the project source and should
 
 ### Local continuation update — photo-derived chip setup
 
-On branch `codex/optical-chip-testing-v1`, a new **unpublished** `optical-chip-testing-v1` template reconstructs three user bench photos: 17 instances / 15 unique equipment IDs, with eight new provisional components. The local library now has **44 records, 43 GLB/STEP assignments**; vendor CAD count remains seven and the vacuum-stage preview remains pending. Main/public deployment is still the earlier 36-record equipment-picture release until this work is reviewed and deployed. This feature branch starts from the documentation PR branch; PR #1 is not automatically expanded or merged by local feature edits.
+On branch `codex/optical-chip-testing-v1`, a new **unpublished** `optical-chip-testing-v1` template reconstructs three user bench photos: 17 instances / 15 unique equipment IDs, with eight new provisional components. The local library now has **44 records, 43 GLB/STEP assignments**; vendor CAD count remains seven and the vacuum-stage preview remains pending. Main/public equipment data remains the earlier 36-record equipment-picture release until this feature is reviewed and deployed. PR #1 (documentation) was confirmed merged on 2026-10-09; this feature branch has been rebased onto `origin/main` at `a95d450` for a separate PR targeting `main`.
+
+The proposed application release is **0.2.0**: `package.json` is the version source and the sidebar imports it directly. Setup/import schemas retain version 1. CHANGELOG records preparation on 2026-10-09 and explicitly leaves deployment pending. The user will accept the new PR personally; do not merge it or mark it deployed without evidence.
 
 Source template: `src/data/photoChipSetup.js`. Editable JSON: `public/library/setups/optical-chip-testing-v1.json`; isolated draft: `public/library/workspaces_draft/optical-chip-testing-v1_draft.json`. Original photos and evidence manifest: `public/library/references/optical-chip-testing-v1/`. Agent workflow and parameters: [PHOTO-TO-SETUP.md](public/documents/PHOTO-TO-SETUP.md), also registered in app Documentation.
 
@@ -20,7 +22,7 @@ Builder/Bench_draft/Explorer can render a catalog **template** before publicatio
 - Main editing page: `#page=builder`; equipment: `#page=equipment`; draft bench: `#page=bench_draft`.
 - Local project root on the original workstation: `C:\Users\ahs2u23\OneDrive - University of Southampton\Documents\ChatGPT\CORNERSTONE TESTING SETUP APP`.
 - Latest verified deployed commit at this handover: `de8fb9e` (equipment pictures), deployed **2026-10-09**. See [CHANGELOG.md](CHANGELOG.md) for exact commits and workflow evidence.
-- This handover/version-history change is proposed on `codex/equipment-pictures-review`, targeting `main`. User requested an open PR to accept personally; do not assume this change is merged or deployed. Check GitHub for its current state.
+- The original handover/version-history PR #1 from `codex/equipment-pictures-review` was confirmed merged as `a95d450` on 2026-10-09. Its deployment has not been reverified here. The current photo setup/version 0.2.0 feature is proposed separately; check GitHub before assuming it is merged or deployed.
 - An earlier comparison branch, `codex/equipment-pictures-review-base`, points to `add78cc`. It was created before documentation was added, has no unique feature work and is not the intended PR target.
 
 ## Product objective and user preferences
