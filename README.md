@@ -1,6 +1,10 @@
 # CORNERSTONE Test Setup
 
-A local JavaScript workspace for finding photonic measurement setups, exploring equipment and connections, collecting documentation, training users and planning measurement time. Prepared for a future repository named **cs-testsetup**.
+A JavaScript workspace for finding photonic measurement setups, exploring equipment and connections, collecting documentation, training users and planning measurement time. Source repository: [zimmxx/cs-testsetup](https://github.com/zimmxx/cs-testsetup).
+
+## Project history and handover
+
+See [CHANGELOG.md](CHANGELOG.md) for shipped changes and verified GitHub deployment dates. See [CONTEXT.md](CONTEXT.md) for the implementation summary, project structure, important decisions, known limitations and next steps for a new development session. Keep both files updated when changes are reviewed and deployed; unmerged changes remain **Unreleased**.
 
 ## Equipment pictures
 
