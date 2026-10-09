@@ -4,9 +4,21 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 ## Unreleased
 
-Future changes belong here.
+## 0.2.3 — Phone layouts and narrow 3D framing — deployment pending
 
-## 0.2.2 — Component orientation, rigid mounts and STEP assembly export — deployment pending
+Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.3**; setup/import schemas remain version 1. Review branch: `codex/mobile-layout`, based on merged release 0.2.2.
+
+Review: [PR #5 — phone layouts and 3D bench framing](https://github.com/zimmxx/cs-testsetup/pull/5).
+
+- Fitted narrow 3D views to the bench/equipment bounds on initial load and Reset view, while keeping the viewing direction and preserving user orbit changes. Added touch-oriented help text.
+- Stacked builder headings/actions on phones; bounded the equipment inventory so previews follow a short scrollable list; enlarged preview, placement and primary action controls.
+- Made navigation scroll on short portrait/landscape screens, excluded the closed phone drawer from keyboard navigation and labelled its icon controls.
+- Fixed phone Signal path zoom, added blank-space panning to the shared Builder/Explorer diagram and removed narrow Documentation action-row overflow. Setup data and published snapshots are unchanged.
+- Local checks used in-app browser viewports 320 × 667, 390 × 844 and 844 × 390 plus restored desktop sizing. Search/media toggles, filters, equipment dialogs, graph zoom/pan, rotation/undo, planner recalculation and training navigation were exercised. All 63 Node tests passed; production build passed with the existing Three.js size warning. Actual mobile touch gestures, Safari and phone GPU performance remain untested. Local server restart also restored the latest CAD export backend.
+
+Deployment: **pending user review, merge and successful Pages deployment**.
+
+## 0.2.2 — Component orientation, rigid mounts and STEP assembly export — deployed 2026-10-09
 
 Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.2**; setup schema stays at version 1 with optional tilt/roll and rigid-mount fields.
 
@@ -19,7 +31,7 @@ Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.2**; setup s
 
 Validation: **61 tests passed**, production build passed. Local browser checks exercised rotation/tilt, mounting, undo, Explore/Edit state and a successful full CAD download. Independent OpenCascade re-import confirmed one root assembly, 17 named source equipment instances plus the optional bench, and every exported source translation/quaternion against the placement manifest. Existing Three.js chunk-size warning remains. Actual import/mating in SolidWorks is not tested.
 
-Review: [PR #4](https://github.com/zimmxx/cs-testsetup/pull/4). Deployment: **pending user review, merge and successful Pages deployment**.
+Merged [PR #4](https://github.com/zimmxx/cs-testsetup/pull/4) as [91bc5c7](https://github.com/zimmxx/cs-testsetup/commit/91bc5c7d7fb0f9aae5756e69ff60ef267193c2c1). Deployment verified by [successful Pages workflow 37962605529](https://github.com/zimmxx/cs-testsetup/actions/runs/37962605529), completed 2026-10-09 at 16:56:29 UTC.
 
 ## 0.2.1 — Vacuum chip sample stage — deployed 2026-10-09
 
