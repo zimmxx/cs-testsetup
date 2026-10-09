@@ -125,25 +125,33 @@
         [
           "Connector",
           "FC/APC · 5 m cables"
+        ],
+        [
+          "CAD revision",
+          "Fibrearm_assembly_try3 · 9 October 2026"
+        ],
+        [
+          "Model completeness",
+          "Mechanical assembly; spring and fibre omitted"
         ]
       ],
       "url": "https://www.thorlabs.com/optical-fiber-fiber-patch-cables",
       "alternatives": "Fibre array configuration is documented separately. Edge coupling with HFV002 holders is a planned setup.",
       "note": "Presentation slide 9. The listed SM patch cable range ends at 1625 nm; confirm the complete optical path before using a 1630 nm sweep.",
-      "stepPath": "library/references/fibre/fibre-Reference.step",
-      "model3d": "library/models/fibre.glb",
-      "cadKind": "Illustrative reference",
-      "cadReview": "Provisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.",
-      "dimensions": "Estimated presentation geometry; not an engineering dimension",
-      "cadSource": "https://www.thorlabs.com/optical-fiber-fiber-patch-cables",
-      "stepSha256": "5fc2ffa25a91c662718539a2159d8d128de66df92a2fdcf1b039bdc53ac5bb1a",
-      "modelReference": "STEP: library/references/fibre/fibre-Reference.step\nGLB: library/models/fibre.glb\nProvisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.\n",
+      "stepPath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
+      "model3d": "library/models/fibre-arm-try3.glb",
+      "cadKind": "User-provided CAD",
+      "cadReview": "User-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.",
+      "dimensions": "CAD bounding box X/Y/Z: 165.6 / 87.8 / 32.0 mm; not a measured installed envelope",
+      "cadSource": "User-supplied Fibrearm_assembly_try3.STEP / SolidWorks assembly, 9 October 2026",
+      "stepSha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
+      "modelReference": "STEP: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP\nGLB: library/models/fibre-arm-try3.glb\nSolidWorks: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM\nAuxiliary DWG: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.DWG\nProvenance: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.provenance.json\nUser-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.\nConverted locally with occt-import-js 0.0.23; source Y-up axes retained. Earlier illustrative geometry and try2 assembly remain archived.",
       "image": "library/images/fibre-arm-solidworks-assembly.png",
       "imageSource": "",
       "imageAssetSource": "",
       "imageCredit": "User-provided SolidWorks assembly screenshot",
       "imageKind": "User CAD preview",
-      "imageReview": "Bespoke arm design shown. Patch cables are recorded separately; this image does not show the complete assembly of arms and fibres.",
+      "imageReview": "Earlier user-supplied SolidWorks screenshot (try2), retained as a reference picture. The default 3D view uses the latest try3 STEP assembly. Spring and fibre are absent from the latest model.",
       "imageModel": "Bespoke CORNERSTONE fibre arm assembly",
       "imageRetrievedAt": "2026-10-09",
       "imageSha256": "4576783eb57f9bdaba591d580f0c934ae60eb5a3216620ef8a97a16b0a598ab1",
@@ -151,7 +159,15 @@
       "imageHeight": 1036,
       "imageRights": "User-supplied CAD screenshot. Original ownership retained.",
       "imageSourcePath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM",
-      "imageSourceLabel": "Related SolidWorks assembly; user screenshot supplied 8 October 2026"
+      "imageSourceLabel": "Related SolidWorks assembly; user screenshot supplied 8 October 2026",
+      "nativeCad": [
+        {
+          "label": "Latest SolidWorks fibre arm assembly — try3 (spring and fibre omitted)",
+          "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM",
+          "sha256": "70a9bb062e53645232b3fe142bcfef1d94a44b4edf596b02ea42b2a260b7800f"
+        }
+      ],
+      "nativeCadNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing. Spring and fibre are omitted from try3. Earlier source files are retained."
     },
     {
       "id": "detector",
@@ -674,6 +690,14 @@
         [
           "Usual angle",
           "10° from wafer normal"
+        ],
+        [
+          "CAD revision",
+          "Fibrearm_assembly_try3 · 9 October 2026"
+        ],
+        [
+          "Model completeness",
+          "Mechanical assembly; spring and fibre omitted"
         ]
       ],
       "location": "Lab 2077",
@@ -682,27 +706,32 @@
       "alternatives": "",
       "note": "Manual wafer optical bench, user-reported 5 October 2026. Verify installed options and calibration.",
       "image": "library/images/fibre-arm-solidworks-assembly.png",
-      "model3d": "library/models/wst-fibre-arms-manual.glb",
-      "modelReference": "STEP: library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step\nGLB: library/models/wst-fibre-arms-manual.glb\nProvisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.\nUnassembled reference files supplied by user: library/references/fibre-arm/parts/. Fibre Arm.stp contains STEP geometry; Base Bottom.idw, Base Top.idw and Micrometer Housing.idw are Inventor drawings. Complete assembly and remaining part geometry await confirmation.",
-      "stepPath": "library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step",
-      "cadKind": "Illustrative reference",
-      "cadReview": "Provisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.",
-      "dimensions": "Estimated presentation geometry; not an engineering dimension",
-      "cadSource": "Local bespoke design · user description; complete CAD pending",
-      "stepSha256": "5fc2ffa25a91c662718539a2159d8d128de66df92a2fdcf1b039bdc53ac5bb1a",
+      "model3d": "library/models/fibre-arm-try3.glb",
+      "modelReference": "STEP: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP\nGLB: library/models/fibre-arm-try3.glb\nSolidWorks: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM\nAuxiliary DWG: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.DWG\nProvenance: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.provenance.json\nUser-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.\nConverted locally with occt-import-js 0.0.23; source Y-up axes retained. Earlier illustrative geometry and try2 assembly remain archived.",
+      "stepPath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
+      "cadKind": "User-provided CAD",
+      "cadReview": "User-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.",
+      "dimensions": "CAD bounding box X/Y/Z: 165.6 / 87.8 / 32.0 mm; not a measured installed envelope",
+      "cadSource": "User-supplied Fibrearm_assembly_try3.STEP / SolidWorks assembly, 9 October 2026",
+      "stepSha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
       "nativeCad": [
         {
-          "label": "SolidWorks fibre-arm assembly (referenced parts may be required)",
+          "label": "Latest SolidWorks fibre arm assembly — try3 (spring and fibre omitted)",
+          "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM",
+          "sha256": "70a9bb062e53645232b3fe142bcfef1d94a44b4edf596b02ea42b2a260b7800f"
+        },
+        {
+          "label": "Earlier SolidWorks assembly — try2 (archived)",
           "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM",
           "sha256": "75a0f3b3a3201b1059fd96a96a5a5217fca0bbaeb3043a14fcd940c08344f4e5"
         }
       ],
-      "nativeCadNote": "User supplied assembled SolidWorks source on 8 October 2026. The picture shows the assembly in SolidWorks. Current browser GLB and STEP remain illustrative until an assembled STEP export is supplied. SLDASM may depend on external SLDPRT files.",
+      "nativeCadNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing. Spring and fibre are omitted from try3. Earlier source files are retained.",
       "imageSource": "",
       "imageAssetSource": "",
       "imageCredit": "User-provided SolidWorks assembly screenshot",
       "imageKind": "User CAD preview",
-      "imageReview": "Your bespoke fibre arm assembly in SolidWorks. An actual assembled-hardware photograph can replace this preview later.",
+      "imageReview": "Earlier user-supplied SolidWorks screenshot (try2), retained as a reference picture. The default 3D view uses the latest try3 STEP assembly. Spring and fibre are absent from the latest model.",
       "imageModel": "Bespoke CORNERSTONE fibre arm assembly",
       "imageRetrievedAt": "2026-10-09",
       "imageSha256": "4576783eb57f9bdaba591d580f0c934ae60eb5a3216620ef8a97a16b0a598ab1",
@@ -1567,6 +1596,350 @@
       "imageRights": "User-supplied lab photograph. Original ownership retained.",
       "imageSourcePath": "documents/CORNERSTONE_TESTING.pptx",
       "imageSourceLabel": "CORNERSTONE_TESTING.pptx, slide 9, image13.png"
+    },
+    {
+      "id": "chip-dut-translation-stage-v1",
+      "name": "Chip DUT translation stage",
+      "model": "Manual multi-axis stage · model unconfirmed",
+      "category": "Positioning",
+      "role": "Moves the copper chip holder independently of the two fibre-arm stages.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Long black translation assembly at the front, with micrometers and a copper holder at its rear."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-3.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Long black translation assembly at the front, with micrometers and a copper holder at its rear. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+      "imageSourceLabel": "Original bench photo 3",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-dut-translation-stage-v1/chip-dut-translation-stage-v1-Reference.step",
+      "model3d": "library/models/chip-dut-translation-stage-v1.glb",
+      "imageSha256": "2eebf76cc9c605817ac27f4dc01ee6fb1512869d7875d0d3cfb783e3e4d53aea",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "2802f25c357bfddbe437034cdc0d41186f55ce43f9ce3fd895f44240d53992b6"
+    },
+    {
+      "id": "chip-microscope-body-v1",
+      "name": "Chip alignment microscope assembly",
+      "model": "Microscope / objective / focus mount · models unconfirmed",
+      "category": "Imaging",
+      "role": "Observe the chip and fibre tips from above; focus and optical geometry to confirm.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Vertical microscope tube, objective, focus carriage and support post over the chip."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-3.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Vertical microscope tube, objective, focus carriage and support post over the chip. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+      "imageSourceLabel": "Original bench photo 3",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-microscope-body-v1/chip-microscope-body-v1-Reference.step",
+      "model3d": "library/models/chip-microscope-body-v1.glb",
+      "imageSha256": "2eebf76cc9c605817ac27f4dc01ee6fb1512869d7875d0d3cfb783e3e4d53aea",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "a8a4f09c060ee30b29111a3e1facfe0e6d9fa614992991b5986c16dafd592a13"
+    },
+    {
+      "id": "chip-camera-head-v1",
+      "name": "Microscope camera head",
+      "model": "Black camera head · model unconfirmed",
+      "category": "Imaging",
+      "role": "Capture the microscope image; interface and output cable to confirm.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Black camera housing above the vertical microscope tube; exact label is unreadable."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-3.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Black camera housing above the vertical microscope tube; exact label is unreadable. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+      "imageSourceLabel": "Original bench photo 3",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-camera-head-v1/chip-camera-head-v1-Reference.step",
+      "model3d": "library/models/chip-camera-head-v1.glb",
+      "imageSha256": "2eebf76cc9c605817ac27f4dc01ee6fb1512869d7875d0d3cfb783e3e4d53aea",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "b26c259fa0408e803fc7a2938ee3844e7339d52ca2e682a27d3c8db682ec5162"
+    },
+    {
+      "id": "chip-display-monitor-v1",
+      "name": "Alignment display monitor",
+      "model": "Cello display · model unconfirmed",
+      "category": "Display",
+      "role": "Display the alignment camera image; actual input and routing to confirm.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Large Cello monitor on the overhead shelf."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-2.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Large Cello monitor on the overhead shelf. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-2.jpg",
+      "imageSourceLabel": "Original bench photo 2",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-display-monitor-v1/chip-display-monitor-v1-Reference.step",
+      "model3d": "library/models/chip-display-monitor-v1.glb",
+      "imageSha256": "b8b4ca77f70367d81ad96a01e37918523f366077c357f9a619841a2e0d609d68",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "cf5a8fdec4d783dd75a6e78e52eb017e441c0563183715b96b5cbac8256c6c6b"
+    },
+    {
+      "id": "chip-led-illuminator-v1",
+      "name": "Microscope LED illuminator",
+      "model": "Microscope LED illuminator · model unconfirmed",
+      "category": "Illumination",
+      "role": "Provide visible alignment illumination; do not classify as the measurement laser.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Blue unit labelled Microscope LED Illuminator on the top shelf, with a front optical fitting."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-3.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Blue unit labelled Microscope LED Illuminator on the top shelf, with a front optical fitting. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+      "imageSourceLabel": "Original bench photo 3",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-led-illuminator-v1/chip-led-illuminator-v1-Reference.step",
+      "model3d": "library/models/chip-led-illuminator-v1.glb",
+      "imageSha256": "2eebf76cc9c605817ac27f4dc01ee6fb1512869d7875d0d3cfb783e3e4d53aea",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "76c5b7d21283e3213402dd73ae9f009b234ccd295c2650a5ad94971c7fc5ebaf"
+    },
+    {
+      "id": "chip-illumination-controller-v1",
+      "name": "Shelf illumination / instrument controller",
+      "model": "Hamamatsu Photonics-labelled unit · function unconfirmed",
+      "category": "Control",
+      "role": "Shelf support instrument; function and relationship to illumination must be checked.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Cream Hamamatsu Photonics-labelled instrument beneath/next to the blue illuminator."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-3.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Cream Hamamatsu Photonics-labelled instrument beneath/next to the blue illuminator. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+      "imageSourceLabel": "Original bench photo 3",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-illumination-controller-v1/chip-illumination-controller-v1-Reference.step",
+      "model3d": "library/models/chip-illumination-controller-v1.glb",
+      "imageSha256": "2eebf76cc9c605817ac27f4dc01ee6fb1512869d7875d0d3cfb783e3e4d53aea",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "09002f60adcf017cd95167ea6858fe4679aa2e90374e3208f74ab45721561fd8"
+    },
+    {
+      "id": "chip-handheld-power-meter-v1",
+      "name": "Handheld meter on chip bench",
+      "model": "Orange/black handheld meter · model/function unconfirmed",
+      "category": "Accessory",
+      "role": "Bench accessory; confirm whether it is an optical power meter and whether it is used in this measurement.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Orange and black handheld instrument on the right of the table; no connected measurement head can be established."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-2.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Orange and black handheld instrument on the right of the table; no connected measurement head can be established. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-2.jpg",
+      "imageSourceLabel": "Original bench photo 2",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-handheld-power-meter-v1/chip-handheld-power-meter-v1-Reference.step",
+      "model3d": "library/models/chip-handheld-power-meter-v1.glb",
+      "imageSha256": "b8b4ca77f70367d81ad96a01e37918523f366077c357f9a619841a2e0d609d68",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "e1c9f37995a6a45dc8ffc2f7c52e75d335527a4371111709c68bf2c0a742a896"
+    },
+    {
+      "id": "chip-overhead-shelf-v1",
+      "name": "Chip bench overhead shelf",
+      "model": "Bench shelf / gantry · dimensions unconfirmed",
+      "category": "Mechanical support",
+      "role": "Support the monitor and shelf instruments above the optical table.",
+      "location": "Lab 2077 · Setup 3 (photo labels)",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Observed in photo",
+          "Horizontal shelf supported by two tall posts over the bench."
+        ],
+        [
+          "Exact model / dimensions",
+          "Not established from photos"
+        ],
+        [
+          "Evidence status",
+          "Observed hardware; provisional identification"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed component before substituting or assigning vendor specifications.",
+      "note": "User-supplied bench photos. Illustrative geometry and estimated placement only; no calibration or operating limits confirmed.",
+      "image": "library/images/optical-chip-v1-photo-2.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Horizontal shelf supported by two tall posts over the bench. Full bench photo; surrounding equipment is included. Exact part number and geometry remain to confirm.",
+      "imageSourcePath": "library/references/optical-chip-testing-v1/Photo-2.jpg",
+      "imageSourceLabel": "Original bench photo 2",
+      "imageRetrievedAt": "2026-10-09",
+      "imageRights": "User-supplied laboratory photograph; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "User photographs; procedural reference geometry",
+      "cadReview": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+      "stepPath": "library/references/chip-overhead-shelf-v1/chip-overhead-shelf-v1-Reference.step",
+      "model3d": "library/models/chip-overhead-shelf-v1.glb",
+      "imageSha256": "b8b4ca77f70367d81ad96a01e37918523f366077c357f9a619841a2e0d609d68",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "187eef8384456dd5cbd8357b36c19719b264d1b348d1616e8af5637fe04f2ed1"
     }
   ]
 }

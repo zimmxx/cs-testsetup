@@ -16,6 +16,8 @@
 *.sldasm binary
 *.SLDPRT binary
 *.SLDASM binary
+*.dwg binary
+*.DWG binary
 *.png binary
 *.jpg binary
 *.pdf binary

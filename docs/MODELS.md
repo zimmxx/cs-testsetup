@@ -45,7 +45,7 @@ The 81940A reference uses the supplier’s 819xxA family photograph and its publ
 
 Conversion runs only on the local development server when the separately installed `.local/cad-tools/package` tool is present. A static GitHub deployment can display and download existing assets, but cannot run the local conversion or write project files. Fallback: convert in SolidWorks/another local tool to GLB and attach the GLB.
 
-The original bespoke arm parts and Inventor drawings are preserved. The displayed arm is a provisional silhouette awaiting the complete SolidWorks/STEP assembly. Vendor cable CAD depicts uncut reference geometry, not the cleaved tips or the full installed cable route.
+The original bespoke arm parts and Inventor drawings are preserved. Both arm records (`wst-fibre-arms-manual` and `fibre`) now display the user-supplied `Fibrearm_assembly_try3.STEP` export received 9 October 2026, converted to `public/library/models/fibre-arm-try3.glb` with source Y-up axes retained. Its 11 mesh parts have a CAD bounding box of approximately 165.6 × 87.8 × 32.0 mm. The spring and fibre are omitted as confirmed by the user; fit and travel remain unverified. The STEP, SLDASM and auxiliary DWG originals, hashes and provenance are stored under `public/library/references/wst-fibre-arms-manual/`; try2 and earlier illustrative sources remain archived. Native SLDASM editing may require referenced SLDPRT files. The Picture tab retains the earlier try2 screenshot with an explicit label. Vendor cable CAD depicts uncut reference geometry, not the cleaved tips or the full installed cable route.
 
 ## O-band assembly references
 

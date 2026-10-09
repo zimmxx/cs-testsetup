@@ -1,0 +1,30 @@
+{
+  "source": "chip-illumination-controller-v1-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 17,
+  "triangles": 332,
+  "boundsMm": {
+    "min": [
+      -135,
+      0,
+      -115
+    ],
+    "max": [
+      135,
+      80,
+      102
+    ]
+  },
+  "extentsMm": [
+    270,
+    80,
+    217
+  ],
+  "glbBytes": 33664,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

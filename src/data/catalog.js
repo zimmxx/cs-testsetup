@@ -1,6 +1,8 @@
 import { manualEquipment } from './manualSetup.js';
 import { obandEquipment } from './obandAssembly.js';
+import { photoChipEquipment, photoChipCatalogEntry } from './photoChipSetup.js';
 export const sources = {
+  'photo-chip': { label: 'User-supplied bench photographs · Lab 2077 / Setup 3', url: null },
   deck: { label: 'CORNERSTONE_TESTING · 22 June 2026', url: null },
   chip: { label: 'Chip-Level Testing Service', url: 'https://cornerstone.sotonfab.co.uk/chip-level-testing-service/' },
   wafer: { label: 'Wafer-Scale Testing Service', url: 'https://cornerstone.sotonfab.co.uk/wafer-scale-testing-service-wst/' },
@@ -27,7 +29,7 @@ export const equipment = [
   { id: 'band-detector', name: 'Band-specific optical detector', model: 'Model to be confirmed', category: 'Detection', location: 'Location to verify', status: 'Needs verification', role: 'Record optical output in the selected wavelength band.', specs: [['Wavelength range', 'Confirm against source and fibre'], ['Model / serial', 'Not supplied'], ['Sensitivity', 'Not supplied'], ['Trigger / sampling', 'To be confirmed']], url: null, alternatives: 'Select a detector compatible with the optical wavelength, signal level and acquisition method. No installed alternative is asserted.', note: 'The supplied equipment list identifies the chip C-band sensor only. Detector models for other bands and the wafer tester require verification.' },
 ];
 
-equipment.push(...manualEquipment,...obandEquipment);
+equipment.push(...manualEquipment,...obandEquipment,...photoChipEquipment);
 const opticalEquipment = ['laser', 'polarisation', 'stage', 'fibre', 'detector', 'camera'];
 const genericOptical = ['band-source', 'polarisation', 'stage', 'fibre', 'band-detector', 'camera'];
 export const setups = [
@@ -44,6 +46,8 @@ export const setups = [
   { id: 'wafer-electrical', name: 'Wafer-scale electrical testing', subtitle: 'Electrical automation · in development', scale: 'Wafer', mode: 'Electrical', bands: [], status: 'In development', lab: 'Lab 2074', description: 'Electrical wafer probing is shown in the presentation; the automated measurement process is still being developed.', capabilities: ['Electrical probing reference', 'Heater measurement workflow in progress', 'No optical wavelength required'], equipment: ['wafer', 'electrical', 'camera'], kind: 'electrical', photos: ['wafer-electrical.jpg'], slide: 27, source: 'deck', guide: 'electrical', note: 'Slide 38 states electrical measurement has been tested but the process has not been fully developed.' },
   { id: 'wafer-o', name: 'Wafer-scale O-band upgrade', subtitle: '1310 nm measurement · planned upgrade', scale: 'Wafer', mode: 'Optical', bands: ['O-band'], status: 'Planned', lab: 'Lab 2074', description: 'O-band capability is listed among the proposed wafer tester upgrades.', capabilities: ['1310 nm upgrade proposal', 'Source & detector changes to verify', 'Automation validation required'], equipment: ['band-source', 'wafer', 'fibre', 'band-detector', 'camera'], kind: 'wafer', photos: ['wafer-tester.jpg'], slide: 38, source: 'deck', guide: 'wafer', note: 'WST photo is a platform reference. Published WST capability currently describes C-band; no operational O-band service is asserted.' },
 ];
+
+setups.push(photoChipCatalogEntry);
 
 export const guideSteps = {
   optical: [
@@ -73,6 +77,7 @@ export const guideSteps = {
 };
 
 export const defaultDocuments = [
+  { id: 'photo-to-setup', title: 'Photo-to-setup agent guide', type: 'Guide', setup: 'all', description: 'Reusable photo reconstruction workflow, equipment matching, evidence rules, builder schema and optical-chip-testing-v1 review checklist.', path: 'documents/PHOTO-TO-SETUP.md', source: 'Project source · photo-derived draft workflow' },
   { id: 'collection-workbook', title: 'Testing setup collection workbook', type: 'Collection workbook', setup: 'all', description: 'Editable Word forms for equipment, detailed models, actual setups, fibre connections, approved guidelines, timing evidence and directory mapping.', path: 'documents/CORNERSTONE_Setup_Collection_Workbook.docx', source: 'Local project · 30 September 2026' },
   { id: 'presentation', title: 'CORNERSTONE testing overview', type: 'Presentation', setup: 'all', description: 'Supplied presentation · updated 22 June 2026. Setup images, equipment and future upgrades.', path: 'documents/CORNERSTONE_TESTING.pptx', source: 'Supplied file' },
   { id: 'service-chip', title: 'Chip-level testing capabilities', type: 'Service reference', setup: 'Chip', description: 'Published optical and electro-optic characterisation capabilities.', url: sources.chip.url, source: 'CORNERSTONE' },

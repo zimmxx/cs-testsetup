@@ -1,0 +1,15 @@
+{
+  "equipmentId": "chip-led-illuminator-v1",
+  "source": "User-supplied bench photos",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+  "photos": [
+    "library/references/optical-chip-testing-v1/Photo-1.jpg",
+    "library/references/optical-chip-testing-v1/Photo-2.jpg",
+    "library/references/optical-chip-testing-v1/Photo-3.jpg"
+  ],
+  "generator": "scripts/generate-photo-chip-cad.py",
+  "units": "Illustrative millimetres",
+  "verifiedDimensions": false,
+  "sha256": "76c5b7d21283e3213402dd73ae9f009b234ccd295c2650a5ad94971c7fc5ebaf"
+}

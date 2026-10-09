@@ -1,0 +1,501 @@
+{
+  "version": 1,
+  "id": "optical-chip-testing-v1",
+  "name": "optical-chip-testing-v1",
+  "recordStatus": "Photo-derived draft · review required",
+  "photoEvidence": {
+    "version": 1,
+    "files": [
+      "library/references/optical-chip-testing-v1/Photo-1.jpg",
+      "library/references/optical-chip-testing-v1/Photo-2.jpg",
+      "library/references/optical-chip-testing-v1/Photo-3.jpg"
+    ],
+    "guide": "documents/PHOTO-TO-SETUP.md",
+    "manifest": "library/references/optical-chip-testing-v1/photo-evidence.json",
+    "warning": "Hardware is reconstructed from photos. Module identities, optical routes, fibre models/connectors, dimensions and operating settings require confirmation. C-band is a provisional catalog allocation; no approved measurement capability is asserted."
+  },
+  "publication": {
+    "scale": "Chip",
+    "mode": "Optical",
+    "bands": [
+      "C-band"
+    ],
+    "lab": "Lab 2077 · Setup 3 (photo labels)",
+    "description": "Photo-derived optical chip bench draft with two fibre arms, copper chip holder and overhead imaging. Review models, signal routes and dimensions before publication."
+  },
+  "nodes": [
+    {
+      "id": "photo-mainframe",
+      "equipmentId": "wst-mainframe-manual",
+      "label": "Shelf mainframe · provisional 8163B",
+      "x": 20,
+      "y": 20,
+      "signalX": 20,
+      "signalY": 20,
+      "benchXMm": -550,
+      "benchZMm": -340,
+      "elevationMm": 550,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Agilent/Keysight-family front panel visible at shelf left. Reused 8163B reference; exact model and installed modules not verified."
+      }
+    },
+    {
+      "id": "photo-laser",
+      "equipmentId": "wst-laser-old",
+      "label": "Laser · provisional 81940A",
+      "x": 240,
+      "y": 20,
+      "signalX": 240,
+      "signalY": 20,
+      "benchXMm": -520,
+      "benchZMm": -300,
+      "elevationMm": 550,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Existing-library candidate for the optical source; module is not identifiable in these photos. No mainframe slot assignment assumed.",
+        "signalRole": "source"
+      }
+    },
+    {
+      "id": "photo-controller",
+      "equipmentId": "wst-polarisation-manual",
+      "label": "Polarisation / routing · confirm",
+      "x": 460,
+      "y": 20,
+      "signalX": 460,
+      "signalY": 20,
+      "benchXMm": -510,
+      "benchZMm": 50,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Left-hand fibre loops/supports visible. FPC562 is a candidate from the existing library, not a confirmed photo identification.",
+        "signalRole": "through"
+      }
+    },
+    {
+      "id": "photo-sensor",
+      "equipmentId": "wst-sensor-old",
+      "label": "Readout sensor · provisional 81634B",
+      "x": 680,
+      "y": 20,
+      "signalX": 680,
+      "signalY": 20,
+      "benchXMm": -250,
+      "benchZMm": -340,
+      "elevationMm": 550,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Existing-library candidate; detector module and connector cannot be verified from photos.",
+        "signalRole": "detector"
+      }
+    },
+    {
+      "id": "photo-input-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Left fibre-arm stage · model to verify",
+      "x": 20,
+      "y": 130,
+      "signalX": 20,
+      "signalY": 130,
+      "benchXMm": -180,
+      "benchZMm": 0,
+      "elevationMm": 0,
+      "rotationDeg": 90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Black Thorlabs-branded positioning stage seen left of the copper block. MAX313D is reused as a candidate only; verify label and drives."
+      }
+    },
+    {
+      "id": "photo-input-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Left fibre arm · provisional input",
+      "x": 240,
+      "y": 130,
+      "signalX": 240,
+      "signalY": 130,
+      "benchXMm": -180,
+      "benchZMm": 0,
+      "elevationMm": 65,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Bespoke silver arm observed. Input/output direction, exact assembly revision, fibre model and tip type need confirmation.",
+        "signalRole": "through",
+        "mountingStage": "photo-input-stage"
+      }
+    },
+    {
+      "id": "photo-holder",
+      "equipmentId": "wst-chip-holder-manual",
+      "label": "Copper chip holder / DUT",
+      "x": 460,
+      "y": 130,
+      "signalX": 460,
+      "signalY": 130,
+      "benchXMm": 0,
+      "benchZMm": 0,
+      "elevationMm": 75,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Copper block is visible at the centre. Chip identity, retention, heating/vacuum and grating/edge coupling are unconfirmed.",
+        "signalRole": "through",
+        "mountingStage": "photo-dut-stage"
+      }
+    },
+    {
+      "id": "photo-output-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Right fibre arm · provisional output",
+      "x": 680,
+      "y": 130,
+      "signalX": 680,
+      "signalY": 130,
+      "benchXMm": 180,
+      "benchZMm": 0,
+      "elevationMm": 65,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Silver arm observed opposite the left arm. Signal direction is proposed; confirm tip and actual route.",
+        "signalRole": "through",
+        "mountingStage": "photo-output-stage"
+      }
+    },
+    {
+      "id": "photo-output-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Right fibre-arm stage · model to verify",
+      "x": 20,
+      "y": 240,
+      "signalX": 20,
+      "signalY": 240,
+      "benchXMm": 180,
+      "benchZMm": 0,
+      "elevationMm": 0,
+      "rotationDeg": -90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Thorlabs-branded multi-axis stage at right. Reused MAX313D model is a candidate, not an established match."
+      }
+    },
+    {
+      "id": "photo-dut-stage",
+      "equipmentId": "chip-dut-translation-stage-v1",
+      "label": "Front DUT translation stage",
+      "x": 240,
+      "y": 240,
+      "signalX": 240,
+      "signalY": 240,
+      "benchXMm": 0,
+      "benchZMm": 170,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    },
+    {
+      "id": "photo-microscope",
+      "equipmentId": "chip-microscope-body-v1",
+      "label": "Overhead microscope & objective",
+      "x": 460,
+      "y": 240,
+      "signalX": 460,
+      "signalY": 240,
+      "benchXMm": 0,
+      "benchZMm": -30,
+      "elevationMm": 110,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    },
+    {
+      "id": "photo-camera",
+      "equipmentId": "chip-camera-head-v1",
+      "label": "Microscope camera head",
+      "x": 680,
+      "y": 240,
+      "signalX": 680,
+      "signalY": 240,
+      "benchXMm": 0,
+      "benchZMm": -30,
+      "elevationMm": 460,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Camera is visually above the microscope. Power/video/data interface and make/model remain unknown."
+      }
+    },
+    {
+      "id": "photo-display",
+      "equipmentId": "chip-display-monitor-v1",
+      "label": "Alignment monitor",
+      "x": 20,
+      "y": 350,
+      "signalX": 20,
+      "signalY": 350,
+      "benchXMm": 0,
+      "benchZMm": -360,
+      "elevationMm": 620,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    },
+    {
+      "id": "photo-led",
+      "equipmentId": "chip-led-illuminator-v1",
+      "label": "Shelf LED illuminator",
+      "x": 240,
+      "y": 350,
+      "signalX": 240,
+      "signalY": 350,
+      "benchXMm": 370,
+      "benchZMm": -330,
+      "elevationMm": 620,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    },
+    {
+      "id": "photo-illumination-control",
+      "equipmentId": "chip-illumination-controller-v1",
+      "label": "Shelf controller · function to confirm",
+      "x": 460,
+      "y": 350,
+      "signalX": 460,
+      "signalY": 350,
+      "benchXMm": 370,
+      "benchZMm": -330,
+      "elevationMm": 550,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    },
+    {
+      "id": "photo-handheld",
+      "equipmentId": "chip-handheld-power-meter-v1",
+      "label": "Handheld bench meter · unconnected",
+      "x": 680,
+      "y": 350,
+      "signalX": 680,
+      "signalY": 350,
+      "benchXMm": 540,
+      "benchZMm": 220,
+      "elevationMm": 0,
+      "rotationDeg": -15,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    },
+    {
+      "id": "photo-shelf",
+      "equipmentId": "chip-overhead-shelf-v1",
+      "label": "Overhead shelf & support posts",
+      "x": 20,
+      "y": 460,
+      "signalX": 20,
+      "signalY": 460,
+      "benchXMm": 0,
+      "benchZMm": -340,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "dimensions": "Estimated placement only; measure before mechanical use",
+        "photoReference": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+        "notes": "Photo-derived draft · verify installed hardware and placement."
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "PHOTO-O1",
+      "from": "photo-laser",
+      "to": "photo-controller",
+      "type": "optical",
+      "fromPort": "Output · confirm",
+      "toPort": "Input · confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — not traced or verified from photographs. Proposed source-to-polarisation lead. Cable part number, connector ends, sleeves and actual source unknown."
+    },
+    {
+      "id": "PHOTO-O2",
+      "from": "photo-controller",
+      "to": "photo-input-arm",
+      "type": "optical",
+      "fromPort": "Output · confirm",
+      "toPort": "Input · confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — not traced or verified from photographs. Proposed input fibre path. Do not infer fibre type, length or connector polish from colour."
+    },
+    {
+      "id": "PHOTO-GC-IN",
+      "from": "photo-input-arm",
+      "to": "photo-holder",
+      "type": "optical",
+      "fromPort": "Output · confirm",
+      "toPort": "Input · confirm",
+      "fibre": "custom",
+      "customFibre": "Candidate free-space coupling · confirm",
+      "fromConnector": "Bare fibre",
+      "toConnector": "Other",
+      "length": "",
+      "notes": "PROPOSED ROUTE — not traced or verified from photographs. Candidate above-chip coupling. Confirm grating vs edge coupling and angle."
+    },
+    {
+      "id": "PHOTO-GC-OUT",
+      "from": "photo-holder",
+      "to": "photo-output-arm",
+      "type": "optical",
+      "fromPort": "Output · confirm",
+      "toPort": "Input · confirm",
+      "fibre": "custom",
+      "customFibre": "Candidate free-space coupling · confirm",
+      "fromConnector": "Other",
+      "toConnector": "Bare fibre",
+      "length": "",
+      "notes": "PROPOSED ROUTE — not traced or verified from photographs. Candidate output coupling. Confirm fibre tip and direction."
+    },
+    {
+      "id": "PHOTO-O3",
+      "from": "photo-output-arm",
+      "to": "photo-sensor",
+      "type": "optical",
+      "fromPort": "Output · confirm",
+      "toPort": "Input · confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — not traced or verified from photographs. Proposed return to mainframe sensor. No complete return cable is traceable."
+    },
+    {
+      "id": "PHOTO-VIDEO",
+      "from": "photo-camera",
+      "to": "photo-display",
+      "type": "electrical",
+      "fromPort": "Output / interface · confirm",
+      "toPort": "Input / interface · confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — not traced or verified from photographs. Candidate camera-to-monitor observation link; interface and intervening controller unknown. This is not the optical measurement signal."
+    }
+  ],
+  "measurement": {
+    "lab": "Lab 2077 · Setup 3",
+    "laserPowerMw": "",
+    "inputAngle": "",
+    "outputAngle": "",
+    "coupling": "",
+    "startNm": "",
+    "stopNm": "",
+    "maxPowerMw": "",
+    "notes": "Configure the actual optical band, source/sensor models, fibre routing, coupling, power, scan, calibration and approved limits. Do not inherit the manual wafer bench 10 mW / 10° defaults from photographs.",
+    "holder": "Copper chip holder · photo-observed",
+    "stageModel": "Manual DUT translation stage · model unknown",
+    "inputFibreStageModel": "MAX313D candidate · verify",
+    "outputFibreStageModel": "MAX313D candidate · verify",
+    "cameraModel": "Camera and microscope models unknown"
+  },
+  "procedure": [
+    {
+      "title": "Review photo reconstruction",
+      "text": "Confirm component labels, left/right input/output direction and the proposed optical path against the real bench. Replace provisional module and stage identities."
+    },
+    {
+      "title": "Record hardware and operating limits",
+      "text": "Complete serials, calibration, fibre/connector ends, actual cut lengths, coupling type and angles. Enter the approved wavelength and DUT power limits; photos do not supply them."
+    },
+    {
+      "title": "Configure the actual chip measurement",
+      "text": "Enter chip/device IDs, reference structures, scan and detector settings, data naming and approved local SOP. Verify camera/illumination links separately from the measurement signal."
+    },
+    {
+      "title": "Align and acquire under the approved SOP",
+      "text": "Use the reviewed lab procedure for loading, alignment, reference acquisition, measurements and acceptance checks. This working outline does not approve hardware operation."
+    },
+    {
+      "title": "Retain results and review the setup",
+      "text": "Save raw/reference data and configuration; record post-processing and measured timings. Save the editable setup, then explicitly publish a reviewed snapshot if appropriate."
+    }
+  ]
+}

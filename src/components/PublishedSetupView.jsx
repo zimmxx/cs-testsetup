@@ -6,8 +6,9 @@ import SetupView from './SetupView.jsx';
 import MainframeSlots from './MainframeSlots.jsx';
 import { Inspector } from './SetupCanvas.jsx';
 import { manualGroups } from '../data/manualSetup.js';
+import PhotoSetupEvidence from './PhotoSetupEvidence.jsx';
 
-export function catalogLayout(setup){return setup.published||{version:1,id:setup.id,name:setup.name,nodes:setup.equipment.map((id,i)=>({id:`catalog-${i}`,equipmentId:id,label:'',x:30+(i%4)*235,y:35+Math.floor(i/4)*145})),connections:[]};}
+export function catalogLayout(setup){return setup.published||setup.template||{version:1,id:setup.id,name:setup.name,nodes:setup.equipment.map((id,i)=>({id:`catalog-${i}`,equipmentId:id,label:'',x:30+(i%4)*235,y:35+Math.floor(i/4)*145})),connections:[]};}
 export default function PublishedSetupView({setup,mode,onMode,onInspect}){
   const original=useMemo(()=>catalogLayout(setup),[setup]);
   const [draft,setDraft]=useState(()=>structuredClone(original)),[selected,setSelected]=useState(null),[edgeId,setEdgeId]=useState(null),[pathType,setPathType]=useState('optical'),[notice,setNotice]=useState(''),[changed,setChanged]=useState(false),[focus,setFocus]=useState(null),[resetKey,setResetKey]=useState(0);
@@ -19,7 +20,8 @@ export default function PublishedSetupView({setup,mode,onMode,onInspect}){
     <div className="published-view-note"><span>{setup.published?`Published layout · ${new Date(setup.publishedAt).toLocaleDateString()}`:'Catalog preview · layout and connections have not been published yet.'}{changed?' · temporary view changes':''}</span><button className="text-button" onClick={reset}>Reset view</button></div>
     {mode==='signal'&&<div className="connection-tools"><label>Preview path<select aria-label="Preview connection type" value={pathType} onChange={e=>setPathType(e.target.value)}><option value="optical">Optical fibre</option><option value="electrical">Electrical cable</option></select></label><p>Drag cards or connect ports to explore. Changes stay in this view; use Build setup to edit and publish.</p></div>}
     {notice&&<div className="builder-notice" role="status">{notice}</div>}
-    {!setup.published&&<div className="builder-help model-disclosure">Equipment is arranged as a catalog preview. No signal connections are assumed. Publish the actual setup from Build setup to replace this preview.</div>}
+    {!setup.published&&<div className="builder-help model-disclosure">{setup.template?'Photo-derived draft preview. Routes are proposed and require review; this setup has not been published.':'Equipment is arranged as a catalog preview. No signal connections are assumed.'} Publish the actual setup from Build setup to replace this preview.</div>}
+    <PhotoSetupEvidence evidence={draft.photoEvidence}/>
     {draft.nodes.some(n=>['wst-mainframe-manual','oband-mainframe-8164b'].includes(n.equipmentId))&&<details className="published-mainframes"><summary>Mainframe installation · inspect slots</summary><MainframeSlots draft={draft} readOnly onSelect={select} onFocus={id=>{setFocus({id});onMode('3d');select(id);}}/></details>}
     <SetupView key={resetKey} draft={draft} mode={mode} selected={selected} edgeId={edgeId} onSelect={select} onSelectEdge={id=>{setEdgeId(id);setSelected(null);}} onMove={(id,pos)=>{setDraft(d=>({...d,nodes:d.nodes.map(n=>n.id===id?{...n,...pos}:n)}));setChanged(true);}} onConnect={connect} pathType={pathType} focusRequest={focus} onInspect={onInspect}/>
     {node&&mode!=='overview'&&<Inspector id={node.equipmentId} onInspect={onInspect}/>}

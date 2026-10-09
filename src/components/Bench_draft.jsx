@@ -16,6 +16,7 @@ import PublishSetup from './PublishSetup.jsx';
 import { EquipmentPicture, PictureSource } from './EquipmentPicture.jsx';
 import Modal from './Modal.jsx';
 import { localPath } from './UI.jsx';
+import PhotoSetupEvidence from './PhotoSetupEvidence.jsx';
 import '../workspaces_draft.css';
 const ModelScene=lazy(()=>import('./ModelScene.jsx'));
 
@@ -54,6 +55,7 @@ export default function Bench_draft({setupId='wst-optical-manual',onSetupChange,
   const visibleConnections=draft.connections.filter(c=>layers[c.type]);
   const hiddenNodes=layers.mechanical?[]:draft.nodes.filter(n=>!draft.connections.some(c=>c.from===n.id||c.to===n.id)).map(n=>n.id);
   return <div className={`draft-workspace ${expanded?'draft-expanded':''}`}>
+    <PhotoSetupEvidence evidence={draft.photoEvidence}/>
     <div className="draft-heading"><div><span className="draft-eyebrow">CORNERSTONE / DESIGN PREVIEW</span><h1>Bench<span>_draft</span></h1><p>Explore the bench. Refine the layout. Review before publishing.</p></div><div className="draft-heading-actions"><button className="button secondary" onClick={()=>setExpanded(v=>!v)}>{expanded?<Minimize2 size={16}/>:<Maximize2 size={16}/>} {expanded?'Exit focus':'Focus workspace'}</button><button className="button secondary" onClick={onTraining}>Guided measurement<ArrowRight size={15}/></button></div></div>
     <div className="draft-session-bar"><label>Setup<select aria-label="Draft setup" value={setupId} onChange={e=>onSetupChange(e.target.value)}>{setups.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}</select></label><div className="draft-mode"><button aria-pressed={!editing} onClick={()=>setEditing(false)}><Eye size={15}/>Explore</button><button aria-pressed={editing} onClick={()=>setEditing(true)}><Pencil size={15}/>Edit draft</button></div><div className="draft-save-actions"><button className="icon-button" aria-label="Undo draft edit" onClick={undo} disabled={!history.current.length}><Undo2 size={17}/></button><button className="button secondary" onClick={load}>Load local</button><button className="button primary" onClick={save} disabled={!storage?.writable||busy}><Save size={15}/>Save draft locally</button><button className="button secondary" onClick={()=>setReview(true)}>Review changes</button></div></div>
     <div className="draft-status-bar" role="status"><span><span className="draft-status-dot"/>{browserStatus}</span><span>{diskSignature===signature?`Project draft matches${diskTime?' · '+diskTime:''}`:diskSignature?'Project draft has unsaved changes':'No saved project draft'}</span><span>{publishedChanged?'Draft differs from publication':'Matches published setup'}</span><div><button onClick={()=>downloadFile(`${setupId}_draft.json`,draft)}><Download size={13}/>Export</button><button onClick={()=>input.current.click()}><Upload size={13}/>Import</button></div></div><input ref={input} type="file" accept=".json" hidden onChange={importFile}/>

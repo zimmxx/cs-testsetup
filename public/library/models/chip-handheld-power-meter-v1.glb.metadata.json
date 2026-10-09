@@ -1,0 +1,30 @@
+{
+  "source": "chip-handheld-power-meter-v1-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 6,
+  "triangles": 72,
+  "boundsMm": {
+    "min": [
+      -45,
+      0,
+      -85
+    ],
+    "max": [
+      45,
+      36,
+      85
+    ]
+  },
+  "extentsMm": [
+    90,
+    36,
+    170
+  ],
+  "glbBytes": 9784,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

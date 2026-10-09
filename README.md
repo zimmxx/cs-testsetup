@@ -6,9 +6,13 @@ A JavaScript workspace for finding photonic measurement setups, exploring equipm
 
 See [CHANGELOG.md](CHANGELOG.md) for shipped changes and verified GitHub deployment dates. See [CONTEXT.md](CONTEXT.md) for the implementation summary, project structure, important decisions, known limitations and next steps for a new development session. Keep both files updated when changes are reviewed and deployed; unmerged changes remain **Unreleased**.
 
-## Equipment pictures
+## Photo-derived chip setup
 
-All 36 equipment records include a local picture with its source, credit and accuracy notes. Open **Equipment library → select equipment → Picture**; 3D remains the default. Pictures are stored in `public/library/images/`, with editable provenance in `public/library/equipment.json` and the acquisition snapshot in `public/library/images/sources.json`. See [Equipment picture guide](docs/EQUIPMENT-PICTURES.md) for coverage and replacement instructions. Bespoke or unconfirmed hardware is explicitly labelled when only a lab context picture or vendor reference is available.
+The editable **optical-chip-testing-v1** draft is reconstructed from three supplied lab photographs. Open [the local bench draft](http://localhost:5174/#page=bench_draft&setup=optical-chip-testing-v1), or select its template in **Build setup**. Seventeen instances include eight new provisional components with illustrative STEP/GLB references. Source photos, unknowns and proposed routes remain inspectable; operating settings are blank and the setup is not published automatically. See [the reusable photo-to-setup agent guide](public/documents/PHOTO-TO-SETUP.md).
+
+## Equipment picture coverage
+
+All 44 equipment records include a local picture with its source, credit and accuracy notes. Open **Equipment library → select equipment → Picture**; 3D remains the default. Pictures are stored in `public/library/images/`, with editable provenance in `public/library/equipment.json` and the acquisition snapshot in `public/library/images/sources.json`. See [Equipment picture guide](docs/EQUIPMENT-PICTURES.md) for coverage and replacement instructions, and the photo-to-setup guide for the eight new provisional records. Bespoke or unconfirmed hardware is explicitly labelled when only a lab context picture or vendor reference is available.
 
 ## Draft UI workspaces
 
@@ -71,7 +75,7 @@ Browser-attached documents and saved links are local to that browser and **origi
 
 Built setup drafts are also browser/origin-local; export JSON to retain or share them. Admin edits are project files shared with all viewers after reload. File writes require same-origin requests from localhost. LAN viewers can inspect and export. GitHub Pages editing requires exporting and committing library changes, or a separately authenticated backend. Admin is not currently a multiuser permissions system.
 
-See [docs/MODELS.md](docs/MODELS.md) and [public/library/README.md](public/library/README.md). The current library contains 36 records: 35 have browser models and STEP references; the vacuum chip stage retains its original SolidWorks source while its browser conversion is pending. Seven records use vendor CAD; others retain their provenance and review notes. See [docs/EQUIPMENT-CAD-REVIEW.md](docs/EQUIPMENT-CAD-REVIEW.md) for assumptions and sources. Build setup includes a suggested optical bench, editable placement, model review and local project saving. The complete bespoke arm assembly, exact DUT stage/camera and measured bench dimensions remain to confirm.
+See [docs/MODELS.md](docs/MODELS.md) and [public/library/README.md](public/library/README.md). The current library contains 44 records: 43 have browser models and STEP references; the vacuum chip stage retains its original SolidWorks source while its browser conversion is pending. Seven records use vendor CAD; others retain their provenance and review notes. The bespoke arm records use the supplied try3 assembly STEP/GLB, with SolidWorks and DWG originals retained; the spring and fibre are omitted. See [docs/EQUIPMENT-CAD-REVIEW.md](docs/EQUIPMENT-CAD-REVIEW.md) for original assumptions and sources, and the photo-to-setup guide for the new illustrative components. Build setup includes a suggested optical bench, editable placement, model review and local project saving. The spring/fibre, exact DUT stage/camera and measured bench dimensions remain to confirm.
 
 ## Structure
 

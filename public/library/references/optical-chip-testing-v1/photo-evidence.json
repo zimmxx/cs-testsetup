@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "setupId": "optical-chip-testing-v1",
+  "asOf": "2026-10-09",
+  "photos": [
+    {
+      "photo": 1,
+      "path": "library/references/optical-chip-testing-v1/Photo-1.jpg",
+      "image": "library/images/optical-chip-v1-photo-1.jpg",
+      "imageHeight": 1280,
+      "imageWidth": 720,
+      "sha256": "13d79640e14780fc840a86540d592eec38b762c5f9e2b6d2f5faeffe9d2f6fd1",
+      "originalFilename": "1-Photo-1.jpg"
+    },
+    {
+      "photo": 2,
+      "path": "library/references/optical-chip-testing-v1/Photo-2.jpg",
+      "image": "library/images/optical-chip-v1-photo-2.jpg",
+      "imageHeight": 1280,
+      "imageWidth": 720,
+      "sha256": "b8b4ca77f70367d81ad96a01e37918523f366077c357f9a619841a2e0d609d68",
+      "originalFilename": "2-Photo-2.jpg"
+    },
+    {
+      "photo": 3,
+      "path": "library/references/optical-chip-testing-v1/Photo-3.jpg",
+      "image": "library/images/optical-chip-v1-photo-3.jpg",
+      "imageHeight": 1280,
+      "imageWidth": 720,
+      "sha256": "2eebf76cc9c605817ac27f4dc01ee6fb1512869d7875d0d3cfb783e3e4d53aea",
+      "originalFilename": "3-Photo-3.jpg"
+    }
+  ],
+  "observed": [
+    "Two silver fibre arms on black positioning stages",
+    "Separate front DUT motion stage with copper holder",
+    "Overhead microscope/camera and shelf monitor",
+    "Blue LED illuminator and cream shelf instrument",
+    "Orange/black handheld instrument",
+    "Thorlabs-branded optical table; room labels LAB 2077 and SETUP 3"
+  ],
+  "inferred": [
+    "8163B mainframe candidate",
+    "81940A and 81634B modules from existing inventory, not visible module identification",
+    "FPC562 controller and MAX313D stages as library candidates",
+    "Proposed left input/right output signal direction",
+    "C-band as a provisional filter allocation"
+  ],
+  "unknown": [
+    "Actual models/options/serials/calibration",
+    "Traceable cable endpoints, sleeve count, connector types and cut lengths",
+    "Coupling type/angle, power, scan range and limits",
+    "Stage travel, bench/shelf dimensions and hole pitch",
+    "Camera video/data route and illumination/controller relationship",
+    "Whether the handheld meter is used in the measurement"
+  ],
+  "mechanicalMounts": [
+    {
+      "instanceId": "photo-input-arm",
+      "parentId": "photo-input-stage",
+      "kind": "Provisional mechanical support; not a signal connection"
+    },
+    {
+      "instanceId": "photo-holder",
+      "parentId": "photo-dut-stage",
+      "kind": "Provisional mechanical support; not a signal connection"
+    },
+    {
+      "instanceId": "photo-output-arm",
+      "parentId": "photo-output-stage",
+      "kind": "Provisional mechanical support; not a signal connection"
+    }
+  ],
+  "connections": [
+    {
+      "id": "PHOTO-O1",
+      "evidence": "Proposed; unverified",
+      "purpose": "Candidate measurement path"
+    },
+    {
+      "id": "PHOTO-O2",
+      "evidence": "Proposed; unverified",
+      "purpose": "Candidate measurement path"
+    },
+    {
+      "id": "PHOTO-GC-IN",
+      "evidence": "Proposed; unverified",
+      "purpose": "Candidate measurement path"
+    },
+    {
+      "id": "PHOTO-GC-OUT",
+      "evidence": "Proposed; unverified",
+      "purpose": "Candidate measurement path"
+    },
+    {
+      "id": "PHOTO-O3",
+      "evidence": "Proposed; unverified",
+      "purpose": "Candidate measurement path"
+    },
+    {
+      "id": "PHOTO-VIDEO",
+      "evidence": "Proposed; unverified",
+      "purpose": "Candidate observation link"
+    }
+  ],
+  "reviewStatus": "Draft; no operational approval and no Setup Explorer publication"
+}

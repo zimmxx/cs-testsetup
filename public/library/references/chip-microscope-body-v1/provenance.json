@@ -1,0 +1,15 @@
+{
+  "equipmentId": "chip-microscope-body-v1",
+  "source": "User-supplied bench photos",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+  "photos": [
+    "library/references/optical-chip-testing-v1/Photo-1.jpg",
+    "library/references/optical-chip-testing-v1/Photo-2.jpg",
+    "library/references/optical-chip-testing-v1/Photo-3.jpg"
+  ],
+  "generator": "scripts/generate-photo-chip-cad.py",
+  "units": "Illustrative millimetres",
+  "verifiedDimensions": false,
+  "sha256": "a8a4f09c060ee30b29111a3e1facfe0e6d9fa614992991b5986c16dafd592a13"
+}

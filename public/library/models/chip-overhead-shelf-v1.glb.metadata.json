@@ -1,0 +1,30 @@
+{
+  "source": "chip-overhead-shelf-v1-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 3,
+  "triangles": 164,
+  "boundsMm": {
+    "min": [
+      -700,
+      0,
+      -150
+    ],
+    "max": [
+      700,
+      584,
+      150
+    ]
+  },
+  "extentsMm": [
+    1400,
+    584,
+    300
+  ],
+  "glbBytes": 11244,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}
