@@ -7,7 +7,8 @@ import { External } from './UI.jsx';
 export default function Guide({ setup }) {
   const [progress, setProgress] = useState(() => readLocal('guide-progress', {}));
   const [saveError, setSaveError] = useState(false);
-  const steps = setup.published?.procedure?.length?setup.published.procedure.map(s=>[s.title,s.text]):guideSteps[setup.guide];
+  const recorded=setup.published||setup.template;
+  const steps = recorded?.procedure?.length?recorded.procedure.map(s=>[s.title,s.text]):guideSteps[setup.guide];
   const done = progress[setup.id] || [];
   function save(next) { setProgress(next); setSaveError(!writeLocal('guide-progress',next)); }
   function toggle(index) { save({...progress, [setup.id]:done.includes(index)?done.filter(i=>i!==index):[...done,index]}); }

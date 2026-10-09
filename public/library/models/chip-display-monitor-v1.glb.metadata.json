@@ -1,0 +1,30 @@
+{
+  "source": "chip-display-monitor-v1-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 4,
+  "triangles": 48,
+  "boundsMm": {
+    "min": [
+      -210,
+      0,
+      -52.5
+    ],
+    "max": [
+      210,
+      340,
+      52.5
+    ]
+  },
+  "extentsMm": [
+    420,
+    340,
+    105
+  ],
+  "glbBytes": 6580,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

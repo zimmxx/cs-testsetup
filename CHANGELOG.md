@@ -4,6 +4,9 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 ## Unreleased
 
+- Added the photo-derived `optical-chip-testing-v1` editable setup, original photos/evidence manifest, eight provisional equipment records with illustrative STEP/GLB previews and a reusable photo-to-setup agent guide. Proposed paths and hardware matches require review; the setup is not automatically published.
+- Added shared photo evidence panels and draft-template loading to Builder, Bench_draft and Explorer while preserving existing published snapshots and the manual wafer setup.
+
 Deployment: **pending user review, merge and successful Pages deployment**.
 
 - Added this version history with verified deployment dates, commits and workflow evidence.

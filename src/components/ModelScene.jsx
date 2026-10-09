@@ -38,8 +38,11 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
     renderer.domElement.setAttribute('aria-label','Interactive 3D setup: drag to orbit, scroll to zoom; select equipment below for keyboard access.');
     const scene=new THREE.Scene();scene.background=new THREE.Color('#f1f3f9');
     const single=nodes.length===1;
-    const camera=new THREE.PerspectiveCamera(40,1,.05,150);camera.position.set(12,11,15);
-    const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,0,0);controls.enableDamping=true;
+    const elevatedBench=!single&&nodes.some(n=>(n.elevationMm||0)>=400);
+    const defaultPosition=single?[2.5,1.8,3]:elevatedBench?[15,13,19]:[12,11,15];
+    const defaultTargetY=single ? 0.5 : elevatedBench ? 2.5 : 0;
+    const camera=new THREE.PerspectiveCamera(40,1,.05,150);camera.position.set(...defaultPosition);
+    const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,defaultTargetY,0);controls.enableDamping=true;
     if(single){camera.position.set(2.5,1.8,3);controls.target.set(0,.5,0);controls.minDistance=.8;controls.maxDistance=12;}
     else{controls.minDistance=3;controls.maxDistance=40;controls.maxPolarAngle=Math.PI*.49;if(view.current){camera.position.copy(view.current.position);controls.target.copy(view.current.target);}}
     scene.add(new THREE.HemisphereLight(0xffffff,0x6b7190,1.8));const light=new THREE.DirectionalLight(0xffffff,2.2);light.position.set(4,10,6);scene.add(light);
@@ -57,7 +60,7 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
       roots.forEach((root,i)=>{root.visible=!hidden.has(root.userData.nodeId);const helper=helpers[i];if(helper){helper.visible=root.visible&&highlighted.has(root.userData.nodeId);if(helper.visible)helper.update();}});
       paths.forEach(({line,arrow,edge})=>{const visible=!hidden.has(edge.from)&&!hidden.has(edge.to);line.visible=visible;arrow.visible=visible;const isSelected=edgeIds.has(edge.id);line.material.color.set(isSelected?0x2f64d9:edge.type==='optical'?0xe2ad25:0x8060d9);line.material.transparent=true;line.material.opacity=edgeIds.size&&!isSelected?.25:1;line.material.emissive.set(isSelected?0x163874:0x000000);arrow.setColor(line.material.color);arrow.traverse(o=>{if(o.material){o.material.transparent=true;o.material.opacity=line.material.opacity;}});});
     };
-    sceneActions.current={style:applyStyle,reset:()=>{camera.position.set(...(single?[2.5,1.8,3]:[12,11,15]));controls.target.set(0,single?.5:0,0);controls.update();},labels:visible=>nameLabels.forEach(l=>{l.visible=visible;}),focus:id=>{const n=nodes.find(n=>n.id===id);if(!n)return;const p=equipmentPose(n,nodes,benchPosition),angle=(p.rotationDeg||0)*Math.PI/180;const large=frameProfile(n)?.model==='8164B',distance=large?(exploded?11:8):(exploded?7.5:5);controls.target.set(p.x,p.y+(large?.8:.5),p.z+(large&&exploded?.3:exploded?-1.3:-.5));camera.position.set(p.x+3*Math.cos(angle)-distance*Math.sin(angle),p.y+(large?4.5:2.7),p.z-3*Math.sin(angle)-distance*Math.cos(angle));controls.update();}};
+    sceneActions.current={style:applyStyle,reset:()=>{camera.position.set(...defaultPosition);controls.target.set(0,defaultTargetY,0);controls.update();},labels:visible=>nameLabels.forEach(l=>{l.visible=visible;}),focus:id=>{const n=nodes.find(n=>n.id===id);if(!n)return;const p=equipmentPose(n,nodes,benchPosition),angle=(p.rotationDeg||0)*Math.PI/180;const large=frameProfile(n)?.model==='8164B',distance=large?(exploded?11:8):(exploded?7.5:5);controls.target.set(p.x,p.y+(large?.8:.5),p.z+(large&&exploded?.3:exploded?-1.3:-.5));camera.position.set(p.x+3*Math.cos(angle)-distance*Math.sin(angle),p.y+(large?4.5:2.7),p.z-3*Math.sin(angle)-distance*Math.cos(angle));controls.update();}};
     const pose=n=>{const p=equipmentPose(n,nodes,benchPosition);if(exploded&&housingFor(n,nodes)){const angle=p.rotationDeg*Math.PI/180;const shift=n.equipmentId==='oband-laser-81606a'?-2.5:1.8;p.x-=shift*Math.sin(angle);p.z-=shift*Math.cos(angle);}return p;};
     // Lead cables out of the front and around the shell, rather than through it.
     const moduleRoute=(n,port,other)=>{

@@ -1,0 +1,30 @@
+{
+  "source": "chip-camera-head-v1-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 3,
+  "triangles": 164,
+  "boundsMm": {
+    "min": [
+      -30,
+      0,
+      -29
+    ],
+    "max": [
+      30,
+      131,
+      29
+    ]
+  },
+  "extentsMm": [
+    60,
+    131,
+    58
+  ],
+  "glbBytes": 11300,
+  "orientation": "Unmodified source axes; verify mounting orientation visually"
+}

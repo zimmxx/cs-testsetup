@@ -8,7 +8,7 @@ export const draftPages=['bench_draft','equipment_draft','training_draft'];
 export const draftNames={bench_draft:'Bench_draft',equipment_draft:'Equipment_draft',training_draft:'Training_draft'};
 export function workspaceSeed(id='wst-optical-manual'){
   const entry=setups.find(s=>s.id===id);
-  const source=entry?.published||(id==='wst-optical-manual'?arrangeOnBench(upgradeManualSetup(createManualSetup())):id==='oband-mainframe-assembly'?createObandAssembly():{version:1,id,name:entry?.name||'New setup',nodes:(entry?.equipment||[]).map((equipmentId,i)=>({id:`item-${i}`,equipmentId,label:'',x:40+(i%4)*230,y:40+Math.floor(i/4)*145})),connections:[]});
+  const source=entry?.published||entry?.template||(id==='wst-optical-manual'?arrangeOnBench(upgradeManualSetup(createManualSetup())):id==='oband-mainframe-assembly'?createObandAssembly():{version:1,id,name:entry?.name||'New setup',nodes:(entry?.equipment||[]).map((equipmentId,i)=>({id:`item-${i}`,equipmentId,label:'',x:40+(i%4)*230,y:40+Math.floor(i/4)*145})),connections:[]});
   return {...structuredClone(source),workspaceName:'Bench_draft',workspaceRevision:1};
 }
 export function validateWorkspace(data,ids=equipment.map(e=>e.id)){

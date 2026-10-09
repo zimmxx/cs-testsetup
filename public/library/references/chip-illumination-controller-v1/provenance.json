@@ -1,0 +1,15 @@
+{
+  "equipmentId": "chip-illumination-controller-v1",
+  "source": "User-supplied bench photos",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+  "photos": [
+    "library/references/optical-chip-testing-v1/Photo-1.jpg",
+    "library/references/optical-chip-testing-v1/Photo-2.jpg",
+    "library/references/optical-chip-testing-v1/Photo-3.jpg"
+  ],
+  "generator": "scripts/generate-photo-chip-cad.py",
+  "units": "Illustrative millimetres",
+  "verifiedDimensions": false,
+  "sha256": "09002f60adcf017cd95167ea6858fe4679aa2e90374e3208f74ab45721561fd8"
+}

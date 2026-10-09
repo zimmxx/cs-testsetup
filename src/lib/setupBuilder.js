@@ -30,6 +30,11 @@ export function validateSetup(data,equipmentIds) {
   const ids=new Set();
   for(const n of data.nodes) {if(typeof n.id!=='string'||ids.has(n.id)||!equipmentIds.includes(n.equipmentId)||!Number.isFinite(n.x)||!Number.isFinite(n.y)||n.x<0||n.x>880||n.y<0||n.y>510||typeof n.label!=='string') throw new Error('Invalid or unknown equipment in this setup.');for(const key of ['elevationMm','rotationDeg','benchXMm','benchZMm'])if(n[key]!==undefined&&(!Number.isFinite(n[key])||Math.abs(n[key])>5000))throw new Error('Invalid bench height or rotation.');ids.add(n.id);}
   if(data.id!==undefined && !/^[a-z0-9][a-z0-9-]{0,79}$/.test(data.id)) throw new Error('Invalid setup ID.');
+  if(data.photoEvidence!==undefined){
+    const p=data.photoEvidence;
+    const reference=value=>typeof value==='string'&&value.length<=500&&/^library\/references\/[a-zA-Z0-9 _./-]+$/.test(value)&&!value.split('/').includes('..');
+    if(!p||p.version!==1||!Array.isArray(p.files)||!p.files.length||p.files.length>12||p.files.some(file=>!reference(file)||!/\.(jpg|jpeg|png|webp)$/i.test(file))||!reference(p.manifest)||!p.manifest.endsWith('.json')||typeof p.guide!=='string'||!/^documents\/[a-zA-Z0-9_-]+\.md$/.test(p.guide)||typeof p.warning!=='string'||p.warning.length>10000)throw new Error('Invalid photo evidence: use local reference images, a manifest and a Markdown guide.');
+  }
   for(const n of data.nodes)for(const [key,max] of [['signalX',880],['signalY',5000]])if(n[key]!==undefined&&(!Number.isFinite(n[key])||n[key]<0||n[key]>max))throw new Error('Invalid signal-path position.');
   if(data.measurement!==undefined){
     if(!data.measurement||typeof data.measurement!=='object'||Array.isArray(data.measurement)) throw new Error('Invalid measurement settings.');

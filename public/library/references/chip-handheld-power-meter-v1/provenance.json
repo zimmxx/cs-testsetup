@@ -1,0 +1,15 @@
+{
+  "equipmentId": "chip-handheld-power-meter-v1",
+  "source": "User-supplied bench photos",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated silhouette and dimensions from photographs, not vendor CAD or a measured assembly. Replace with verified STEP/GLB when available.",
+  "photos": [
+    "library/references/optical-chip-testing-v1/Photo-1.jpg",
+    "library/references/optical-chip-testing-v1/Photo-2.jpg",
+    "library/references/optical-chip-testing-v1/Photo-3.jpg"
+  ],
+  "generator": "scripts/generate-photo-chip-cad.py",
+  "units": "Illustrative millimetres",
+  "verifiedDimensions": false,
+  "sha256": "e1c9f37995a6a45dc8ffc2f7c52e75d335527a4371111709c68bf2c0a742a896"
+}

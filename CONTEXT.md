@@ -4,6 +4,16 @@ Last updated: **2026-10-09**. This file is part of the project source and should
 
 ## Start here
 
+### Local continuation update — photo-derived chip setup
+
+On branch `codex/optical-chip-testing-v1`, a new **unpublished** `optical-chip-testing-v1` template reconstructs three user bench photos: 17 instances / 15 unique equipment IDs, with eight new provisional components. The local library now has **44 records, 43 GLB/STEP assignments**; vendor CAD count remains seven and the vacuum-stage preview remains pending. Main/public deployment is still the earlier 36-record equipment-picture release until this work is reviewed and deployed. This feature branch starts from the documentation PR branch; PR #1 is not automatically expanded or merged by local feature edits.
+
+Source template: `src/data/photoChipSetup.js`. Editable JSON: `public/library/setups/optical-chip-testing-v1.json`; isolated draft: `public/library/workspaces_draft/optical-chip-testing-v1_draft.json`. Original photos and evidence manifest: `public/library/references/optical-chip-testing-v1/`. Agent workflow and parameters: [PHOTO-TO-SETUP.md](public/documents/PHOTO-TO-SETUP.md), also registered in app Documentation.
+
+Validation for this local feature: 50 Node tests passed (including photo evidence/path validation and existing CAD/picture integrity checks). Browser checks verified 17 instances/six proposed paths, all 3D assets loaded, placement editing/undo, context pictures, original-photo captions, unpublished Explorer template preview, Builder template loading/undo without losing its prior draft, and an actual local Bench_draft save. Edge desktop and the narrow in-app browser layout rendered without page-wide horizontal overflow or recorded app console errors. Elevated bench equipment uses a higher/wider initial/reset camera view; layouts and model silhouettes remain approximate. A production build passed; the existing lazy Three.js chunk-size warning remains.
+
+Builder/Bench_draft/Explorer can render a catalog **template** before publication; published snapshots still take precedence. Template loading clones data rather than mutating the source. Shared photo panels expose references/uncertainties. The photo setup leaves operating settings blank, labels candidate instrument identities and all signal routes as proposed, and does not insert anything into the publication index. Eight new components have procedural illustrative STEP/GLB silhouettes with unverified dimensions; the scripts preserve existing sources and user-edited records. This is an agent-assisted workflow, not an in-app autonomous image-recognition service. Older counts below describe the deployed baseline.
+
 - Repository: <https://github.com/zimmxx/cs-testsetup>
 - Public app: <https://zimmxx.github.io/cs-testsetup/>
 - Local app: <http://localhost:5174/>
