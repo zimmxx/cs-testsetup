@@ -8,6 +8,8 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.3**; setup/import schemas remain version 1. Review branch: `codex/mobile-layout`, based on merged release 0.2.2.
 
+Review: [PR #5 — phone layouts and 3D bench framing](https://github.com/zimmxx/cs-testsetup/pull/5).
+
 - Fitted narrow 3D views to the bench/equipment bounds on initial load and Reset view, while keeping the viewing direction and preserving user orbit changes. Added touch-oriented help text.
 - Stacked builder headings/actions on phones; bounded the equipment inventory so previews follow a short scrollable list; enlarged preview, placement and primary action controls.
 - Made navigation scroll on short portrait/landscape screens, excluded the closed phone drawer from keyboard navigation and labelled its icon controls.
