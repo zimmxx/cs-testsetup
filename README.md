@@ -77,6 +77,14 @@ Built setup drafts are also browser/origin-local; export JSON to retain or share
 
 See [docs/MODELS.md](docs/MODELS.md) and [public/library/README.md](public/library/README.md). All 44 library records have browser models and STEP references. Seven records use vendor CAD; others retain their provenance and review notes. The bespoke arm records use the supplied try3 assembly STEP/GLB, with SolidWorks and DWG originals retained; the spring and fibre are omitted. The vacuum chip sample stage uses its supplied STEP/GLB and original SolidWorks part and is assigned as the holder in `optical-chip-testing-v1`, separate from its DUT translation stage. See [docs/EQUIPMENT-CAD-REVIEW.md](docs/EQUIPMENT-CAD-REVIEW.md) for original assumptions and sources, and the photo-to-setup guide for the new illustrative components. Build setup includes a suggested optical bench, editable placement, model review and local project saving. The spring/fibre, vacuum plumbing/retention, exact DUT stage/camera and measured bench dimensions remain to confirm.
 
+## Rotate, mount and export CAD
+
+Select equipment in **Build setup** or **Bench_draft → Edit draft**. The inspector supports yaw, tilt and roll, 90° turns and a 180° flip. **Mount to component** retains the current pose and introduces editable offsets and angles in the parent's axes; parents can carry nested components. Detach preserves the current world pose. Mainframe modules continue to use their dedicated slots.
+
+On localhost, **Export CAD** downloads a ZIP containing the entire placed STEP assembly, a placement/source manifest, the editable setup JSON and SolidWorks instructions. It uses original STEP geometry, including the fibre-arm preview correction. The optional Python/OpenCascade runtime is project-local and excluded from Git. GitHub Pages visitors can rotate/mount/export JSON without installing CAD software; whole-setup STEP generation requires localhost.
+
+See [SolidWorks handoff and runtime installation](public/documents/SOLIDWORKS-HANDOFF.md). Face/concentric mates, native feature history and verified mechanical fit are completed in SolidWorks. Return the whole assembly STEP plus a Pack and Go native package and layout JSON so named placements can be reviewed and brought back into the app.
+
 ## Structure
 
 ```text

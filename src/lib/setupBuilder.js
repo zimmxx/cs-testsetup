@@ -28,7 +28,7 @@ export function connectionProblem(setup,from,to,type) {
 export function validateSetup(data,equipmentIds) {
   if(data?.version!==1||typeof data.name!=='string'||!Array.isArray(data.nodes)||!Array.isArray(data.connections)||data.nodes.length>100||data.connections.length>300) throw new Error('Use a version 1 setup file with up to 100 equipment items and 300 connections.');
   const ids=new Set();
-  for(const n of data.nodes) {if(typeof n.id!=='string'||ids.has(n.id)||!equipmentIds.includes(n.equipmentId)||!Number.isFinite(n.x)||!Number.isFinite(n.y)||n.x<0||n.x>880||n.y<0||n.y>510||typeof n.label!=='string') throw new Error('Invalid or unknown equipment in this setup.');for(const key of ['elevationMm','rotationDeg','benchXMm','benchZMm'])if(n[key]!==undefined&&(!Number.isFinite(n[key])||Math.abs(n[key])>5000))throw new Error('Invalid bench height or rotation.');ids.add(n.id);}
+  for(const n of data.nodes) {if(typeof n.id!=='string'||ids.has(n.id)||!equipmentIds.includes(n.equipmentId)||!Number.isFinite(n.x)||!Number.isFinite(n.y)||n.x<0||n.x>880||n.y<0||n.y>510||typeof n.label!=='string') throw new Error('Invalid or unknown equipment in this setup.');for(const key of ['elevationMm','rotationDeg','tiltDeg','rollDeg','benchXMm','benchZMm'])if(n[key]!==undefined&&(!Number.isFinite(n[key])||Math.abs(n[key])>5000))throw new Error('Invalid bench height or rotation.');ids.add(n.id);}
   if(data.id!==undefined && !/^[a-z0-9][a-z0-9-]{0,79}$/.test(data.id)) throw new Error('Invalid setup ID.');
   if(data.photoEvidence!==undefined){
     const p=data.photoEvidence;

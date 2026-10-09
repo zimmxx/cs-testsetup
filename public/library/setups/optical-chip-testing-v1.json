@@ -35,7 +35,7 @@
       "benchXMm": -550,
       "benchZMm": -340,
       "elevationMm": 550,
-      "rotationDeg": 0,
+      "rotationDeg": 180,
       "configuration": {
         "serial": "",
         "calibration": "",
@@ -55,7 +55,7 @@
       "benchXMm": -520,
       "benchZMm": -300,
       "elevationMm": 550,
-      "rotationDeg": 0,
+      "rotationDeg": 180,
       "configuration": {
         "serial": "",
         "calibration": "",
@@ -97,7 +97,7 @@
       "benchXMm": -250,
       "benchZMm": -340,
       "elevationMm": 550,
-      "rotationDeg": 0,
+      "rotationDeg": 180,
       "configuration": {
         "serial": "",
         "calibration": "",
@@ -284,7 +284,7 @@
       "benchXMm": 0,
       "benchZMm": -360,
       "elevationMm": 620,
-      "rotationDeg": 0,
+      "rotationDeg": 180,
       "configuration": {
         "serial": "",
         "calibration": "",
@@ -304,7 +304,7 @@
       "benchXMm": 370,
       "benchZMm": -330,
       "elevationMm": 620,
-      "rotationDeg": 0,
+      "rotationDeg": 180,
       "configuration": {
         "serial": "",
         "calibration": "",
@@ -324,7 +324,7 @@
       "benchXMm": 370,
       "benchZMm": -330,
       "elevationMm": 550,
-      "rotationDeg": 0,
+      "rotationDeg": 180,
       "configuration": {
         "serial": "",
         "calibration": "",
@@ -498,5 +498,6 @@
       "text": "Save raw/reference data and configuration; record post-processing and measured timings. Save the editable setup, then explicitly publish a reviewed snapshot if appropriate."
     }
   ],
-  "chipHolderRevision": 1
+  "chipHolderRevision": 1,
+  "frontFacingRevision": 1
 }

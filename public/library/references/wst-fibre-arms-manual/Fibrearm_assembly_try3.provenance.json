@@ -24,8 +24,8 @@
       "bytes": 121022
     }
   ],
-  "browserModel": "library/models/fibre-arm-try3.glb",
-  "browserModelSha256": "e0c6b5a438dbd5364555c4180ce0538cd82ca8f30eec7111b2bfdc7acfe2553d",
+  "browserModel": "library/models/fibre-arm-try3-inward.glb",
+  "browserModelSha256": "f86dab25fb85520d8da63994a70bbdd7bf9ce1248adaad1ee22ebf982c0ac45f",
   "review": "User-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.",
   "exporter": "SolidWorks 2025 / STEP AP214",
   "conversion": {
@@ -55,19 +55,23 @@
       87.78148519229423,
       32
     ],
-    "glbBytes": 547680,
-    "orientation": "Unmodified source axes; verify mounting orientation visually",
+    "glbBytes": 547912,
+    "orientation": "Source Y-up retained; preview rotated 180 degrees about Y to align its forward direction",
+    "previewYawDeg": 180,
     "sourcePath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
     "sourceSha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
     "receivedAt": "2026-10-09",
-    "completeness": "User reports spring and fibre are not included."
+    "completeness": "User reports spring and fibre are not included.",
+    "previewFacing": "Tip axis corrected from source -X to preview +X; instance rotations and source STEP remain unchanged."
   },
   "units": "STEP millimetres; GLB metres",
-  "sourceAxes": "Preserved: Y-up",
+  "sourceAxes": "Source STEP unchanged; Y-up preserved, with 180-degree preview yaw to align tip direction with existing bench placements.",
   "rights": "User-provided design; original ownership retained. No open licence inferred.",
   "retainedPreviousSources": [
     "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM",
     "library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step"
   ],
-  "nativeAssemblyNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing."
+  "nativeAssemblyNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing.",
+  "previousBrowserModel": "library/models/fibre-arm-try3.glb",
+  "previewCorrectionDate": "2026-10-09"
 }

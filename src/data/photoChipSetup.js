@@ -1,3 +1,4 @@
+import { upgradeFrontFacing } from '../lib/frontFacing.js';
 // Photo-derived draft. Equipment identities and cable routes require lab review.
 const sourceFolder='library/references/optical-chip-testing-v1';
 export const chipPhotoFiles=[1,2,3].map(i=>`${sourceFolder}/Photo-${i}.jpg`);
@@ -45,7 +46,7 @@ export function upgradePhotoChipSetup(setup){
   return {...setup,nodes,measurement,publication,chipHolderRevision:1};
 }
 export function createPhotoChipSetup(){
-  return {version:1,chipHolderRevision:1,id:'optical-chip-testing-v1',name:'optical-chip-testing-v1',recordStatus:'Photo-derived draft · review required',
+  return upgradeFrontFacing({version:1,chipHolderRevision:1,id:'optical-chip-testing-v1',name:'optical-chip-testing-v1',recordStatus:'Photo-derived draft · review required',
     photoEvidence:{version:1,files:chipPhotoFiles,guide:'documents/PHOTO-TO-SETUP.md',manifest:`${sourceFolder}/photo-evidence.json`,
       warning:'Hardware is reconstructed from photos. Module identities, optical routes, fibre models/connectors, dimensions and operating settings require confirmation. C-band is a provisional catalog allocation; no approved measurement capability is asserted.'},
     publication:{scale:'Chip',mode:'Optical',bands:['C-band'],lab:'Lab 2077 · Setup 3 (photo labels)',description:'Photo-derived optical chip bench draft with two fibre arms, vacuum chip sample stage and overhead imaging. Review models, signal routes and dimensions before publication.'},
@@ -84,7 +85,7 @@ export function createPhotoChipSetup(){
       {title:'Align and acquire under the approved SOP',text:'Use the reviewed lab procedure for loading, alignment, reference acquisition, measurements and acceptance checks. This working outline does not approve hardware operation.'},
       {title:'Retain results and review the setup',text:'Save raw/reference data and configuration; record post-processing and measured timings. Save the editable setup, then explicitly publish a reviewed snapshot if appropriate.'},
     ],
-  };
+  });
 }
 const template=createPhotoChipSetup();
 export const photoChipCatalogEntry={id:template.id,name:template.name,subtitle:'Photo-derived draft · Setup 3',scale:'Chip',mode:'Optical',bands:['C-band'],status:'Needs verification',lab:template.publication.lab,description:template.publication.description,
