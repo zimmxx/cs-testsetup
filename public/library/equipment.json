@@ -125,25 +125,33 @@
         [
           "Connector",
           "FC/APC · 5 m cables"
+        ],
+        [
+          "CAD revision",
+          "Fibrearm_assembly_try3 · 9 October 2026"
+        ],
+        [
+          "Model completeness",
+          "Mechanical assembly; spring and fibre omitted"
         ]
       ],
       "url": "https://www.thorlabs.com/optical-fiber-fiber-patch-cables",
       "alternatives": "Fibre array configuration is documented separately. Edge coupling with HFV002 holders is a planned setup.",
       "note": "Presentation slide 9. The listed SM patch cable range ends at 1625 nm; confirm the complete optical path before using a 1630 nm sweep.",
-      "stepPath": "library/references/fibre/fibre-Reference.step",
-      "model3d": "library/models/fibre.glb",
-      "cadKind": "Illustrative reference",
-      "cadReview": "Provisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.",
-      "dimensions": "Estimated presentation geometry; not an engineering dimension",
-      "cadSource": "https://www.thorlabs.com/optical-fiber-fiber-patch-cables",
-      "stepSha256": "5fc2ffa25a91c662718539a2159d8d128de66df92a2fdcf1b039bdc53ac5bb1a",
-      "modelReference": "STEP: library/references/fibre/fibre-Reference.step\nGLB: library/models/fibre.glb\nProvisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.\n",
+      "stepPath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
+      "model3d": "library/models/fibre-arm-try3.glb",
+      "cadKind": "User-provided CAD",
+      "cadReview": "User-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.",
+      "dimensions": "CAD bounding box X/Y/Z: 165.6 / 87.8 / 32.0 mm; not a measured installed envelope",
+      "cadSource": "User-supplied Fibrearm_assembly_try3.STEP / SolidWorks assembly, 9 October 2026",
+      "stepSha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
+      "modelReference": "STEP: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP\nGLB: library/models/fibre-arm-try3.glb\nSolidWorks: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM\nAuxiliary DWG: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.DWG\nProvenance: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.provenance.json\nUser-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.\nConverted locally with occt-import-js 0.0.23; source Y-up axes retained. Earlier illustrative geometry and try2 assembly remain archived.",
       "image": "library/images/fibre-arm-solidworks-assembly.png",
       "imageSource": "",
       "imageAssetSource": "",
       "imageCredit": "User-provided SolidWorks assembly screenshot",
       "imageKind": "User CAD preview",
-      "imageReview": "Bespoke arm design shown. Patch cables are recorded separately; this image does not show the complete assembly of arms and fibres.",
+      "imageReview": "Earlier user-supplied SolidWorks screenshot (try2), retained as a reference picture. The default 3D view uses the latest try3 STEP assembly. Spring and fibre are absent from the latest model.",
       "imageModel": "Bespoke CORNERSTONE fibre arm assembly",
       "imageRetrievedAt": "2026-10-09",
       "imageSha256": "4576783eb57f9bdaba591d580f0c934ae60eb5a3216620ef8a97a16b0a598ab1",
@@ -151,7 +159,15 @@
       "imageHeight": 1036,
       "imageRights": "User-supplied CAD screenshot. Original ownership retained.",
       "imageSourcePath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM",
-      "imageSourceLabel": "Related SolidWorks assembly; user screenshot supplied 8 October 2026"
+      "imageSourceLabel": "Related SolidWorks assembly; user screenshot supplied 8 October 2026",
+      "nativeCad": [
+        {
+          "label": "Latest SolidWorks fibre arm assembly — try3 (spring and fibre omitted)",
+          "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM",
+          "sha256": "70a9bb062e53645232b3fe142bcfef1d94a44b4edf596b02ea42b2a260b7800f"
+        }
+      ],
+      "nativeCadNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing. Spring and fibre are omitted from try3. Earlier source files are retained."
     },
     {
       "id": "detector",
@@ -674,6 +690,14 @@
         [
           "Usual angle",
           "10° from wafer normal"
+        ],
+        [
+          "CAD revision",
+          "Fibrearm_assembly_try3 · 9 October 2026"
+        ],
+        [
+          "Model completeness",
+          "Mechanical assembly; spring and fibre omitted"
         ]
       ],
       "location": "Lab 2077",
@@ -682,27 +706,32 @@
       "alternatives": "",
       "note": "Manual wafer optical bench, user-reported 5 October 2026. Verify installed options and calibration.",
       "image": "library/images/fibre-arm-solidworks-assembly.png",
-      "model3d": "library/models/wst-fibre-arms-manual.glb",
-      "modelReference": "STEP: library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step\nGLB: library/models/wst-fibre-arms-manual.glb\nProvisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.\nUnassembled reference files supplied by user: library/references/fibre-arm/parts/. Fibre Arm.stp contains STEP geometry; Base Bottom.idw, Base Top.idw and Micrometer Housing.idw are Inventor drawings. Complete assembly and remaining part geometry await confirmation.",
-      "stepPath": "library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step",
-      "cadKind": "Illustrative reference",
-      "cadReview": "Provisional arm silhouette only. Original unassembled parts are preserved in references/fibre-arm/parts. Await the user’s complete SolidWorks/STEP assembly; no mates or dimensions inferred.",
-      "dimensions": "Estimated presentation geometry; not an engineering dimension",
-      "cadSource": "Local bespoke design · user description; complete CAD pending",
-      "stepSha256": "5fc2ffa25a91c662718539a2159d8d128de66df92a2fdcf1b039bdc53ac5bb1a",
+      "model3d": "library/models/fibre-arm-try3.glb",
+      "modelReference": "STEP: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP\nGLB: library/models/fibre-arm-try3.glb\nSolidWorks: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM\nAuxiliary DWG: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.DWG\nProvenance: library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.provenance.json\nUser-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.\nConverted locally with occt-import-js 0.0.23; source Y-up axes retained. Earlier illustrative geometry and try2 assembly remain archived.",
+      "stepPath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
+      "cadKind": "User-provided CAD",
+      "cadReview": "User-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.",
+      "dimensions": "CAD bounding box X/Y/Z: 165.6 / 87.8 / 32.0 mm; not a measured installed envelope",
+      "cadSource": "User-supplied Fibrearm_assembly_try3.STEP / SolidWorks assembly, 9 October 2026",
+      "stepSha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
       "nativeCad": [
         {
-          "label": "SolidWorks fibre-arm assembly (referenced parts may be required)",
+          "label": "Latest SolidWorks fibre arm assembly — try3 (spring and fibre omitted)",
+          "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM",
+          "sha256": "70a9bb062e53645232b3fe142bcfef1d94a44b4edf596b02ea42b2a260b7800f"
+        },
+        {
+          "label": "Earlier SolidWorks assembly — try2 (archived)",
           "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM",
           "sha256": "75a0f3b3a3201b1059fd96a96a5a5217fca0bbaeb3043a14fcd940c08344f4e5"
         }
       ],
-      "nativeCadNote": "User supplied assembled SolidWorks source on 8 October 2026. The picture shows the assembly in SolidWorks. Current browser GLB and STEP remain illustrative until an assembled STEP export is supplied. SLDASM may depend on external SLDPRT files.",
+      "nativeCadNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing. Spring and fibre are omitted from try3. Earlier source files are retained.",
       "imageSource": "",
       "imageAssetSource": "",
       "imageCredit": "User-provided SolidWorks assembly screenshot",
       "imageKind": "User CAD preview",
-      "imageReview": "Your bespoke fibre arm assembly in SolidWorks. An actual assembled-hardware photograph can replace this preview later.",
+      "imageReview": "Earlier user-supplied SolidWorks screenshot (try2), retained as a reference picture. The default 3D view uses the latest try3 STEP assembly. Spring and fibre are absent from the latest model.",
       "imageModel": "Bespoke CORNERSTONE fibre arm assembly",
       "imageRetrievedAt": "2026-10-09",
       "imageSha256": "4576783eb57f9bdaba591d580f0c934ae60eb5a3216620ef8a97a16b0a598ab1",

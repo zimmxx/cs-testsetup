@@ -1,0 +1,73 @@
+{
+  "equipmentIds": [
+    "wst-fibre-arms-manual",
+    "fibre"
+  ],
+  "kind": "User-provided CAD",
+  "receivedAt": "2026-10-09",
+  "revision": "try3",
+  "source": "User-provided bespoke University of Southampton fibre arm",
+  "files": [
+    {
+      "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
+      "sha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
+      "bytes": 742987
+    },
+    {
+      "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.SLDASM",
+      "sha256": "70a9bb062e53645232b3fe142bcfef1d94a44b4edf596b02ea42b2a260b7800f",
+      "bytes": 407793
+    },
+    {
+      "path": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.DWG",
+      "sha256": "3186dcbee47dcb6ce4826e010b7c60980b0cce4c58f6a82e2a5d8343cf6d7047",
+      "bytes": 121022
+    }
+  ],
+  "browserModel": "library/models/fibre-arm-try3.glb",
+  "browserModelSha256": "e0c6b5a438dbd5364555c4180ce0538cd82ca8f30eec7111b2bfdc7acfe2553d",
+  "review": "User-supplied SolidWorks try3 assembly STEP, received 9 October 2026. Spring and fibre are not included, as confirmed by the user; usable as the current mechanical reference. Mounting, travel and fit are not independently verified.",
+  "exporter": "SolidWorks 2025 / STEP AP214",
+  "conversion": {
+    "source": "Fibrearm_assembly_try3.STEP",
+    "converter": "occt-import-js 0.0.23 / OpenCascade",
+    "tessellation": {
+      "linearDeflectionMm": 0.08,
+      "angularDeflectionRad": 0.35
+    },
+    "units": "metres in GLB; source bounds reported in mm",
+    "meshCount": 11,
+    "triangles": 17858,
+    "boundsMm": {
+      "min": [
+        -104.22798068140101,
+        17.41549637398182,
+        36.394735028071324
+      ],
+      "max": [
+        61.349631396578154,
+        105.19698156627605,
+        68.39473502807132
+      ]
+    },
+    "extentsMm": [
+      165.57761207797915,
+      87.78148519229423,
+      32
+    ],
+    "glbBytes": 547680,
+    "orientation": "Unmodified source axes; verify mounting orientation visually",
+    "sourcePath": "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP",
+    "sourceSha256": "0d45658a99adb0e84b7a5a364e4c9ec955ea7424b642b92c626637368f27bf96",
+    "receivedAt": "2026-10-09",
+    "completeness": "User reports spring and fibre are not included."
+  },
+  "units": "STEP millimetres; GLB metres",
+  "sourceAxes": "Preserved: Y-up",
+  "rights": "User-provided design; original ownership retained. No open licence inferred.",
+  "retainedPreviousSources": [
+    "library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM",
+    "library/references/wst-fibre-arms-manual/wst-fibre-arms-manual-Reference.step"
+  ],
+  "nativeAssemblyNote": "SLDASM may still require referenced SLDPRT files for native editing. The STEP export is self-contained for browser geometry; DWG is retained as an auxiliary drawing."
+}

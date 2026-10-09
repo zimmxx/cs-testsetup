@@ -14,6 +14,7 @@ Prepared for review: **2026-10-09**. Package and sidebar version: **0.2.0**. Set
 - Added shared photo evidence panels and draft-template loading to Builder, Bench_draft and Explorer while preserving existing published snapshots and the manual wafer setup.
 - Added a wider initial/reset 3D camera view for elevated shelf equipment, validated local photo-evidence imports and preserved all existing `_draft` workspaces.
 - Expanded the local library to 44 equipment records and 43 STEP/GLB assignments. New models are illustrative references with estimated dimensions, not verified vendor CAD.
+- Replaced the bespoke arm silhouettes with the user-supplied `Fibrearm_assembly_try3.STEP` assembly for both arm library records; retained STEP, SolidWorks and DWG sources with checksums and earlier revisions. The 3D preview preserves supplied geometry; spring and fibre are explicitly omitted. Received 2026-10-09.
 
 Validation: **50 tests passed**, production build passed; browser checks covered template loading, local draft saving, editing/undo, 3D and source-photo views. The existing Three.js bundle-size warning remains.
 

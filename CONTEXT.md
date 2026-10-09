@@ -10,6 +10,8 @@ On branch `codex/optical-chip-testing-v1`, a new **unpublished** `optical-chip-t
 
 The proposed application release is **0.2.0**: `package.json` is the version source and the sidebar imports it directly. Setup/import schemas retain version 1. CHANGELOG records preparation on 2026-10-09 and explicitly leaves deployment pending. The user will accept the new PR personally; do not merge it or mark it deployed without evidence.
 
+Latest arm update (2026-10-09): user supplied `Fibrearm_assembly_try3.STEP`, `.SLDASM` and `.DWG`, stored under `public/library/references/wst-fibre-arms-manual/`. Both `wst-fibre-arms-manual` and legacy `fibre` now point to the actual STEP and `library/models/fibre-arm-try3.glb` (11 mesh parts, 17,858 triangles; source Y-up retained). Spring and fibre are omitted; mounting/fit remain unverified. Original files and hashes are recorded in `Fibrearm_assembly_try3.provenance.json`; try2 and illustrative sources remain archived. The Picture tab still shows the explicitly labelled earlier try2 screenshot. Native SLDASM may depend on external part files. No setup coordinates, connections or settings were changed.
+
 Source template: `src/data/photoChipSetup.js`. Editable JSON: `public/library/setups/optical-chip-testing-v1.json`; isolated draft: `public/library/workspaces_draft/optical-chip-testing-v1_draft.json`. Original photos and evidence manifest: `public/library/references/optical-chip-testing-v1/`. Agent workflow and parameters: [PHOTO-TO-SETUP.md](public/documents/PHOTO-TO-SETUP.md), also registered in app Documentation.
 
 Validation for this local feature: 50 Node tests passed (including photo evidence/path validation and existing CAD/picture integrity checks). Browser checks verified 17 instances/six proposed paths, all 3D assets loaded, placement editing/undo, context pictures, original-photo captions, unpublished Explorer template preview, Builder template loading/undo without losing its prior draft, and an actual local Bench_draft save. Edge desktop and the narrow in-app browser layout rendered without page-wide horizontal overflow or recorded app console errors. Elevated bench equipment uses a higher/wider initial/reset camera view; layouts and model silhouettes remain approximate. A production build passed; the existing lazy Three.js chunk-size warning remains.
@@ -73,7 +75,7 @@ The **SM P3-SMF28Y-FC-5 is cleaved**, not the PM cable. Controller input/output 
 | `wst-fibre-sm-manual` | P3-SMF28Y-FC-5, nominal 5 m SM cable, one end cleaved for each arm |
 | `wst-fibre-pm5-manual` | P3-1550PM-FC-5 retained as an inventory alternative, not the configured cleaved fibre |
 | `fibre-arm-stage` | Thorlabs MAX313D, differential drives, no piezos; two instances support input/output fibre arms |
-| `wst-fibre-arms-manual` | Bespoke Southampton adjustable-angle arms; real assembly source retained, preview still illustrative |
+| `wst-fibre-arms-manual` | Bespoke Southampton adjustable-angle arms; actual try3 STEP/GLB assembly, spring/fibre omitted |
 | `wst-stage-manual` | Separate DUT motion stage; exact model remains unknown; do not replace it with MAX313D |
 | `wst-camera-manual` | Camera/optics awaiting exact identity; GT Vision picture is representative |
 | `wst-wafer-holder-manual` | Bespoke 3D-printed wafer holder; dimensions/isolated photo pending |
@@ -183,7 +185,7 @@ Recovery `.bak`/`.tmp` files are ignored and excluded from production builds. Do
 - Seven records have vendor CAD assignments: FPC562, MAX313D, ADAFCPMB2, the three named patch cables and Keithley 6487. Generic records may borrow these as explicitly unconfirmed visual references.
 - Other equipment uses generated **illustrative faceted STEP BREPs**, written by project Python utilities from supplier envelopes/photos or estimated geometry. These were not built as SolidWorks feature trees; front details, ports, mounting and fit remain approximate.
 - Current coverage: **36 equipment records, 35 GLB previews/STEP references, one native-only vacuum stage awaiting conversion**. Historical CAD docs mentioning 30 records predate O-band and vacuum-stage additions.
-- User fibre assembly: `public/library/references/wst-fibre-arms-manual/Fibrearm_assembly_try2.SLDASM`. Obtain resolved component files or a complete STEP assembly export; current arm browser model remains illustrative.
+- User fibre assembly: latest `public/library/references/wst-fibre-arms-manual/Fibrearm_assembly_try3.STEP` plus SLDASM/DWG originals; browser model `library/models/fibre-arm-try3.glb`. Spring and fibre are omitted. Try2 and earlier reference geometry remain archived. Obtain resolved SLDPRT files only when native assembly editing is needed.
 - User chip stage: `public/library/references/chip-vacuum-stage/Vacuum-Sample-Stage.SLDPRT`. Obtain STEP export to replace the missing preview.
 - Earlier fibre-arm parts/Inventor `.idw` drawings are retained under `references/fibre-arm/`. A drawing alone is insufficient to reconstruct an exact SLDPRT; the user will assemble/provide real parts later.
 - Existing viewer uses uncompressed GLB; Draco/Meshopt/KTX2 decoders and articulated paddle/fibre-arm motion are not implemented. Source licences/credits are retained; supplier image redistribution licences were not independently confirmed.
@@ -217,7 +219,7 @@ Latest application validation (equipment-picture release): **46 tests passed**, 
 
 No unresolved functional runtime bug was observed in the latest checked flows. This is a tested snapshot, not a guarantee for every browser or new user action. Known follow-ups:
 
-1. **Missing accurate CAD:** vacuum-stage preview is pending; actual resolved arm STEP assembly is pending. Mainframe/model fit, instrument front details and bench placements are illustrative. 3D cables terminate at equipment positions, not dimensionally precise CAD connector ports.
+1. **Missing accurate CAD:** vacuum-stage preview is pending; arm try3 STEP is now available but spring/fibre and mounting validation remain pending. Mainframe/model fit, instrument front details and bench placements are illustrative. 3D cables terminate at equipment positions, not dimensionally precise CAD connector ports.
 2. **Unconfirmed equipment/content:** exact DUT motion stage, camera/objective, wafer holder dimensions/photos, instrument connector options, serials, calibration, inventory quantities, physical slot order and cut cable lengths remain incomplete.
 3. **Pictures:** vacuum stage currently has a context image that does not depict its actual geometry; stage/wafer holder need isolated photos. Generic instruments/cameras retain reference labels. New images must replace attribution/checksums correctly.
 4. **O-band:** complete measurement path and validated fibre/connector choices are missing. User's 1240–1380 nm confirmation does not prove every cable and detector setting supports that path.
@@ -232,7 +234,7 @@ No unresolved functional runtime bug was observed in the latest checked flows. T
 1. Read this file, README, CHANGELOG and relevant feature docs. Inspect `git status`, branch, remotes and the open documentation PR. Do not discard user changes, merge the PR or force-push main without user instruction.
 2. Finish user review of this PR; after merge, verify the successful Pages run and record the actual deployment date in CHANGELOG. Equipment pictures are already live on main, not awaiting this PR.
 3. Restart/check localhost if requested (`scripts/start-local.ps1`); verify HTTP and browser render before reporting availability.
-4. Continue the manual wafer setup first. Ask for two or three specific missing details at a time, beginning with vacuum stage STEP and resolved fibre-arm assembly STEP, then DUT stage/camera identity and photos.
+4. Continue the manual wafer setup first. Ask for two or three specific missing details at a time, beginning with vacuum stage STEP, then DUT stage/camera identity and photos. Arm try3 STEP is supplied; add its spring/fibre later when available.
 5. Import supplied CAD locally, inspect orientation/scale, retain originals and accurate source notes, save the matching stable equipment records, and verify both builder and Explorer views. Do not replace the separate DUT motion stage with the fibre-arm stage or vacuum holder.
 6. Let the user configure parameters/records through UI or the Excel collection workbook. Spreadsheet edits are not automatically imported into the catalog; deliberate mapping/validation is required before changing project JSON.
 7. Confirm physical dimensions/slots/ports, complete the guide and timing evidence, and review changes before explicitly publishing the setup snapshot. Keep drafts until the user chooses their future.
