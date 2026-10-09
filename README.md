@@ -2,6 +2,10 @@
 
 A local JavaScript workspace for finding photonic measurement setups, exploring equipment and connections, collecting documentation, training users and planning measurement time. Prepared for a future repository named **cs-testsetup**.
 
+## Equipment pictures
+
+All 36 equipment records include a local picture with its source, credit and accuracy notes. Open **Equipment library → select equipment → Picture**; 3D remains the default. Pictures are stored in `public/library/images/`, with editable provenance in `public/library/equipment.json` and the acquisition snapshot in `public/library/images/sources.json`. See [Equipment picture guide](docs/EQUIPMENT-PICTURES.md) for coverage and replacement instructions. Bespoke or unconfirmed hardware is explicitly labelled when only a lab context picture or vendor reference is available.
+
 ## Draft UI workspaces
 
 Three separate preview workspaces are available on the same local app: **Bench_draft**, **Equipment_draft**, and **Training_draft**. Start with [Bench_draft](http://localhost:5174/#page=bench_draft). See [README_draft.md](README_draft.md) for the user guide, draft file locations and review workflow. Saving a draft does not change the shared equipment catalog or published setups.

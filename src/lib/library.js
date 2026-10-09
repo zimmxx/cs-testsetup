@@ -11,6 +11,11 @@ export function validateEquipment(item) {
   for (const key of ['name','model','category','location','status','role','alternatives','note']) if (typeof item[key] !== 'string' || (['name','model','category'].includes(key) && !item[key].trim())) throw new Error(`Check the ${key} field.`);
   if (!Array.isArray(item.specs) || item.specs.some(row=>!Array.isArray(row)||row.length!==2||row.some(v=>typeof v!=='string'))) throw new Error('Specifications must be label / value pairs.');
   if (item.url && !/^https?:\/\//i.test(item.url)) throw new Error('Manufacturer link must start with https:// or http://.');
+  for (const key of ['imageSource','imageAssetSource']) if (item[key] && !/^https?:\/\/[^\s]+$/i.test(item[key])) throw new Error('Picture source links must start with https:// or http://.');
+  for (const key of ['imageCredit','imageKind','imageReview','imageModel','imageRetrievedAt','imageRights','imageSourceLabel']) if (item[key] !== undefined && (typeof item[key] !== 'string' || item[key].length > 10000)) throw new Error('Invalid picture provenance.');
+  if (item.imageSourcePath && (!/^(documents|library\/references)\/[a-zA-Z0-9 _./-]+$/.test(item.imageSourcePath) || item.imageSourcePath.split('/').includes('..'))) throw new Error('Picture references must link to local documents or reference files.');
+  if (item.imageSha256 && !/^[a-f0-9]{64}$/.test(item.imageSha256)) throw new Error('Invalid picture checksum.');
+  for (const key of ['imageWidth','imageHeight']) if (item[key] !== undefined && (!Number.isInteger(item[key]) || item[key] < 1)) throw new Error('Invalid picture dimensions.');
   for (const key of ['image','model3d']) if (item[key] && !/^library\/(images|models)\/[a-zA-Z0-9._-]+$/.test(item[key])) throw new Error('Assets must be inside library/images or library/models.');
   if(item.stepPath&&!/^library\/references\/[a-zA-Z0-9 _./-]+\.(step|stp)$/i.test(item.stepPath))throw new Error('STEP files must be inside library/references.');
   if(item.stepPath?.split('/').some(segment=>segment==='..'))throw new Error('STEP paths cannot traverse folders.');

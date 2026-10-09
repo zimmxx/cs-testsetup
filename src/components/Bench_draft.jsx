@@ -13,6 +13,7 @@ import BuildOverview from './BuildOverview.jsx';
 import MainframeSlots from './MainframeSlots.jsx';
 import MeasurementSettings from './MeasurementSettings.jsx';
 import PublishSetup from './PublishSetup.jsx';
+import { EquipmentPicture, PictureSource } from './EquipmentPicture.jsx';
 import Modal from './Modal.jsx';
 import { localPath } from './UI.jsx';
 import '../workspaces_draft.css';
@@ -82,5 +83,5 @@ export default function Bench_draft({setupId='wst-optical-manual',onSetupChange,
 
 function DraftMedia({item}){
   const [view,setView]=useState('3d');
-  return <div className="draft-media"><div><button aria-pressed={view==='3d'} onClick={()=>setView('3d')}>3D model</button><button aria-pressed={view==='picture'} onClick={()=>setView('picture')}>Picture</button></div>{view==='3d'?item.model3d?<Suspense fallback={<div className="draft-media-empty">Loading model…</div>}><ModelScene nodes={[{id:item.id,equipmentId:item.id,x:440,y:255}]}/></Suspense>:<div className="draft-media-empty">3D model pending · attach STEP or GLB in Admin</div>:item.image?<img src={localPath(item.image)} alt={`${item.name} reference`}/>:<div className="draft-media-empty">Picture not recorded</div>}</div>;
+  return <div className="draft-media"><div><button aria-pressed={view==='3d'} onClick={()=>setView('3d')}>3D model</button><button aria-pressed={view==='picture'} onClick={()=>setView('picture')}>Picture</button></div>{view==='3d'?item.model3d?<Suspense fallback={<div className="draft-media-empty">Loading model…</div>}><ModelScene nodes={[{id:item.id,equipmentId:item.id,x:440,y:255}]}/></Suspense>:<div className="draft-media-empty">3D model pending · attach STEP or GLB in Admin</div>:<><div className="draft-picture-window"><EquipmentPicture key={item.image} item={item}/></div><PictureSource item={item}/></>}</div>;
 }
