@@ -1,0 +1,33 @@
+{
+  "source": "Vaccum Sample Stage.STEP",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 1,
+  "triangles": 1892,
+  "boundsMm": {
+    "min": [
+      -42.500000000000014,
+      -4.3368086899420177e-16,
+      -32
+    ],
+    "max": [
+      42.50000000000003,
+      25.5,
+      32
+    ]
+  },
+  "extentsMm": [
+    85.00000000000004,
+    25.5,
+    64
+  ],
+  "glbBytes": 70904,
+  "orientation": "Unmodified source axes; verify mounting orientation visually",
+  "sourcePath": "library/references/chip-vacuum-stage/Vaccum Sample Stage.STEP",
+  "sourceSha256": "063d9acea4283c2d141f6370e678b343026f92ee809dab1fb41529fd1e16abe8",
+  "receivedAt": "2026-10-09"
+}

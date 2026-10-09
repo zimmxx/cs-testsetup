@@ -47,6 +47,10 @@ Conversion runs only on the local development server when the separately install
 
 The original bespoke arm parts and Inventor drawings are preserved. Both arm records (`wst-fibre-arms-manual` and `fibre`) now display the user-supplied `Fibrearm_assembly_try3.STEP` export received 9 October 2026, converted to `public/library/models/fibre-arm-try3.glb` with source Y-up axes retained. Its 11 mesh parts have a CAD bounding box of approximately 165.6 × 87.8 × 32.0 mm. The spring and fibre are omitted as confirmed by the user; fit and travel remain unverified. The STEP, SLDASM and auxiliary DWG originals, hashes and provenance are stored under `public/library/references/wst-fibre-arms-manual/`; try2 and earlier illustrative sources remain archived. Native SLDASM editing may require referenced SLDPRT files. The Picture tab retains the earlier try2 screenshot with an explicit label. Vendor cable CAD depicts uncut reference geometry, not the cleaved tips or the full installed cable route.
 
+## Vacuum chip sample stage
+
+The vacuum chip sample stage (`chip-vacuum-stage`) now has a user-supplied STEP/GLB preview. STEP and SLDPRT originals received 9 October 2026 are in `public/library/references/chip-vacuum-stage/` with checksums and `vacuum-stage.provenance.json`. Source Y-up is retained; CAD X/Y/Z bounds are 85 × 25.5 × 64 mm. It is the user-confirmed holder in `optical-chip-testing-v1`, mounted on the separate DUT translation stage; its stable instance ID and optical endpoints are unchanged. Vacuum fittings, pressure, retention and fit require confirmation. The current Picture tab is an explicitly labelled bench context image, not an isolated photograph of this part.
+
 ## O-band assembly references
 
 The 8164B, 81606A, 81618A, external 81624B and 81000FA are separate library records with illustrative STEP and GLB models. Slot 0 is horizontal and back-loadable; Slots 1–4 are vertical compact bays. The head is external and links electrically to the confirmed Slot 3 interface. See [O-band assembly](O-BAND-MAINFRAME.md) for paths, confirmed data and remaining model limitations.

@@ -30,6 +30,7 @@ export const equipment = [
 ];
 
 equipment.push(...manualEquipment,...obandEquipment,...photoChipEquipment);
+equipment.push({id:'chip-vacuum-stage',name:'Vacuum chip sample stage',model:'Bespoke vacuum sample stage',category:'Positioning',location:'Local bench - location to confirm',status:'Needs verification',role:'Separate chip holder/stage; user-confirmed holder for optical-chip-testing-v1. Does not replace the DUT motion stage.',specs:[['Use','Chip holder / sample stage'],['CAD X/Y/Z bounds','85 / 25.5 / 64 mm'],['Vacuum connection / pressure','To confirm']],url:'',alternatives:'Bespoke copper chip holder or other mount: suitability to verify.',note:'User-supplied STEP/SolidWorks geometry, received 9 October 2026. Mounting, retention and operating conditions remain unverified.',model3d:'library/models/chip-vacuum-stage.glb',stepPath:'library/references/chip-vacuum-stage/Vaccum Sample Stage.STEP',cadKind:'User-provided CAD',cadReview:'Actual supplied STEP geometry; source Y-up retained. CAD bounds are not physically measured dimensions. Vacuum plumbing and mounting require confirmation.',cadSource:'User-supplied SolidWorks 2025 STEP export, 9 October 2026'});
 const opticalEquipment = ['laser', 'polarisation', 'stage', 'fibre', 'detector', 'camera'];
 const genericOptical = ['band-source', 'polarisation', 'stage', 'fibre', 'band-detector', 'camera'];
 export const setups = [

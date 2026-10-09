@@ -103,5 +103,15 @@
       "purpose": "Candidate observation link"
     }
   ],
-  "reviewStatus": "Draft; no operational approval and no Setup Explorer publication"
+  "reviewStatus": "Draft; no operational approval and no Setup Explorer publication",
+  "userConfirmations": [
+    {
+      "date": "2026-10-09",
+      "instanceId": "photo-holder",
+      "equipmentId": "chip-vacuum-stage",
+      "statement": "Use the supplied vacuum chip sample stage instead of the alternative chip holder in optical-chip-testing-v1. It remains separate from the DUT translation stage.",
+      "cadSource": "library/references/chip-vacuum-stage/Vaccum Sample Stage.STEP",
+      "provenance": "library/references/chip-vacuum-stage/vacuum-stage.provenance.json"
+    }
+  ]
 }

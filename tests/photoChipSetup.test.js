@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {createPhotoChipSetup,photoChipEquipment} from '../src/data/photoChipSetup.js';
+import {createPhotoChipSetup,photoChipEquipment,upgradePhotoChipSetup} from '../src/data/photoChipSetup.js';
 import {equipment,setups} from '../src/data/catalog.js';
 import {validateSetup} from '../src/lib/setupBuilder.js';
 import {workspaceSeed,validateWorkspace} from '../src/lib/workspace_draft.js';
@@ -14,6 +14,9 @@ test('photo chip template stays editable, unapproved and separate from manual wa
   assert.equal(setup.id,'optical-chip-testing-v1');assert.equal(setup.nodes.length,17);
   assert.equal(new Set(setup.nodes.map(n=>n.equipmentId)).size,15);
   assert.equal(photoChipEquipment.length,8);
+  const holder=setup.nodes.find(n=>n.id==='photo-holder');
+  assert.equal(holder.equipmentId,'chip-vacuum-stage');assert.equal(holder.configuration.mountingStage,'photo-dut-stage');
+  assert.equal(setup.nodes.find(n=>n.id==='photo-dut-stage').equipmentId,'chip-dut-translation-stage-v1');
   for(const key of ['laserPowerMw','inputAngle','outputAngle','coupling','startNm','stopNm','maxPowerMw'])assert.equal(setup.measurement[key],'');
   assert.ok(setup.connections.every(c=>c.notes.startsWith('PROPOSED ROUTE')));
   assert.ok(setup.nodes.every(n=>!n.configuration.mainframeId));
@@ -21,6 +24,23 @@ test('photo chip template stays editable, unapproved and separate from manual wa
   for(const n of setup.nodes)if(n.configuration.mountingStage)assert.ok(setup.nodes.some(parent=>parent.id===n.configuration.mountingStage));
   const publication=JSON.parse(fs.readFileSync('public/library/published/index.json','utf8'));
   assert.ok(!publication.setups.some(s=>s.id===setup.id));
+});
+
+test('vacuum holder upgrade preserves edited placements, paths, settings and alternate choices',()=>{
+  const legacy=createPhotoChipSetup();delete legacy.chipHolderRevision;
+  const holder=legacy.nodes.find(n=>n.id==='photo-holder');holder.equipmentId='wst-chip-holder-manual';holder.label='My chip';holder.benchXMm=123;holder.locked=true;
+  holder.configuration.notes='My retention note';holder.configuration.serial='MY-CHIP';holder.configuration.cadReference='library/references/wst-chip-holder-manual/wst-chip-holder-manual-Reference.step';holder.configuration.modelReference='library/models/wst-chip-holder-manual.glb';
+  legacy.measurement.laserPowerMw=4;legacy.measurement.holder='My fixture notes';
+  const old=structuredClone(legacy),next=validateWorkspace({...legacy,workspaceName:'Bench_draft',workspaceRevision:1});
+  const upgraded=next.nodes.find(n=>n.id===holder.id);
+  assert.equal(upgraded.equipmentId,'chip-vacuum-stage');assert.equal(upgraded.label,'My chip');assert.equal(upgraded.benchXMm,123);assert.equal(upgraded.locked,true);
+  assert.equal(upgraded.configuration.serial,'MY-CHIP');assert.ok(upgraded.configuration.notes.startsWith('My retention note'));
+  assert.ok(!upgraded.configuration.cadReference&&!upgraded.configuration.modelReference);
+  assert.deepEqual(next.connections,old.connections);assert.deepEqual(next.measurement,old.measurement);assert.deepEqual(legacy,old);
+  assert.equal(upgradePhotoChipSetup(next),next);
+  const changed=structuredClone(next);changed.nodes.find(n=>n.id===holder.id).equipmentId='wst-chip-holder-manual';assert.equal(upgradePhotoChipSetup(changed),changed);
+  const alternate=structuredClone(legacy);alternate.nodes.find(n=>n.id===holder.id).equipmentId='wst-wafer-holder-manual';assert.equal(upgradePhotoChipSetup(alternate).nodes.find(n=>n.id===holder.id).equipmentId,'wst-wafer-holder-manual');
+  const other={...legacy,id:'wst-optical-manual'};assert.equal(upgradePhotoChipSetup(other),other);
 });
 
 test('template seeds preserve photo connections and do not mutate catalog or saved records',()=>{

@@ -22,7 +22,7 @@ The wide views show the optical table, overhead shelf, monitor, shelf instrument
 | `photo-controller` | `wst-polarisation-manual` | Left fibre routing/loops observed; FPC562 is a provisional library match |
 | `photo-input-stage`, `photo-output-stage` | `fibre-arm-stage` | Two Thorlabs-branded stages observed; MAX313D used as a candidate, drive variants unconfirmed |
 | `photo-input-arm`, `photo-output-arm` | `wst-fibre-arms-manual` | Two bespoke silver arms observed; exact revision and input/output assignment unconfirmed |
-| `photo-holder` | `wst-chip-holder-manual` | Copper chip block observed; mounted on the separate DUT stage |
+| `photo-holder` | `chip-vacuum-stage` | User confirmed the supplied vacuum chip sample stage on 2026-10-09; replaces the alternative chip holder, mounted on the separate DUT stage |
 | `photo-dut-stage` | `chip-dut-translation-stage-v1` | New provisional record for long black front translation assembly; do not substitute a fibre-arm stage |
 | `photo-microscope` | `chip-microscope-body-v1` | New microscope/objective/focus/post assembly record; individual models unknown |
 | `photo-camera` | `chip-camera-head-v1` | New black camera-head record, exact label/interface unknown |
@@ -33,6 +33,8 @@ The wide views show the optical table, overhead shelf, monitor, shelf instrument
 | `photo-shelf` | `chip-overhead-shelf-v1` | New mechanical shelf/gantry record; dimensions estimated |
 
 There are **17 instances**, **15 unique library IDs** and **8 newly created component records**. No mainframe modules have been assigned to slots from these photos. Mechanical arm/holder mounts are separate from signal edges. The table is the existing viewer bench surface; a second table model is not added on top of it.
+
+User clarification overrides the initial holder interpretation: the working setup now uses `chip-vacuum-stage`, with supplied STEP/SLDPRT originals and a converted GLB. The original photo observations remain in the evidence manifest alongside this dated confirmation. The one-time `chipHolderRevision: 1` draft migration changes only the original `photo-holder` equipment assignment, retaining instance ID, placement, mounting and connection endpoints. Custom labels, operating settings and alternate holder choices are preserved; after migration, later user substitutions are not automatically reverted. Vacuum connection/pressure and approved retention procedure remain to collect.
 
 ## Proposed connections, not photographed proof
 
