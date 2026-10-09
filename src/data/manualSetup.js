@@ -1,6 +1,7 @@
 // Local bench information supplied by the user, 5 October 2026.
 import { addBenchDefaults } from '../lib/benchLayout.js';
 import { addMainframeDefaults } from '../lib/mainframeAssembly.js';
+import { upgradeFrontFacing } from '../lib/frontFacing.js';
 const item=(id,name,model,category,url,specs=[])=>({id,name,model,category,url,specs,location:'Lab 2077',status:'Needs verification',role:name,alternatives:'',note:'Manual wafer optical bench, user-reported 5 October 2026. Verify installed options and calibration.',image:'',model3d:''});
 export const manualEquipment=[
   item('wst-laser-old','Manual bench laser','Keysight 81940A','Optical source','https://www.keysight.com/us/en/product/81940A/compact-tunable-laser-source-continuous-sweep-mode-1520nm-1630nm.html',[['Usual output setting','10 mW (user-reported)']]),
@@ -58,13 +59,13 @@ export function createManualSetup(){
 
 // Apply the confirmed mounting distinction to older drafts without resetting user work.
 export function upgradeManualSetup(data){
-  if(data.id!=='wst-optical-manual'||data.manualAssemblyRevision>=1)return addMainframeDefaults(addBenchDefaults(data));
+  if(data.id!=='wst-optical-manual'||data.manualAssemblyRevision>=1)return upgradeFrontFacing(addMainframeDefaults(addBenchDefaults(data)));
   const next=structuredClone(data), part=manualEquipment.find(e=>e.id==='fibre-arm-stage');
   for(const [side,x] of [['input',680],['output',240]]){
     const id=`${side}-fibre-stage`;
     if(!next.nodes.some(n=>n.id===id)&&next.nodes.length<100)next.nodes.push({id,equipmentId:part.id,label:`${side==='input'?'Input':'Output'} fibre arm stage`,x,y:480,configuration:{exactModel:part.model,specUrl:part.url,specifications:part.specs.map(([k,v])=>`${k}: ${v}`).join('\n'),notes:`Supports the ${side} bespoke fibre arm. Physical mounting dimensions remain to confirm.`}});
     const arm=next.nodes.find(n=>n.id===`${side}-arm`);
-    if(arm)arm.configuration={...arm.configuration,mountingStage:arm.configuration?.mountingStage||id};
+    if(arm&&!arm.configuration?.mount)arm.configuration={...arm.configuration,mountingStage:arm.configuration?.mountingStage||id};
   }
   for(const n of next.nodes.filter(n=>n.equipmentId==='wst-stage-manual')){
     if(n.label==='3-axis stage')n.label='DUT motion stage';
@@ -73,5 +74,5 @@ export function upgradeManualSetup(data){
   }
   next.measurement={...next.measurement,inputFibreStageModel:next.measurement?.inputFibreStageModel||'Thorlabs MAX313D',outputFibreStageModel:next.measurement?.outputFibreStageModel||'Thorlabs MAX313D'};
   next.manualAssemblyRevision=1;
-  return addMainframeDefaults(addBenchDefaults(next));
+  return upgradeFrontFacing(addMainframeDefaults(addBenchDefaults(next)));
 }

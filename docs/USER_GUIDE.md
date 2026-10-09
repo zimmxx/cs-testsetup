@@ -8,6 +8,14 @@ Choose source and destination equipment under **Connect equipment**. Select a pa
 
 Switch between Setup overview, 3D and Signal path. Setup overview draws your current equipment and connections on an illustrative bench. Select a numbered marker to show the same equipment specifications used in Setup explorer; View equipment opens the full record. Missing models appear as labelled wireframe placeholders in 3D. Drafts autosave in this browser. Export JSON to share or retain them; Import restores a valid file. Undo restores the last change, including removed equipment and its connections.
 
+## Rotate and mount equipment
+
+Select an instance in Build setup, or choose Edit draft in Bench_draft. Under Position & installation, set Yaw Y, Tilt X and Roll Z. Use the 90° turns or 180° flip for quick orientation changes. Mounted fibre arms have their own orientation controls. Mainframe modules follow their housing; rotate the mainframe to turn them together.
+
+Choose Mount to component to keep the current pose while attaching the instance to a parent. Change the local X/Y/Z offsets and relative angles, or align the bottom-centre preview origins. Moving or tilting the parent carries nested rigid-mounted children. Detach with Independent on bench; Undo restores any edit. This is a visual rigid-mount relationship, not a face/concentric mate solver.
+
+Export CAD on localhost produces the current whole setup STEP assembly and its placement/JSON records. See the [SolidWorks handoff guide](../public/documents/SOLIDWORKS-HANDOFF.md) for the optional runtime, import settings, native assembly saving, mating and return workflow. Static GitHub Pages supports layout JSON export; whole-setup STEP generation needs the local server.
+
 ## Maintain the equipment library
 
 The discreet **Admin** link is at the bottom of the sidebar. Open it through localhost on the development computer to edit project files. Select an existing record or Add equipment, edit specifications, and attach pictures / self-contained GLB models. Save to library updates the app and `public/library/equipment.json`. Record model sources, licences and dimensions alongside the asset.

@@ -7,8 +7,9 @@ import MainframeSlots from './MainframeSlots.jsx';
 import { Inspector } from './SetupCanvas.jsx';
 import { manualGroups } from '../data/manualSetup.js';
 import PhotoSetupEvidence from './PhotoSetupEvidence.jsx';
+import { upgradeFrontFacing } from '../lib/frontFacing.js';
 
-export function catalogLayout(setup){return setup.published||setup.template||{version:1,id:setup.id,name:setup.name,nodes:setup.equipment.map((id,i)=>({id:`catalog-${i}`,equipmentId:id,label:'',x:30+(i%4)*235,y:35+Math.floor(i/4)*145})),connections:[]};}
+export function catalogLayout(setup){return upgradeFrontFacing(setup.published||setup.template||{version:1,id:setup.id,name:setup.name,nodes:setup.equipment.map((id,i)=>({id:`catalog-${i}`,equipmentId:id,label:'',x:30+(i%4)*235,y:35+Math.floor(i/4)*145})),connections:[]});}
 export default function PublishedSetupView({setup,mode,onMode,onInspect}){
   const original=useMemo(()=>catalogLayout(setup),[setup]);
   const [draft,setDraft]=useState(()=>structuredClone(original)),[selected,setSelected]=useState(null),[edgeId,setEdgeId]=useState(null),[pathType,setPathType]=useState('optical'),[notice,setNotice]=useState(''),[changed,setChanged]=useState(false),[focus,setFocus]=useState(null),[resetKey,setResetKey]=useState(0);

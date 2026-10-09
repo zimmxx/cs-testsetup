@@ -23,7 +23,7 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
   const [message,setMessage]=useState('');
   const [loadState,setLoadState]=useState('loading');
   const hasModules=nodes.some(n=>housingFor(n,nodes));
-  const visualKey=JSON.stringify(nodes.map(n=>({id:n.id,equipmentId:n.equipmentId,x:n.x,y:n.y,benchXMm:n.benchXMm,benchZMm:n.benchZMm,elevationMm:n.elevationMm,rotationDeg:n.rotationDeg,mountingStage:n.configuration?.mountingStage,mainframeId:n.configuration?.mainframeId,mainframeSlot:n.configuration?.mainframeSlot})));
+  const visualKey=JSON.stringify(nodes.map(n=>({id:n.id,equipmentId:n.equipmentId,x:n.x,y:n.y,benchXMm:n.benchXMm,benchZMm:n.benchZMm,elevationMm:n.elevationMm,rotationDeg:n.rotationDeg,tiltDeg:n.tiltDeg,rollDeg:n.rollDeg,mount:n.configuration?.mount,mountingStage:n.configuration?.mountingStage,mainframeId:n.configuration?.mainframeId,mainframeSlot:n.configuration?.mainframeSlot})));
   const modelKey=JSON.stringify(nodes.map(n=>{const item=items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId);return [item?.model3d,item?.cadKind];}));
   const pathKey=JSON.stringify(connections.map(c=>[c.id,c.from,c.to,c.type]));
   useEffect(()=>{
@@ -39,11 +39,11 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
     const scene=new THREE.Scene();scene.background=new THREE.Color('#f1f3f9');
     const single=nodes.length===1;
     const elevatedBench=!single&&nodes.some(n=>(n.elevationMm||0)>=400);
-    const defaultPosition=single?[2.5,1.8,3]:elevatedBench?[15,13,19]:[12,11,15];
+    const defaultPosition=single?[-2.5,1.8,-3]:elevatedBench?[15,13,19]:[12,11,15];
     const defaultTargetY=single ? 0.5 : elevatedBench ? 2.5 : 0;
     const camera=new THREE.PerspectiveCamera(40,1,.05,150);camera.position.set(...defaultPosition);
     const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,defaultTargetY,0);controls.enableDamping=true;
-    if(single){camera.position.set(2.5,1.8,3);controls.target.set(0,.5,0);controls.minDistance=.8;controls.maxDistance=12;}
+    if(single){camera.position.set(-2.5,1.8,-3);controls.target.set(0,.5,0);controls.minDistance=.8;controls.maxDistance=12;}
     else{controls.minDistance=3;controls.maxDistance=40;controls.maxPolarAngle=Math.PI*.49;if(view.current){camera.position.copy(view.current.position);controls.target.copy(view.current.target);}}
     scene.add(new THREE.HemisphereLight(0xffffff,0x6b7190,1.8));const light=new THREE.DirectionalLight(0xffffff,2.2);light.position.set(4,10,6);scene.add(light);
     if(single)scene.add(new THREE.GridHelper(8,16,0xd1d6e6,0xe0e4ef));
@@ -61,24 +61,24 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
       paths.forEach(({line,arrow,edge})=>{const visible=!hidden.has(edge.from)&&!hidden.has(edge.to);line.visible=visible;arrow.visible=visible;const isSelected=edgeIds.has(edge.id);line.material.color.set(isSelected?0x2f64d9:edge.type==='optical'?0xe2ad25:0x8060d9);line.material.transparent=true;line.material.opacity=edgeIds.size&&!isSelected?.25:1;line.material.emissive.set(isSelected?0x163874:0x000000);arrow.setColor(line.material.color);arrow.traverse(o=>{if(o.material){o.material.transparent=true;o.material.opacity=line.material.opacity;}});});
     };
     sceneActions.current={style:applyStyle,reset:()=>{camera.position.set(...defaultPosition);controls.target.set(0,defaultTargetY,0);controls.update();},labels:visible=>nameLabels.forEach(l=>{l.visible=visible;}),focus:id=>{const n=nodes.find(n=>n.id===id);if(!n)return;const p=equipmentPose(n,nodes,benchPosition),angle=(p.rotationDeg||0)*Math.PI/180;const large=frameProfile(n)?.model==='8164B',distance=large?(exploded?11:8):(exploded?7.5:5);controls.target.set(p.x,p.y+(large?.8:.5),p.z+(large&&exploded?.3:exploded?-1.3:-.5));camera.position.set(p.x+3*Math.cos(angle)-distance*Math.sin(angle),p.y+(large?4.5:2.7),p.z-3*Math.sin(angle)-distance*Math.cos(angle));controls.update();}};
-    const pose=n=>{const p=equipmentPose(n,nodes,benchPosition);if(exploded&&housingFor(n,nodes)){const angle=p.rotationDeg*Math.PI/180;const shift=n.equipmentId==='oband-laser-81606a'?-2.5:1.8;p.x-=shift*Math.sin(angle);p.z-=shift*Math.cos(angle);}return p;};
+    const pose=n=>{const p=equipmentPose(n,nodes,benchPosition);if(exploded&&housingFor(n,nodes)){const shift=n.equipmentId==='oband-laser-81606a'?-2.5:1.8,v=new THREE.Vector3(0,0,-shift).applyQuaternion(new THREE.Quaternion().fromArray(p.quaternion));p.x+=v.x;p.y+=v.y;p.z+=v.z;}return p;};
     // Lead cables out of the front and around the shell, rather than through it.
     const moduleRoute=(n,port,other)=>{
       const housing=housingFor(n,nodes);if(!housing)return [port];
-      const origin=benchPosition(housing,nodes),angle=(housing.rotationDeg||0)*Math.PI/180,cos=Math.cos(angle),sin=Math.sin(angle);
-      const local=p=>({x:(p.x-origin.x)*cos-(p.z-origin.z)*sin,z:(p.x-origin.x)*sin+(p.z-origin.z)*cos});
+      const origin=equipmentPose(housing,nodes,benchPosition),quaternion=new THREE.Quaternion().fromArray(origin.quaternion),inverse=quaternion.clone().invert();
+      const local=p=>new THREE.Vector3(p.x-origin.x,p.y-origin.y,p.z-origin.z).applyQuaternion(inverse);
       const profile=frameProfile(housing),a=local(port),b=local(other),clearance=profile.depth/2+.8,front=Math.min(a.z-.4,-clearance),side=(b.x>=0?1:-1)*(profile.width/2+.45);
-      const world=(x,z)=>new THREE.Vector3(origin.x+x*cos+z*sin,port.y,origin.z-x*sin+z*cos);
+      const world=(x,z)=>new THREE.Vector3(x,a.y,z).applyQuaternion(quaternion).add(new THREE.Vector3(origin.x,origin.y,origin.z));
       return [port,world(a.x,front),world(side,front),world(side,Math.max(-clearance,Math.min(profile.depth/2+.4,b.z)))];
     };
     const signalPort=(n,type)=>{
-      const p=pose(n),angle=p.rotationDeg*Math.PI/180;
+      const p=pose(n);
       const z=n.equipmentId==='oband-head-81624b'?(type==='optical'?-.455:.455):0;
       const y=n.equipmentId==='oband-head-81624b'?.28:n.equipmentId==='oband-head-interface'?.22:n.equipmentId==='oband-laser-81606a'?.1:.18;
-      return new THREE.Vector3(p.x+z*Math.sin(angle),p.y+y,p.z+z*Math.cos(angle));
+      return new THREE.Vector3(0,y,z).applyQuaternion(new THREE.Quaternion().fromArray(p.quaternion)).add(new THREE.Vector3(p.x,p.y,p.z));
     };
     for(const n of nodes) {
-      const item=items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId),group=new THREE.Group(),position=pose(n);group.position.set(single?0:position.x,single?0:position.y,single?0:position.z);group.rotation.y=position.rotationDeg*Math.PI/180;group.userData.nodeId=n.id;scene.add(group);roots.push(group);
+      const item=items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId),group=new THREE.Group(),position=pose(n);group.position.set(single?0:position.x,single?0:position.y,single?0:position.z);group.quaternion.fromArray(position.quaternion);group.userData.nodeId=n.id;scene.add(group);roots.push(group);
       const proxy=new THREE.Mesh(new THREE.BoxGeometry(1.7,.7,1.15),new THREE.MeshStandardMaterial({color:0xc3c9df,wireframe:true}));proxy.position.y=.35;group.add(proxy);const helper=new THREE.BoxHelper(group,0x447ae5);helper.material.depthTest=false;helper.material.transparent=true;helper.material.opacity=.7;helper.visible=false;scene.add(helper);helpers.push(helper);
       let label;
       if(!single){const canvas=document.createElement('canvas');canvas.width=512;canvas.height=88;const ctx=canvas.getContext('2d');ctx.fillStyle='rgba(255,255,255,.94)';ctx.fillRect(0,0,512,88);ctx.font='600 25px sans-serif';ctx.textAlign='center';ctx.fillStyle='#41425f';ctx.fillText((n.label||item?.name||'Equipment').slice(0,34),256,34);ctx.font='19px sans-serif';ctx.fillStyle=item?.cadKind==='Vendor CAD'?'#44816b':'#a08043';ctx.fillText(item?.cadKind||'CAD pending',256,65);const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;label=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:false,depthWrite:false,toneMapped:false}));label.scale.set(3.4,.58,1);label.position.y=.9;label.visible=labels;group.add(label);nameLabels.push(label);}

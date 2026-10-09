@@ -8,6 +8,7 @@ import { validateSetup } from '../src/lib/setupBuilder.js';
 import { equipment } from '../src/data/catalog.js';
 import { validatePublication } from '../src/lib/publishedSetups.js';
 import { validateWorkspace } from '../src/lib/workspace_draft.js';
+import { cadRuntime, assemblyManifest, exportAssemblyPackage } from './cad-assembly-service.mjs';
 const execute=promisify(execFile);
 
 async function body(req,limit) {
@@ -19,6 +20,7 @@ export default function libraryServer() {
   return {name:'local-equipment-library',configureServer(server) {
     const root=path.resolve(server.config.root,'public/library');
     const converter=path.resolve(server.config.root,'.local/cad-tools/package');
+    let exportingCad=false;
     server.middlewares.use(async(req,res,next)=> {
       const url=new URL(req.url,'http://localhost');
       // Vite's cached public-file inventory does not include newly uploaded
@@ -34,10 +36,24 @@ export default function libraryServer() {
       const localHost=['localhost','127.0.0.1','[::1]'].includes(new URL(`http://${req.headers.host}`).hostname);
       const origin=req.headers.origin;
       const sameOrigin=!origin || origin===`http://${req.headers.host}`;
-      if(url.pathname==='/api/library/status' && req.method==='GET') {let cadConversion=false;if(local)try{await access(path.join(converter,'dist/occt-import-js.js'));cadConversion=true;}catch{}res.end(JSON.stringify({writable:local&&localHost&&sameOrigin,folder:local?root:'public/library',cadConversion}));return;}
+      if(url.pathname==='/api/library/status' && req.method==='GET') {let cadConversion=false;if(local)try{await access(path.join(converter,'dist/occt-import-js.js'));cadConversion=true;}catch{}res.end(JSON.stringify({writable:local&&localHost&&sameOrigin,folder:local?root:'public/library',cadConversion,cadAssembly:local&&localHost&&sameOrigin&&Boolean(await cadRuntime(server.config.root))}));return;}
       if(!local||!localHost||!sameOrigin) {res.statusCode=403;res.end(JSON.stringify({error:'Open this app on localhost to edit project files. Network access is read-only.'}));return;}
       try {
         await mkdir(root,{recursive:true});
+        if(url.pathname==='/api/library/export-step' && req.method==='POST'){
+          if(exportingCad)throw new Error('A CAD export is running. Try again when it finishes.');
+          const data=JSON.parse((await body(req,1024*1024)).toString());
+          if(typeof data.includeBench!=='boolean')throw new Error('Select whether to include the bench.');
+          let extra=[];try{extra=JSON.parse(await readFile(path.join(root,'equipment.json'),'utf8')).equipment||[];}catch{}
+          const items=[...new Map([...equipment,...extra].map(e=>[e.id,e])).values()];
+          validateSetup(data.setup,items.map(e=>e.id));
+          exportingCad=true;
+          try{
+            const manifest=await assemblyManifest(server.config.root,data.setup,items,data.includeBench),zip=await exportAssemblyPackage(server.config.root,manifest);
+            res.setHeader('Content-Type','application/zip');res.setHeader('Content-Disposition','attachment; filename="setup-solidworks.zip"');res.end(zip);
+          }finally{exportingCad=false;}
+          return;
+        }
         if(url.pathname==='/api/library/workspace-draft' && req.method==='PUT') {
           const data=JSON.parse((await body(req,2*1024*1024)).toString());
           let filename;

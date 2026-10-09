@@ -1,7 +1,7 @@
 // Suggested presentation layout, not a measured installation or mounting design.
 // x/y remain shared across overview, illustration and 3D; bench heights are mm.
 const positions={
-  mainframe:[50,50,0,0,-600,-200],laser:[300,50,0,0,-580,160],sensor:[800,50,0,0,600,-200],
+  mainframe:[50,50,0,180,-600,-200],laser:[300,50,0,0,-580,160],sensor:[800,50,0,0,600,-200],
   controller:[550,50,0,0,-250,-200],'sleeve-in':[50,185,0,0,-500,40],'sleeve-arm':[300,185,0,0,-260,40],
   'input-arm':[50,320,63,0,-170,120],dut:[300,320,65,0,0,120],'output-arm':[550,320,63,180,170,120],
   'input-fibre-stage':[50,455,0,90,-170,120],'output-fibre-stage':[550,455,0,-90,170,120],

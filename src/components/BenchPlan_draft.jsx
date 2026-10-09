@@ -5,7 +5,7 @@ import { housingFor } from '../lib/mainframeAssembly.js';
 
 export default function BenchPlan_draft({draft,selected,onSelect,onMove,onMoveStart,snap}){
   const svg=useRef(null),drag=useRef(null);
-  const nodes=draft.nodes.filter(n=>!housingFor(n,draft.nodes)&&!n.configuration?.mountingStage);
+  const nodes=draft.nodes.filter(n=>!housingFor(n,draft.nodes)&&!n.configuration?.mountingStage&&!n.configuration?.mount);
   function point(e){const p=svg.current.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(svg.current.getScreenCTM().inverse());}
   function start(e,n){onSelect(n.id);if(n.locked)return;e.preventDefault();e.currentTarget.setPointerCapture(e.pointerId);const p=point(e),b=benchCoordinates(n,draft);drag.current={id:n.id,dx:p.x-(b.x+900)/2,dy:p.y-(b.z+450)/2,started:false};}
   function move(e){const g=drag.current;if(!g)return;const n=draft.nodes.find(n=>n.id===g.id),p=point(e);if(!g.started){onMoveStart();g.started=true;}const patch=benchPatch(n,draft,(p.x-g.dx)*2-900,(p.y-g.dy)*2-450,snap);if(patch)onMove(n.id,patch);}

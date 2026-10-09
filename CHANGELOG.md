@@ -6,7 +6,22 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 Future changes belong here.
 
-## 0.2.1 — Vacuum chip sample stage — deployment pending
+## 0.2.2 — Component orientation, rigid mounts and STEP assembly export — deployment pending
+
+Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.2**; setup schema stays at version 1 with optional tilt/roll and rigid-mount fields.
+
+- Corrected the try3 fibre-arm browser preview by 180° about its vertical axis, aligning its tip direction with existing opposing bench placements. Both tips now face the DUT; source CAD, setup rotations, positions, supports and connections are retained. The prior preview remains archived.
+- Corrected the default monitor, mainframe, laser/sensor and shelf-instrument fronts to face the photographed side of the chip bench. Legacy default-facing upgrades preserve custom angles and alternative equipment. Builder, Bench_draft and Explorer use the same correction; publication files stay unchanged. Single-equipment previews and reset start from the front side.
+- Added shared yaw/tilt/roll controls, 15° steps, 90° turns and a 180° flip, including independent angles for existing stage-mounted arms.
+- Added rigid component mounting with editable parent-local X/Y/Z offsets and angles, nested parent movement, cycle/import validation and pose-preserving attach/detach/parent removal. Mainframe slot installation remains separate and takes ownership of compatible modules. Signal connections remain intact.
+- Added localhost whole-setup AP214 STEP assembly export from original BREP sources, named repeated equipment instances, optional illustrative bench, checksums/placement manifest and editable layout JSON in a ZIP. Preview-axis/centering corrections are included in export transforms. Sources are unchanged; native features/mates and physical fibre geometry are not generated.
+- Added optional pinned project-local OpenCascade runtime requirements and a SolidWorks import/mating/Pack and Go return guide, linked from app Documentation, README and user guide. Static GitHub Pages offers layout JSON export and explains the local STEP requirement.
+
+Validation: **61 tests passed**, production build passed. Local browser checks exercised rotation/tilt, mounting, undo, Explore/Edit state and a successful full CAD download. Independent OpenCascade re-import confirmed one root assembly, 17 named source equipment instances plus the optional bench, and every exported source translation/quaternion against the placement manifest. Existing Three.js chunk-size warning remains. Actual import/mating in SolidWorks is not tested.
+
+Deployment: **pending user review, merge and successful Pages deployment**.
+
+## 0.2.1 — Vacuum chip sample stage — deployed 2026-10-09
 
 Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.1**; setup/import schema remains version 1.
 
@@ -16,7 +31,7 @@ Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.1**; setup/i
 
 Validation: **51 tests passed**, production build passed. Browser inspection confirmed the migrated vacuum holder, loaded 3D scene/inspector, preserved 17 items/six paths and separate DUT-stage mounting, with no captured console errors. The existing Three.js bundle-size warning remains.
 
-Deployment: **pending review, merge and successful Pages deployment**. Vacuum plumbing, operating pressure and physical mounting remain unverified.
+Merged as [f9ee73e](https://github.com/zimmxx/cs-testsetup/commit/f9ee73e9b3fc545c817ca81caabe7982fb219e6e). Deployment verified by [successful Pages workflow 37957472351](https://github.com/zimmxx/cs-testsetup/actions/runs/37957472351), completed 2026-10-09 at 16:13:55 UTC. Vacuum plumbing, operating pressure and physical mounting remain unverified.
 
 ## 0.2.0 — Photo-derived optical chip setup — deployed 2026-10-09
 

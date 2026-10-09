@@ -2,6 +2,7 @@ import { getEquipment, equipment, setups } from '../data/catalog.js';
 import { createManualSetup, upgradeManualSetup } from '../data/manualSetup.js';
 import { createObandAssembly } from '../data/obandAssembly.js';
 import { upgradePhotoChipSetup } from '../data/photoChipSetup.js';
+import { upgradeFrontFacing } from './frontFacing.js';
 import { arrangeOnBench, benchPosition } from './benchLayout.js';
 import { validateSetup, connectionProblem, connectionRecord } from './setupBuilder.js';
 import { housingFor, equipmentPose } from './mainframeAssembly.js';
@@ -10,14 +11,14 @@ export const draftNames={bench_draft:'Bench_draft',equipment_draft:'Equipment_dr
 export function workspaceSeed(id='wst-optical-manual'){
   const entry=setups.find(s=>s.id===id);
   const source=entry?.published||entry?.template||(id==='wst-optical-manual'?arrangeOnBench(upgradeManualSetup(createManualSetup())):id==='oband-mainframe-assembly'?createObandAssembly():{version:1,id,name:entry?.name||'New setup',nodes:(entry?.equipment||[]).map((equipmentId,i)=>({id:`item-${i}`,equipmentId,label:'',x:40+(i%4)*230,y:40+Math.floor(i/4)*145})),connections:[]});
-  return {...structuredClone(source),workspaceName:'Bench_draft',workspaceRevision:1};
+  return {...upgradeFrontFacing(structuredClone(source)),workspaceName:'Bench_draft',workspaceRevision:1};
 }
 export function validateWorkspace(data,ids=equipment.map(e=>e.id)){
   validateSetup(data,ids);
   if(!data.id||data.workspaceName!=='Bench_draft'||data.workspaceRevision!==1)throw new Error('Use a Bench_draft workspace export.');
   for(const n of data.nodes)if(n.locked!==undefined&&typeof n.locked!=='boolean')throw new Error('Invalid equipment lock.');
   for(const n of data.nodes)if(n.configuration?.signalRole!==undefined&&!['auto','source','detector','through','electrical','support'].includes(n.configuration.signalRole))throw new Error('Invalid recorded signal role.');
-  return upgradePhotoChipSetup(data);
+  return upgradeFrontFacing(upgradePhotoChipSetup(data));
 }
 export const contentSignature=draft=>JSON.stringify(Object.fromEntries(Object.entries(draft).filter(([key])=>!['savedAt','savedAtDraft','publishedAt'].includes(key))));
 export const draftStorageKey=id=>`bench_draft:${id}`;
@@ -98,7 +99,7 @@ export function equipmentReadiness(item,node){
 }
 export function benchCoordinates(node,draft){const p=equipmentPose(node,draft.nodes,benchPosition);return {x:Math.round(p.x*100),z:Math.round(p.z*100)};}
 export function benchPatch(node,draft,x,z,snap=true){
-  if(node.locked||housingFor(node,draft.nodes)||node.configuration?.mountingStage)return null;
+  if(node.locked||housingFor(node,draft.nodes)||node.configuration?.mountingStage||node.configuration?.mount)return null;
   const round=v=>snap?Math.round(v/25)*25:Math.round(v);
   return {benchXMm:Math.max(-850,Math.min(850,round(x))),benchZMm:Math.max(-400,Math.min(400,round(z)))};
 }

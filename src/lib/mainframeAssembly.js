@@ -1,4 +1,6 @@
 // Mechanical installation is separate from optical/electrical signal paths.
+import { nodeQuaternion, rotateVector, multiplyQuaternion, quaternionAngles } from './placement.js';
+import { benchPosition } from './benchLayout.js';
 export const MAINFRAME_ID='wst-mainframe-manual';
 export const OBAND_MAINFRAME_ID='oband-mainframe-8164b';
 export const MODULE_IDS=['wst-laser-old','wst-sensor-old','oband-laser-81606a','oband-head-interface'];
@@ -34,7 +36,7 @@ export function assignModule(setup,frameId,slot,moduleId){
     if(n.id!==moduleId&&n.id!==occupant?.id)return n;
     const configuration={...n.configuration};
     delete configuration.mainframeId;delete configuration.mainframeSlot;
-    if(n.id===moduleId)Object.assign(configuration,{mainframeId:frameId,mainframeSlot:String(slot)});
+    if(n.id===moduleId){delete configuration.mount;delete configuration.mountingStage;Object.assign(configuration,{mainframeId:frameId,mainframeSlot:String(slot)});}
     else if(previousFrame&&acceptsModule(previousFrame,previousSlot,n))Object.assign(configuration,{mainframeId:previousFrame.id,mainframeSlot:previousSlot});
     return {...n,configuration};
   });
@@ -42,11 +44,13 @@ export function assignModule(setup,frameId,slot,moduleId){
 }
 export function removeAssemblyNode(setup,id){
   return syncModuleSettings({...setup,nodes:setup.nodes.filter(n=>n.id!==id).map(n=>{
-    if(n.configuration?.mainframeId!==id&&n.configuration?.mountingStage!==id)return n;
+    if(n.configuration?.mainframeId!==id&&n.configuration?.mountingStage!==id&&n.configuration?.mount?.parentId!==id)return n;
+    const world=equipmentPose(n,setup.nodes,benchPosition);
     const configuration={...n.configuration};
     if(configuration.mainframeId===id){delete configuration.mainframeId;delete configuration.mainframeSlot;}
     if(configuration.mountingStage===id)delete configuration.mountingStage;
-    return {...n,configuration};
+    if(configuration.mount?.parentId===id)delete configuration.mount;
+    return {...n,configuration,benchXMm:world.x*100,benchZMm:world.z*100,elevationMm:world.y*100,...quaternionAngles(world.quaternion)};
   }),connections:setup.connections.filter(c=>c.from!==id&&c.to!==id)});
 }
 export function addMainframeDefaults(setup){
@@ -75,6 +79,16 @@ export function validateAssembly(nodes){
     if(occupied.has(key))throw new Error('A mainframe slot can contain only one module.');
     occupied.add(key);
   }
+  for(const n of nodes){
+    const c=n.configuration||{},m=c.mount;
+    if(m!==undefined){
+      if(!m||typeof m!=='object'||Array.isArray(m)||typeof m.parentId!=='string'||!nodes.some(p=>p.id===m.parentId)||m.parentId===n.id||c.mainframeId||c.mountingStage)throw new Error('Invalid component mount: select one existing parent.');
+      for(const key of ['offsetXMm','offsetYMm','offsetZMm'])if(!Number.isFinite(m[key])||Math.abs(m[key])>5000)throw new Error('Invalid mounting offset.');
+    }
+    if(c.mountingStage!==undefined&&(typeof c.mountingStage!=='string'||!nodes.some(p=>p.id===c.mountingStage)))throw new Error('Invalid mounting stage.');
+    const seen=new Set([n.id]);let current=n;
+    while(current){const id=current.configuration?.mount?.parentId||current.configuration?.mountingStage||current.configuration?.mainframeId;if(!id)break;if(seen.has(id))throw new Error('Component mounts cannot contain a cycle.');seen.add(id);current=nodes.find(p=>p.id===id);}
+  }
 }
 // Approximate front-panel geometry in viewer units (1 unit = 100 mm).
 // Slot numbers are an editable presentation convention pending a bench photo.
@@ -83,9 +97,21 @@ export function moduleOffset(frame,slot){
   if(frameProfile(frame)?.model!=='8164B')return slotOffset(slot);
   return slot==='0'?{x:-1.2,y:.14,z:-2.94}:{x:-.66-(Number(slot)-1)*.36,y:.54,z:-2.94};
 }
-export function equipmentPose(node,nodes,basePosition){
+export function equipmentPose(node,nodes,basePosition,seen=new Set()){
+  if(seen.has(node.id))throw new Error('Component mounts cannot contain a cycle.');
+  seen=new Set(seen);seen.add(node.id);
+  const mount=node.configuration?.mount;
+  if(mount){
+    const parent=nodes.find(n=>n.id===mount.parentId);if(!parent)throw new Error('Mount parent is missing.');
+    const origin=equipmentPose(parent,nodes,basePosition,seen),offset=rotateVector([mount.offsetXMm/100,mount.offsetYMm/100,mount.offsetZMm/100],origin.quaternion);
+    return {x:origin.x+offset[0],y:origin.y+offset[1],z:origin.z+offset[2],rotationDeg:(origin.rotationDeg||0)+(node.rotationDeg||0),quaternion:multiplyQuaternion(origin.quaternion,nodeQuaternion(node))};
+  }
   const frame=housingFor(node,nodes);
-  if(!frame)return {...basePosition(node,nodes),rotationDeg:node.rotationDeg||0};
-  const origin=basePosition(frame,nodes),offset=moduleOffset(frame,node.configuration.mainframeSlot),angle=(frame.rotationDeg||0)*Math.PI/180;
-  return {x:origin.x+offset.x*Math.cos(angle)+offset.z*Math.sin(angle),y:origin.y+offset.y,z:origin.z-offset.x*Math.sin(angle)+offset.z*Math.cos(angle),rotationDeg:frame.rotationDeg||0};
+  if(!frame){
+    const support=nodes.find(n=>n.id===node.configuration?.mountingStage);
+    const base=basePosition(node,nodes),origin=support&&equipmentPose(support,nodes,basePosition,seen);
+    return {...base,...(origin?{x:origin.x,z:origin.z}:{}),rotationDeg:node.rotationDeg||0,quaternion:nodeQuaternion(node)};
+  }
+  const origin=equipmentPose(frame,nodes,basePosition,seen),offset=moduleOffset(frame,node.configuration.mainframeSlot),v=rotateVector([offset.x,offset.y,offset.z],origin.quaternion);
+  return {x:origin.x+v[0],y:origin.y+v[1],z:origin.z+v[2],rotationDeg:origin.rotationDeg||0,quaternion:origin.quaternion};
 }

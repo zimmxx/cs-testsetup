@@ -7,6 +7,8 @@ import { createManualSetup, upgradeManualSetup } from '../src/data/manualSetup.j
 import { arrangeOnBench, benchPosition } from '../src/lib/benchLayout.js';
 import { connectionProblem, validateSetup } from '../src/lib/setupBuilder.js';
 import { validateEquipment } from '../src/lib/library.js';
+import { createPhotoChipSetup } from '../src/data/photoChipSetup.js';
+import { Vector3, Quaternion } from 'three';
 
 const catalog=JSON.parse(fs.readFileSync('public/library/equipment.json','utf8')).equipment;
 test('equipment CAD is valid and native-only sources explicitly remain pending',()=>{
@@ -35,4 +37,21 @@ test('drag connection guards reject self, missing and duplicate paths but allow 
   const s=createManualSetup();assert.ok(connectionProblem(s,'laser','laser','optical'));assert.ok(connectionProblem(s,'laser','missing','optical'));
   assert.ok(connectionProblem(s,'laser','sleeve-in','optical'));assert.equal(connectionProblem(s,'laser','sleeve-in','electrical'),'');
   assert.ok(connectionProblem({...s,connections:Array(300).fill(s.connections[0])},'mainframe','sensor','electrical'));
+});
+
+test('supplied fibre-arm preview points both tips toward the DUT with existing instance rotations',()=>{
+  const armRecord=catalog.find(e=>e.id==='wst-fibre-arms-manual');
+  assert.equal(catalog.find(e=>e.id==='fibre').model3d,armRecord.model3d);
+  const bytes=fs.readFileSync(path.join('public',armRecord.model3d)),gltf=JSON.parse(bytes.toString('utf8',20,20+bytes.readUInt32LE(12)));
+  const arm=gltf.nodes.find(n=>n.name==='Fibre Arm'),mesh=gltf.meshes[arm.mesh],position=gltf.accessors[mesh.primitives[0].attributes.POSITION];
+  assert.ok(position.min[0]<-0.1,'supplied arm tip lies along source -X');
+  const tipDirection=new Vector3(-1,0,0).applyQuaternion(new Quaternion().fromArray(arm.rotation||[0,0,0,1]));
+  for(const setup of [arrangeOnBench(upgradeManualSetup(createManualSetup())),createPhotoChipSetup()]){
+    const dut=setup.nodes.find(n=>n.id==='dut'||n.id==='photo-holder'),target=benchPosition(dut,setup.nodes);
+    for(const n of setup.nodes.filter(n=>n.equipmentId===armRecord.id)){
+      const origin=benchPosition(n,setup.nodes),towardDut=new Vector3(target.x-origin.x,0,target.z-origin.z);
+      const actual=tipDirection.clone().applyAxisAngle(new Vector3(0,1,0),(n.rotationDeg||0)*Math.PI/180);
+      assert.ok(actual.dot(towardDut)>0,`${setup.id}: ${n.id} tip must face inward`);
+    }
+  }
 });
