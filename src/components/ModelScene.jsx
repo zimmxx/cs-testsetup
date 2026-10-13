@@ -6,6 +6,7 @@ import { getEquipment } from '../data/catalog.js';
 import { localPath } from './UI.jsx';
 import { benchPosition } from '../lib/benchLayout.js';
 import { equipmentPose, housingFor, isMainframe, frameProfile } from '../lib/mainframeAssembly.js';
+import { fittedCameraPosition } from '../lib/cameraFraming.js';
 
 const emptySceneItems=[];
 function disposeObject(root) {root.traverse(o=>{o.geometry?.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.filter(Boolean).forEach(m=>{Object.values(m).forEach(v=>{if(v?.isTexture)v.dispose();});m.dispose();});});}
@@ -31,11 +32,11 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
     setMessage('');
     let remaining=nodes.filter(n=>(items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId))?.model3d).length,failed=false;
     setLoadState(remaining?'loading':'placeholders');
-    const complete=()=>{remaining--;if(!disposed){sceneActions.current?.style();if(remaining===0)setLoadState(failed?'error':'loaded');}};
+    const complete=()=>{remaining--;if(!disposed){sceneActions.current?.style();if(remaining===0){sceneActions.current?.fit();setLoadState(failed?'error':'loaded');}}};
     try {renderer=new THREE.WebGLRenderer({antialias:true});} catch {setMessage('3D rendering is unavailable in this browser. Use Signal path.');setLoadState('unavailable');return;}
     renderer.setPixelRatio(Math.min(devicePixelRatio,2));el.appendChild(renderer.domElement);
     renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
-    renderer.domElement.setAttribute('aria-label','Interactive 3D setup: drag to orbit, scroll to zoom; select equipment below for keyboard access.');
+    renderer.domElement.setAttribute('aria-label','Interactive 3D setup: drag to orbit, pinch or scroll to zoom; tap equipment to inspect. Equipment buttons are also available below.');
     const scene=new THREE.Scene();scene.background=new THREE.Color('#f1f3f9');
     const single=nodes.length===1;
     const elevatedBench=!single&&nodes.some(n=>(n.elevationMm||0)>=400);
@@ -43,16 +44,18 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
     const defaultTargetY=single ? 0.5 : elevatedBench ? 2.5 : 0;
     const camera=new THREE.PerspectiveCamera(40,1,.05,150);camera.position.set(...defaultPosition);
     const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,defaultTargetY,0);controls.enableDamping=true;
+    let autoFramed=single||!view.current;
+    const fitObjects=[];
     if(single){camera.position.set(-2.5,1.8,-3);controls.target.set(0,.5,0);controls.minDistance=.8;controls.maxDistance=12;}
     else{controls.minDistance=3;controls.maxDistance=40;controls.maxPolarAngle=Math.PI*.49;if(view.current){camera.position.copy(view.current.position);controls.target.copy(view.current.target);}}
     scene.add(new THREE.HemisphereLight(0xffffff,0x6b7190,1.8));const light=new THREE.DirectionalLight(0xffffff,2.2);light.position.set(4,10,6);scene.add(light);
     if(single)scene.add(new THREE.GridHelper(8,16,0xd1d6e6,0xe0e4ef));
     else{
-      const table=new THREE.Mesh(new THREE.BoxGeometry(18,.8,9),new THREE.MeshStandardMaterial({color:0xc0c7d4,metalness:.55,roughness:.5}));table.position.y=-.41;scene.add(table);
+      const table=new THREE.Mesh(new THREE.BoxGeometry(18,.8,9),new THREE.MeshStandardMaterial({color:0xc0c7d4,metalness:.55,roughness:.5}));table.position.y=-.41;scene.add(table);fitObjects.push(table);
       const holeGeometry=new THREE.CircleGeometry(.022,8),holeMaterial=new THREE.MeshBasicMaterial({color:0x586273,side:THREE.DoubleSide});
       const holes=new THREE.InstancedMesh(holeGeometry,holeMaterial,71*35),matrix=new THREE.Matrix4();let i=0;
       for(let x=-8.75;x<=8.75;x+=.25)for(let z=-4.25;z<=4.25;z+=.25){matrix.makeRotationX(-Math.PI/2);matrix.setPosition(x,.002,z);holes.setMatrixAt(i++,matrix);}holes.count=i;scene.add(holes);
-      for(const x of [-6.5,6.5])for(const z of [-3,3]){const leg=new THREE.Mesh(new THREE.CylinderGeometry(.65,.7,5,20),new THREE.MeshStandardMaterial({color:0x586175,roughness:.65}));leg.position.set(x,-3.3,z);scene.add(leg);}
+      for(const x of [-6.5,6.5])for(const z of [-3,3]){const leg=new THREE.Mesh(new THREE.CylinderGeometry(.65,.7,5,20),new THREE.MeshStandardMaterial({color:0x586175,roughness:.65}));leg.position.set(x,-3.3,z);scene.add(leg);fitObjects.push(leg);}
     }
     const roots=[],nameLabels=[],paths=[],helpers=[],loader=new GLTFLoader();
     const applyStyle=()=>{
@@ -60,7 +63,20 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
       roots.forEach((root,i)=>{root.visible=!hidden.has(root.userData.nodeId);const helper=helpers[i];if(helper){helper.visible=root.visible&&highlighted.has(root.userData.nodeId);if(helper.visible)helper.update();}});
       paths.forEach(({line,arrow,edge})=>{const visible=!hidden.has(edge.from)&&!hidden.has(edge.to);line.visible=visible;arrow.visible=visible;const isSelected=edgeIds.has(edge.id);line.material.color.set(isSelected?0x2f64d9:edge.type==='optical'?0xe2ad25:0x8060d9);line.material.transparent=true;line.material.opacity=edgeIds.size&&!isSelected?.25:1;line.material.emissive.set(isSelected?0x163874:0x000000);arrow.setColor(line.material.color);arrow.traverse(o=>{if(o.material){o.material.transparent=true;o.material.opacity=line.material.opacity;}});});
     };
-    sceneActions.current={style:applyStyle,reset:()=>{camera.position.set(...defaultPosition);controls.target.set(0,defaultTargetY,0);controls.update();},labels:visible=>nameLabels.forEach(l=>{l.visible=visible;}),focus:id=>{const n=nodes.find(n=>n.id===id);if(!n)return;const p=equipmentPose(n,nodes,benchPosition),angle=(p.rotationDeg||0)*Math.PI/180;const large=frameProfile(n)?.model==='8164B',distance=large?(exploded?11:8):(exploded?7.5:5);controls.target.set(p.x,p.y+(large?.8:.5),p.z+(large&&exploded?.3:exploded?-1.3:-.5));camera.position.set(p.x+3*Math.cos(angle)-distance*Math.sin(angle),p.y+(large?4.5:2.7),p.z-3*Math.sin(angle)-distance*Math.cos(angle));controls.update();}};
+    const fitDefault=()=>{
+      if(!autoFramed)return;
+      let position=defaultPosition;
+      if(camera.aspect<1.25){
+        scene.updateMatrixWorld(true);
+        const bounds=new THREE.Box3();
+        [...fitObjects,...roots].forEach(root=>root.traverse(o=>{if(o.isMesh)bounds.union(new THREE.Box3().setFromObject(o));}));
+        if(!bounds.isEmpty())position=fittedCameraPosition(defaultPosition,[0,defaultTargetY,0],{min:bounds.min.toArray(),max:bounds.max.toArray()},camera.aspect,camera.fov);
+      }
+      camera.position.set(...position);controls.target.set(0,defaultTargetY,0);
+      controls.maxDistance=Math.max(single?12:40,camera.position.distanceTo(controls.target)*1.5);
+      controls.update();
+    };
+    sceneActions.current={style:applyStyle,fit:fitDefault,reset:()=>{autoFramed=true;fitDefault();},labels:visible=>nameLabels.forEach(l=>{l.visible=visible;}),focus:id=>{const n=nodes.find(n=>n.id===id);if(!n)return;autoFramed=false;const p=equipmentPose(n,nodes,benchPosition),angle=(p.rotationDeg||0)*Math.PI/180;const large=frameProfile(n)?.model==='8164B',distance=large?(exploded?11:8):(exploded?7.5:5);controls.target.set(p.x,p.y+(large?.8:.5),p.z+(large&&exploded?.3:exploded?-1.3:-.5));camera.position.set(p.x+3*Math.cos(angle)-distance*Math.sin(angle),p.y+(large?4.5:2.7),p.z-3*Math.sin(angle)-distance*Math.cos(angle));controls.update();}};
     const pose=n=>{const p=equipmentPose(n,nodes,benchPosition);if(exploded&&housingFor(n,nodes)){const shift=n.equipmentId==='oband-laser-81606a'?-2.5:1.8,v=new THREE.Vector3(0,0,-shift).applyQuaternion(new THREE.Quaternion().fromArray(p.quaternion));p.x+=v.x;p.y+=v.y;p.z+=v.z;}return p;};
     // Lead cables out of the front and around the shell, rather than through it.
     const moduleRoute=(n,port,other)=>{
@@ -106,7 +122,8 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
       const direction=end.clone().sub(curve.getPoint(.9)).normalize();const arrow=new THREE.ArrowHelper(direction,end,.3,c.type==='optical'?0xe2ad25:0x8060d9,.15,.1);scene.add(arrow);paths.push({line,arrow,edge:c});
     }
     applyStyle();
-    const resize=()=>{const w=el.clientWidth,h=el.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();};const observer=new ResizeObserver(resize);observer.observe(el);resize();
+    const resize=()=>{const w=el.clientWidth,h=el.clientHeight;if(!w||!h)return;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();fitDefault();};const observer=new ResizeObserver(resize);observer.observe(el);resize();
+    const stopAutoFrame=()=>{autoFramed=false;};controls.addEventListener('start',stopAutoFrame);
     let start;const down=e=>{start=[e.clientX,e.clientY];};const up=e=>{if(!start||Math.hypot(e.clientX-start[0],e.clientY-start[1])>5)return;const rect=el.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),camera);const targets=selectEdge.current?[...roots.filter(r=>r.visible),...paths.filter(p=>p.line.visible).map(p=>p.line)]:roots.filter(r=>r.visible);const hit=ray.intersectObjects(targets,true)[0];if(hit){let obj=hit.object;while(obj&&!obj.userData.nodeId&&!obj.userData.edgeId)obj=obj.parent;if(obj?.userData.edgeId)selectEdge.current?.(obj.userData.edgeId);else if(obj)select.current?.(obj.userData.nodeId);}};
     renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointerup',up);
     const animate=()=>{controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(animate);};animate();
@@ -117,5 +134,5 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
   },[visualKey,modelKey,pathKey,exploded]);
   useEffect(()=>{sceneActions.current?.style();},[styleKey,visualKey,modelKey,pathKey,exploded]);
   useEffect(()=>{if(focusRequest)sceneActions.current?.focus(focusRequest.id);},[focusRequest,visualKey,exploded]);
-  return <div className="model-stage" data-model-status={loadState}><div ref={host} className="model-render"/><div className="model-controls"><button onClick={()=>sceneActions.current?.reset()}>Reset view</button>{nodes.length>1&&<button aria-pressed={labels} onClick={()=>{setLabels(v=>!v);sceneActions.current?.labels(!labels);}}>Equipment labels</button>}{hasModules&&<button aria-pressed={exploded} onClick={()=>setExploded(v=>!v)}>{exploded?'Assemble modules':'Explode modules'}</button>}</div>{message&&<div className="model-message" role="status">{message}</div>}<span className="model-hint">{loadState==='loading'?'Loading model…':'Drag to orbit · scroll to zoom · click equipment to inspect'}</span></div>;
+  return <div className="model-stage" data-model-status={loadState}><div ref={host} className="model-render"/><div className="model-controls"><button onClick={()=>sceneActions.current?.reset()}>Reset view</button>{nodes.length>1&&<button aria-pressed={labels} onClick={()=>{setLabels(v=>!v);sceneActions.current?.labels(!labels);}}>Equipment labels</button>}{hasModules&&<button aria-pressed={exploded} onClick={()=>setExploded(v=>!v)}>{exploded?'Assemble modules':'Explode modules'}</button>}</div>{message&&<div className="model-message" role="status">{message}</div>}<span className="model-hint">{loadState==='loading'?'Loading model…':<><span className="model-desktop-hint">Drag to orbit · scroll to zoom · click equipment to inspect</span><span className="model-phone-hint">Drag to orbit · pinch to zoom · tap to inspect</span></>}</span></div>;
 }
