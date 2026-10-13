@@ -10,9 +10,17 @@ See [CHANGELOG.md](CHANGELOG.md) for shipped changes and verified GitHub deploym
 
 The editable **optical-chip-testing-v1** draft is reconstructed from three supplied lab photographs. Open [the local bench draft](http://localhost:5174/#page=bench_draft&setup=optical-chip-testing-v1), or select its template in **Build setup**. Seventeen instances include eight new provisional components with illustrative STEP/GLB references. Source photos, unknowns and proposed routes remain inspectable; operating settings are blank and the setup is not published automatically. See [the reusable photo-to-setup agent guide](public/documents/PHOTO-TO-SETUP.md).
 
+## Photo-derived manual wafer Setup 2
+
+Open [wafer-manual-setup-2 locally](http://localhost:5174/#page=bench_draft&setup=wafer-manual-setup-2), or select its template in Build setup. Four source photos support 23 editable instances, a separate circular wafer carrier/motion assembly and dual-monitor imaging workstation. The user confirmed the 8163B / 81940A / 81634B core system and excluded the unused right-hand shelf instrument. Other identities, slot order, cable routes and measurements remain for review. Eleven new records have illustrative STEP/GLB and photo provenance. See [the Setup 2 configuration and agent guide](public/documents/WAFER-MANUAL-SETUP-2.md). Existing setups and publications are retained; this local draft is not deployed or automatically published.
+
+## Photo-derived chip Setup 4
+
+Open [chip-manual-setup4 locally](http://localhost:5174/#page=bench_draft&setup=chip-manual-setup4), or choose its Build setup template. Twenty instances include the user-confirmed active Keysight source/head system and supplied vacuum holder; Santec instruments remain inactive alternatives. Six new records have illustrative STEP/GLB and sourced context photos. See [the Setup 4 guide](public/documents/CHIP-MANUAL-SETUP4.md) for evidence, unknown parameters and agent continuation. This is a local unpublished draft.
+
 ## Equipment picture coverage
 
-All 44 equipment records include a local picture with its source, credit and accuracy notes. Open **Equipment library → select equipment → Picture**; 3D remains the default. Pictures are stored in `public/library/images/`, with editable provenance in `public/library/equipment.json` and the acquisition snapshot in `public/library/images/sources.json`. See [Equipment picture guide](docs/EQUIPMENT-PICTURES.md) for coverage and replacement instructions, and the photo-to-setup guide for the eight new provisional records. Bespoke or unconfirmed hardware is explicitly labelled when only a lab context picture or vendor reference is available.
+All 61 equipment records include a local picture with its source, credit and accuracy notes. Open **Equipment library → select equipment → Picture**; 3D remains the default. Pictures are stored in `public/library/images/`, with editable provenance in `public/library/equipment.json` and the acquisition snapshot in `public/library/images/sources.json`. See [Equipment picture guide](docs/EQUIPMENT-PICTURES.md) for earlier coverage/replacement instructions and the photo guides for new provisional records. Bespoke or unconfirmed hardware is explicitly labelled when only a lab context picture or vendor reference is available.
 
 ## Draft UI workspaces
 

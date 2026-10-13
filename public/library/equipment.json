@@ -1950,6 +1950,737 @@
       "imageWidth": 720,
       "imageHeight": 1280,
       "stepSha256": "187eef8384456dd5cbd8357b36c19719b264d1b348d1616e8af5637fe04f2ed1"
+    },
+    {
+      "id": "wafer-xy-motion-stage-2",
+      "name": "Setup 2 wafer motion assembly",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Positioning",
+      "role": "Move the wafer holder independently of both fibre arms.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Large orthogonal rail/lead-screw motion assembly, front handwheel and rear cross rail. Axes, travel and drive model unconfirmed."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Large orthogonal rail/lead-screw motion assembly, front handwheel and rear cross rail. Axes, travel and drive model unconfirmed. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-xy-motion-stage-2/wafer-xy-motion-stage-2-Reference.step",
+      "model3d": "library/models/wafer-xy-motion-stage-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "7fdf92bc14b2726f9ed8f7af81815f43d1ae29d12861fed443aefc7b61483a62"
+    },
+    {
+      "id": "wafer-carrier-2",
+      "name": "Setup 2 circular wafer carrier",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Sample holder",
+      "role": "Support the wafer on the separate motion assembly.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Black circular plate with several circular openings and edge cut-outs. Retention/vacuum and wafer diameter unknown."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Black circular plate with several circular openings and edge cut-outs. Retention/vacuum and wafer diameter unknown. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-carrier-2/wafer-carrier-2-Reference.step",
+      "model3d": "library/models/wafer-carrier-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "3f198f79d849b8334d0cc23d02f98362fc652f65b1b76feee3342d8f5e89a033"
+    },
+    {
+      "id": "wafer-camera-head-2",
+      "name": "Setup 2 alignment camera head",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Imaging",
+      "role": "Capture the overhead alignment image; interface unknown.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Black upper camera housing with a small cluster of grey/white control buttons above the microscope."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Black upper camera housing with a small cluster of grey/white control buttons above the microscope. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-camera-head-2/wafer-camera-head-2-Reference.step",
+      "model3d": "library/models/wafer-camera-head-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "a4726032b7f0bb6edffa207797a2e40bad7217d6d462c310d805f4f4c89c1ace"
+    },
+    {
+      "id": "wafer-monitor-2",
+      "name": "Setup 2 alignment / workstation monitor",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Display",
+      "role": "Show alignment images or acquisition software; input assignment unknown.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Two black flat-panel monitors on the shelf; do not assign the Cello model from Setup 3."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-2.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Two black flat-panel monitors on the shelf; do not assign the Cello model from Setup 3. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-2.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 2",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-monitor-2/wafer-monitor-2-Reference.step",
+      "model3d": "library/models/wafer-monitor-2.glb",
+      "imageSha256": "726bd0b76229a5f5729338bd840f8295c0681fca249a49d2a319653221940f3e",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "cfe1af1b21ab646a68290ea26425345cdfd45c909d699686a8c5ab6dc365d307"
+    },
+    {
+      "id": "wafer-pc-2",
+      "name": "Setup 2 workstation computer",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Computing",
+      "role": "Candidate acquisition/observation host; software and instrument interfaces to confirm.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Black small desktop computer below the right monitor, Dell-family mark visible; exact model unreadable."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-2.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Black small desktop computer below the right monitor, Dell-family mark visible; exact model unreadable. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-2.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 2",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-pc-2/wafer-pc-2-Reference.step",
+      "model3d": "library/models/wafer-pc-2.glb",
+      "imageSha256": "726bd0b76229a5f5729338bd840f8295c0681fca249a49d2a319653221940f3e",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "0e41fed60ad7a6a26593509f2b172be97f2a4ab419ce84f0ce776c34b6549e60"
+    },
+    {
+      "id": "wafer-shelf-2",
+      "name": "Setup 2 instrument shelf and frame",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Mechanical support",
+      "role": "Support shelf instruments and displays.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Aluminium extrusion gantry with wide top shelf and lower crossbar. Width/height estimated."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-2.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Aluminium extrusion gantry with wide top shelf and lower crossbar. Width/height estimated. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-2.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 2",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-shelf-2/wafer-shelf-2-Reference.step",
+      "model3d": "library/models/wafer-shelf-2.glb",
+      "imageSha256": "726bd0b76229a5f5729338bd840f8295c0681fca249a49d2a319653221940f3e",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "b920230484c30c8f6e343b8898a3667d9160a4bce26aee005d8d6b28454e720c"
+    },
+    {
+      "id": "wafer-keyboard-tray-2",
+      "name": "Setup 2 adjustable workstation tray",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Mechanical support",
+      "role": "Support keyboard and writing/input surface beside the bench.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "White-edged sloping black tray on a vertical support at the right."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "White-edged sloping black tray on a vertical support at the right. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-keyboard-tray-2/wafer-keyboard-tray-2-Reference.step",
+      "model3d": "library/models/wafer-keyboard-tray-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "674c7f6bccb7eabdfa35b7655f127f392eebb9ed7944445e35df39a2c9b4f2eb"
+    },
+    {
+      "id": "wafer-keyboard-2",
+      "name": "Setup 2 keyboard",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Accessory",
+      "role": "Workstation input device; connection unconfirmed.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Black keyboard at the upper edge of the right workstation tray."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Black keyboard at the upper edge of the right workstation tray. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-keyboard-2/wafer-keyboard-2-Reference.step",
+      "model3d": "library/models/wafer-keyboard-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "9f688d9dd4c4fdd2ad16b671354cac955dd748c66b243a974d59c4afb3fc220e"
+    },
+    {
+      "id": "wafer-digital-indicator-2",
+      "name": "Setup 2 digital position indicator",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Position readout",
+      "role": "Candidate position readout; axis/units and actual function require confirmation.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Small black digital indicator with three orange buttons beside the front wafer motion rail."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Small black digital indicator with three orange buttons beside the front wafer motion rail. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-digital-indicator-2/wafer-digital-indicator-2-Reference.step",
+      "model3d": "library/models/wafer-digital-indicator-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "95c6a1e52d9336e5cdc21a70920606242a7238863fca9af5279d0f874a741214"
+    },
+    {
+      "id": "wafer-shelf-smu-2",
+      "name": "Setup 2 Keithley-labelled shelf instrument",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Electrical instrument",
+      "role": "Candidate source/measurement accessory; leave disconnected until the red leads are traced.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Keithley brand visible on upper-left shelf instrument. Exact model and function unconfirmed; not automatically the existing 6487."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-3.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Keithley brand visible on upper-left shelf instrument. Exact model and function unconfirmed; not automatically the existing 6487. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-3.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-shelf-smu-2/wafer-shelf-smu-2-Reference.step",
+      "model3d": "library/models/wafer-shelf-smu-2.glb",
+      "imageSha256": "e877b04f770530aa809e9fd71e9b8ecb4ee7852b97243cb1a2cc9a9835ed06b9",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "f5e01284db382e14d513621f55c5d75d0489e08665a0afad88f3a9c7ca64ccde"
+    },
+    {
+      "id": "wafer-aux-probe-mount-2",
+      "name": "Setup 2 auxiliary probe / positioning mount",
+      "model": "Photo-observed assembly · exact model unconfirmed",
+      "category": "Positioning",
+      "role": "Additional rear bench accessory; active use and probe endpoints unknown.",
+      "location": "Bench label SETUP 2 · room to confirm",
+      "status": "Needs verification",
+      "specs": [
+        [
+          "Photo evidence",
+          "Black compact upright mounts at the rear-right of the working area. Function and model cannot be established."
+        ],
+        [
+          "Model / dimensions",
+          "Unconfirmed; illustrative dimensions only"
+        ],
+        [
+          "Operating limits",
+          "Not supplied"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Replace with the verified installed model and original CAD when available.",
+      "note": "Created from user photos received 13 October 2026. Presence observed; identity, calibration and dimensions require review.",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "imageCredit": "User-supplied CORNERSTONE bench photograph",
+      "imageKind": "Lab context photo",
+      "imageReview": "Black compact upright mounts at the rear-right of the working area. Function and model cannot be established. Full bench photograph, not an isolated verified product image.",
+      "imageSourcePath": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "imageSourceLabel": "Original Setup 2 photo 4",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied lab photo; no open licence asserted.",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Photo-derived procedural geometry",
+      "cadReview": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+      "stepPath": "library/references/wafer-aux-probe-mount-2/wafer-aux-probe-mount-2-Reference.step",
+      "model3d": "library/models/wafer-aux-probe-mount-2.glb",
+      "imageSha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageWidth": 1280,
+      "imageHeight": 720,
+      "stepSha256": "5003e4d812d20bc91c8b1d7dd6d68e5fcdb7157c07aad229b410f7ea5310519e"
+    },
+    {
+      "id": "santec-tsl570-setup4",
+      "name": "Santec tunable semiconductor laser",
+      "model": "Santec TSL-570 · label observed",
+      "category": "Optical source",
+      "location": "SETUP 4 photo label · room to confirm",
+      "status": "Needs verification",
+      "role": "TSL-570 label visible on the upper-right white Santec instrument. Installed wavelength option and active route unknown.",
+      "specs": [
+        [
+          "Photo evidence",
+          "TSL-570 label visible on the upper-right white Santec instrument. Installed wavelength option and active route unknown."
+        ],
+        [
+          "Installed options / calibration",
+          "To confirm"
+        ],
+        [
+          "Dimensions",
+          "Illustrative; not measured"
+        ]
+      ],
+      "url": "https://inst.santec.com/products/test-and-measurement/tunablelaser/tsl-570",
+      "alternatives": "Confirm the installed model and replace illustrative CAD with verified sources.",
+      "note": "User photos received 2026-10-13. Readable labels are recorded; active use, settings and exact options remain unverified.",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "imageCredit": "User-supplied lab photo",
+      "imageKind": "Lab context photo",
+      "imageReview": "Full bench context; not an isolated vendor product photo.",
+      "imageSourcePath": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "imageSourceLabel": "Setup 4 original photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied photo; no open licence asserted.",
+      "model3d": "library/models/santec-tsl570-setup4.glb",
+      "stepPath": "library/references/santec-tsl570-setup4/santec-tsl570-setup4-Reference.step",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Procedural silhouette from user photographs",
+      "cadReview": "Estimated geometry only; not vendor CAD or verified dimensions.",
+      "imageSha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "179b47fff67f24d107d0623729a128d0c62863a7be754565de6ad0d3cc3ce890"
+    },
+    {
+      "id": "santec-mpm210-setup4",
+      "name": "Santec multi-port optical power meter",
+      "model": "Santec MPM-210 family · label candidate",
+      "category": "Detection",
+      "location": "SETUP 4 photo label · room to confirm",
+      "status": "Needs verification",
+      "role": "Upper-left white modular Santec power meter. Exact mainframe suffix, module types and used channels require a close label photo.",
+      "specs": [
+        [
+          "Photo evidence",
+          "Upper-left white modular Santec power meter. Exact mainframe suffix, module types and used channels require a close label photo."
+        ],
+        [
+          "Installed options / calibration",
+          "To confirm"
+        ],
+        [
+          "Dimensions",
+          "Illustrative; not measured"
+        ]
+      ],
+      "url": "https://www.santec.com/dcms_media/other/instruments_MPM-210-M-E.pdf",
+      "alternatives": "Confirm the installed model and replace illustrative CAD with verified sources.",
+      "note": "User photos received 2026-10-13. Readable labels are recorded; active use, settings and exact options remain unverified.",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "imageCredit": "User-supplied lab photo",
+      "imageKind": "Lab context photo",
+      "imageReview": "Full bench context; not an isolated vendor product photo.",
+      "imageSourcePath": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "imageSourceLabel": "Setup 4 original photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied photo; no open licence asserted.",
+      "model3d": "library/models/santec-mpm210-setup4.glb",
+      "stepPath": "library/references/santec-mpm210-setup4/santec-mpm210-setup4-Reference.step",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Procedural silhouette from user photographs",
+      "cadReview": "Estimated geometry only; not vendor CAD or verified dimensions.",
+      "imageSha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "e76810772924f704edddae613c6f62c66511db2daaa9554ed8399d59299bed21"
+    },
+    {
+      "id": "chip4-upper-display",
+      "name": "Setup 4 upper display",
+      "model": "Hanns.G-family display · model unconfirmed",
+      "category": "Display",
+      "location": "SETUP 4 photo label · room to confirm",
+      "status": "Needs verification",
+      "role": "Large light-coloured monitor above the shelf instruments. Model and input unconfirmed.",
+      "specs": [
+        [
+          "Photo evidence",
+          "Large light-coloured monitor above the shelf instruments. Model and input unconfirmed."
+        ],
+        [
+          "Installed options / calibration",
+          "To confirm"
+        ],
+        [
+          "Dimensions",
+          "Illustrative; not measured"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed model and replace illustrative CAD with verified sources.",
+      "note": "User photos received 2026-10-13. Readable labels are recorded; active use, settings and exact options remain unverified.",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "imageCredit": "User-supplied lab photo",
+      "imageKind": "Lab context photo",
+      "imageReview": "Full bench context; not an isolated vendor product photo.",
+      "imageSourcePath": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "imageSourceLabel": "Setup 4 original photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied photo; no open licence asserted.",
+      "model3d": "library/models/chip4-upper-display.glb",
+      "stepPath": "library/references/chip4-upper-display/chip4-upper-display-Reference.step",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Procedural silhouette from user photographs",
+      "cadReview": "Estimated geometry only; not vendor CAD or verified dimensions.",
+      "imageSha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "41e5d055b99a660ce7a6a6eb644ccd45902f1fa482f64480af5d2da36a2df41e"
+    },
+    {
+      "id": "chip4-lower-display",
+      "name": "Setup 4 lower alignment display",
+      "model": "Black display · model unconfirmed",
+      "category": "Display",
+      "location": "SETUP 4 photo label · room to confirm",
+      "status": "Needs verification",
+      "role": "Smaller black monitor at the front-right of the shelf. Active camera/PC input unknown.",
+      "specs": [
+        [
+          "Photo evidence",
+          "Smaller black monitor at the front-right of the shelf. Active camera/PC input unknown."
+        ],
+        [
+          "Installed options / calibration",
+          "To confirm"
+        ],
+        [
+          "Dimensions",
+          "Illustrative; not measured"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed model and replace illustrative CAD with verified sources.",
+      "note": "User photos received 2026-10-13. Readable labels are recorded; active use, settings and exact options remain unverified.",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "imageCredit": "User-supplied lab photo",
+      "imageKind": "Lab context photo",
+      "imageReview": "Full bench context; not an isolated vendor product photo.",
+      "imageSourcePath": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "imageSourceLabel": "Setup 4 original photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied photo; no open licence asserted.",
+      "model3d": "library/models/chip4-lower-display.glb",
+      "stepPath": "library/references/chip4-lower-display/chip4-lower-display-Reference.step",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Procedural silhouette from user photographs",
+      "cadReview": "Estimated geometry only; not vendor CAD or verified dimensions.",
+      "imageSha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "2ade326c2959ce997047492c8fb06475785689deb0b07125a65a6b64ecc4f558"
+    },
+    {
+      "id": "chip4-pc-tower",
+      "name": "Setup 4 workstation tower",
+      "model": "Desktop tower · model unconfirmed",
+      "category": "Computing",
+      "location": "SETUP 4 photo label · room to confirm",
+      "status": "Needs verification",
+      "role": "Black computer tower behind the optical mainframe and lower monitor. Acquisition software and interfaces unknown.",
+      "specs": [
+        [
+          "Photo evidence",
+          "Black computer tower behind the optical mainframe and lower monitor. Acquisition software and interfaces unknown."
+        ],
+        [
+          "Installed options / calibration",
+          "To confirm"
+        ],
+        [
+          "Dimensions",
+          "Illustrative; not measured"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed model and replace illustrative CAD with verified sources.",
+      "note": "User photos received 2026-10-13. Readable labels are recorded; active use, settings and exact options remain unverified.",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "imageCredit": "User-supplied lab photo",
+      "imageKind": "Lab context photo",
+      "imageReview": "Full bench context; not an isolated vendor product photo.",
+      "imageSourcePath": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "imageSourceLabel": "Setup 4 original photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied photo; no open licence asserted.",
+      "model3d": "library/models/chip4-pc-tower.glb",
+      "stepPath": "library/references/chip4-pc-tower/chip4-pc-tower-Reference.step",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Procedural silhouette from user photographs",
+      "cadReview": "Estimated geometry only; not vendor CAD or verified dimensions.",
+      "imageSha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "bce82f41c5db75d155eedabe9578e595263a9f2f1a7f15ac200f446b45045528"
+    },
+    {
+      "id": "chip4-shelf",
+      "name": "Setup 4 instrument shelf and frame",
+      "model": "Aluminium extrusion gantry · estimated",
+      "category": "Mechanical support",
+      "location": "SETUP 4 photo label · room to confirm",
+      "status": "Needs verification",
+      "role": "Shelf/frame above the compact chip bench; holds instruments and displays.",
+      "specs": [
+        [
+          "Photo evidence",
+          "Shelf/frame above the compact chip bench; holds instruments and displays."
+        ],
+        [
+          "Installed options / calibration",
+          "To confirm"
+        ],
+        [
+          "Dimensions",
+          "Illustrative; not measured"
+        ]
+      ],
+      "url": "",
+      "alternatives": "Confirm the installed model and replace illustrative CAD with verified sources.",
+      "note": "User photos received 2026-10-13. Readable labels are recorded; active use, settings and exact options remain unverified.",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "imageCredit": "User-supplied lab photo",
+      "imageKind": "Lab context photo",
+      "imageReview": "Full bench context; not an isolated vendor product photo.",
+      "imageSourcePath": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "imageSourceLabel": "Setup 4 original photo 3",
+      "imageRetrievedAt": "2026-10-13",
+      "imageRights": "User-supplied photo; no open licence asserted.",
+      "model3d": "library/models/chip4-shelf.glb",
+      "stepPath": "library/references/chip4-shelf/chip4-shelf-Reference.step",
+      "cadKind": "Illustrative reference",
+      "cadSource": "Procedural silhouette from user photographs",
+      "cadReview": "Estimated geometry only; not vendor CAD or verified dimensions.",
+      "imageSha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageWidth": 720,
+      "imageHeight": 1280,
+      "stepSha256": "bc0cb08f05c66d448613f0529611ab6e250973c5bc8adbbb37f82cc003b93a3a"
     }
   ]
 }

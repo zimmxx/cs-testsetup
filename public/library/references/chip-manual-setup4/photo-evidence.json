@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "setupId": "chip-manual-setup4",
+  "asOf": "2026-10-13",
+  "photos": [
+    {
+      "photo": 1,
+      "path": "library/references/chip-manual-setup4/Photo-1.jpg",
+      "image": "library/images/chip-setup4-photo-1.jpg",
+      "originalFilename": "1-Photo-1.jpg",
+      "sha256": "c53ea7312290e97524b77fae69ccd7cc8d64bd99122de5a7cdb60665814e7707",
+      "imageHeight": 1280,
+      "imageWidth": 720
+    },
+    {
+      "photo": 2,
+      "path": "library/references/chip-manual-setup4/Photo-2.jpg",
+      "image": "library/images/chip-setup4-photo-2.jpg",
+      "originalFilename": "2-Photo-2.jpg",
+      "sha256": "8144171e2de50782606d1c57fca670483edf5e1d75949fe04b488c1cfd70d589",
+      "imageHeight": 1280,
+      "imageWidth": 720
+    },
+    {
+      "photo": 3,
+      "path": "library/references/chip-manual-setup4/Photo-3.jpg",
+      "image": "library/images/chip-setup4-photo-3.jpg",
+      "originalFilename": "3-Photo-3.jpg",
+      "sha256": "acd6b01ea07ba48e0bb21b55eeaa8c6b817199c0206f5727ca39ffa614beb48a",
+      "imageHeight": 1280,
+      "imageWidth": 720
+    }
+  ],
+  "userConfirmations": [
+    {
+      "date": "2026-10-13",
+      "statement": "Name it chip-manual-setup4",
+      "action": "Use requested ID; photo label also SETUP 4"
+    },
+    {
+      "date": "2026-10-13",
+      "statement": "Keysight 81606A and external detector head",
+      "action": "Keysight route is the default active system; Santec remains inactive"
+    },
+    {
+      "date": "2026-10-13",
+      "statement": "Same supplied vacuum chip holder",
+      "action": "Assigned chip-vacuum-stage with actual supplied STEP/GLB; provisional copper silhouette removed"
+    }
+  ],
+  "observed": [
+    "SETUP 4 shelf label",
+    "81606A / 1310 labels in horizontal laser slot",
+    "White Santec TSL-570 and modular power meter on shelf",
+    "Black cylindrical head with yellow band and head cable",
+    "Two opposing silver arms and separate front DUT stage",
+    "Copper sample block/fixture",
+    "Overhead microscope and button-control camera",
+    "Two displays, tower, shelf/frame and right auxiliary stage"
+  ],
+  "inferred": [
+    "8164B housing, 81618A interface/slot 3 and 81624B head are reference candidates",
+    "MPM-210 family identification needs model/suffix confirmation",
+    "MAX313D/try3 arm and microscope models reused provisionally",
+    "Keysight source/head path and camera/PC/display links are proposed",
+    "O-band filter allocation from 1310 label"
+  ],
+  "unknown": [
+    "Exact detector/interface identities, module options and connector routes remain to confirm",
+    "Installed wavelength options, detector/interface identity, slots and MPM channels",
+    "Fibre models/connector ends/sleeves/length/tips and input/output direction",
+    "Coupling/angles/power/scan/calibration/approved limits",
+    "Holder retention/vacuum/heating, stage axes/travel and auxiliary role",
+    "Measured table/shelf/placements and camera/objective/illumination/data links"
+  ],
+  "mechanicalMounts": [
+    {
+      "instanceId": "c4-mainframe",
+      "parentId": "c4-shelf",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-laser",
+      "parentId": "c4-mainframe",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-interface",
+      "parentId": "c4-mainframe",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-head",
+      "parentId": "c4-santec-meter",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-santec-laser",
+      "parentId": "c4-shelf",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-santec-meter",
+      "parentId": "c4-shelf",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-input-arm",
+      "parentId": "c4-input-stage",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-holder",
+      "parentId": "c4-dut-stage",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-output-arm",
+      "parentId": "c4-output-stage",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-camera",
+      "parentId": "c4-microscope",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-upper-display",
+      "parentId": "c4-shelf",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-lower-display",
+      "parentId": "c4-shelf",
+      "kind": "Provisional support / module placement"
+    },
+    {
+      "instanceId": "c4-pc",
+      "parentId": "c4-shelf",
+      "kind": "Provisional support / module placement"
+    }
+  ],
+  "connections": [
+    {
+      "id": "C4-O1",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate Keysight measurement route"
+    },
+    {
+      "id": "C4-O2",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate Keysight measurement route"
+    },
+    {
+      "id": "C4-IN",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate Keysight measurement route"
+    },
+    {
+      "id": "C4-OUT",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate Keysight measurement route"
+    },
+    {
+      "id": "C4-O3",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate Keysight measurement route"
+    },
+    {
+      "id": "C4-HEAD",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate head/image/data link"
+    },
+    {
+      "id": "C4-VIDEO",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate head/image/data link"
+    },
+    {
+      "id": "C4-SCREEN1",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate head/image/data link"
+    },
+    {
+      "id": "C4-SCREEN2",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate head/image/data link"
+    }
+  ],
+  "vendorReferences": [
+    {
+      "url": "https://inst.santec.com/products/test-and-measurement/tunablelaser/tsl-570",
+      "reviewedAt": "2026-10-13"
+    },
+    {
+      "url": "https://www.santec.com/dcms_media/other/instruments_MPM-210-M-E.pdf",
+      "reviewedAt": "2026-10-13"
+    }
+  ],
+  "reviewStatus": "Unpublished draft; no operational approval"
+}

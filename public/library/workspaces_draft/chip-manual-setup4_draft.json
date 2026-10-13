@@ -1,0 +1,629 @@
+{
+  "version": 1,
+  "id": "chip-manual-setup4",
+  "name": "chip-manual-setup4",
+  "recordStatus": "Photo-derived draft · review required",
+  "photoEvidence": {
+    "version": 1,
+    "files": [
+      "library/references/chip-manual-setup4/Photo-1.jpg",
+      "library/references/chip-manual-setup4/Photo-2.jpg",
+      "library/references/chip-manual-setup4/Photo-3.jpg"
+    ],
+    "guide": "documents/CHIP-MANUAL-SETUP4.md",
+    "manifest": "library/references/chip-manual-setup4/photo-evidence.json",
+    "warning": "User confirmed the Keysight 81606A / external head system is active and the supplied vacuum chip holder is used. SETUP 4, 81606A / 1310 and TSL-570 labels are observed. Exact options, interface/head identities, fibre endpoints and settings require review. Santec instruments are inactive alternatives; no other bench power or fibre angle is inherited."
+  },
+  "publication": {
+    "scale": "Chip",
+    "mode": "Optical",
+    "bands": [
+      "O-band"
+    ],
+    "lab": "SETUP 4 · room to confirm",
+    "description": "Photo-derived chip bench with opposing arms, copper sample fixture, overhead imaging, Keysight and Santec shelf instruments. O-band is a provisional allocation from the 1310 label."
+  },
+  "nodes": [
+    {
+      "id": "c4-mainframe",
+      "equipmentId": "oband-mainframe-8164b",
+      "label": "Keysight 8164B housing · candidate",
+      "x": 20,
+      "y": 15,
+      "signalX": 20,
+      "signalY": 320,
+      "benchXMm": -380,
+      "benchZMm": -300,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-1.jpg",
+        "notes": "Keysight-family housing on the shelf; 8164B geometry reused as candidate. 81606A is readable in horizontal slot 0. Interface model/slot 3 is provisional.",
+        "mount": {
+          "parentId": "c4-shelf",
+          "offsetXMm": -380,
+          "offsetYMm": 564,
+          "offsetZMm": 40
+        }
+      }
+    },
+    {
+      "id": "c4-laser",
+      "equipmentId": "oband-laser-81606a",
+      "label": "Keysight 81606A · 1310 label",
+      "x": 240,
+      "y": 15,
+      "signalX": 20,
+      "signalY": 20,
+      "benchXMm": -380,
+      "benchZMm": -300,
+      "elevationMm": 564,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "81606A model and 1310 label visible. Exact option/range not confirmed for THIS bench; do not inherit 1240–1380 nm confirmation from another setup.",
+        "mainframeId": "c4-mainframe",
+        "mainframeSlot": "0",
+        "signalRole": "source"
+      }
+    },
+    {
+      "id": "c4-interface",
+      "equipmentId": "oband-head-interface",
+      "label": "Optical head interface · 81618A candidate",
+      "x": 460,
+      "y": 15,
+      "signalX": 240,
+      "signalY": 160,
+      "benchXMm": -380,
+      "benchZMm": -300,
+      "elevationMm": 564,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Head cable plugs into a vertical module. Existing 81618A reference/slot 3 used provisionally; actual interface and slot need confirmation.",
+        "mainframeId": "c4-mainframe",
+        "mainframeSlot": "3"
+      }
+    },
+    {
+      "id": "c4-head",
+      "equipmentId": "oband-head-81624b",
+      "label": "External optical head · 81624B candidate",
+      "x": 680,
+      "y": 15,
+      "signalX": 460,
+      "signalY": 160,
+      "benchXMm": -545,
+      "benchZMm": -300,
+      "elevationMm": 885,
+      "rotationDeg": -90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Black cylindrical head with yellow band lies above the Santec meter. Reused head silhouette is placed horizontally across the meter. 81624B is a library candidate, not a readable model identification. Adapter, cable and connector remain unconfirmed.",
+        "mount": {
+          "parentId": "c4-santec-meter",
+          "offsetXMm": 0,
+          "offsetYMm": 160,
+          "offsetZMm": 0
+        }
+      }
+    },
+    {
+      "id": "c4-santec-laser",
+      "equipmentId": "santec-tsl570-setup4",
+      "label": "Santec TSL-570 · inactive alternative",
+      "x": 20,
+      "y": 95,
+      "signalX": 240,
+      "signalY": 320,
+      "benchXMm": -160,
+      "benchZMm": -300,
+      "elevationMm": 725,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "TSL-570 label observed. User selected the Keysight system as active on 13 October 2026. This instrument remains visible and unconnected as an inactive alternative; installed option unconfirmed.",
+        "mount": {
+          "parentId": "c4-shelf",
+          "offsetXMm": -160,
+          "offsetYMm": 725,
+          "offsetZMm": 40
+        }
+      }
+    },
+    {
+      "id": "c4-santec-meter",
+      "equipmentId": "santec-mpm210-setup4",
+      "label": "Santec multi-port meter · channels to confirm",
+      "x": 240,
+      "y": 95,
+      "signalX": 460,
+      "signalY": 320,
+      "benchXMm": -545,
+      "benchZMm": -300,
+      "elevationMm": 725,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "MPM-210 family appearance/label candidate. Module suffixes and channel assignments unknown. Unconnected in the proposed Keysight route.",
+        "mount": {
+          "parentId": "c4-shelf",
+          "offsetXMm": -545,
+          "offsetYMm": 725,
+          "offsetZMm": 40
+        }
+      }
+    },
+    {
+      "id": "c4-controller",
+      "equipmentId": "wst-polarisation-manual",
+      "label": "Paddle controller · FPC562 candidate",
+      "x": 460,
+      "y": 95,
+      "signalX": 240,
+      "signalY": 20,
+      "benchXMm": -580,
+      "benchZMm": -30,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Paddle/loop assembly left of arms. Match and optical direction are provisional.",
+        "signalRole": "through"
+      }
+    },
+    {
+      "id": "c4-input-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Left arm stage · MAX313D candidate",
+      "x": 680,
+      "y": 95,
+      "signalX": 680,
+      "signalY": 320,
+      "benchXMm": -180,
+      "benchZMm": 0,
+      "elevationMm": 0,
+      "rotationDeg": 90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use."
+      }
+    },
+    {
+      "id": "c4-input-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Left fibre arm · proposed input",
+      "x": 20,
+      "y": 175,
+      "signalX": 460,
+      "signalY": 20,
+      "benchXMm": -180,
+      "benchZMm": 0,
+      "elevationMm": 65,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Bespoke silver arm visible. Existing supplied try3 geometry is a provisional revision match; spring/fibre omitted.",
+        "signalRole": "through",
+        "mountingStage": "c4-input-stage"
+      }
+    },
+    {
+      "id": "c4-holder",
+      "equipmentId": "chip-vacuum-stage",
+      "label": "Vacuum chip sample stage / DUT",
+      "x": 240,
+      "y": 175,
+      "signalX": 680,
+      "signalY": 20,
+      "benchXMm": 0,
+      "benchZMm": 0,
+      "elevationMm": 75,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "User confirmed on 13 October 2026: same supplied vacuum chip holder. Actual STEP/SolidWorks geometry reused. Vacuum plumbing, operating pressure, retention, chip identity and mounting fit remain to confirm.",
+        "signalRole": "through",
+        "mountingStage": "c4-dut-stage"
+      }
+    },
+    {
+      "id": "c4-output-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Right fibre arm · proposed output",
+      "x": 460,
+      "y": 175,
+      "signalX": 680,
+      "signalY": 160,
+      "benchXMm": 180,
+      "benchZMm": 0,
+      "elevationMm": 65,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use.",
+        "signalRole": "through",
+        "mountingStage": "c4-output-stage"
+      }
+    },
+    {
+      "id": "c4-output-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Right arm stage · MAX313D candidate",
+      "x": 680,
+      "y": 175,
+      "signalX": 20,
+      "signalY": 455,
+      "benchXMm": 180,
+      "benchZMm": 0,
+      "elevationMm": 0,
+      "rotationDeg": -90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use."
+      }
+    },
+    {
+      "id": "c4-dut-stage",
+      "equipmentId": "chip-dut-translation-stage-v1",
+      "label": "Front DUT motion stage · candidate",
+      "x": 20,
+      "y": 255,
+      "signalX": 240,
+      "signalY": 455,
+      "benchXMm": 0,
+      "benchZMm": 170,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use."
+      }
+    },
+    {
+      "id": "c4-microscope",
+      "equipmentId": "chip-microscope-body-v1",
+      "label": "Overhead microscope / focus · candidate",
+      "x": 240,
+      "y": 255,
+      "signalX": 460,
+      "signalY": 455,
+      "benchXMm": 88,
+      "benchZMm": 0,
+      "elevationMm": 110,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Tube/objective/focus and post observed. Setup 3 silhouette reused, rotated to place its support post to the right. Estimated 88 mm preview-centre offset aligns the objective over the sample; this is model registration, not a measured dimension."
+      }
+    },
+    {
+      "id": "c4-camera",
+      "equipmentId": "wafer-camera-head-2",
+      "label": "Button-control alignment camera · candidate",
+      "x": 460,
+      "y": 255,
+      "signalX": 680,
+      "signalY": 455,
+      "benchXMm": 0,
+      "benchZMm": 0,
+      "elevationMm": 460,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Black camera with grey/white controls resembles Setup 2; exact model and video/data interface unknown.",
+        "mount": {
+          "parentId": "c4-microscope",
+          "offsetXMm": 88,
+          "offsetYMm": 350,
+          "offsetZMm": 0
+        }
+      }
+    },
+    {
+      "id": "c4-upper-display",
+      "equipmentId": "chip4-upper-display",
+      "label": "Upper workstation display",
+      "x": 680,
+      "y": 255,
+      "signalX": 20,
+      "signalY": 590,
+      "benchXMm": 185,
+      "benchZMm": -380,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use.",
+        "mount": {
+          "parentId": "c4-shelf",
+          "offsetXMm": 185,
+          "offsetYMm": 564,
+          "offsetZMm": -40
+        }
+      }
+    },
+    {
+      "id": "c4-lower-display",
+      "equipmentId": "chip4-lower-display",
+      "label": "Lower alignment display",
+      "x": 20,
+      "y": 335,
+      "signalX": 240,
+      "signalY": 590,
+      "benchXMm": 450,
+      "benchZMm": -150,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use.",
+        "mount": {
+          "parentId": "c4-shelf",
+          "offsetXMm": 450,
+          "offsetYMm": 564,
+          "offsetZMm": 190
+        }
+      }
+    },
+    {
+      "id": "c4-pc",
+      "equipmentId": "chip4-pc-tower",
+      "label": "Workstation tower",
+      "x": 240,
+      "y": 335,
+      "signalX": 460,
+      "signalY": 590,
+      "benchXMm": 390,
+      "benchZMm": -430,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use.",
+        "mount": {
+          "parentId": "c4-shelf",
+          "offsetXMm": 390,
+          "offsetYMm": 564,
+          "offsetZMm": -90
+        }
+      }
+    },
+    {
+      "id": "c4-shelf",
+      "equipmentId": "chip4-shelf",
+      "label": "Aluminium shelf & posts",
+      "x": 460,
+      "y": 335,
+      "signalX": 680,
+      "signalY": 590,
+      "benchXMm": 0,
+      "benchZMm": -340,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Photo-derived candidate; verify dimensions, model and active use."
+      }
+    },
+    {
+      "id": "c4-aux-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Auxiliary right positioning stage · unused role unknown",
+      "x": 680,
+      "y": 335,
+      "signalX": 20,
+      "signalY": 725,
+      "benchXMm": 510,
+      "benchZMm": 170,
+      "elevationMm": 0,
+      "rotationDeg": -90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/chip-manual-setup4/Photo-2.jpg",
+        "notes": "Third silver/black positioning accessory at front-right. MAX313D is a provisional silhouette; active function unclear, no optical path assigned."
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "C4-O1",
+      "from": "c4-laser",
+      "to": "c4-controller",
+      "type": "optical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Keysight source system confirmed active by user. Trace actual fibre and paddle controller role."
+    },
+    {
+      "id": "C4-O2",
+      "from": "c4-controller",
+      "to": "c4-input-arm",
+      "type": "optical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate input routing. Cable model, sleeves and connector ends unknown."
+    },
+    {
+      "id": "C4-IN",
+      "from": "c4-input-arm",
+      "to": "c4-holder",
+      "type": "optical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "custom",
+      "customFibre": "Candidate free-space coupling",
+      "fromConnector": "Bare fibre",
+      "toConnector": "Other",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate above-chip coupling; tip type, angle and grating/edge coupling unconfirmed."
+    },
+    {
+      "id": "C4-OUT",
+      "from": "c4-holder",
+      "to": "c4-output-arm",
+      "type": "optical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "custom",
+      "customFibre": "Candidate free-space coupling",
+      "fromConnector": "Other",
+      "toConnector": "Bare fibre",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate return coupling; direction unconfirmed."
+    },
+    {
+      "id": "C4-O3",
+      "from": "c4-output-arm",
+      "to": "c4-head",
+      "type": "optical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate return to external optical head. Exact detector, adapter and connector unknown; existing reference adapter is not proof of installed FC/PC."
+    },
+    {
+      "id": "C4-HEAD",
+      "from": "c4-head",
+      "to": "c4-interface",
+      "type": "electrical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Head-to-interface cable candidate, not DUT bias; interface/slot still provisional."
+    },
+    {
+      "id": "C4-VIDEO",
+      "from": "c4-camera",
+      "to": "c4-pc",
+      "type": "electrical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate image/data link; direct display route may be used instead."
+    },
+    {
+      "id": "C4-SCREEN1",
+      "from": "c4-pc",
+      "to": "c4-upper-display",
+      "type": "electrical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate workstation display link."
+    },
+    {
+      "id": "C4-SCREEN2",
+      "from": "c4-pc",
+      "to": "c4-lower-display",
+      "type": "electrical",
+      "fromPort": "Port / channel to confirm",
+      "toPort": "Port / channel to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — Candidate second display link; active input unknown."
+    }
+  ],
+  "measurement": {
+    "lab": "SETUP 4 · room to confirm",
+    "laserPowerMw": "",
+    "maxPowerMw": "",
+    "startNm": "",
+    "stopNm": "",
+    "inputAngle": "",
+    "outputAngle": "",
+    "coupling": "",
+    "holder": "Supplied vacuum chip sample stage · user-confirmed",
+    "stageModel": "Front manual DUT stage · candidate",
+    "notes": "User confirmed Keysight 81606A / external detector head as the active system and the supplied vacuum holder. 1310 label observed, not a confirmed range. Confirm options, exact interface/head, fibre routes, calibration and approved limits. Santec instruments are inactive alternatives. Other-bench 10 mW / 10° defaults remain blank."
+  },
+  "procedure": [
+    {
+      "title": "Review instrument selection",
+      "text": "Confirm which source/meter pair is active. Trace Keysight and Santec leads separately; verify module/head identities and channels before changing proposed paths."
+    },
+    {
+      "title": "Record the chip and coupling",
+      "text": "Confirm holder retention, chip/device IDs, stage axes, fibre model and connector at each end, tip preparation and coupling angles."
+    },
+    {
+      "title": "Configure the approved measurement",
+      "text": "Enter actual wavelength options, power limits, scan and detector settings, references, calibration and local SOP. Photos do not approve operation."
+    },
+    {
+      "title": "Align, acquire and retain results",
+      "text": "Follow the approved lab workflow for alignment/reference/data capture and shutdown. Record site IDs, raw/processed files, analysis settings and measured timing."
+    }
+  ],
+  "workspaceName": "Bench_draft",
+  "workspaceRevision": 1
+}

@@ -1,0 +1,16 @@
+{
+  "equipmentId": "wafer-keyboard-2",
+  "source": "Four user Setup 2 photos, received 2026-10-13",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated silhouette, not measured or vendor CAD. Does not establish fit, travel or clearance.",
+  "photos": [
+    "library/references/wafer-manual-setup-2/Photo-1.jpg",
+    "library/references/wafer-manual-setup-2/Photo-2.jpg",
+    "library/references/wafer-manual-setup-2/Photo-3.jpg",
+    "library/references/wafer-manual-setup-2/Photo-4.jpg"
+  ],
+  "generator": "scripts/generate-wafer-setup-2-cad.py",
+  "units": "millimetres / Y-up",
+  "verifiedDimensions": false,
+  "sha256": "9f688d9dd4c4fdd2ad16b671354cac955dd748c66b243a974d59c4afb3fc220e"
+}

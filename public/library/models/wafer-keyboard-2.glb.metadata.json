@@ -1,0 +1,31 @@
+{
+  "source": "wafer-keyboard-2-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 76,
+  "triangles": 912,
+  "boundsMm": {
+    "min": [
+      -180,
+      0,
+      -65
+    ],
+    "max": [
+      180,
+      18,
+      65
+    ]
+  },
+  "extentsMm": [
+    360,
+    18,
+    130
+  ],
+  "glbBytes": 120796,
+  "orientation": "Source Y-up retained; no preview yaw correction",
+  "previewYawDeg": 0
+}

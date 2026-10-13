@@ -1,0 +1,31 @@
+{
+  "source": "chip4-shelf-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 4,
+  "triangles": 48,
+  "boundsMm": {
+    "min": [
+      -625,
+      0,
+      -150
+    ],
+    "max": [
+      625,
+      564,
+      150
+    ]
+  },
+  "extentsMm": [
+    1250,
+    564,
+    300
+  ],
+  "glbBytes": 6540,
+  "orientation": "Source Y-up retained; no preview yaw correction",
+  "previewYawDeg": 0
+}
