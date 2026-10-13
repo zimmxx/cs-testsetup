@@ -6,6 +6,8 @@ Last updated: **2026-10-13**. This file is part of the project source and should
 
 ### Review release 0.2.4 — 2026-10-13
 
+Open review: [PR #6](https://github.com/zimmxx/cs-testsetup/pull/6), pushed branch `codex/photo-setups-024`. It targets PR #5's branch to isolate the setup changes. Merge #5 first, then retarget #6 to main if needed. PR #6 is deliberately left open for the user; no merge/deployment performed. CAD, GLB previews, photos, editable JSON, provenance and guides are included in the remote branch.
+
 User requested pushing both completed local photo setups, creating a PR before deployment and updating versioning. Branch `codex/photo-setups-024` targets `codex/mobile-layout` because PR #5 is still open (verified 2026-10-13). Merge PR #5 first, then retarget/merge the setup PR against main as appropriate; do not merge automatically. Package/sidebar version is 0.2.4; schemas stay at version 1. Both photo templates remain unpublished in the app; committing files does not create reviewed publication snapshots. CHANGELOG records this release as deployment pending. The following local-development notes describe implementation history; review status here supersedes their earlier “not pushed” wording. Latest validation: 68 tests passed, production build and desktop/phone browser checks passed; actual fit/touch/SolidWorks remain unverified.
 
 ### Local photo reconstruction — chip-manual-setup4 — 2026-10-13

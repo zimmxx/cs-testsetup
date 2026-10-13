@@ -8,6 +8,8 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 Prepared for review: **2026-10-13**. Package/sidebar version: **0.2.4**; setup/import schemas remain version 1. Review branch: `codex/photo-setups-024`, based on `codex/mobile-layout` while PR #5 remains open. Merge PR #5 first, then this setup review. No deployment date is assigned until a successful Pages run.
 
+Review: [PR #6 — manual wafer Setup 2 and chip Setup 4](https://github.com/zimmxx/cs-testsetup/pull/6). The branch, including CAD and original photo assets, is pushed to GitHub. Deployment remains pending acceptance, merge to main and a successful Pages run.
+
 ### chip-manual-setup4 — prepared locally 2026-10-13
 
 - Added the requested chip bench from three photos (SETUP 4 label): 20 instances / 17 equipment IDs, original photos/evidence manifest, saved setup and isolated draft, editable views and configuration/agent guide.
