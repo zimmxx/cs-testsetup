@@ -1,0 +1,31 @@
+{
+  "source": "chip4-pc-tower-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 7,
+  "triangles": 148,
+  "boundsMm": {
+    "min": [
+      -80,
+      0,
+      -180
+    ],
+    "max": [
+      80,
+      400,
+      175
+    ]
+  },
+  "extentsMm": [
+    160,
+    400,
+    355
+  ],
+  "glbBytes": 14512,
+  "orientation": "Source Y-up retained; no preview yaw correction",
+  "previewYawDeg": 0
+}

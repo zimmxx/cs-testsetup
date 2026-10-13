@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "setupId": "wafer-manual-setup-2",
+  "asOf": "2026-10-13",
+  "photos": [
+    {
+      "photo": 1,
+      "path": "library/references/wafer-manual-setup-2/Photo-1.jpg",
+      "image": "library/images/wafer-setup-2-photo-1.jpg",
+      "originalFilename": "1-Photo-1.jpg",
+      "sha256": "ab01b65f4a520dd83e5cb3c2cfc5b90d687ccf4b85a1fba77fd7cf99b230083a",
+      "imageHeight": 1280,
+      "imageWidth": 720
+    },
+    {
+      "photo": 2,
+      "path": "library/references/wafer-manual-setup-2/Photo-2.jpg",
+      "image": "library/images/wafer-setup-2-photo-2.jpg",
+      "originalFilename": "2-Photo-2.jpg",
+      "sha256": "726bd0b76229a5f5729338bd840f8295c0681fca249a49d2a319653221940f3e",
+      "imageHeight": 1280,
+      "imageWidth": 720
+    },
+    {
+      "photo": 3,
+      "path": "library/references/wafer-manual-setup-2/Photo-3.jpg",
+      "image": "library/images/wafer-setup-2-photo-3.jpg",
+      "originalFilename": "3-Photo-3.jpg",
+      "sha256": "e877b04f770530aa809e9fd71e9b8ecb4ee7852b97243cb1a2cc9a9835ed06b9",
+      "imageHeight": 1280,
+      "imageWidth": 720
+    },
+    {
+      "photo": 4,
+      "path": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+      "image": "library/images/wafer-setup-2-photo-4.jpg",
+      "originalFilename": "4-Photo-4.jpg",
+      "sha256": "c9115204a937e548426b5550d375077edc01091c4f4cfb0d3497329abf4482d0",
+      "imageHeight": 720,
+      "imageWidth": 1280
+    }
+  ],
+  "observed": [
+    "SETUP 2 bench label",
+    "Circular openwork carrier, no wafer visibly loaded",
+    "Separate large rail/handwheel wafer motion assembly",
+    "Two opposing silver arms on micrometer stages",
+    "Two front-left paddle/loop assemblies",
+    "Overhead microscope and button-control camera",
+    "Dual monitors, desktop PC, keyboard/tray and aluminium gantry",
+    "Keithley-labelled upper-left instrument and two optical instrument housings",
+    "Small three-button digital indicator and rear auxiliary mounts"
+  ],
+  "inferred": [
+    "Core 8163B / 81940A / 81634B confirmed by user. Slot 1/2 presentation defaults remain provisional.",
+    "MAX313D and try3 arm geometry reused as provisional matches",
+    "Left input / right output and two-controller return path are proposed",
+    "C-band only for catalog filtering",
+    "Camera-to-PC-to-displays and keyboard data links are candidates"
+  ],
+  "unknown": [
+    "Actual room, instrument models/options/serials/calibration",
+    "Laser/detector modules, band and head/interface details",
+    "Fibre type/connector ends/sleeves/length/cut tips",
+    "Controller roles and traceable optical signal direction",
+    "Wafer diameter, retention/vacuum, carrier pattern and stage axes/travel",
+    "Coupling type/angles/power/scan/approved limits",
+    "Measured table/shelf geometry, mount offsets and clearances",
+    "Red electrical lead destinations and auxiliary mount purpose",
+    "Imaging/video/control interfaces and indicator axis/units"
+  ],
+  "mechanicalMounts": [
+    {
+      "instanceId": "w2-mainframe",
+      "parentId": "w2-shelf",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-shelf",
+        "offsetXMm": -610,
+        "offsetYMm": 564,
+        "offsetZMm": 40
+      }
+    },
+    {
+      "instanceId": "w2-input-arm",
+      "parentId": "w2-input-stage",
+      "kind": "Provisional mechanical support"
+    },
+    {
+      "instanceId": "w2-holder",
+      "parentId": "w2-wafer-stage",
+      "kind": "Provisional mechanical support"
+    },
+    {
+      "instanceId": "w2-output-arm",
+      "parentId": "w2-output-stage",
+      "kind": "Provisional mechanical support"
+    },
+    {
+      "instanceId": "w2-camera",
+      "parentId": "w2-microscope",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-microscope",
+        "offsetXMm": 0,
+        "offsetYMm": 350,
+        "offsetZMm": 0
+      }
+    },
+    {
+      "instanceId": "w2-left-display",
+      "parentId": "w2-shelf",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-shelf",
+        "offsetXMm": -245,
+        "offsetYMm": 564,
+        "offsetZMm": 0
+      }
+    },
+    {
+      "instanceId": "w2-right-display",
+      "parentId": "w2-pc",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-pc",
+        "offsetXMm": -20,
+        "offsetYMm": 85,
+        "offsetZMm": 10
+      }
+    },
+    {
+      "instanceId": "w2-pc",
+      "parentId": "w2-shelf",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-shelf",
+        "offsetXMm": 200,
+        "offsetYMm": 564,
+        "offsetZMm": 10
+      }
+    },
+    {
+      "instanceId": "w2-shelf-smu",
+      "parentId": "w2-mainframe",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-mainframe",
+        "offsetXMm": 0,
+        "offsetYMm": 96,
+        "offsetZMm": 0
+      }
+    },
+    {
+      "instanceId": "w2-keyboard",
+      "parentId": "w2-tray",
+      "kind": "Provisional mechanical support",
+      "offsets": {
+        "parentId": "w2-tray",
+        "offsetXMm": 0,
+        "offsetYMm": 383,
+        "offsetZMm": -80
+      }
+    },
+    {
+      "instanceId": "w2-laser",
+      "parentId": "w2-mainframe",
+      "kind": "Confirmed module identity; provisional slot order"
+    },
+    {
+      "instanceId": "w2-sensor",
+      "parentId": "w2-mainframe",
+      "kind": "Confirmed module identity; provisional slot order"
+    }
+  ],
+  "connections": [
+    {
+      "id": "W2-O1",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate measurement route"
+    },
+    {
+      "id": "W2-O2",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate measurement route"
+    },
+    {
+      "id": "W2-IN",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate measurement route"
+    },
+    {
+      "id": "W2-OUT",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate measurement route"
+    },
+    {
+      "id": "W2-O3",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate measurement route"
+    },
+    {
+      "id": "W2-O4",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate measurement route"
+    },
+    {
+      "id": "W2-CAMERA",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate workstation image/data link"
+    },
+    {
+      "id": "W2-DISPLAY-L",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate workstation image/data link"
+    },
+    {
+      "id": "W2-DISPLAY-R",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate workstation image/data link"
+    },
+    {
+      "id": "W2-KEYBOARD",
+      "evidence": "Proposed / unverified",
+      "purpose": "Candidate workstation image/data link"
+    }
+  ],
+  "reviewStatus": "Editable unpublished draft; no operational approval",
+  "userConfirmations": [
+    {
+      "date": "2026-10-13",
+      "statement": "It is the same used as Manual Wafer Optical Measurements",
+      "interpretation": "Core measurement instruments 8163B / 81940A / 81634B; slot order unconfirmed"
+    },
+    {
+      "date": "2026-10-13",
+      "statement": "remove the larger right hand shelf instrument as that is redundant and not being used",
+      "action": "Removed w2-right-mainframe from this setup; shared O-band catalog record and other setups retained"
+    }
+  ],
+  "excluded": [
+    {
+      "photoObservation": "Large right-hand shelf housing",
+      "reason": "User confirmed unused/redundant; excluded from active setup"
+    }
+  ]
+}

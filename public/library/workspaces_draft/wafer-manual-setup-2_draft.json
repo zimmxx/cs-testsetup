@@ -1,0 +1,697 @@
+{
+  "version": 1,
+  "id": "wafer-manual-setup-2",
+  "name": "wafer-manual-setup-2",
+  "recordStatus": "Photo-derived draft · review required",
+  "photoEvidence": {
+    "version": 1,
+    "files": [
+      "library/references/wafer-manual-setup-2/Photo-1.jpg",
+      "library/references/wafer-manual-setup-2/Photo-2.jpg",
+      "library/references/wafer-manual-setup-2/Photo-3.jpg",
+      "library/references/wafer-manual-setup-2/Photo-4.jpg"
+    ],
+    "guide": "documents/WAFER-MANUAL-SETUP-2.md",
+    "manifest": "library/references/wafer-manual-setup-2/photo-evidence.json",
+    "warning": "Setup 2 reconstructed from four photos. User confirmed the same 8163B, 81940A and 81634B measurement instruments as Manual Wafer Optical Measurement; the unused right-hand shelf housing is excluded at their request. Slots 1/2 are provisional display defaults. Stage matches, signal direction, fibres and settings require review. C-band does not confirm the complete path capability. No wafer, spring or fibre geometry is invented."
+  },
+  "publication": {
+    "scale": "Wafer",
+    "mode": "Optical",
+    "bands": [
+      "C-band"
+    ],
+    "lab": "SETUP 2 · room to confirm",
+    "description": "Manual wafer bench reconstructed from four photos: circular carrier, separate motion rails, opposing fibre arms, overhead imaging and dual-monitor workstation. Unpublished review draft."
+  },
+  "nodes": [
+    {
+      "id": "w2-mainframe",
+      "equipmentId": "wst-mainframe-manual",
+      "label": "Keysight 8163B measurement mainframe",
+      "x": 20,
+      "y": 15,
+      "signalX": 20,
+      "signalY": 320,
+      "benchXMm": -610,
+      "benchZMm": -300,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-3.jpg",
+        "notes": "User confirmed on 13 October 2026: same measurement instruments as Manual Wafer Optical Measurement (8163B, 81940A, 81634B). Left shelf assignment follows the optical-looking leads. Slots 1/2 are provisional display defaults, not a confirmed physical order.",
+        "mount": {
+          "parentId": "w2-shelf",
+          "offsetXMm": -610,
+          "offsetYMm": 564,
+          "offsetZMm": 40
+        }
+      }
+    },
+    {
+      "id": "w2-input-controller",
+      "equipmentId": "wst-polarisation-manual",
+      "label": "Left routing / polarisation A · candidate",
+      "x": 240,
+      "y": 15,
+      "signalX": 240,
+      "signalY": 20,
+      "benchXMm": -650,
+      "benchZMm": 120,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Black paddles and fibre loops at front-left. FPC562 reused provisionally; cable ends and exact paddle assemblies unconfirmed."
+      }
+    },
+    {
+      "id": "w2-input-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Left fibre arm · proposed input",
+      "x": 460,
+      "y": 15,
+      "signalX": 460,
+      "signalY": 20,
+      "benchXMm": -260,
+      "benchZMm": -45,
+      "elevationMm": 125,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Bespoke silver arm above sample region. Existing user try3 CAD is a provisional revision match; spring/fibre omitted. Input direction not confirmed.",
+        "mountingStage": "w2-input-stage"
+      }
+    },
+    {
+      "id": "w2-holder",
+      "equipmentId": "wafer-carrier-2",
+      "label": "Circular wafer carrier / DUT location",
+      "x": 680,
+      "y": 15,
+      "signalX": 680,
+      "signalY": 20,
+      "benchXMm": 0,
+      "benchZMm": 30,
+      "elevationMm": 95,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Openwork circular carrier is observed; no wafer visibly loaded. Diameter, cut-out layout, retention and vacuum are unknown. Separate from chip vacuum holder.",
+        "mountingStage": "w2-wafer-stage"
+      }
+    },
+    {
+      "id": "w2-output-arm",
+      "equipmentId": "wst-fibre-arms-manual",
+      "label": "Right fibre arm · proposed output",
+      "x": 20,
+      "y": 95,
+      "signalX": 680,
+      "signalY": 160,
+      "benchXMm": 260,
+      "benchZMm": -45,
+      "elevationMm": 125,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Opposing silver arm; reused try3 model as a candidate. Output direction, tip type and fibre angle remain to confirm.",
+        "mountingStage": "w2-output-stage"
+      }
+    },
+    {
+      "id": "w2-output-controller",
+      "equipmentId": "wst-polarisation-manual",
+      "label": "Left routing / polarisation B · candidate",
+      "x": 240,
+      "y": 95,
+      "signalX": 460,
+      "signalY": 160,
+      "benchXMm": -650,
+      "benchZMm": 260,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Second front-left paddle/loop assembly. Its position in the proposed return path is inferred; it may serve a different purpose."
+      }
+    },
+    {
+      "id": "w2-input-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Left fibre-arm stage · MAX313D candidate",
+      "x": 460,
+      "y": 95,
+      "signalX": 240,
+      "signalY": 320,
+      "benchXMm": -260,
+      "benchZMm": -45,
+      "elevationMm": 60,
+      "rotationDeg": 90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Black micrometer stage below left arm. NanoMax-family silhouette; MAX313D exact drive variant unverified. Bespoke support height estimated."
+      }
+    },
+    {
+      "id": "w2-output-stage",
+      "equipmentId": "fibre-arm-stage",
+      "label": "Right fibre-arm stage · MAX313D candidate",
+      "x": 680,
+      "y": 95,
+      "signalX": 460,
+      "signalY": 320,
+      "benchXMm": 260,
+      "benchZMm": -45,
+      "elevationMm": 60,
+      "rotationDeg": -90,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Opposing black micrometer stage; same provisional MAX313D reference. Does not move the wafer holder."
+      }
+    },
+    {
+      "id": "w2-wafer-stage",
+      "equipmentId": "wafer-xy-motion-stage-2",
+      "label": "Wafer motion rails & handwheel",
+      "x": 20,
+      "y": 175,
+      "signalX": 680,
+      "signalY": 320,
+      "benchXMm": 0,
+      "benchZMm": 30,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance."
+      }
+    },
+    {
+      "id": "w2-microscope",
+      "equipmentId": "chip-microscope-body-v1",
+      "label": "Overhead microscope / focus assembly · candidate",
+      "x": 240,
+      "y": 175,
+      "signalX": 20,
+      "signalY": 455,
+      "benchXMm": 0,
+      "benchZMm": -20,
+      "elevationMm": 135,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Visible tube, focus mount and silver post resemble Setup 3. Existing geometry reused provisionally; objective, focus assembly and post dimensions unverified."
+      }
+    },
+    {
+      "id": "w2-camera",
+      "equipmentId": "wafer-camera-head-2",
+      "label": "Alignment camera head",
+      "x": 460,
+      "y": 175,
+      "signalX": 240,
+      "signalY": 455,
+      "benchXMm": 0,
+      "benchZMm": -20,
+      "elevationMm": 485,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance.",
+        "mount": {
+          "parentId": "w2-microscope",
+          "offsetXMm": 0,
+          "offsetYMm": 350,
+          "offsetZMm": 0
+        }
+      }
+    },
+    {
+      "id": "w2-left-display",
+      "equipmentId": "wafer-monitor-2",
+      "label": "Left monitor · role to confirm",
+      "x": 680,
+      "y": 175,
+      "signalX": 460,
+      "signalY": 455,
+      "benchXMm": -245,
+      "benchZMm": -340,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance.",
+        "mount": {
+          "parentId": "w2-shelf",
+          "offsetXMm": -245,
+          "offsetYMm": 564,
+          "offsetZMm": 0
+        }
+      }
+    },
+    {
+      "id": "w2-right-display",
+      "equipmentId": "wafer-monitor-2",
+      "label": "Right monitor · role to confirm",
+      "x": 20,
+      "y": 255,
+      "signalX": 680,
+      "signalY": 455,
+      "benchXMm": 220,
+      "benchZMm": -340,
+      "elevationMm": 649,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance.",
+        "mount": {
+          "parentId": "w2-pc",
+          "offsetXMm": -20,
+          "offsetYMm": 85,
+          "offsetZMm": 10
+        }
+      }
+    },
+    {
+      "id": "w2-pc",
+      "equipmentId": "wafer-pc-2",
+      "label": "Workstation PC",
+      "x": 240,
+      "y": 255,
+      "signalX": 20,
+      "signalY": 590,
+      "benchXMm": 200,
+      "benchZMm": -330,
+      "elevationMm": 564,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance.",
+        "mount": {
+          "parentId": "w2-shelf",
+          "offsetXMm": 200,
+          "offsetYMm": 564,
+          "offsetZMm": 10
+        }
+      }
+    },
+    {
+      "id": "w2-shelf",
+      "equipmentId": "wafer-shelf-2",
+      "label": "Aluminium shelf & gantry",
+      "x": 460,
+      "y": 255,
+      "signalX": 240,
+      "signalY": 590,
+      "benchXMm": 0,
+      "benchZMm": -340,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance."
+      }
+    },
+    {
+      "id": "w2-shelf-smu",
+      "equipmentId": "wafer-shelf-smu-2",
+      "label": "Keithley-labelled accessory · unconnected",
+      "x": 680,
+      "y": 255,
+      "signalX": 460,
+      "signalY": 590,
+      "benchXMm": -610,
+      "benchZMm": -300,
+      "elevationMm": 660,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-3.jpg",
+        "notes": "Brand visible; exact model and red-lead destination not established. No electrical measurement capability or DUT connection assumed.",
+        "mount": {
+          "parentId": "w2-mainframe",
+          "offsetXMm": 0,
+          "offsetYMm": 96,
+          "offsetZMm": 0
+        }
+      }
+    },
+    {
+      "id": "w2-tray",
+      "equipmentId": "wafer-keyboard-tray-2",
+      "label": "Right workstation tray",
+      "x": 240,
+      "y": 335,
+      "signalX": 680,
+      "signalY": 590,
+      "benchXMm": 650,
+      "benchZMm": 0,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance."
+      }
+    },
+    {
+      "id": "w2-keyboard",
+      "equipmentId": "wafer-keyboard-2",
+      "label": "Keyboard",
+      "x": 460,
+      "y": 335,
+      "signalX": 20,
+      "signalY": 725,
+      "benchXMm": 650,
+      "benchZMm": -80,
+      "elevationMm": 383,
+      "rotationDeg": 180,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance.",
+        "mount": {
+          "parentId": "w2-tray",
+          "offsetXMm": 0,
+          "offsetYMm": 383,
+          "offsetZMm": -80
+        }
+      }
+    },
+    {
+      "id": "w2-indicator",
+      "equipmentId": "wafer-digital-indicator-2",
+      "label": "Digital indicator · axis to confirm",
+      "x": 680,
+      "y": 335,
+      "signalX": 240,
+      "signalY": 725,
+      "benchXMm": 180,
+      "benchZMm": 230,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance."
+      }
+    },
+    {
+      "id": "w2-aux-mount-a",
+      "equipmentId": "wafer-aux-probe-mount-2",
+      "label": "Rear auxiliary mount A · unconnected",
+      "x": 20,
+      "y": 415,
+      "signalX": 460,
+      "signalY": 725,
+      "benchXMm": 390,
+      "benchZMm": -245,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance."
+      }
+    },
+    {
+      "id": "w2-aux-mount-b",
+      "equipmentId": "wafer-aux-probe-mount-2",
+      "label": "Rear auxiliary mount B · unconnected",
+      "x": 240,
+      "y": 415,
+      "signalX": 680,
+      "signalY": 725,
+      "benchXMm": 460,
+      "benchZMm": -290,
+      "elevationMm": 0,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "Photo-derived placement; verify hardware, dimensions and clearance."
+      }
+    },
+    {
+      "id": "w2-laser",
+      "equipmentId": "wst-laser-old",
+      "label": "Keysight 81940A tunable laser",
+      "x": 460,
+      "y": 415,
+      "signalX": 20,
+      "signalY": 20,
+      "benchXMm": -610,
+      "benchZMm": -300,
+      "elevationMm": 564,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "User confirmed same source as Manual Wafer Optical Measurement on 13 October 2026. Slot 1 is the existing manual template default; confirm actual slot/order, serial and calibration.",
+        "mainframeId": "w2-mainframe",
+        "mainframeSlot": "1",
+        "signalRole": "source"
+      }
+    },
+    {
+      "id": "w2-sensor",
+      "equipmentId": "wst-sensor-old",
+      "label": "Keysight 81634B optical power sensor",
+      "x": 680,
+      "y": 415,
+      "signalX": 240,
+      "signalY": 160,
+      "benchXMm": -610,
+      "benchZMm": -300,
+      "elevationMm": 564,
+      "rotationDeg": 0,
+      "configuration": {
+        "serial": "",
+        "calibration": "",
+        "photoReference": "library/references/wafer-manual-setup-2/Photo-4.jpg",
+        "notes": "User confirmed same sensor as Manual Wafer Optical Measurement on 13 October 2026. Slot 2 is a provisional display default; verify installed slot and port.",
+        "mainframeId": "w2-mainframe",
+        "mainframeSlot": "2",
+        "signalRole": "detector"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "W2-O1",
+      "from": "w2-laser",
+      "to": "w2-input-controller",
+      "type": "optical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Confirmed 81940A source identity; controller role and actual fibre route still require tracing."
+    },
+    {
+      "id": "W2-O2",
+      "from": "w2-input-controller",
+      "to": "w2-input-arm",
+      "type": "optical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate controller-to-input-arm route; fibre model, sleeves and connector polish are unknown."
+    },
+    {
+      "id": "W2-IN",
+      "from": "w2-input-arm",
+      "to": "w2-holder",
+      "type": "optical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "custom",
+      "customFibre": "Free-space coupling candidate",
+      "fromConnector": "Bare fibre",
+      "toConnector": "Other",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate above-wafer grating coupling; confirm tip, coupling type and angle."
+    },
+    {
+      "id": "W2-OUT",
+      "from": "w2-holder",
+      "to": "w2-output-arm",
+      "type": "optical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "custom",
+      "customFibre": "Free-space coupling candidate",
+      "fromConnector": "Other",
+      "toConnector": "Bare fibre",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate output coupling, not proof of input/output assignment."
+    },
+    {
+      "id": "W2-O3",
+      "from": "w2-output-arm",
+      "to": "w2-output-controller",
+      "type": "optical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Second controller in return path is only a proposal; confirm whether it belongs to this path."
+    },
+    {
+      "id": "W2-O4",
+      "from": "w2-output-controller",
+      "to": "w2-sensor",
+      "type": "optical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "unspecified",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate return to confirmed 81634B sensor. Controller purpose and return lead need tracing; unused right housing excluded by user."
+    },
+    {
+      "id": "W2-CAMERA",
+      "from": "w2-camera",
+      "to": "w2-pc",
+      "type": "electrical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate image/data link; direct-to-monitor or intermediate-controller routing is also possible. Not a bias signal."
+    },
+    {
+      "id": "W2-DISPLAY-L",
+      "from": "w2-pc",
+      "to": "w2-left-display",
+      "type": "electrical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate display link; interface unknown."
+    },
+    {
+      "id": "W2-DISPLAY-R",
+      "from": "w2-pc",
+      "to": "w2-right-display",
+      "type": "electrical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate second display link; interface unknown."
+    },
+    {
+      "id": "W2-KEYBOARD",
+      "from": "w2-keyboard",
+      "to": "w2-pc",
+      "type": "electrical",
+      "fromPort": "Interface / port to confirm",
+      "toPort": "Interface / port to confirm",
+      "fibre": "",
+      "customFibre": "",
+      "fromConnector": "Unspecified",
+      "toConnector": "Unspecified",
+      "length": "",
+      "notes": "PROPOSED ROUTE — endpoints and purpose require lab confirmation. Candidate workstation input cable; no connector type inferred."
+    }
+  ],
+  "measurement": {
+    "lab": "SETUP 2 · room to confirm",
+    "laserPowerMw": "",
+    "maxPowerMw": "",
+    "inputAngle": "",
+    "outputAngle": "",
+    "coupling": "",
+    "startNm": "",
+    "stopNm": "",
+    "holder": "Circular openwork carrier · model and retention unknown",
+    "stageModel": "Separate manual wafer rail assembly · exact axes/model unknown",
+    "cameraModel": "Button-control camera head · model unknown",
+    "notes": "Core instruments confirmed as 8163B / 81940A / 81634B, matching Manual Wafer Optical Measurement. Slots 1/2 are presentation defaults pending order confirmation. Collect wafer/map, cable endpoints, coupling, approved limits, scan/calibration and timing. Do not copy 10 mW / 10° from another bench."
+  },
+  "procedure": [
+    {
+      "title": "Confirm the photo reconstruction",
+      "text": "Check all component IDs, source/detector modules, two controller roles, arm drive variants, wafer holder and motion axes. Trace proposed optical/video paths against the real bench."
+    },
+    {
+      "title": "Record wafer and operating parameters",
+      "text": "Complete wafer format/map, carrier retention, stage travel and datum, coupling angles, fibre preparation and approved optical limits. Keep electrical accessories disconnected in the record until their purpose is established."
+    },
+    {
+      "title": "Prepare and align using the approved SOP",
+      "text": "Use the reviewed local procedure for loading/retention, imaging, reference structures and fibre alignment. This draft is a documentation outline, not operating approval."
+    },
+    {
+      "title": "Acquire and document sites",
+      "text": "Record site coordinates, scan/readout settings, calibration/reference files and repeated measurements under the approved procedure. Retain raw data and configuration."
+    },
+    {
+      "title": "Review and save the finished setup",
+      "text": "Record shutdown, post-processing, acceptance criteria and measured timings. Save editable JSON locally; explicitly publish only after the hardware/path review."
+    }
+  ],
+  "workspaceName": "Bench_draft",
+  "workspaceRevision": 1
+}

@@ -1,0 +1,31 @@
+{
+  "source": "wafer-carrier-2-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 1,
+  "triangles": 2072,
+  "boundsMm": {
+    "min": [
+      -111.2909090909,
+      0,
+      -115
+    ],
+    "max": [
+      111.2909090909,
+      18,
+      115
+    ]
+  },
+  "extentsMm": [
+    222.5818181818,
+    18,
+    230
+  ],
+  "glbBytes": 76260,
+  "orientation": "Source Y-up retained; no preview yaw correction",
+  "previewYawDeg": 0
+}

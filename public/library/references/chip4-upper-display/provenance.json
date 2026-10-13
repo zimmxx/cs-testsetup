@@ -1,0 +1,15 @@
+{
+  "equipmentId": "chip4-upper-display",
+  "source": "Three user Setup 4 photos, received 2026-10-13",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated geometry only; not vendor CAD or verified dimensions.",
+  "photos": [
+    "library/references/chip-manual-setup4/Photo-1.jpg",
+    "library/references/chip-manual-setup4/Photo-2.jpg",
+    "library/references/chip-manual-setup4/Photo-3.jpg"
+  ],
+  "generator": "scripts/generate-chip-setup4-cad.py",
+  "units": "millimetres / Y-up",
+  "verifiedDimensions": false,
+  "sha256": "41e5d055b99a660ce7a6a6eb644ccd45902f1fa482f64480af5d2da36a2df41e"
+}

@@ -1,0 +1,31 @@
+{
+  "source": "wafer-shelf-smu-2-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 20,
+  "triangles": 368,
+  "boundsMm": {
+    "min": [
+      -107.5,
+      0,
+      -170
+    ],
+    "max": [
+      107.5,
+      85,
+      160
+    ]
+  },
+  "extentsMm": [
+    215,
+    85,
+    330
+  ],
+  "glbBytes": 38552,
+  "orientation": "Source Y-up retained; no preview yaw correction",
+  "previewYawDeg": 0
+}
