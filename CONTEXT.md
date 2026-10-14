@@ -1,8 +1,14 @@
 # CORNERSTONE Test Setup — development handover
 
-Last updated: **2026-10-13**. This file is part of the project source and should travel with the repository. It records the state at this documentation change; a future session must verify Git status, open PRs and deployments before acting. Historical documents describe the state on their own dates and may contain superseded counts or tabs.
+Last updated: **2026-10-14**. This file is part of the project source and should travel with the repository. It records the state at this documentation change; a future session must verify Git status, open PRs and deployments before acting. Historical documents describe the state on their own dates and may contain superseded counts or tabs.
 
 ## Start here
+
+### Deployment routing correction — 2026-10-14
+
+PR #5 is merged into main as `d873b65` and version 0.2.3 deployed successfully on 2026-10-13 at 11:19:15 UTC (Pages run 38389324325). PR #6 is also merged, but its base was `codex/mobile-layout`: merge `de241f6` did not reach main. This explains why the public Bench_draft lacks the two new setups. The public HTML still references the 0.2.3 bundle. No filter or publication change is needed to list these Bench_draft templates.
+
+Corrective branch `codex/deploy-photo-setups` includes the accepted setup branch plus current main, with no accepted feature/data changes. It will target main directly. Keep version 0.2.4 as the existing pending release; do not invent a deployment date or merge without the user's acceptance. Earlier PR dependency instructions below are historical and superseded by this correction. Source/CAD/photos are already accepted and remain intact. After user merge, verify the main Pages workflow and public setup dropdown; only then mark 0.2.4 deployed.
 
 ### Review release 0.2.4 — 2026-10-13
 
