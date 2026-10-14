@@ -12,6 +12,8 @@ Review: [PR #6 — manual wafer Setup 2 and chip Setup 4](https://github.com/zim
 
 Deployment routing correction — **2026-10-14**: PR #6 was accepted into `codex/mobile-layout`, not `main`, so its setups did not trigger Pages deployment. Branch `codex/deploy-photo-setups` contains the accepted setup work and current main for a corrective PR directly into `main`. Version remains 0.2.4; this is the same pending release, not a new feature version. No accepted setup content is changed.
 
+Corrective review: [PR #7 — deploy accepted 0.2.4 setups to main](https://github.com/zimmxx/cs-testsetup/pull/7). Pending user merge and successful Pages deployment.
+
 ### chip-manual-setup4 — prepared locally 2026-10-13
 
 - Added the requested chip bench from three photos (SETUP 4 label): 20 instances / 17 equipment IDs, original photos/evidence manifest, saved setup and isolated draft, editable views and configuration/agent guide.
