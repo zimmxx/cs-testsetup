@@ -4,7 +4,32 @@ Deployment dates below are UTC dates verified against successful GitHub Actions 
 
 ## Unreleased
 
-## 0.2.3 — Phone layouts and narrow 3D framing — deployment pending
+## 0.2.4 — Photo-derived manual wafer and chip setups — deployment pending
+
+Prepared for review: **2026-10-13**. Package/sidebar version: **0.2.4**; setup/import schemas remain version 1. Review branch: `codex/photo-setups-024`, based on `codex/mobile-layout` while PR #5 remains open. Merge PR #5 first, then this setup review. No deployment date is assigned until a successful Pages run.
+
+Review: [PR #6 — manual wafer Setup 2 and chip Setup 4](https://github.com/zimmxx/cs-testsetup/pull/6). The branch, including CAD and original photo assets, is pushed to GitHub. Deployment remains pending acceptance, merge to main and a successful Pages run.
+
+Deployment routing correction — **2026-10-14**: PR #6 was accepted into `codex/mobile-layout`, not `main`, so its setups did not trigger Pages deployment. Branch `codex/deploy-photo-setups` contains the accepted setup work and current main for a corrective PR directly into `main`. Version remains 0.2.4; this is the same pending release, not a new feature version. No accepted setup content is changed.
+
+Corrective review: [PR #7 — deploy accepted 0.2.4 setups to main](https://github.com/zimmxx/cs-testsetup/pull/7). Pending user merge and successful Pages deployment.
+
+### chip-manual-setup4 — prepared locally 2026-10-13
+
+- Added the requested chip bench from three photos (SETUP 4 label): 20 instances / 17 equipment IDs, original photos/evidence manifest, saved setup and isolated draft, editable views and configuration/agent guide.
+- User confirmed the default Keysight 81606A / external detector system and the supplied vacuum chip holder. Installed range, exact head/interface, fibre endpoints and limits remain unconfirmed; Santec instruments are visible inactive alternatives. No other-bench power/angle settings or vacuum parameters are inherited.
+- Added six missing equipment records with photo provenance and illustrative STEP/GLB: Santec source/meter, two displays, tower and shelf/frame. Existing arms/stages/imaging/mainframe/head and actual vacuum-holder CAD are reused. Shelf fronts face the operator; arms face inward and microscope post is on the photographed side.
+- Validation: 68 tests passed; production build passed with the existing lazy Three.js size warning. Browser checks at 1440 × 1000 and 390 × 844 verified loaded models, source-picture loading, signal inspection, orientation editing/Undo and a restored saved draft signature. No captured warnings/errors or phone page overflow. Measured fit, physical-phone gestures and SolidWorks import are untested.
+- Included in the 0.2.4 review branch. No setup publication snapshot or GitHub Pages deployment has been performed.
+
+### wafer-manual-setup-2 — prepared locally 2026-10-13
+
+- Added an editable, unpublished reconstruction from four user bench photos: 23 instances, separate wafer carrier/motion stage, two opposing fibre arms, overhead imaging and dual-monitor workstation. Ten optical/image-data links are explicitly proposed; uncertain accessories remain unconnected.
+- Reused seven existing equipment IDs and added 11 new records with context-photo provenance, illustrative STEP/GLB and source hashes. User confirmed the same 8163B / 81940A / 81634B core instruments as the existing Manual Wafer Optical Measurement. Slot 1/2 display assignments are provisional; no measured dimensions, approved path/power or readiness is inferred.
+- Added local setup and isolated draft JSON, original photos/evidence manifest, configuration/agent guide and catalog/document links. Rigid shelf/camera/workstation supports preserve orientation; prior setups and publication snapshots are retained.
+- Validation: 66 tests passed; production build passed with the existing lazy Three.js size warning. Browser checks at 1440 × 1000 and 390 × 844 confirmed loaded models, no captured console warnings/errors, no phone page overflow, signal inspection, equipment picture/STEP records and orientation editing/undo. The unused right-hand housing is excluded per user confirmation. Physical dimensions/fit, real phone gestures and full SolidWorks import remain unverified. This work is not a GitHub deployment.
+
+## 0.2.3 — Phone layouts and narrow 3D framing — deployed 2026-10-13
 
 Prepared for review: **2026-10-09**. Package/sidebar version: **0.2.3**; setup/import schemas remain version 1. Review branch: `codex/mobile-layout`, based on merged release 0.2.2.
 
@@ -16,7 +41,7 @@ Review: [PR #5 — phone layouts and 3D bench framing](https://github.com/zimmxx
 - Fixed phone Signal path zoom, added blank-space panning to the shared Builder/Explorer diagram and removed narrow Documentation action-row overflow. Setup data and published snapshots are unchanged.
 - Local checks used in-app browser viewports 320 × 667, 390 × 844 and 844 × 390 plus restored desktop sizing. Search/media toggles, filters, equipment dialogs, graph zoom/pan, rotation/undo, planner recalculation and training navigation were exercised. All 63 Node tests passed; production build passed with the existing Three.js size warning. Actual mobile touch gestures, Safari and phone GPU performance remain untested. Local server restart also restored the latest CAD export backend.
 
-Deployment: **pending user review, merge and successful Pages deployment**.
+Merged PR #5 as [d873b65](https://github.com/zimmxx/cs-testsetup/commit/d873b65fd8193c15dbbe1bee4eba23976c0f4e9c). Deployment verified by [successful Pages workflow 38389324325](https://github.com/zimmxx/cs-testsetup/actions/runs/38389324325), deploy job completed **2026-10-13 11:19:15 UTC**. The public site still serves this version while 0.2.4 awaits merge into main.
 
 ## 0.2.2 — Component orientation, rigid mounts and STEP assembly export — deployed 2026-10-09
 

@@ -1,0 +1,15 @@
+{
+  "equipmentId": "santec-tsl570-setup4",
+  "source": "Three user Setup 4 photos, received 2026-10-13",
+  "cadKind": "Illustrative reference",
+  "review": "Estimated geometry only; not vendor CAD or verified dimensions.",
+  "photos": [
+    "library/references/chip-manual-setup4/Photo-1.jpg",
+    "library/references/chip-manual-setup4/Photo-2.jpg",
+    "library/references/chip-manual-setup4/Photo-3.jpg"
+  ],
+  "generator": "scripts/generate-chip-setup4-cad.py",
+  "units": "millimetres / Y-up",
+  "verifiedDimensions": false,
+  "sha256": "179b47fff67f24d107d0623729a128d0c62863a7be754565de6ad0d3cc3ce890"
+}

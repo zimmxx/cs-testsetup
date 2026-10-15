@@ -1,7 +1,11 @@
 import { manualEquipment } from './manualSetup.js';
 import { obandEquipment } from './obandAssembly.js';
 import { photoChipEquipment, photoChipCatalogEntry } from './photoChipSetup.js';
+import { wafer2Equipment, wafer2CatalogEntry } from './photoWaferSetup2.js';
+import { chip4Equipment, chip4CatalogEntry } from './photoChipSetup4.js';
 export const sources = {
+  'photo-chip-4': {label:'User-supplied photographs · SETUP 4',url:null},
+  'photo-wafer-2': {label:'User-supplied bench photographs · SETUP 2',url:null},
   'photo-chip': { label: 'User-supplied bench photographs · Lab 2077 / Setup 3', url: null },
   deck: { label: 'CORNERSTONE_TESTING · 22 June 2026', url: null },
   chip: { label: 'Chip-Level Testing Service', url: 'https://cornerstone.sotonfab.co.uk/chip-level-testing-service/' },
@@ -29,7 +33,7 @@ export const equipment = [
   { id: 'band-detector', name: 'Band-specific optical detector', model: 'Model to be confirmed', category: 'Detection', location: 'Location to verify', status: 'Needs verification', role: 'Record optical output in the selected wavelength band.', specs: [['Wavelength range', 'Confirm against source and fibre'], ['Model / serial', 'Not supplied'], ['Sensitivity', 'Not supplied'], ['Trigger / sampling', 'To be confirmed']], url: null, alternatives: 'Select a detector compatible with the optical wavelength, signal level and acquisition method. No installed alternative is asserted.', note: 'The supplied equipment list identifies the chip C-band sensor only. Detector models for other bands and the wafer tester require verification.' },
 ];
 
-equipment.push(...manualEquipment,...obandEquipment,...photoChipEquipment);
+equipment.push(...manualEquipment,...obandEquipment,...photoChipEquipment,...wafer2Equipment,...chip4Equipment);
 equipment.push({id:'chip-vacuum-stage',name:'Vacuum chip sample stage',model:'Bespoke vacuum sample stage',category:'Positioning',location:'Local bench - location to confirm',status:'Needs verification',role:'Separate chip holder/stage; user-confirmed holder for optical-chip-testing-v1. Does not replace the DUT motion stage.',specs:[['Use','Chip holder / sample stage'],['CAD X/Y/Z bounds','85 / 25.5 / 64 mm'],['Vacuum connection / pressure','To confirm']],url:'',alternatives:'Bespoke copper chip holder or other mount: suitability to verify.',note:'User-supplied STEP/SolidWorks geometry, received 9 October 2026. Mounting, retention and operating conditions remain unverified.',model3d:'library/models/chip-vacuum-stage.glb',stepPath:'library/references/chip-vacuum-stage/Vaccum Sample Stage.STEP',cadKind:'User-provided CAD',cadReview:'Actual supplied STEP geometry; source Y-up retained. CAD bounds are not physically measured dimensions. Vacuum plumbing and mounting require confirmation.',cadSource:'User-supplied SolidWorks 2025 STEP export, 9 October 2026'});
 const opticalEquipment = ['laser', 'polarisation', 'stage', 'fibre', 'detector', 'camera'];
 const genericOptical = ['band-source', 'polarisation', 'stage', 'fibre', 'band-detector', 'camera'];
@@ -49,6 +53,8 @@ export const setups = [
 ];
 
 setups.push(photoChipCatalogEntry);
+setups.push(wafer2CatalogEntry);
+setups.push(chip4CatalogEntry);
 
 export const guideSteps = {
   optical: [
@@ -78,6 +84,8 @@ export const guideSteps = {
 };
 
 export const defaultDocuments = [
+  {id:'chip-manual-setup4-guide',title:'Chip Setup 4 · evidence and configuration guide',type:'Guide',setup:'chip-manual-setup4',description:'Photo observations, instrument alternatives, required parameters and continuation notes.',path:'documents/CHIP-MANUAL-SETUP4.md',source:'User photographs · local draft'},
+  {id:'wafer-manual-setup-2-guide',title:'Setup 2 wafer bench · evidence and configuration guide',type:'Guide',setup:'wafer-manual-setup-2',description:'Photo reconstruction, equipment IDs, provisional connections, required parameters and agent continuation workflow.',path:'documents/WAFER-MANUAL-SETUP-2.md',source:'User photos · project draft'},
   { id: 'photo-to-setup', title: 'Photo-to-setup agent guide', type: 'Guide', setup: 'all', description: 'Reusable photo reconstruction workflow, equipment matching, evidence rules, builder schema and optical-chip-testing-v1 review checklist.', path: 'documents/PHOTO-TO-SETUP.md', source: 'Project source · photo-derived draft workflow' },
   { id: 'solidworks-handoff', title: 'Rotation, mounting and SolidWorks handoff', type: 'Guide', setup: 'all', description: 'Rotate and rigid-mount equipment, export a whole STEP assembly on localhost and return named CAD placements from SolidWorks.', path: 'documents/SOLIDWORKS-HANDOFF.md', source: 'Project source · local CAD export workflow' },
   { id: 'collection-workbook', title: 'Testing setup collection workbook', type: 'Collection workbook', setup: 'all', description: 'Editable Word forms for equipment, detailed models, actual setups, fibre connections, approved guidelines, timing evidence and directory mapping.', path: 'documents/CORNERSTONE_Setup_Collection_Workbook.docx', source: 'Local project · 30 September 2026' },

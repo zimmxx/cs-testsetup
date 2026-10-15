@@ -1,0 +1,31 @@
+{
+  "source": "santec-tsl570-setup4-Reference.step",
+  "converter": "occt-import-js 0.0.23 / OpenCascade",
+  "tessellation": {
+    "linearDeflectionMm": 0.08,
+    "angularDeflectionRad": 0.35
+  },
+  "units": "metres in GLB; source bounds reported in mm",
+  "meshCount": 5,
+  "triangles": 188,
+  "boundsMm": {
+    "min": [
+      -125,
+      0,
+      -175
+    ],
+    "max": [
+      125,
+      160,
+      155
+    ]
+  },
+  "extentsMm": [
+    250,
+    160,
+    330
+  ],
+  "glbBytes": 14460,
+  "orientation": "Source Y-up retained; no preview yaw correction",
+  "previewYawDeg": 0
+}
