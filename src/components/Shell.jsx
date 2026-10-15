@@ -11,6 +11,7 @@ export const navItems = [
   { id: 'documents', title: 'Documentation', icon: BookOpen },
 ];
 export const draftNavItems = [
+  {id:'simulation_draft',title:'Simulation_draft',icon:Network},
   {id:'bench_draft',title:'Bench_draft',icon:PencilRuler},
   {id:'equipment_draft',title:'Equipment_draft',icon:Cpu},
   {id:'training_draft',title:'Training_draft',icon:GraduationCap},
@@ -26,7 +27,7 @@ export default function Shell({ page, navigate, children }) {
       <nav>{navItems.map(({id,title,icon:Icon}) => <button key={id} className={`nav-item ${page === id ? 'active' : ''}`} aria-current={page === id ? 'page' : undefined} onClick={() => go(id)}><Icon size={21}/><span>{title}</span></button>)}</nav>
       <div className="draft-nav-label">PREVIEW WORKSPACES</div><nav aria-label="Draft workspaces">{draftNavItems.map(({id,title,icon:Icon})=><button key={id} className={`nav-item draft-nav-item ${page===id?'active':''}`} aria-current={page===id?'page':undefined} onClick={()=>go(id)}><Icon size={19}/><span>{title}</span></button>)}</nav>
       <button className="training-link" onClick={() => {navigate('explorer', {tab:'guide'});setMenu(false);}}><GraduationCap size={24}/><span><strong>Training starts here</strong><small>Learn the equipment, connections and measurement workflow.</small></span><ChevronRight size={18}/></button>
-      <div className="sidebar-footer">CORNERSTONE · Southampton<span>Local workspace · v{version}</span></div>
+      <div className="sidebar-footer">CORNERSTONE · Southampton<span>{['localhost','127.0.0.1','[::1]'].includes(window.location.hostname)?'Local workspace':'Shared catalog'} · v{version}</span></div>
       <button className={`admin-nav ${page==='admin'?'active':''}`} onClick={()=>go('admin')} aria-current={page==='admin'?'page':undefined}><Settings2 size={13}/>Admin</button>
     </aside>
     {menu && <button className="scrim" aria-label="Dismiss menu" onClick={() => setMenu(false)}/>}

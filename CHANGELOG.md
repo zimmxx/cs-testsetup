@@ -2,9 +2,20 @@
 
 Deployment dates below are UTC dates verified against successful GitHub Actions runs. A push, PR creation or merge alone does not prove deployment. Historical 0.1.x release-history labels were assigned retrospectively while the package/UI remained `0.1.0`; version `0.2.0` updates the package and displayed version together. No historical Git tags are implied.
 
-## Unreleased
+## 0.3.0 — Interactive alignment studio — review candidate
 
-## 0.2.4 — Photo-derived manual wafer and chip setups — deployment pending
+Prepared **2026-10-15**, branch `codex/simulation-studio-030`, base **main**. Package/sidebar version is 0.3.0; setup and simulation schemas remain version 1. Deployment date is pending user acceptance and a successful Pages run.
+
+- Added Simulation_draft with a locally bundled CC0 technician, stable/smooth skeletal gestures, guided alignment, independent arm/DUT micrometers, optical coupling, polarisation, animated light paths, local poses, JSON sequences and WebM canvas recording.
+- NanoMax bases stay fixed in the simulation. Supplied arm CAD feet now register to actual NanoMax top platforms; stage/arm STEP and GLB files are retained. Added clearly labelled dummy PIC chips and 203.2 mm wafers following their holders.
+- Corrected stage axes, mirrored output tip angle, X-axis paddle rotation and actual CAD paddle ring locations. Added Perfect alignment while retaining DUT position/yaw and optical settings. Removed the old placeholder person during setup changes.
+- Added beginner guidance, clear Reset demo wording, a recording-loading guard, filter-consistent setup URLs, and a local/shared footer label. Existing draft workspaces are retained.
+- Added PROGRESS.md, bugs_improvements_ideas.md, an equipment-motion reference, simulation guide, public/version.json and PR test/build CI. No real instrument control, native mate solver or automatic publishing is introduced.
+- Validation: **84 tests pass**, production build passes, desktop/390/320 px walkthroughs and `/cs-testsetup/` production-preview asset loading pass. The existing large Three.js chunk warning remains; performance, real-hardware calibration and CAD-export limitations are documented for review.
+
+## 0.2.4 — Photo-derived manual wafer and chip setups — deployed 2026-10-15
+
+Deployment verified: **2026-10-15**, main commit `941578b`, [successful Pages workflow 38713476260](https://github.com/zimmxx/cs-testsetup/actions/runs/38713476260), after accepted corrective PR #7. The preparation/routing notes below are historical.
 
 Prepared for review: **2026-10-13**. Package/sidebar version: **0.2.4**; setup/import schemas remain version 1. Review branch: `codex/photo-setups-024`, based on `codex/mobile-layout` while PR #5 remains open. Merge PR #5 first, then this setup review. No deployment date is assigned until a successful Pages run.
 

@@ -84,6 +84,7 @@ export const guideSteps = {
 };
 
 export const defaultDocuments = [
+  {id:'simulation-draft-guide',title:'Simulation_draft · alignment and animation guide',type:'Guide',setup:'all',description:'Micrometers, virtual optical path, PIC alignment, operator animation, saved poses, WebM recording and model assumptions.',path:'documents/SIMULATION-DRAFT.md',source:'Project source · teaching prototype'},
   {id:'chip-manual-setup4-guide',title:'Chip Setup 4 · evidence and configuration guide',type:'Guide',setup:'chip-manual-setup4',description:'Photo observations, instrument alternatives, required parameters and continuation notes.',path:'documents/CHIP-MANUAL-SETUP4.md',source:'User photographs · local draft'},
   {id:'wafer-manual-setup-2-guide',title:'Setup 2 wafer bench · evidence and configuration guide',type:'Guide',setup:'wafer-manual-setup-2',description:'Photo reconstruction, equipment IDs, provisional connections, required parameters and agent continuation workflow.',path:'documents/WAFER-MANUAL-SETUP-2.md',source:'User photos · project draft'},
   { id: 'photo-to-setup', title: 'Photo-to-setup agent guide', type: 'Guide', setup: 'all', description: 'Reusable photo reconstruction workflow, equipment matching, evidence rules, builder schema and optical-chip-testing-v1 review checklist.', path: 'documents/PHOTO-TO-SETUP.md', source: 'Project source · photo-derived draft workflow' },

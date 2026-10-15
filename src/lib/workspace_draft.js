@@ -6,8 +6,8 @@ import { upgradeFrontFacing } from './frontFacing.js';
 import { arrangeOnBench, benchPosition } from './benchLayout.js';
 import { validateSetup, connectionProblem, connectionRecord } from './setupBuilder.js';
 import { housingFor, equipmentPose } from './mainframeAssembly.js';
-export const draftPages=['bench_draft','equipment_draft','training_draft'];
-export const draftNames={bench_draft:'Bench_draft',equipment_draft:'Equipment_draft',training_draft:'Training_draft'};
+export const draftPages=['bench_draft','equipment_draft','training_draft','simulation_draft'];
+export const draftNames={bench_draft:'Bench_draft',equipment_draft:'Equipment_draft',training_draft:'Training_draft',simulation_draft:'Simulation_draft'};
 export function workspaceSeed(id='wst-optical-manual'){
   const entry=setups.find(s=>s.id===id);
   const source=entry?.published||entry?.template||(id==='wst-optical-manual'?arrangeOnBench(upgradeManualSetup(createManualSetup())):id==='oband-mainframe-assembly'?createObandAssembly():{version:1,id,name:entry?.name||'New setup',nodes:(entry?.equipment||[]).map((equipmentId,i)=>({id:`item-${i}`,equipmentId,label:'',x:40+(i%4)*230,y:40+Math.floor(i/4)*145})),connections:[]});

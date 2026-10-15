@@ -5,7 +5,7 @@ function parseState() {
   const p = new URLSearchParams(window.location.hash.slice(1));
   const state = { ...defaults };
   Object.keys(defaults).forEach(k => { if (p.has(k)) state[k] = p.get(k); });
-  if (!['explorer', 'setups', 'equipment', 'planner', 'documents', 'builder', 'admin', 'bench_draft', 'equipment_draft', 'training_draft'].includes(state.page)) state.page = 'explorer';
+  if (!['explorer', 'setups', 'equipment', 'planner', 'documents', 'builder', 'admin', 'bench_draft', 'equipment_draft', 'training_draft', 'simulation_draft'].includes(state.page)) state.page = 'explorer';
   if(state.page.endsWith('_draft')&&!p.has('setup'))state.setup='wst-optical-manual';
   state.tab=normalizeSetupView(state.tab);
   if (!['overview', '3d', 'signal', 'diagram', 'equipment', 'guide'].includes(state.tab)) state.tab = 'overview';
