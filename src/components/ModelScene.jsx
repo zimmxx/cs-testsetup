@@ -7,6 +7,8 @@ import { localPath } from './UI.jsx';
 import { benchPosition } from '../lib/benchLayout.js';
 import { equipmentPose, housingFor, isMainframe, frameProfile } from '../lib/mainframeAssembly.js';
 import { fittedCameraPosition } from '../lib/cameraFraming.js';
+import { createSimulationLayer } from '../lib/simulationScene.js';
+import { registerFibreArmMounts, addDummySample, sampleKind } from '../lib/benchPresentation.js';
 
 const emptySceneItems=[];
 function disposeObject(root) {root.traverse(o=>{o.geometry?.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.filter(Boolean).forEach(m=>{Object.values(m).forEach(v=>{if(v?.isTexture)v.dispose();});m.dispose();});});}
@@ -15,7 +17,7 @@ function panelLabel(text,width,height,color='#fff'){
   const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;
   const mesh=new THREE.Mesh(new THREE.PlaneGeometry(width,height),new THREE.MeshBasicMaterial({map:texture,transparent:true,toneMapped:false}));mesh.rotation.y=Math.PI;return mesh;
 }
-export default function ModelScene({nodes=emptySceneItems,connections=emptySceneItems,onSelect,onSelectEdge,items,focusRequest,highlightedNodeIds=emptySceneItems,highlightedEdgeIds=emptySceneItems,hiddenNodeIds=emptySceneItems}) {
+export default function ModelScene({nodes=emptySceneItems,connections=emptySceneItems,onSelect,onSelectEdge,items,focusRequest,highlightedNodeIds=emptySceneItems,highlightedEdgeIds=emptySceneItems,hiddenNodeIds=emptySceneItems,simulation}) {
   const host=useRef(null),select=useRef(onSelect),view=useRef(null),sceneActions=useRef(null);select.current=onSelect;
   const selectEdge=useRef(onSelectEdge),style=useRef(null);selectEdge.current=onSelectEdge;style.current={nodes:highlightedNodeIds,edges:highlightedEdgeIds,hidden:hiddenNodeIds};
   const styleKey=JSON.stringify(style.current);
@@ -23,12 +25,15 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
   const [exploded,setExploded]=useState(false);
   const [message,setMessage]=useState('');
   const [loadState,setLoadState]=useState('loading');
+  const [technicianState,setTechnicianState]=useState('loading');
+  const presentedSample=nodes.length>1?nodes.map(n=>sampleKind(n.equipmentId)).find(Boolean):null;
   const hasModules=nodes.some(n=>housingFor(n,nodes));
   const visualKey=JSON.stringify(nodes.map(n=>({id:n.id,equipmentId:n.equipmentId,x:n.x,y:n.y,benchXMm:n.benchXMm,benchZMm:n.benchZMm,elevationMm:n.elevationMm,rotationDeg:n.rotationDeg,tiltDeg:n.tiltDeg,rollDeg:n.rollDeg,mount:n.configuration?.mount,mountingStage:n.configuration?.mountingStage,mainframeId:n.configuration?.mainframeId,mainframeSlot:n.configuration?.mainframeSlot})));
   const modelKey=JSON.stringify(nodes.map(n=>{const item=items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId);return [item?.model3d,item?.cadKind];}));
   const pathKey=JSON.stringify(connections.map(c=>[c.id,c.from,c.to,c.type]));
   useEffect(()=>{
     const el=host.current;let renderer,frame,disposed=false;
+    if(simulation)setTechnicianState('loading');
     setMessage('');
     let remaining=nodes.filter(n=>(items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId))?.model3d).length,failed=false;
     setLoadState(remaining?'loading':'placeholders');
@@ -66,7 +71,7 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
     const fitDefault=()=>{
       if(!autoFramed)return;
       let position=defaultPosition;
-      if(camera.aspect<1.25){
+      if(camera.aspect<1.25||simulation){
         scene.updateMatrixWorld(true);
         const bounds=new THREE.Box3();
         [...fitObjects,...roots].forEach(root=>root.traverse(o=>{if(o.isMesh)bounds.union(new THREE.Box3().setFromObject(o));}));
@@ -94,7 +99,7 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
       return new THREE.Vector3(0,y,z).applyQuaternion(new THREE.Quaternion().fromArray(p.quaternion)).add(new THREE.Vector3(p.x,p.y,p.z));
     };
     for(const n of nodes) {
-      const item=items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId),group=new THREE.Group(),position=pose(n);group.position.set(single?0:position.x,single?0:position.y,single?0:position.z);group.quaternion.fromArray(position.quaternion);group.userData.nodeId=n.id;scene.add(group);roots.push(group);
+      const item=items?.find(i=>i.id===n.equipmentId)||getEquipment(n.equipmentId),group=new THREE.Group(),position=pose(n);group.position.set(single?0:position.x,single?0:position.y,single?0:position.z);group.quaternion.fromArray(position.quaternion);group.userData.nodeId=n.id;group.userData.presentationHome={position:group.position.clone(),quaternion:group.quaternion.clone()};scene.add(group);roots.push(group);
       const proxy=new THREE.Mesh(new THREE.BoxGeometry(1.7,.7,1.15),new THREE.MeshStandardMaterial({color:0xc3c9df,wireframe:true}));proxy.position.y=.35;group.add(proxy);const helper=new THREE.BoxHelper(group,0x447ae5);helper.material.depthTest=false;helper.material.transparent=true;helper.material.opacity=.7;helper.visible=false;scene.add(helper);helpers.push(helper);
       let label;
       if(!single){const canvas=document.createElement('canvas');canvas.width=512;canvas.height=88;const ctx=canvas.getContext('2d');ctx.fillStyle='rgba(255,255,255,.94)';ctx.fillRect(0,0,512,88);ctx.font='600 25px sans-serif';ctx.textAlign='center';ctx.fillStyle='#41425f';ctx.fillText((n.label||item?.name||'Equipment').slice(0,34),256,34);ctx.font='19px sans-serif';ctx.fillStyle=item?.cadKind==='Vendor CAD'?'#44816b':'#a08043';ctx.fillText(item?.cadKind||'CAD pending',256,65);const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;label=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,depthTest:false,depthWrite:false,toneMapped:false}));label.scale.set(3.4,.58,1);label.position.y=.9;label.visible=labels;group.add(label);nameLabels.push(label);}
@@ -104,7 +109,9 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
         const model=gltf.scene,box=new THREE.Box3().setFromObject(model),size=box.getSize(new THREE.Vector3()),center=box.getCenter(new THREE.Vector3());
         const max=Math.max(size.x,size.y,size.z);if(!Number.isFinite(max)||max===0){disposeObject(model);failed=true;setMessage(`Empty geometry: ${item.name}`);complete();return;}
         const scale=single?1.8/max:item.cadKind?10:1.8/max;
-        model.scale.setScalar(scale);model.position.set(-center.x*scale,-box.min.y*scale,(!single&&housingFor(n,nodes)?-box.min.z:-center.z)*scale);group.add(model);if(label)label.position.y=size.y*scale+.4;complete();
+        model.scale.setScalar(scale);model.position.set(-center.x*scale,-box.min.y*scale,(!single&&housingFor(n,nodes)?-box.min.z:-center.z)*scale);group.add(model);group.userData.modelRoot=model;
+        if(!single){registerFibreArmMounts(roots,nodes);addDummySample(group,n.equipmentId);}
+        if(label)label.position.y=size.y*scale+.4;complete();
         if(!single&&item.cadKind==='Illustrative reference'){
           if(housingFor(n,nodes)){const horizontal=n.equipmentId==='oband-laser-81606a',name={'wst-laser-old':'81940A','wst-sensor-old':'81634B','oband-head-interface':'81618A','oband-laser-81606a':'81606A'}[n.equipmentId];const decal=panelLabel(name,horizontal?.6:.24,.07);decal.position.set(0,horizontal?.225:.63,horizontal?.205:.115);group.add(decal);}
           else if(isMainframe(n)){const large=frameProfile(n).model==='8164B',decal=panelLabel(`KEYSIGHT ${frameProfile(n).model}`,large?1.25:.75,.09,'#414755');decal.position.set(large?1.15:.56,large?1.43:.88,large?-2.68:-1.88);group.add(decal);}
@@ -119,20 +126,22 @@ export default function ModelScene({nodes=emptySceneItems,connections=emptyScene
       const mounted=housingFor(a,nodes)||housingFor(b,nodes);
       const curve=mounted?new THREE.CatmullRomCurve3([...moduleRoute(a,start,end),...moduleRoute(b,end,start).reverse()],false,'centripetal'):new THREE.QuadraticBezierCurve3(start,new THREE.Vector3((start.x+end.x)/2,Math.max(start.y,end.y)+.35,(start.z+end.z)/2),end);
       const line=new THREE.Mesh(new THREE.TubeGeometry(curve,mounted?80:36,.025,6,false),new THREE.MeshStandardMaterial({color:c.type==='optical'?0xe2ad25:0x8060d9}));line.userData.edgeId=c.id;scene.add(line);
-      const direction=end.clone().sub(curve.getPoint(.9)).normalize();const arrow=new THREE.ArrowHelper(direction,end,.3,c.type==='optical'?0xe2ad25:0x8060d9,.15,.1);scene.add(arrow);paths.push({line,arrow,edge:c});
+      const direction=end.clone().sub(curve.getPoint(.9)).normalize();const arrow=new THREE.ArrowHelper(direction,end,.3,c.type==='optical'?0xe2ad25:0x8060d9,.15,.1);scene.add(arrow);paths.push({line,arrow,edge:c,curve});
     }
     applyStyle();
+    const demo=simulation?createSimulationLayer(scene,roots,paths,nodes,simulation,{loadTechnician:(ready,error)=>loader.load(localPath('library/people/lab-technician.glb'),ready,undefined,error),onTechnician:state=>{if(!disposed){setTechnicianState(state);if(state==='unavailable')setMessage('The technician could not load. Reload to retry.');}},onReady:()=>{if(!disposed)fitDefault();}}):null;
+    if(demo)fitObjects.push(demo.operator);
     const resize=()=>{const w=el.clientWidth,h=el.clientHeight;if(!w||!h)return;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();fitDefault();};const observer=new ResizeObserver(resize);observer.observe(el);resize();
     const stopAutoFrame=()=>{autoFramed=false;};controls.addEventListener('start',stopAutoFrame);
     let start;const down=e=>{start=[e.clientX,e.clientY];};const up=e=>{if(!start||Math.hypot(e.clientX-start[0],e.clientY-start[1])>5)return;const rect=el.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),camera);const targets=selectEdge.current?[...roots.filter(r=>r.visible),...paths.filter(p=>p.line.visible).map(p=>p.line)]:roots.filter(r=>r.visible);const hit=ray.intersectObjects(targets,true)[0];if(hit){let obj=hit.object;while(obj&&!obj.userData.nodeId&&!obj.userData.edgeId)obj=obj.parent;if(obj?.userData.edgeId)selectEdge.current?.(obj.userData.edgeId);else if(obj)select.current?.(obj.userData.nodeId);}};
     renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointerup',up);
-    const animate=()=>{controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(animate);};animate();
-    return ()=>{sceneActions.current=null;if(!single)view.current={position:camera.position.clone(),target:controls.target.clone()};disposed=true;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();disposeObject(scene);renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();};
+    const animate=()=>{demo?.update(performance.now()/1000);if(demo)helpers.forEach(h=>{if(h.visible)h.update();});controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(animate);};animate();
+    return ()=>{sceneActions.current=null;if(!single)view.current={position:camera.position.clone(),target:controls.target.clone()};disposed=true;demo?.dispose();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();disposeObject(scene);renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();};
   // Only rebuild when geometry, placement or topology changes; editing notes,
   // fibre metadata or measurement settings preserves the current orbit view.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[visualKey,modelKey,pathKey,exploded]);
+  },[visualKey,modelKey,pathKey,exploded,simulation]);
   useEffect(()=>{sceneActions.current?.style();},[styleKey,visualKey,modelKey,pathKey,exploded]);
   useEffect(()=>{if(focusRequest)sceneActions.current?.focus(focusRequest.id);},[focusRequest,visualKey,exploded]);
-  return <div className="model-stage" data-model-status={loadState}><div ref={host} className="model-render"/><div className="model-controls"><button onClick={()=>sceneActions.current?.reset()}>Reset view</button>{nodes.length>1&&<button aria-pressed={labels} onClick={()=>{setLabels(v=>!v);sceneActions.current?.labels(!labels);}}>Equipment labels</button>}{hasModules&&<button aria-pressed={exploded} onClick={()=>setExploded(v=>!v)}>{exploded?'Assemble modules':'Explode modules'}</button>}</div>{message&&<div className="model-message" role="status">{message}</div>}<span className="model-hint">{loadState==='loading'?'Loading model…':<><span className="model-desktop-hint">Drag to orbit · scroll to zoom · click equipment to inspect</span><span className="model-phone-hint">Drag to orbit · pinch to zoom · tap to inspect</span></>}</span></div>;
+  return <div className="model-stage" data-model-status={loadState} data-technician-status={simulation?technicianState:undefined}><div ref={host} className="model-render"/>{presentedSample&&<span className="model-sample-label">Illustrative sample · {presentedSample==='wafer'?'8-inch silicon wafer (203.2 mm)':'silicon photonics chip'}</span>}<div className="model-controls"><button onClick={()=>sceneActions.current?.reset()}>Reset view</button>{nodes.length>1&&<button aria-pressed={labels} onClick={()=>{setLabels(v=>!v);sceneActions.current?.labels(!labels);}}>Equipment labels</button>}{hasModules&&!simulation&&<button aria-pressed={exploded} onClick={()=>setExploded(v=>!v)}>{exploded?'Assemble modules':'Explode modules'}</button>}</div>{message&&<div className="model-message" role="status">{message}</div>}<span className="model-hint">{simulation&&technicianState==='loading'?'Loading technician…':loadState==='loading'?'Loading model…':<><span className="model-desktop-hint">Drag to orbit · scroll to zoom · click equipment to inspect</span><span className="model-phone-hint">Drag to orbit · pinch to zoom · tap to inspect</span></>}</span></div>;
 }

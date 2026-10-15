@@ -2,6 +2,18 @@
 
 A JavaScript workspace for finding photonic measurement setups, exploring equipment and connections, collecting documentation, training users and planning measurement time. Source repository: [zimmxx/cs-testsetup](https://github.com/zimmxx/cs-testsetup).
 
+## Release candidate 0.3.0
+
+See [PROGRESS.md](PROGRESS.md) for completed work and deployment status, and [bugs_improvements_ideas.md](bugs_improvements_ideas.md) for the walkthrough, fixed bugs and proposed improvements. This release is prepared for user review; the deployment date will be recorded after a successful main Pages run.
+
+## Interactive alignment simulation
+
+The operator now uses a textured CC0 human rig adapted as a lab technician, with idle motion and constrained reaching gestures. The model is bundled locally; users need no additional plugin. See [character provenance and licence](public/library/people/ATTRIBUTION.md).
+
+Open [Simulation_draft locally](http://localhost:5174/#page=simulation_draft&setup=wst-optical-manual). Play the guided demo or adjust input/output/DUT micrometers, fibre angles and polarisation. A textured technician, moving carriage overlays, illuminated optical graph and magnified PIC views demonstrate alignment; the detector response is a teaching model. Add poses and export a JSON sequence, or record the 3D bench as WebM. This workspace uses separate browser storage and never saves changes to original setups/publications. See [the simulation guide](public/documents/SIMULATION-DRAFT.md) and [equipment motion reference](docs/SIMULATION-MOTION-REFERENCE.md) for assumptions, manufacturer sources and limitations. Teaching simulation only; no instrument control. The release remains a review candidate until accepted and deployed.
+
+NanoMax bases stay fixed while the supplied arm feet sit on their CAD top platforms. Chip benches show a dummy PIC and wafer benches show an illustrative 8-inch wafer; these samples are presentation geometry rather than verified inventory or exported STEP parts.
+
 ## Project history and handover
 
 See [CHANGELOG.md](CHANGELOG.md) for shipped changes and verified GitHub deployment dates. See [CONTEXT.md](CONTEXT.md) for the implementation summary, project structure, important decisions, known limitations and next steps for a new development session. Keep both files updated when changes are reviewed and deployed; unmerged changes remain **Unreleased**.
@@ -24,7 +36,7 @@ All 61 equipment records include a local picture with its source, credit and acc
 
 ## Draft UI workspaces
 
-Three separate preview workspaces are available on the same local app: **Bench_draft**, **Equipment_draft**, and **Training_draft**. Start with [Bench_draft](http://localhost:5174/#page=bench_draft). See [README_draft.md](README_draft.md) for the user guide, draft file locations and review workflow. Saving a draft does not change the shared equipment catalog or published setups.
+Four separate preview workspaces are available on the same local app: **Simulation_draft**, **Bench_draft**, **Equipment_draft**, and **Training_draft**. Start with [Bench_draft](http://localhost:5174/#page=bench_draft), or use the simulation guide above. See [README_draft.md](README_draft.md) for the bench, equipment and training user guide, draft file locations and review workflow. Saving a draft does not change the shared equipment catalog or published setups.
 
 ## Run locally
 

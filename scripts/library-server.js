@@ -27,8 +27,8 @@ export default function libraryServer() {
       // assets when library watching is disabled. Serve them immediately.
       const assetPath=decodeURIComponent(url.pathname);
       const reference=/^\/library\/references\/[a-zA-Z0-9 _./-]+\.(step|stp|pdf|json|sldprt|sldasm)$/i.test(assetPath)&&!assetPath.split('/').includes('..');
-      if(req.method==='GET' && (reference||/^\/library\/(images|models|setups|published|workspaces_draft)\/[a-zA-Z0-9._-]+$/.test(assetPath))) {
-        try {const filename=path.resolve(root,assetPath.slice('/library/'.length));if(!filename.startsWith(root+path.sep))throw new Error('Invalid path');const data=await readFile(filename);const ext=path.extname(filename).toLowerCase();res.setHeader('Content-Type',({'.json':'application/json','.glb':'model/gltf-binary','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.pdf':'application/pdf','.step':'application/step','.stp':'application/step'})[ext]||'application/octet-stream');res.setHeader('Cache-Control','no-cache');res.end(data);}catch{res.statusCode=404;res.end('Asset not found.');}return;
+      if(req.method==='GET' && (reference||/^\/library\/(images|models|people|setups|published|workspaces_draft)\/[a-zA-Z0-9._-]+$/.test(assetPath))) {
+        try {const filename=path.resolve(root,assetPath.slice('/library/'.length));if(!filename.startsWith(root+path.sep))throw new Error('Invalid path');const data=await readFile(filename);const ext=path.extname(filename).toLowerCase();res.setHeader('Content-Type',({'.md':'text/plain; charset=utf-8','.json':'application/json','.glb':'model/gltf-binary','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.pdf':'application/pdf','.step':'application/step','.stp':'application/step'})[ext]||'application/octet-stream');res.setHeader('Cache-Control','no-cache');res.end(data);}catch{res.statusCode=404;res.end('Asset not found.');}return;
       }
       if(!url.pathname.startsWith('/api/library/')) return next();
       res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store');
