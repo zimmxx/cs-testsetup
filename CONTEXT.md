@@ -6,6 +6,8 @@ Last updated: **2026-10-15**. This file is part of the project source and should
 
 ### Release candidate 0.3.0 — 2026-10-15
 
+Pushed implementation commit `445db44` on `codex/simulation-studio-030`; [PR #8](https://github.com/zimmxx/cs-testsetup/pull/8) is open for user acceptance. Do not merge automatically. Local final verification: 84 tests pass and production build succeeds. Check PR CI and deployment state again when resuming.
+
 The user explicitly requested final mounting/sample work, first-use QA, progress/versioning and a PR they will accept. Current branch `codex/simulation-studio-030`, targeting main. Prior PR #7 is merged as `941578b`; 0.2.4 deployed successfully in Pages run 38713476260 on 2026-10-15. This supersedes earlier local-only/no-push and deployment-pending notes below. Do not merge/deploy the new PR automatically.
 
 Version is 0.3.0 in package/sidebar and public/version.json; schema versions stay 1. New root PROGRESS.md and bugs_improvements_ideas.md are the review/handover entry points. Mounting registration and dummy samples are in benchPresentation.js, shared by multi-equipment ModelScene views. The real named arm base footprint is translated within its model root to the actual NanoMax top plate (accounting for asynchronous loading and simulation offsets), leaving saved node coordinates and source CAD unchanged. NanoMax stage roots explicitly retain initial bench transforms. Dummy chip/203.2 mm wafer groups are children of their appropriate holder, so follow DUT movement; labels disclose their illustrative nature. No CAD mate or STEP-export parity is asserted. Actual-CAD registration and sample-size/follow tests added; 84 tests pass.

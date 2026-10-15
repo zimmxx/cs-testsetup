@@ -2,6 +2,8 @@
 
 Updated: **15 October 2026**. Release candidate: **0.3.0**. Review branch: `codex/simulation-studio-030`, targeting **main**. This file records prepared work; it does not claim deployment before a successful GitHub Pages run.
 
+Review: [PR #8](https://github.com/zimmxx/cs-testsetup/pull/8), opened and pushed on 15 October 2026. Implementation commit: `445db44`. Awaiting user acceptance; not merged or deployed.
+
 | Version | State | Date/evidence |
 | --- | --- | --- |
 | 0.2.4 | Deployed | 15 October 2026; accepted PR #7, main commit `941578b`, [successful Pages workflow](https://github.com/zimmxx/cs-testsetup/actions/runs/38713476260) |
